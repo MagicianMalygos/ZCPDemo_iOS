@@ -15,5 +15,4 @@
 
 @interface ZCPAFNetworkingTool : NSObject
 
-
 @end

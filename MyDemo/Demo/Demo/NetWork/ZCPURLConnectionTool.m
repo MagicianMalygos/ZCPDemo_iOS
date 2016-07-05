@@ -60,6 +60,7 @@
     return _requestThread;
 }
 - (void)requestThreadEntryPoint {
+    // 在线程中要使用autoreleasepool
     @autoreleasepool {
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         // 不让runloop进入休眠
