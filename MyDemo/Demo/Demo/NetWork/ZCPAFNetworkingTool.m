@@ -44,21 +44,14 @@
     return operation;
 }
 
-
 - (AFHTTPRequestOperation *)uploadRequest_AF {
     return nil;
 }
 - (AFHTTPRequestOperation *)downloadRequest_AF {
     
-    // HEAD 请求
-    
-    
-    
-    
-    /**
-     *  第一次只有当在文件读取结束的时候才能知道文件的大小
-     */
-    
+    // ! 当服务器返回的头信息中有Content-Length时，才能获取到下载文件的大小 !
+#pragma mark 公共部分
+    NSString *url = @"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/software/RTX_V1.1%20For%20Mac.dmg";
     // 创建请求队列管理者
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     // 设置request解析方式
@@ -66,10 +59,20 @@
     // 设置response解析方式
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    AFHTTPRequestOperation *operation = [manager GET:@"https://github.com/MagicianMalygos/MyDocuments/blob/master/%E5%9B%BE/AFNetworking%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png" parameters:@{} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@ %@", responseObject, [responseObject className]);
-        NSLog(@"\n- - - - - Request - - - - -\n%@\n\n - - - - - Response - - - - -\n%@", operation.request, operation.response);
+#pragma mark HEAD请求
+    AFHTTPRequestOperation *operationHEAD = [manager HEAD:url parameters:@{} success:^(AFHTTPRequestOperation *operation) {
         NSLog(@"头信息：%@, 编码方式：%@, 文件名：%@", operation.response.allHeaderFields, operation.response.textEncodingName, operation.response.suggestedFilename);
+        NSLog(@"Length: %lli\n", operation.response.expectedContentLength);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    }];
+    
+    /**
+     *  第一次只有当在文件读取结束的时候才能知道文件的大小
+     */
+    AFHTTPRequestOperation *operationGET = [manager GET:url parameters:@{} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //        NSLog(@"%@ %@", responseObject, [responseObject className]);
+        //        NSLog(@"\n- - - - - Request - - - - -\n%@\n\n - - - - - Response - - - - -\n%@", operation.request, operation.response);
+        //        NSLog(@"头信息：%@, 编码方式：%@, 文件名：%@", operation.response.allHeaderFields, operation.response.textEncodingName, operation.response.suggestedFilename);
         
         // 将下载得到的数据生成文件放在沙盒的Documents文件夹下
         // 沙盒路径 http://m.blog.csdn.net/article/details?id=51265014
@@ -80,6 +83,7 @@
         
         NSData *data = responseObject;
         [data writeToFile:fileDirectory atomically:YES];
+        
         
         // 获取Documents文件夹下所有文件名
         NSArray *files = [[NSArray alloc] initWithArray:[[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:nil]];
@@ -97,13 +101,13 @@
      *  @param totalBytesExpectedToRead 文件总大小
      *
      */
-    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+    [operationGET setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
         
         NSLog(@"读取字节数：%lu，已下载：%lli，总大小：%lli，当前下载进度：%f", (unsigned long)bytesRead, totalBytesRead, totalBytesExpectedToRead, (double)totalBytesRead / totalBytesExpectedToRead);
         
     }];
     
-    return operation;
+    return operationHEAD;
 }
 
 @end
