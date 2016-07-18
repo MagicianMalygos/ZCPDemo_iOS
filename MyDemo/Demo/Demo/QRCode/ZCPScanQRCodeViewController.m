@@ -8,6 +8,7 @@
 
 #import "ZCPScanQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "ZCPRecogniseQRCode.h"
 
 #define Ratio           ([[UIScreen mainScreen] bounds].size.width / 320.0)
 #define kValidX         (60 * Ratio)    // 有效扫描区X
@@ -156,7 +157,7 @@ static NSString     *kScanLineImageName     = @"scanLine";
             [session addOutput:output];
         }
         
-        // 6.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
+        // 8.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
         output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode];
         
         _session = session;
@@ -330,27 +331,23 @@ static NSString     *kScanLineImageName     = @"scanLine";
     
     [picker dismissViewControllerAnimated:YES completion:^{
         
-        // 2.从选中的图片中读取二维码数据
-        // 2.1创建检测器，检测类型为二维码
-        CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
-        // 2.2进行检测
-        NSArray *feature = [detector featuresInImage:[CIImage imageWithCGImage:pickerImage.CGImage]];
-        
-        if (feature.count != 0) {
-            // 2.3取出检测结果数据
-            for (CIQRCodeFeature *result in feature) {
-                NSString *urlStr = result.messageString;
-                [self handleQRCodeInfo:urlStr];
-            }
+        // 2.进行检测获取结果信息
+        NSString *resultInfo = [ZCPRecogniseQRCode recogniseFromUIImage:pickerImage];
+        if (resultInfo) {
+            // 2.1若有检测结果，则进行处理
+            [self handleQRCodeInfo:resultInfo];
         } else {
-            // 2.4若无检测结果，则提示未检测到二维码
+            // 2.2若无检测结果，则提示未检测到二维码
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"未扫描到有效二维码" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 // * * 结束本次扫描 * *
                 _processing = NO;
             }];
             [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
+            // 在主线程中显示alert
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:alertController animated:YES completion:nil];
+            });
         }
     }];
 }

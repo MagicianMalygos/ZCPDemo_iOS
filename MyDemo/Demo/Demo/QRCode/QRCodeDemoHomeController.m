@@ -9,6 +9,7 @@
 #import "QRCodeDemoHomeController.h"
 #import "ZCPScanQRCodeViewController.h"
 #import "ZCPGenerateQRCode.h"
+#import "ZCPRecogniseQRCode.h"
 
 @interface QRCodeDemoHomeController ()
 
@@ -68,14 +69,22 @@
     iv3.userInteractionEnabled = YES;
     WEAK_SELF;
     [iv3 addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        STRONG_SELF;
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         UIAlertAction *scanAction = [UIAlertAction actionWithTitle:@"扫描图中二维码" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            // 将获取图片中的二维码信息封装成一个单独的功能。
+            // 将获取图片中的二维码信息封装成一个单独的功能，传参UIImage，返回信息
+            if ([sender isKindOfClass:[UITapGestureRecognizer class]] && [((UITapGestureRecognizer *)sender).view isKindOfClass:[UIImageView class]]) {
+                UIImageView *iv = (UIImageView *)((UITapGestureRecognizer *)sender).view;
+                NSString *result = [ZCPRecogniseQRCode recogniseFromUIImage:iv.image];
+                NSLog(@"%@", result);
+            }
         }];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-        [alertControl addAction:scanAction];
         [alertControl addAction:cancelAction];
-        [weakSelf.navigationController presentViewController:alertControl animated:YES completion:nil];
+        [alertControl addAction:scanAction];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alertControl animated:YES completion:nil];
+        });
     }]];
     
     [self.view addSubview:scanQRCodeButton];
@@ -95,6 +104,8 @@
     UIImage *image2 = [ZCPGenerateQRCode imageBlackToTransparent:image withRed:100 green:24 blue:0];
     _iv1.image = image;
     _iv2.image = image2;
+    _iv3.image = image2;
+    [ZCPGenerateQRCode addShadow:[UIColor greenColor] forImageView:_iv3];
 }
 
 

@@ -217,6 +217,7 @@
 		9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BB1D2A850A0061664A /* libz.tbd */; };
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
+		FB114AB11D3CCDC700927094 /* ZCPRecogniseQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1568,6 +1569,8 @@
 		9E3E86BF1D2A86650061664A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A64F86DBCB8DEA9772D53AD7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB114AAF1D3CCDC700927094 /* ZCPRecogniseQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPRecogniseQRCode.h; sourceTree = "<group>"; };
+		FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPRecogniseQRCode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1774,6 +1777,8 @@
 				18CAA73B1D0D5B7D00A0E39D /* QRCodeDemoHomeController.m */,
 				18BEA2DD1D0D8A5A00F03E4C /* ZCPGenerateQRCode.h */,
 				18BEA2DE1D0D8A5A00F03E4C /* ZCPGenerateQRCode.m */,
+				FB114AAF1D3CCDC700927094 /* ZCPRecogniseQRCode.h */,
+				FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -4734,6 +4739,7 @@
 				18D6FCAF1D003E230034FCCE /* UIButton+Category.m in Sources */,
 				18D6FCDB1D003E230034FCCE /* TipsViewDemoHomeController.m in Sources */,
 				186EB0711D066C1D00BC4662 /* ZCPScanQRCodeViewController.m in Sources */,
+				FB114AB11D3CCDC700927094 /* ZCPRecogniseQRCode.m in Sources */,
 				18D6FCB81D003E230034FCCE /* ZCPDataModel.m in Sources */,
 				18D6FCBF1D003E230034FCCE /* ZCPButtonCell.m in Sources */,
 				187250601C91276C002D8C9E /* MyViewController.m in Sources */,
