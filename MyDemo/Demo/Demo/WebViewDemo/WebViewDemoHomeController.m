@@ -96,15 +96,17 @@
 - (void)loadRequestBtnClick {
     ZCPLog(@"loadRequestBtnClick!");
     // 设置请求
-//    NSURL *url = [NSURL URLWithString:@"http://ananzu.m.anpp.qa.anhouse.com.cn/event/list"];
-//    NSTimeInterval timeInterval = 60;
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:timeInterval];
-//    [self.webView loadRequest:request];
-    // 也可以设置加载文件请求
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"a" ofType:@"html"];
-    NSURL *url = [NSURL fileURLWithPath:filePath];
+    NSURL *url = [NSURL URLWithString:@"http://h5.baidu.com/"]; //
     NSTimeInterval timeInterval = 60;
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:timeInterval];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:timeInterval];
+    [self.webView loadRequest:request];
+    
+    // 也可以设置加载文件请求
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"a" ofType:@"html"];
+//    NSURL *url = [NSURL fileURLWithPath:filePath];
+//    NSTimeInterval timeInterval = 60;
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:timeInterval];
+    
     [self.webView loadRequest:request];
 }
 - (void)loadHTMLStringBtnClick {

@@ -15,4 +15,14 @@
 
 @interface ZCPAFNetworkingTool : NSObject
 
+- (AFHTTPRequestOperation *)getRequest_Asynchronous_AF;
+- (AFHTTPRequestOperation *)postRequest_Asynchronous_AF;
+- (AFHTTPRequestOperation *)uploadRequest_AF;
+- (AFHTTPRequestOperation *)downloadRequest_AF;
+
+- (AFHTTPRequestOperation *)getRequest_Asynchronous_AF_Session;
+- (AFHTTPRequestOperation *)postRequest_Asynchronous_AF_Session;
+- (NSURLSessionUploadTask *)uploadRequest_AF_Session;
+- (NSURLSessionDownloadTask *)downloadRequest_AF_Session;
+
 @end

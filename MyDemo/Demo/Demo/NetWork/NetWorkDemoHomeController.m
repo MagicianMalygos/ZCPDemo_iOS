@@ -51,6 +51,10 @@
                        , @{@"info": @"post异步 AF", @"sel": @"postRequest_Asynchronous_AF", @"type": @"AF"}
                        , @{@"info": @"上传 AF", @"sel": @"uploadRequest_AF", @"type": @"AF"}
                        , @{@"info": @"下载 AF", @"sel": @"downloadRequest_AF", @"type": @"AF"}
+                       , @{@"info": @"get异步 AF Session", @"sel": @"getRequest_Asynchronous_AF_Session", @"type": @"AF"}
+                       , @{@"info": @"post异步 AF Session", @"sel": @"postRequest_Asynchronous_AF_Session", @"type": @"AF"}
+                       , @{@"info": @"上传AF Session", @"sel": @"uploadRequest_AF_Session", @"type": @"AF"}
+                       , @{@"info": @"下载AF Session", @"sel": @"downloadRequest_AF_Session", @"type": @"AF"}
                        , @{@"info": @"测试", @"sel": @"test", @"type": @"self"}
                        ];
     }

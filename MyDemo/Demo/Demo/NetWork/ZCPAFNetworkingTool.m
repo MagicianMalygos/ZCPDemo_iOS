@@ -45,7 +45,12 @@
 }
 
 - (AFHTTPRequestOperation *)uploadRequest_AF {
-    return nil;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    AFHTTPRequestOperation *operation = [manager POST:@"" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    }];
+    return operation;
 }
 - (AFHTTPRequestOperation *)downloadRequest_AF {
     
@@ -106,8 +111,69 @@
         NSLog(@"读取字节数：%lu，已下载：%lli，总大小：%lli，当前下载进度：%f", (unsigned long)bytesRead, totalBytesRead, totalBytesExpectedToRead, (double)totalBytesRead / totalBytesExpectedToRead);
         
     }];
+    return operationGET;
+}
+
+- (NSURLSessionDataTask *)getRequest_Asynchronous_AF_Session {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSURLSessionDataTask *task = [manager GET:URL_STR parameters:URL_PARAMS_AF success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@ %@", responseObject, [responseObject className]);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Fetch Error: %@", error);
+    }];
+    return task;
+}
+- (NSURLSessionDataTask *)postRequest_Asynchronous_AF_Session {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSURLSessionDataTask *task = [manager POST:URL_STR parameters:URL_PARAMS_AF success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@ %@", responseObject, [responseObject className]);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Fetch Error: %@", error);
+    }];
+    return task;
+}
+- (NSURLSessionUploadTask *)uploadRequest_AF_Session {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    return operationHEAD;
+    NSURL *url = [NSURL URLWithString:@"http://example.com/upload"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURL *filePath = [NSURL fileURLWithPath:@"file:///Test/"];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+        }
+    }];
+    [uploadTask resume];
+    return uploadTask;
+}
+- (NSURLSessionDownloadTask *)downloadRequest_AF_Session {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/software/RTX_V1.1%20For%20Mac.dmg"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        
+        NSLog(@"%@ \n %@", targetPath, response);
+        
+        
+        // 将下载得到的数据生成文件放在沙盒的Documents文件夹下
+        // 沙盒路径 http://m.blog.csdn.net/article/details?id=51265014
+        NSArray *patchs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        // Documents路径
+        NSString *documentsDirectory = [patchs objectAtIndex:0];
+        NSString *fileDirectory = [documentsDirectory stringByAppendingPathComponent:response.suggestedFilename? response.suggestedFilename: @"未知文件"];
+        return [NSURL URLWithString:fileDirectory];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
+    }];
+    [downloadTask resume];
+    return downloadTask;
 }
 
 @end
