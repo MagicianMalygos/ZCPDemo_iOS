@@ -17,7 +17,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, 50, 50);
+    button.frame = CGRectMake(0, 0, 200, 50);
     [button setTitle:@"点击播放视频" forState:UIControlStateNormal];
     button.backgroundColor = [UIColor redColor];
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -30,6 +30,8 @@
 
 - (void)buttonClick:(UIButton *)button {
     LCVodViewController_UI *vc = [LCVodViewController_UI new];
+    vc.uu = @"xhwv5dggjv";
+    vc.vu = @"e32b9cb9ab";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

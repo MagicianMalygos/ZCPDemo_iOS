@@ -8,7 +8,7 @@
 
 #import "LCBaseViewController.h"
 
-@interface LCBaseViewController ()
+@interface LCBaseViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 - (void)showTips:(NSString *)tips

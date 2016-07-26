@@ -7,10 +7,12 @@
 //
 
 #import "LCVodViewController.h"
-#import "LCVodDownloadViewController.h"
+#import "TestDownloadViewController.h"
 #import "LECVODPlayer.h"
 
 #define LCRect_PlayerHalfFrame    CGRectMake(0, 50, [UIScreen mainScreen].bounds.size.width, 250);
+
+
 
 @interface LCVodViewController ()<LECPlayerDelegate>
 {
@@ -55,6 +57,7 @@
         _vodPlayer.delegate = self;
     }
     _playerView.frame = LCRect_PlayerHalfFrame;
+    
     _vodPlayer.videoView.frame = _playerView.bounds;
     _vodPlayer.videoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|
     UIViewAutoresizingFlexibleWidth|
@@ -64,25 +67,27 @@
     [_playerView sendSubviewToBack:_vodPlayer.videoView];
 
     __weak typeof(self) wSelf = self;
-    [_vodPlayer registerWithUu:kVod_UU
-                            vu:kVod_VU
-                    completion:^(BOOL result) {
-                        if (result)
-                        {
-                            NSLog(@"播放器注册成功");
-                            [wSelf play];//注册完成后自动播放
-                            wSelf.titleLabel.text = wSelf.vodPlayer.videoTitle;
-                            LCStreamRateItem * lItem = wSelf.vodPlayer.selectedStreamRateItem;
-                            wSelf.downloadBtn.enabled = _vodPlayer.allowDownload;
-                            [wSelf.playerRateBtn setTitle:lItem.name
-                                                 forState:(UIControlStateNormal)];
-                        }
-                        else
-                        {
-                            [self showTips:@"播放器注册失败,请检查UU和VU"];
-                            [_loadIndicatorView stopAnimating];
-                        }
-                    }];
+    if (self.vu) {
+        [_vodPlayer registerWithUu:self.uu
+                                vu:self.vu
+                        completion:^(BOOL result) {
+                            if (result)
+                            {
+                                NSLog(@"播放器注册成功");
+                                [wSelf play];//注册完成后自动播放
+                                wSelf.titleLabel.text = wSelf.vodPlayer.videoTitle;
+                                LECStreamRateItem * lItem = wSelf.vodPlayer.selectedStreamRateItem;
+                                wSelf.downloadBtn.enabled = _vodPlayer.allowDownload;
+                                [wSelf.playerRateBtn setTitle:lItem.name
+                                                     forState:(UIControlStateNormal)];
+                            }
+                            else
+                            {
+                                [self showTips:@"播放器注册失败,请检查UU和VU"];
+                                [_loadIndicatorView stopAnimating];
+                            }
+                        }];
+    }
 }
 
 #pragma mark - 播放控制
@@ -209,10 +214,17 @@
     {
         case LECPlayerContentTypeFeature:
             NSLog(@"正在播放正片");
+            _playStateBtn.hidden = NO;
+            self.playerRateBtn.hidden = NO;
+            [_loadIndicatorView stopAnimating];
+
             break;
         case LECPlayerContentTypeAdv:
             NSLog(@"正在播放广告");
             [_loadIndicatorView stopAnimating];
+            _playStateBtn.hidden = YES;
+            self.playerRateBtn.hidden = YES;
+
             break;
             
         default:
@@ -266,7 +278,7 @@
     
     NSArray * list = self.vodPlayer.streamRatesList;
     
-    for (LCStreamRateItem * lItem in list)
+    for (LECStreamRateItem * lItem in list)
     {
         if (lItem.isEnabled)
         {
@@ -289,8 +301,8 @@
 - (IBAction)clickToShowDownloadPage:(id)sender
 {
     [self pause];
-    LCVodDownloadViewController * viewController = [[LCVodDownloadViewController alloc] initWithNibName:@"LCVodDownloadViewController" bundle:nil uu:kVod_UU vu:kVod_VU rate:self.vodPlayer.selectedStreamRateItem];
-    [self.navigationController pushViewController:viewController
+    TestDownloadViewController *testDownloadViewController = [[TestDownloadViewController alloc] initWithNibName:@"TestDownloadViewController" bundle:nil];
+    [self.navigationController pushViewController:testDownloadViewController
                                          animated:YES];
 }
 
@@ -301,10 +313,20 @@
 }
 
 #pragma mark - 转屏处理逻辑
-- (void)viewWillLayoutSubviews
-{
-    if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation))
-    {
+
+-(void)shouldRotateToOrientation:(UIDeviceOrientation)orientation {
+    
+    if (orientation == UIDeviceOrientationPortrait ||orientation == UIDeviceOrientationPortraitUpsideDown) {
+        
+        // 竖屏
+        _isFullScreen = NO;
+        _playerView.frame = LCRect_PlayerHalfFrame;
+        
+    }
+    
+    else {
+        
+        // 横屏
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
         CGFloat height = [UIScreen mainScreen].bounds.size.height;
         if (width < height)
@@ -315,12 +337,13 @@
         }
         _isFullScreen = YES;
         _playerView.frame = CGRectMake(0, 0, width, height);
+        
     }
-    else
-    {
-        _isFullScreen = NO;
-        _playerView.frame = LCRect_PlayerHalfFrame;
-    }
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [self shouldRotateToOrientation:(UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation];
 }
 
 - (void)changeScreenAction

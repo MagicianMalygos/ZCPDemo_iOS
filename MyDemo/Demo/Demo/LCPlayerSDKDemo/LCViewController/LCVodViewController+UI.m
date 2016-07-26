@@ -7,13 +7,9 @@
 //
 
 #import "LCVodViewController+UI.h"
-#import "LCPlayerViewControl.h"
 
 
-@interface LCVodViewController_UI ()<LCPlayerControlDelegate>
-
-@property (nonatomic, strong) LCPlayerViewControl * control;
-@property (nonatomic, strong) UIView * lcPlayerView;
+@interface LCVodViewController_UI ()<LECPlayerControlDelegate>
 
 @end
 
@@ -21,38 +17,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _control = [[LCPlayerViewControl alloc] init];
+    _control = [[LECVodPlayerControl alloc] init];
+    // 在开启设备陀螺仪状态下是否允许自动转屏
+    _control.enableGravitySensor = YES;
+     // 设置在全屏状态下是否隐藏状态栏
     _control.hiddenStatusBarWhenFullScreen = YES;
-    _control.hiddenBackButton = NO;
-    _control.enableDownload = NO;
     _control.delegate = self;
-    _lcPlayerView = [_control createPlayerWithOwner:self frame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [_control registerVodPlayerWithUU:@"hqilswlgvx" vu:@"b12ff1eef5"];
-    NSLog(@"%d", _control.isFullScreen);
+    _control.enableDownload = YES;
+    
+    _lcPlayerView = [_control createPlayerWithOwner:self frame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
+    _lcPlayerView.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth;
+    [_control registerVodPlayerWithUU:self.uu vu:self.vu];
+    
     [self.view addSubview:_lcPlayerView];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
-- (BOOL)prefersStatusBarHidden
+//废弃播放器
+- (void)dealloc{
+    if (_control) {
+        [_control destroyPlayer];
+    }
+}
+
+#pragma mark - 转屏处理逻辑
+- (void)viewWillLayoutSubviews
 {
-    return [_control statusBarHiddenState];
+    CGRect frame = [_control shouldRotateToOrientation:(UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation];
+    if (!CGRectIsEmpty(frame))
+    {
+        _lcPlayerView.frame = frame;
+    }
 }
-
+#pragma mark - 设置是否自动转屏
 - (BOOL)shouldAutorotate
 {
-    return NO;
+    return  _control.autoRotation;
 }
 
-#pragma mark - LCPlayerControlDelegate
-- (void)lcPlayerControlDidClickBackBtn:(LCPlayerControl *)playerControl{
-    //销毁播放器
-    [_control destroyPlayer];
+#pragma mark - LECPlayerControlDelegate
+- (void)lecPlayerControlDidClickBackBtn:(NSObject *)playerControl{
+    if (_control) {
+        //销毁播放器
+        [_control destroyPlayer];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
-
+// 获取状态栏状态
+- (BOOL)prefersStatusBarHidden
+{
+    return _control.statusBarHiddenState;
+}
 
 #pragma mark - 按钮事件
 - (IBAction)clickToBack:(id)sender

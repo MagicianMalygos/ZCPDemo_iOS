@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ZCPDemoHomeController.h"
+//#import "LCPlayerService.h"
+#import "LECPlayerFoundation.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +23,13 @@
     // share相关
     [WeiboSDK enableDebugMode:YES];  // 设置调试模式
     [WeiboSDK registerApp:kAppKey];  // 向微博注册第三方应用
+    
+    // 乐视点播sdk 4.0.5
+//    [[LCPlayerService sharedService] startService];
+//    [[LCPlayerService sharedService] setFileLogLevel:LCPlayerServiceLogLevelInfo];
+//    [[LCPlayerService sharedService] setConsoleLogLevel:LCPlayerServiceLogLevelInfo];
+    // 乐视点播sdk 4.1.1
+    [[LECPlayerFoundation sharedFoundation] startService];
     
     ZCPDemoHomeController *vc = [ZCPDemoHomeController new];
     vc.view.backgroundColor = [UIColor whiteColor];

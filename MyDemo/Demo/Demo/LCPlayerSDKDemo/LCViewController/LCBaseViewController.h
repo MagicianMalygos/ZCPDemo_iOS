@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-#define kDuration  2.0f
+#define kDuration  1.0f
+
+
+typedef NS_ENUM(NSInteger, LCPlayType){
+    LCPlayIdType = 0, // 通过uu,vu播放
+    LCPlayUrlType = 1 // 通过url播放
+};
+
+typedef NS_ENUM(NSInteger, LCPlayerIdType){
+    LCPlayLiveIdType,
+    LCPlayStreamIdType,
+    LCPlayUrlAddressType
+};
 
 /*
  点播测试UU和VU
@@ -25,8 +37,11 @@
 /*
  活动测试ID
  */
-#define kActivity_ID   @"A2016032900000ai"
+#define kActivity_ID   @"A2016012101229"
 
+#define ViewWidth 320
+#define segmentY 70
+#define segmentH [UIScreen mainScreen].bounds.size.height
 
 
 /**
@@ -37,6 +52,15 @@
 
 @interface LCBaseViewController : UIViewController
 
+@property (nonatomic, strong) NSString *uu;
+
+@property (nonatomic, strong) NSString *vu;
+
+@property (nonatomic, strong) NSString *url;
+
+@property (nonatomic, assign) NSInteger type;
+
+@property (nonatomic, strong) NSString *activityId;
 
 - (void)showTips:(NSString *)tips;
 

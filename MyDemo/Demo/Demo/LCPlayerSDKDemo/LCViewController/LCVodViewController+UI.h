@@ -7,7 +7,7 @@
 //
 
 #import "LCBaseViewController.h"
-
+#import "LECVodPlayerControl.h"
 
 /**
  *  @author CC
@@ -15,5 +15,6 @@
  *  皮肤点播播放器页面
  */
 @interface LCVodViewController_UI : LCBaseViewController
-
+@property (nonatomic, strong) LECVodPlayerControl * control;
+@property (nonatomic, strong) UIView * lcPlayerView;
 @end
