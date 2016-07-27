@@ -1,4 +1,6 @@
 platform :ios, '7.0'
 inhibit_all_warnings!
 
-pod 'AFNetworking', '~> 2.5.4'
+target ‘AFNetworking3.0’ do
+pod 'AFNetworking', '~> 3.1.0'
+end
