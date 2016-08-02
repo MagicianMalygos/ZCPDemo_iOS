@@ -14,14 +14,16 @@
 - (void)GET {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.securityPolicy.allowInvalidCertificates = NO;
     
     [manager GET:@"http://www.weather.com.cn/data/sk/101010100.html" parameters:@{} progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"");
+        NSLog(@"GET LOG: %f", (CGFloat)downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"Success: %@", responseObject);
+        id dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"GET LOG: Success: %@", dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Error: %@", error);
+        NSLog(@"GET LOG: Error: %@", error);
     }];
 }
 - (void)POST {
@@ -30,11 +32,11 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
     [manager POST:@"http://www.weather.com.cn/data/sk/101010100.html" parameters:@{} progress:^(NSProgress * _Nonnull uploadProgress) {
-        NSLog(@"%f", (CGFloat)uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+        NSLog(@"POST LOG: %f", (CGFloat)uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"Success: %@", responseObject);
+        NSLog(@"POS LOG: Success: %@", responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Error: %@", error);
+        NSLog(@"GET LOG: Error: %@", error);
     }];
 }
 - (void)UPLOAD {
