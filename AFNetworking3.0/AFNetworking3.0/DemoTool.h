@@ -10,9 +10,9 @@
 
 @interface DemoTool : NSObject
 
-- (void)GET;
-- (void)POST;
-- (void)UPLOAD;
-- (void)DOWNLOAD;
+- (NSURLSessionTask *)GET;
+- (NSURLSessionTask *)POST;
+- (NSURLSessionTask *)UPLOAD;
+- (NSURLSessionTask *)DOWNLOAD;
 
 @end

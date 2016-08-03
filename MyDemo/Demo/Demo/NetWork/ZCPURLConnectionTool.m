@@ -204,6 +204,8 @@
     // 2.参数转换为NSData类型
 //    NSString *params = POST_URL_PARAMS;
     NSString *params = @"https://github.com/MagicianMalygos/MyDocuments/archive/master.zip";
+    [params stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
     NSData *paramsData = [params dataUsingEncoding:NSUTF8StringEncoding];
     // 3.request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:POST_URL];

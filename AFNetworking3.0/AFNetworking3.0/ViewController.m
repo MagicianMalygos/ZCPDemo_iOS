@@ -40,14 +40,17 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
-    cell.textLabel.text = [self.dataArr objectAtIndex:indexPath.row];
+    NSDictionary *dic = [self.dataArr objectAtIndex:indexPath.row];
+    NSString *textString = [dic objectForKey:@"text"];
+    cell.textLabel.text = textString;
 
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *selectorString = [self.dataArr objectAtIndex:indexPath.row];
+    NSDictionary *dic = [self.dataArr objectAtIndex:indexPath.row];
+    NSString *selectorString = [dic objectForKey:@"method"];
     SEL sel = NSSelectorFromString(selectorString);
     [[DemoTool new] performSelector:sel];
 }
@@ -63,7 +66,10 @@
 }
 - (NSArray *)dataArr {
     if (!_dataArr) {
-        _dataArr = @[@"GET", @"POST", @"上传", @"下载"];
+        _dataArr = @[@{@"text": @"GET", @"method": @"GET"},
+                     @{@"text": @"POST", @"method": @"POST"},
+                     @{@"text": @"上传", @"method": @"UPLOAD"},
+                     @{@"text": @"下载", @"method": @"DOWNLOAD"}];
     }
     return _dataArr;
 }
