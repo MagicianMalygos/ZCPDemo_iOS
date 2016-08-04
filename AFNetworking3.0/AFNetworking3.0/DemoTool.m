@@ -78,21 +78,24 @@ NSString *MakeURLString (NSString *scheme, NSString *host, NSString *path) {
     } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
     }];
+    [task resume];
     return task;
 }
 
 // 有问题
 - (NSURLSessionTask *)DOWNLOAD {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://25.io/mou/download/Mou_0.6.6.zip"]];
+    NSString *url = @"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/%E5%9B%BE/AFNetworking%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png";
+    url = @"http://25.io/mou/download/Mou_0.6.6.zip";
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"%lf", (CGFloat)downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         NSLog(@"DOWNLOAD LOG: 默认下载地址：%@", targetPath);
-        NSString *filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-        return [NSURL URLWithString:filePath];
+        NSURL *filePath = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]];
+        return [filePath URLByAppendingPathComponent:[response suggestedFilename]];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         if (error) {
             NSLog(@"DOWNLOAD LOG: 下载失败");
@@ -102,6 +105,7 @@ NSString *MakeURLString (NSString *scheme, NSString *host, NSString *path) {
             NSLog(@"DOWNLOAD LOG: %@", filePath);
         }
     }];
+    [task resume];
     return task;
 }
 
