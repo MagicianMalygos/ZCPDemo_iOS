@@ -48,7 +48,7 @@ NSString *MakeURLString (NSString *scheme, NSString *host, NSString *path) {
     return task;
 }
 
-// 有问题
+//
 - (NSURLSessionTask *)UPLOAD {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
@@ -78,13 +78,15 @@ NSString *MakeURLString (NSString *scheme, NSString *host, NSString *path) {
     } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
     }];
+    // 之前忘记写死活执行不了，唉
     [task resume];
     return task;
 }
 
-// 有问题
 - (NSURLSessionTask *)DOWNLOAD {
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    // 断点续传其实就是利用了http的range请求头
     
     NSString *url = @"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/%E5%9B%BE/AFNetworking%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png";
     url = @"http://25.io/mou/download/Mou_0.6.6.zip";
