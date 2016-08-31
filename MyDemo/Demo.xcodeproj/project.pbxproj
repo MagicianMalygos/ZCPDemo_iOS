@@ -171,7 +171,6 @@
 		18D6FCDB1D003E230034FCCE /* TipsViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6FCA71D003E230034FCCE /* TipsViewDemoHomeController.m */; };
 		18F8F6581D0517E200AE88AA /* NetWorkDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8F6571D0517E200AE88AA /* NetWorkDemoHomeController.m */; };
 		9CCEDFF0349A15355E79DF86 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */; };
-		9E3E82201D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3E821F1D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.m */; };
 		9E3E82841D2A83730061664A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82831D2A83730061664A /* AdSupport.framework */; };
 		9E3E82861D2A837B0061664A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82851D2A837B0061664A /* SystemConfiguration.framework */; };
 		9E3E82881D2A83830061664A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82871D2A83830061664A /* VideoToolbox.framework */; };
@@ -185,29 +184,6 @@
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
 		FB114AB11D3CCDC700927094 /* ZCPRecogniseQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */; };
-		FB223F991D4742C200642BD1 /* LCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F691D4742C200642BD1 /* LCBaseViewController.m */; };
-		FB223F9A1D4742C200642BD1 /* LCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F6B1D4742C200642BD1 /* LCPlayerViewController.m */; };
-		FB223F9B1D4742C200642BD1 /* LCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F6C1D4742C200642BD1 /* LCPlayerViewController.xib */; };
-		FB223F9C1D4742C200642BD1 /* LCVodView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F6E1D4742C200642BD1 /* LCVodView.m */; };
-		FB223F9D1D4742C200642BD1 /* LCVodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F6F1D4742C200642BD1 /* LCVodView.xib */; };
-		FB223F9E1D4742C200642BD1 /* LCVodViewController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F711D4742C200642BD1 /* LCVodViewController+UI.m */; };
-		FB223F9F1D4742C200642BD1 /* LCVodViewController+UI.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F721D4742C200642BD1 /* LCVodViewController+UI.xib */; };
-		FB223FA01D4742C200642BD1 /* LCVodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F741D4742C200642BD1 /* LCVodViewController.m */; };
-		FB223FA11D4742C200642BD1 /* LCVodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F751D4742C200642BD1 /* LCVodViewController.xib */; };
-		FB223FA21D4742C200642BD1 /* TestDownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F771D4742C200642BD1 /* TestDownloadTableViewCell.m */; };
-		FB223FA31D4742C200642BD1 /* TestDownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F781D4742C200642BD1 /* TestDownloadTableViewCell.xib */; };
-		FB223FA41D4742C200642BD1 /* TestDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB223F7A1D4742C200642BD1 /* TestDownloadViewController.m */; };
-		FB223FA51D4742C200642BD1 /* TestDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB223F7B1D4742C200642BD1 /* TestDownloadViewController.xib */; };
-		FB223FA61D4742C200642BD1 /* LCInfoResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB223F8E1D4742C200642BD1 /* LCInfoResource.bundle */; };
-		FB223FA71D4742C200642BD1 /* LECPlayerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB223F8F1D4742C200642BD1 /* LECPlayerResource.bundle */; };
-		FB223FA81D4742C200642BD1 /* LECPlayerUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB223F901D4742C200642BD1 /* LECPlayerUIResource.bundle */; };
-		FB223FA91D4742C200642BD1 /* LECVodPlayerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB223F911D4742C200642BD1 /* LECVodPlayerResource.bundle */; };
-		FB223FAA1D4742C200642BD1 /* libLECPlayerFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F931D4742C200642BD1 /* libLECPlayerFoundation.a */; };
-		FB223FAB1D4742C200642BD1 /* libLECPlayerUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F941D4742C200642BD1 /* libLECPlayerUIKit.a */; };
-		FB223FAC1D4742C200642BD1 /* libLECVodPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F951D4742C200642BD1 /* libLECVodPlayerSDK.a */; };
-		FB223FAD1D4742C200642BD1 /* libLECVodPlayerUISDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F961D4742C200642BD1 /* libLECVodPlayerUISDK.a */; };
-		FB223FAE1D4742C200642BD1 /* libReachbility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F971D4742C200642BD1 /* libReachbility.a */; };
-		FB223FAF1D4742C200642BD1 /* libZipArchive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB223F981D4742C200642BD1 /* libZipArchive.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -550,8 +526,6 @@
 		18F8F6561D0517E200AE88AA /* NetWorkDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkDemoHomeController.h; sourceTree = "<group>"; };
 		18F8F6571D0517E200AE88AA /* NetWorkDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkDemoHomeController.m; sourceTree = "<group>"; };
 		7D08670972DB97FE5738009B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9E3E821E1D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPlayerSDKDemoHomeController.h; sourceTree = "<group>"; };
-		9E3E821F1D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPlayerSDKDemoHomeController.m; sourceTree = "<group>"; };
 		9E3E82831D2A83730061664A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E3E82851D2A837B0061664A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E3E82871D2A83830061664A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -1500,48 +1474,6 @@
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB114AAF1D3CCDC700927094 /* ZCPRecogniseQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPRecogniseQRCode.h; sourceTree = "<group>"; };
 		FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPRecogniseQRCode.m; sourceTree = "<group>"; };
-		FB223F681D4742C200642BD1 /* LCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBaseViewController.h; sourceTree = "<group>"; };
-		FB223F691D4742C200642BD1 /* LCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBaseViewController.m; sourceTree = "<group>"; };
-		FB223F6A1D4742C200642BD1 /* LCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPlayerViewController.h; sourceTree = "<group>"; };
-		FB223F6B1D4742C200642BD1 /* LCPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPlayerViewController.m; sourceTree = "<group>"; };
-		FB223F6C1D4742C200642BD1 /* LCPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCPlayerViewController.xib; sourceTree = "<group>"; };
-		FB223F6D1D4742C200642BD1 /* LCVodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVodView.h; sourceTree = "<group>"; };
-		FB223F6E1D4742C200642BD1 /* LCVodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVodView.m; sourceTree = "<group>"; };
-		FB223F6F1D4742C200642BD1 /* LCVodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCVodView.xib; sourceTree = "<group>"; };
-		FB223F701D4742C200642BD1 /* LCVodViewController+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LCVodViewController+UI.h"; sourceTree = "<group>"; };
-		FB223F711D4742C200642BD1 /* LCVodViewController+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LCVodViewController+UI.m"; sourceTree = "<group>"; };
-		FB223F721D4742C200642BD1 /* LCVodViewController+UI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LCVodViewController+UI.xib"; sourceTree = "<group>"; };
-		FB223F731D4742C200642BD1 /* LCVodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCVodViewController.h; sourceTree = "<group>"; };
-		FB223F741D4742C200642BD1 /* LCVodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCVodViewController.m; sourceTree = "<group>"; };
-		FB223F751D4742C200642BD1 /* LCVodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCVodViewController.xib; sourceTree = "<group>"; };
-		FB223F761D4742C200642BD1 /* TestDownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDownloadTableViewCell.h; sourceTree = "<group>"; };
-		FB223F771D4742C200642BD1 /* TestDownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDownloadTableViewCell.m; sourceTree = "<group>"; };
-		FB223F781D4742C200642BD1 /* TestDownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDownloadTableViewCell.xib; sourceTree = "<group>"; };
-		FB223F791D4742C200642BD1 /* TestDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDownloadViewController.h; sourceTree = "<group>"; };
-		FB223F7A1D4742C200642BD1 /* TestDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDownloadViewController.m; sourceTree = "<group>"; };
-		FB223F7B1D4742C200642BD1 /* TestDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestDownloadViewController.xib; sourceTree = "<group>"; };
-		FB223F7F1D4742C200642BD1 /* LECGlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECGlobalDefine.h; sourceTree = "<group>"; };
-		FB223F801D4742C200642BD1 /* LECPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayer.h; sourceTree = "<group>"; };
-		FB223F811D4742C200642BD1 /* LECPlayerFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayerFoundation.h; sourceTree = "<group>"; };
-		FB223F821D4742C200642BD1 /* LECPlayerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayerOption.h; sourceTree = "<group>"; };
-		FB223F831D4742C200642BD1 /* LECStreamRateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECStreamRateItem.h; sourceTree = "<group>"; };
-		FB223F851D4742C200642BD1 /* LECPlayerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayerControl.h; sourceTree = "<group>"; };
-		FB223F861D4742C200642BD1 /* LECPlayerUIDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayerUIDefine.h; sourceTree = "<group>"; };
-		FB223F871D4742C200642BD1 /* LECPlayerUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECPlayerUIProtocol.h; sourceTree = "<group>"; };
-		FB223F891D4742C200642BD1 /* LECVODDownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECVODDownloadItem.h; sourceTree = "<group>"; };
-		FB223F8A1D4742C200642BD1 /* LECVODDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECVODDownloadManager.h; sourceTree = "<group>"; };
-		FB223F8B1D4742C200642BD1 /* LECVODPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECVODPlayer.h; sourceTree = "<group>"; };
-		FB223F8D1D4742C200642BD1 /* LECVodPlayerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECVodPlayerControl.h; sourceTree = "<group>"; };
-		FB223F8E1D4742C200642BD1 /* LCInfoResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LCInfoResource.bundle; sourceTree = "<group>"; };
-		FB223F8F1D4742C200642BD1 /* LECPlayerResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LECPlayerResource.bundle; sourceTree = "<group>"; };
-		FB223F901D4742C200642BD1 /* LECPlayerUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LECPlayerUIResource.bundle; sourceTree = "<group>"; };
-		FB223F911D4742C200642BD1 /* LECVodPlayerResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LECVodPlayerResource.bundle; sourceTree = "<group>"; };
-		FB223F931D4742C200642BD1 /* libLECPlayerFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLECPlayerFoundation.a; sourceTree = "<group>"; };
-		FB223F941D4742C200642BD1 /* libLECPlayerUIKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLECPlayerUIKit.a; sourceTree = "<group>"; };
-		FB223F951D4742C200642BD1 /* libLECVodPlayerSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLECVodPlayerSDK.a; sourceTree = "<group>"; };
-		FB223F961D4742C200642BD1 /* libLECVodPlayerUISDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLECVodPlayerUISDK.a; sourceTree = "<group>"; };
-		FB223F971D4742C200642BD1 /* libReachbility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libReachbility.a; sourceTree = "<group>"; };
-		FB223F981D4742C200642BD1 /* libZipArchive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libZipArchive.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1549,8 +1481,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB223FAE1D4742C200642BD1 /* libReachbility.a in Frameworks */,
-				FB223FAB1D4742C200642BD1 /* libLECPlayerUIKit.a in Frameworks */,
 				9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */,
 				9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */,
 				9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */,
@@ -1558,14 +1488,10 @@
 				9E3E86B81D2A84D70061664A /* libxml2.2.tbd in Frameworks */,
 				9E3E86B61D2A84BB0061664A /* libz.1.2.5.tbd in Frameworks */,
 				9E3E828E1D2A83990061664A /* CoreLocation.framework in Frameworks */,
-				FB223FAA1D4742C200642BD1 /* libLECPlayerFoundation.a in Frameworks */,
-				FB223FAF1D4742C200642BD1 /* libZipArchive.a in Frameworks */,
 				9E3E828C1D2A83920061664A /* CoreMedia.framework in Frameworks */,
-				FB223FAD1D4742C200642BD1 /* libLECVodPlayerUISDK.a in Frameworks */,
 				9E3E828A1D2A838B0061664A /* AudioToolbox.framework in Frameworks */,
 				9E3E82881D2A83830061664A /* VideoToolbox.framework in Frameworks */,
 				9E3E82861D2A837B0061664A /* SystemConfiguration.framework in Frameworks */,
-				FB223FAC1D4742C200642BD1 /* libLECVodPlayerSDK.a in Frameworks */,
 				9E3E82841D2A83730061664A /* AdSupport.framework in Frameworks */,
 				9CCEDFF0349A15355E79DF86 /* libPods.a in Frameworks */,
 				18BA09631C98F6D500550379 /* libWeiboSDK.a in Frameworks */,
@@ -1785,7 +1711,6 @@
 		187250241C91189A002D8C9E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				9E3E821D1D2A7E800061664A /* LCPlayerSDKDemo */,
 				188E90451D100282006D0664 /* UI */,
 				188E90441D10021D006D0664 /* 多线程(X) */,
 				18CAA7321D0CF7B400A0E39D /* Category */,
@@ -2389,17 +2314,6 @@
 				18A4C8A61D0EC69C0072F098 /* ZCPAFNetworkingTool.m */,
 			);
 			path = NetWork;
-			sourceTree = "<group>";
-		};
-		9E3E821D1D2A7E800061664A /* LCPlayerSDKDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F671D4742C200642BD1 /* LCViewController */,
-				FB223F7C1D4742C200642BD1 /* SDK4.1.1 */,
-				9E3E821E1D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.h */,
-				9E3E821F1D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.m */,
-			);
-			path = LCPlayerSDKDemo;
 			sourceTree = "<group>";
 		};
 		9E3E828F1D2A84A30061664A /* MyDemo */ = {
@@ -4275,110 +4189,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FB223F671D4742C200642BD1 /* LCViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F681D4742C200642BD1 /* LCBaseViewController.h */,
-				FB223F691D4742C200642BD1 /* LCBaseViewController.m */,
-				FB223F6A1D4742C200642BD1 /* LCPlayerViewController.h */,
-				FB223F6B1D4742C200642BD1 /* LCPlayerViewController.m */,
-				FB223F6C1D4742C200642BD1 /* LCPlayerViewController.xib */,
-				FB223F6D1D4742C200642BD1 /* LCVodView.h */,
-				FB223F6E1D4742C200642BD1 /* LCVodView.m */,
-				FB223F6F1D4742C200642BD1 /* LCVodView.xib */,
-				FB223F701D4742C200642BD1 /* LCVodViewController+UI.h */,
-				FB223F711D4742C200642BD1 /* LCVodViewController+UI.m */,
-				FB223F721D4742C200642BD1 /* LCVodViewController+UI.xib */,
-				FB223F731D4742C200642BD1 /* LCVodViewController.h */,
-				FB223F741D4742C200642BD1 /* LCVodViewController.m */,
-				FB223F751D4742C200642BD1 /* LCVodViewController.xib */,
-				FB223F761D4742C200642BD1 /* TestDownloadTableViewCell.h */,
-				FB223F771D4742C200642BD1 /* TestDownloadTableViewCell.m */,
-				FB223F781D4742C200642BD1 /* TestDownloadTableViewCell.xib */,
-				FB223F791D4742C200642BD1 /* TestDownloadViewController.h */,
-				FB223F7A1D4742C200642BD1 /* TestDownloadViewController.m */,
-				FB223F7B1D4742C200642BD1 /* TestDownloadViewController.xib */,
-			);
-			path = LCViewController;
-			sourceTree = "<group>";
-		};
-		FB223F7C1D4742C200642BD1 /* SDK4.1.1 */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F7D1D4742C200642BD1 /* inc */,
-				FB223F8E1D4742C200642BD1 /* LCInfoResource.bundle */,
-				FB223F8F1D4742C200642BD1 /* LECPlayerResource.bundle */,
-				FB223F901D4742C200642BD1 /* LECPlayerUIResource.bundle */,
-				FB223F911D4742C200642BD1 /* LECVodPlayerResource.bundle */,
-				FB223F921D4742C200642BD1 /* Libs */,
-			);
-			path = SDK4.1.1;
-			sourceTree = "<group>";
-		};
-		FB223F7D1D4742C200642BD1 /* inc */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F7E1D4742C200642BD1 /* LECPlayerFoundation */,
-				FB223F841D4742C200642BD1 /* LECPlayerUIKit */,
-				FB223F881D4742C200642BD1 /* LECVodPlayerSDK */,
-				FB223F8C1D4742C200642BD1 /* LECVodPlayerUISDK */,
-			);
-			path = inc;
-			sourceTree = "<group>";
-		};
-		FB223F7E1D4742C200642BD1 /* LECPlayerFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F7F1D4742C200642BD1 /* LECGlobalDefine.h */,
-				FB223F801D4742C200642BD1 /* LECPlayer.h */,
-				FB223F811D4742C200642BD1 /* LECPlayerFoundation.h */,
-				FB223F821D4742C200642BD1 /* LECPlayerOption.h */,
-				FB223F831D4742C200642BD1 /* LECStreamRateItem.h */,
-			);
-			path = LECPlayerFoundation;
-			sourceTree = "<group>";
-		};
-		FB223F841D4742C200642BD1 /* LECPlayerUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F851D4742C200642BD1 /* LECPlayerControl.h */,
-				FB223F861D4742C200642BD1 /* LECPlayerUIDefine.h */,
-				FB223F871D4742C200642BD1 /* LECPlayerUIProtocol.h */,
-			);
-			path = LECPlayerUIKit;
-			sourceTree = "<group>";
-		};
-		FB223F881D4742C200642BD1 /* LECVodPlayerSDK */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F891D4742C200642BD1 /* LECVODDownloadItem.h */,
-				FB223F8A1D4742C200642BD1 /* LECVODDownloadManager.h */,
-				FB223F8B1D4742C200642BD1 /* LECVODPlayer.h */,
-			);
-			path = LECVodPlayerSDK;
-			sourceTree = "<group>";
-		};
-		FB223F8C1D4742C200642BD1 /* LECVodPlayerUISDK */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F8D1D4742C200642BD1 /* LECVodPlayerControl.h */,
-			);
-			path = LECVodPlayerUISDK;
-			sourceTree = "<group>";
-		};
-		FB223F921D4742C200642BD1 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				FB223F931D4742C200642BD1 /* libLECPlayerFoundation.a */,
-				FB223F941D4742C200642BD1 /* libLECPlayerUIKit.a */,
-				FB223F951D4742C200642BD1 /* libLECVodPlayerSDK.a */,
-				FB223F961D4742C200642BD1 /* libLECVodPlayerUISDK.a */,
-				FB223F971D4742C200642BD1 /* libReachbility.a */,
-				FB223F981D4742C200642BD1 /* libZipArchive.a */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4508,25 +4318,19 @@
 				187250431C911FA0002D8C9E /* a.html in Resources */,
 				184439A51D002E5B00FDD7F7 /* tips_page_done.png in Resources */,
 				184D75211C97A9B70068D686 /* default.png in Resources */,
-				FB223F9B1D4742C200642BD1 /* LCPlayerViewController.xib in Resources */,
 				1844399B1D0012C700FDD7F7 /* tips_page_arrow_down@3x.png in Resources */,
-				FB223FA71D4742C200642BD1 /* LECPlayerResource.bundle in Resources */,
-				FB223FA31D4742C200642BD1 /* TestDownloadTableViewCell.xib in Resources */,
 				18A5014C1C92BE67006EBEB4 /* 005.jpg in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
 				1839DCC81C97FF16002EA526 /* objc_msgSend.png in Resources */,
-				FB223FA61D4742C200642BD1 /* LCInfoResource.bundle in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
 				1839DCC71C97FF16002EA526 /* class.png in Resources */,
 				1844399C1D0012C700FDD7F7 /* tips_page_next_step.png in Resources */,
 				1897E2961D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png in Resources */,
 				187250381C91189A002D8C9E /* Main.storyboard in Resources */,
-				FB223FA81D4742C200642BD1 /* LECPlayerUIResource.bundle in Resources */,
 				18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */,
 				184439991D0012C700FDD7F7 /* tips_page_arrow_down.png in Resources */,
 				184439A01D0012C700FDD7F7 /* tips_page_star@2x.png in Resources */,
 				1897E2981D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png in Resources */,
-				FB223FA51D4742C200642BD1 /* TestDownloadViewController.xib in Resources */,
 				186EB0701D066C1D00BC4662 /* scanLine@3x.png in Resources */,
 				1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */,
 				187250361C91189A002D8C9E /* Assets.xcassets in Resources */,
@@ -4534,8 +4338,6 @@
 				18CAA7391D0D587500A0E39D /* turn_on.png in Resources */,
 				1844399D1D0012C700FDD7F7 /* tips_page_next_step@2x.png in Resources */,
 				18A5014B1C92BE67006EBEB4 /* 004.jpg in Resources */,
-				FB223FA91D4742C200642BD1 /* LECVodPlayerResource.bundle in Resources */,
-				FB223F9F1D4742C200642BD1 /* LCVodViewController+UI.xib in Resources */,
 				184439A61D002E5B00FDD7F7 /* tips_page_done@2x.png in Resources */,
 				1897E2951D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png in Resources */,
 				184439961D0012C700FDD7F7 /* tips_page_arrow.png in Resources */,
@@ -4545,7 +4347,6 @@
 				1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */,
 				1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */,
 				186EB06F1D066C1D00BC4662 /* scanLine@2x.png in Resources */,
-				FB223F9D1D4742C200642BD1 /* LCVodView.xib in Resources */,
 				184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */,
 				18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */,
 				1844399A1D0012C700FDD7F7 /* tips_page_arrow_down@2x.png in Resources */,
@@ -4554,7 +4355,6 @@
 				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
 				184439A11D0012C700FDD7F7 /* tips_page_star@3x.png in Resources */,
-				FB223FA11D4742C200642BD1 /* LCVodViewController.xib in Resources */,
 				1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */,
 				18BA09641C98F6D500550379 /* WeiboSDK.bundle in Resources */,
 				1844399E1D0012C700FDD7F7 /* tips_page_next_step@3x.png in Resources */,
@@ -4627,8 +4427,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1839DCCE1C97FF16002EA526 /* ZCPImageCircleView.m in Sources */,
-				FB223F9C1D4742C200642BD1 /* LCVodView.m in Sources */,
-				FB223F9E1D4742C200642BD1 /* LCVodViewController+UI.m in Sources */,
 				1839DCCC1C97FF16002EA526 /* RuntimeTest3.m in Sources */,
 				18D6FCBC1D003E230034FCCE /* ZCPNavigationController.m in Sources */,
 				18D6FCC31D003E230034FCCE /* ZCPTableViewCell.m in Sources */,
@@ -4640,7 +4438,6 @@
 				1872504C1C9123CF002D8C9E /* AlertViewDemoHomeController.m in Sources */,
 				18D6FCC21D003E230034FCCE /* ZCPSectionCell.m in Sources */,
 				18D6FCB11D003E230034FCCE /* UIFont+Category.m in Sources */,
-				FB223F9A1D4742C200642BD1 /* LCPlayerViewController.m in Sources */,
 				1839DCCA1C97FF16002EA526 /* RuntimeTest1.m in Sources */,
 				18BA096B1C98F80A00550379 /* ShareDemoHomeController.m in Sources */,
 				18D6FCC91D003E230034FCCE /* ZCPNetworkDataConstructor.m in Sources */,
@@ -4649,7 +4446,6 @@
 				1839DCDA1C980787002EA526 /* YYFPSLabel.m in Sources */,
 				18D6FCBD1D003E230034FCCE /* ZCPTabBarController.m in Sources */,
 				1839DCD01C97FF16002EA526 /* SetFilletDemoHomeController.m in Sources */,
-				FB223F991D4742C200642BD1 /* LCBaseViewController.m in Sources */,
 				18D6FCB51D003E230034FCCE /* UIScrollView+ExtraMethod.m in Sources */,
 				18D6FCB61D003E230034FCCE /* UIViewController+Category.m in Sources */,
 				18A4C8A71D0EC69C0072F098 /* ZCPAFNetworkingTool.m in Sources */,
@@ -4663,7 +4459,6 @@
 				1839DCC91C97FF16002EA526 /* RuntimeDemo.m in Sources */,
 				1839DCC61C97FF16002EA526 /* OtherDemoHomeController.m in Sources */,
 				18D6FCC41D003E230034FCCE /* ZCPTableViewWithLineCell.m in Sources */,
-				FB223FA01D4742C200642BD1 /* LCVodViewController.m in Sources */,
 				18F8F6581D0517E200AE88AA /* NetWorkDemoHomeController.m in Sources */,
 				18D6FCB71D003E230034FCCE /* ZCPTableViewCell+Category.m in Sources */,
 				18D6FCBE1D003E230034FCCE /* ZCPListTableViewAdaptor.m in Sources */,
@@ -4676,13 +4471,11 @@
 				18D6FCCE1D003E230034FCCE /* ZCPRequestResponseTranslator.m in Sources */,
 				1872509F1C917E29002D8C9E /* FontDemoHomeControllerViewController.m in Sources */,
 				187250341C91189A002D8C9E /* AppDelegate.m in Sources */,
-				FB223FA21D4742C200642BD1 /* TestDownloadTableViewCell.m in Sources */,
 				1839DCCF1C97FF16002EA526 /* ZCPPhotoCarouselView.m in Sources */,
 				18D6FCD81D003E230034FCCE /* ZCPViewController.m in Sources */,
 				18A4C8A11D0EAEB60072F098 /* ZCPURLConnectionTool.m in Sources */,
 				1809638C1D011266004BE0F2 /* ProcessViewDemoHomeController.m in Sources */,
 				1897E2861D015C5A002BEE0D /* TBDemoVC1.m in Sources */,
-				9E3E82201D2A7EAE0061664A /* LCPlayerSDKDemoHomeController.m in Sources */,
 				18BA09681C98F6F000550379 /* WeiXinShareDemoHomeController.m in Sources */,
 				18CAA73C1D0D5B7D00A0E39D /* QRCodeDemoHomeController.m in Sources */,
 				1839DCC31C97FF16002EA526 /* ClassASub.m in Sources */,
@@ -4716,7 +4509,6 @@
 				18D6FCB81D003E230034FCCE /* ZCPDataModel.m in Sources */,
 				18D6FCBF1D003E230034FCCE /* ZCPButtonCell.m in Sources */,
 				187250601C91276C002D8C9E /* MyViewController.m in Sources */,
-				FB223FA41D4742C200642BD1 /* TestDownloadViewController.m in Sources */,
 				1812C9EC1C96B3A900E387EE /* CollectionViewDemoHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
