@@ -184,6 +184,13 @@
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
 		FB114AB11D3CCDC700927094 /* ZCPRecogniseQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */; };
+		FB81A8DA1DAB3F5F00B6F46E /* PaletteDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8D81DAB3F5F00B6F46E /* PaletteDemoHomeController.m */; };
+		FB81A8DB1DAB3F5F00B6F46E /* PaletteDemoHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB81A8D91DAB3F5F00B6F46E /* PaletteDemoHomeController.xib */; };
+		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
+		FB81A8E11DAB402700B6F46E /* QuartzCorePaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8DF1DAB402700B6F46E /* QuartzCorePaletteViewController.m */; };
+		FB81A8E21DAB402700B6F46E /* QuartzCorePaletteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB81A8E01DAB402700B6F46E /* QuartzCorePaletteViewController.xib */; };
+		FB81A8E51DAB435100B6F46E /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8E41DAB435100B6F46E /* Line.m */; };
+		FB81A8E81DAB452400B6F46E /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8E71DAB452400B6F46E /* TouchDrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1474,6 +1481,17 @@
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB114AAF1D3CCDC700927094 /* ZCPRecogniseQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPRecogniseQRCode.h; sourceTree = "<group>"; };
 		FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPRecogniseQRCode.m; sourceTree = "<group>"; };
+		FB81A8D71DAB3F5F00B6F46E /* PaletteDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteDemoHomeController.h; sourceTree = "<group>"; };
+		FB81A8D81DAB3F5F00B6F46E /* PaletteDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteDemoHomeController.m; sourceTree = "<group>"; };
+		FB81A8D91DAB3F5F00B6F46E /* PaletteDemoHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaletteDemoHomeController.xib; sourceTree = "<group>"; };
+		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB81A8DE1DAB402700B6F46E /* QuartzCorePaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzCorePaletteViewController.h; sourceTree = "<group>"; };
+		FB81A8DF1DAB402700B6F46E /* QuartzCorePaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzCorePaletteViewController.m; sourceTree = "<group>"; };
+		FB81A8E01DAB402700B6F46E /* QuartzCorePaletteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuartzCorePaletteViewController.xib; sourceTree = "<group>"; };
+		FB81A8E31DAB435100B6F46E /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		FB81A8E41DAB435100B6F46E /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		FB81A8E61DAB452400B6F46E /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDrawView.h; sourceTree = "<group>"; };
+		FB81A8E71DAB452400B6F46E /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1481,6 +1499,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */,
 				9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */,
 				9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */,
 				9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */,
@@ -1711,6 +1730,7 @@
 		187250241C91189A002D8C9E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FB81A8D61DAB3F3800B6F46E /* PaletteDemo */,
 				188E90451D100282006D0664 /* UI */,
 				188E90441D10021D006D0664 /* 多线程(X) */,
 				18CAA7321D0CF7B400A0E39D /* Category */,
@@ -1728,11 +1748,11 @@
 				1872505B1C91276C002D8C9E /* PageVCDemo */,
 				187250491C9123CF002D8C9E /* AlertViewDemo */,
 				187250451C9120C3002D8C9E /* SizeToFitDemo */,
+				187250291C91189A002D8C9E /* WebViewDemo */,
 				187250251C91189A002D8C9E /* AppDelegate.h */,
 				187250261C91189A002D8C9E /* AppDelegate.m */,
 				1872503C1C9118CE002D8C9E /* ZCPDemoHomeController.h */,
 				1872503D1C9118CE002D8C9E /* ZCPDemoHomeController.m */,
-				187250291C91189A002D8C9E /* WebViewDemo */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -4171,6 +4191,7 @@
 		D10722E32930B68D8F858ED5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */,
 				9E3E86BF1D2A86650061664A /* libstdc++.tbd */,
 				9E3E86BD1D2A85240061664A /* libiconv.tbd */,
 				9E3E86BB1D2A850A0061664A /* libz.tbd */,
@@ -4187,6 +4208,23 @@
 				AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB81A8D61DAB3F3800B6F46E /* PaletteDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FB81A8D71DAB3F5F00B6F46E /* PaletteDemoHomeController.h */,
+				FB81A8D81DAB3F5F00B6F46E /* PaletteDemoHomeController.m */,
+				FB81A8D91DAB3F5F00B6F46E /* PaletteDemoHomeController.xib */,
+				FB81A8DE1DAB402700B6F46E /* QuartzCorePaletteViewController.h */,
+				FB81A8DF1DAB402700B6F46E /* QuartzCorePaletteViewController.m */,
+				FB81A8E01DAB402700B6F46E /* QuartzCorePaletteViewController.xib */,
+				FB81A8E31DAB435100B6F46E /* Line.h */,
+				FB81A8E41DAB435100B6F46E /* Line.m */,
+				FB81A8E61DAB452400B6F46E /* TouchDrawView.h */,
+				FB81A8E71DAB452400B6F46E /* TouchDrawView.m */,
+			);
+			path = PaletteDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4334,6 +4372,7 @@
 				186EB0701D066C1D00BC4662 /* scanLine@3x.png in Resources */,
 				1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */,
 				187250361C91189A002D8C9E /* Assets.xcassets in Resources */,
+				FB81A8DB1DAB3F5F00B6F46E /* PaletteDemoHomeController.xib in Resources */,
 				186EB06E1D066C1D00BC4662 /* scanBackground@3x.png in Resources */,
 				18CAA7391D0D587500A0E39D /* turn_on.png in Resources */,
 				1844399D1D0012C700FDD7F7 /* tips_page_next_step@2x.png in Resources */,
@@ -4348,6 +4387,7 @@
 				1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */,
 				186EB06F1D066C1D00BC4662 /* scanLine@2x.png in Resources */,
 				184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */,
+				FB81A8E21DAB402700B6F46E /* QuartzCorePaletteViewController.xib in Resources */,
 				18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */,
 				1844399A1D0012C700FDD7F7 /* tips_page_arrow_down@2x.png in Resources */,
 				186EB06D1D066C1D00BC4662 /* scanBackground@2x.png in Resources */,
@@ -4434,6 +4474,7 @@
 				18D6FCA81D003E230034FCCE /* NSDate+Category.m in Sources */,
 				18D6FCCF1D003E230034FCCE /* ZCPRequestManager.m in Sources */,
 				18D6FCB01D003E230034FCCE /* UIColor+Category.m in Sources */,
+				FB81A8E11DAB402700B6F46E /* QuartzCorePaletteViewController.m in Sources */,
 				187250681C914B8B002D8C9E /* CameraAndAlbumDemoHomeController.m in Sources */,
 				1872504C1C9123CF002D8C9E /* AlertViewDemoHomeController.m in Sources */,
 				18D6FCC21D003E230034FCCE /* ZCPSectionCell.m in Sources */,
@@ -4487,8 +4528,10 @@
 				1897E2831D015C3C002BEE0D /* TabBarDemoHomeController.m in Sources */,
 				18D6FCA91D003E230034FCCE /* NSDateFormatter+ExtraMethod.m in Sources */,
 				18BA09651C98F6D500550379 /* SinaShareDemoHomeController.m in Sources */,
+				FB81A8E81DAB452400B6F46E /* TouchDrawView.m in Sources */,
 				18D6FCDA1D003E230034FCCE /* TipsView.m in Sources */,
 				18A4C8A41D0EAEC60072F098 /* ZCPURLSessionTool.m in Sources */,
+				FB81A8E51DAB435100B6F46E /* Line.m in Sources */,
 				187250481C9120C3002D8C9E /* SizeToFitDemoHomeController.m in Sources */,
 				189888A71CBCDEFA00F0A75E /* AlgorithmDemo.m in Sources */,
 				1839DCD31C97FF6B002EA526 /* SetFilletTestCell.m in Sources */,
@@ -4496,6 +4539,7 @@
 				1897E2891D015C66002BEE0D /* TBDemoVC2.m in Sources */,
 				1839DCC01C97FF16002EA526 /* MacroDemo.m in Sources */,
 				18CAA7351D0CF7F800A0E39D /* NSString+Category.m in Sources */,
+				FB81A8DA1DAB3F5F00B6F46E /* PaletteDemoHomeController.m in Sources */,
 				18D6FCC81D003E230034FCCE /* ZCPBasicDataConstructor.m in Sources */,
 				18D6FCAD1D003E230034FCCE /* NSString+PAFormat.m in Sources */,
 				18D6FCB91D003E230034FCCE /* ZCPListDataModel.m in Sources */,

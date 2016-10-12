@@ -59,7 +59,7 @@
 , @{@"DemoName": @"NetWorkDemo", @"DemoHomeClass": @"NetWorkDemoHomeController"}
 , @{@"DemoName": @"二维码扫描", @"DemoHomeClass": @"QRCodeDemoHomeController"}
 , @{@"DemoName": @"UIDemo", @"DemoHomeClass": @"UIDemoHomeController"}
-, @{@"DemoName": @"LCPlayerSDKDemo", @"DemoHomeClass": @"LCPlayerSDKDemoHomeController"}
+, @{@"DemoName": @"Palette", @"DemoHomeClass": @"PaletteDemoHomeController"}
 , nil];
     }
     return _demoArr;
