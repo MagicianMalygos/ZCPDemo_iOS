@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
+
+#pragma mark - 旋转
 
 // 是否支持
 -(BOOL)shouldAutorotate{

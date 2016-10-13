@@ -312,6 +312,7 @@
 				FB5044921DADDF1800A40DED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

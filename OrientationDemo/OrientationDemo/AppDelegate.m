@@ -31,7 +31,6 @@
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     if ([self.window.rootViewController isKindOfClass:[UINavigationController class]]) {
-        
         return [((UINavigationController *)[self.window rootViewController]).topViewController supportedInterfaceOrientations];
     }
     return [[self.window rootViewController] supportedInterfaceOrientations];

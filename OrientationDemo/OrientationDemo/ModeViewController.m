@@ -44,6 +44,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - 旋转
+
 
 #pragma mark - 状态栏
 
