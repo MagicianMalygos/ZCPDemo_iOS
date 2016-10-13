@@ -183,7 +183,6 @@
 		9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BB1D2A850A0061664A /* libz.tbd */; };
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
-		FB0BAB1C1DAF240B00A13AEF /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0BAB1B1DAF240B00A13AEF /* TestViewController.m */; };
 		FB114AB11D3CCDC700927094 /* ZCPRecogniseQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */; };
 		FB81A8DA1DAB3F5F00B6F46E /* PaletteDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8D81DAB3F5F00B6F46E /* PaletteDemoHomeController.m */; };
 		FB81A8DB1DAB3F5F00B6F46E /* PaletteDemoHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB81A8D91DAB3F5F00B6F46E /* PaletteDemoHomeController.xib */; };
@@ -1481,7 +1480,6 @@
 		A64F86DBCB8DEA9772D53AD7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0BAB1A1DAF240B00A13AEF /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		FB0BAB1B1DAF240B00A13AEF /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		FB114AAF1D3CCDC700927094 /* ZCPRecogniseQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPRecogniseQRCode.h; sourceTree = "<group>"; };
 		FB114AB01D3CCDC700927094 /* ZCPRecogniseQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPRecogniseQRCode.m; sourceTree = "<group>"; };
 		FB81A8D71DAB3F5F00B6F46E /* PaletteDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteDemoHomeController.h; sourceTree = "<group>"; };
@@ -4218,7 +4216,6 @@
 			isa = PBXGroup;
 			children = (
 				FB0BAB1A1DAF240B00A13AEF /* TestViewController.h */,
-				FB0BAB1B1DAF240B00A13AEF /* TestViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -4545,7 +4542,6 @@
 				18D6FCDA1D003E230034FCCE /* TipsView.m in Sources */,
 				18A4C8A41D0EAEC60072F098 /* ZCPURLSessionTool.m in Sources */,
 				FB81A8E51DAB435100B6F46E /* Line.m in Sources */,
-				FB0BAB1C1DAF240B00A13AEF /* TestViewController.m in Sources */,
 				187250481C9120C3002D8C9E /* SizeToFitDemoHomeController.m in Sources */,
 				189888A71CBCDEFA00F0A75E /* AlgorithmDemo.m in Sources */,
 				1839DCD31C97FF6B002EA526 /* SetFilletTestCell.m in Sources */,
