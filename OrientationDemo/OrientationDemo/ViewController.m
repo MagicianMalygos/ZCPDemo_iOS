@@ -12,6 +12,7 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) UIView *rotationView;
+@property (nonatomic, strong) UIView *rotationView_m;
 
 @end
 
@@ -23,12 +24,17 @@
     self.title = @"测试1";
     
     [self.view addSubview:self.rotationView];
+    [self.view addSubview:self.rotationView_m];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    self.rotationView.frame = CGRectMake(0, 0, 100, 50);
-    self.rotationView.center = self.view.center;
+    
+    CGFloat centerX = self.view.center.x;
+    CGFloat centerY = self.view.center.y;
+    
+    self.rotationView.frame     = CGRectMake(centerX - 50, centerY - 25, 50, 50);
+    self.rotationView_m.frame   = CGRectMake(centerX, centerY - 25, 50, 50);
 }
 
 - (UIView *)rotationView {
@@ -40,8 +46,21 @@
     }
     return _rotationView;
 }
+- (UIView *)rotationView_m {
+    if (!_rotationView_m) {
+        _rotationView_m = [[UIView alloc] init];
+        _rotationView_m.backgroundColor = [UIColor redColor];
+        _rotationView_m.userInteractionEnabled = YES;
+        [_rotationView_m addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoNextVC_m)]];
+    }
+    return _rotationView_m;
+}
 
 - (void)gotoNextVC {
+    ViewController *vc = [[ViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)gotoNextVC_m {
     ModeViewController *mvc = [[ModeViewController alloc] init];
     [self presentViewController:mvc animated:YES completion:nil];
 }
