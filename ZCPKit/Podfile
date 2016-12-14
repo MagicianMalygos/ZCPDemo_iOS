@@ -1,0 +1,10 @@
+platform :ios, ‘8.0’
+inhibit_all_warnings!
+
+target ‘ZCPKit’ do
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'SDWebImage', '~> 3.8.1'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'IQKeyboardManager', '~> 4.0.4'
+end
