@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18E1C42F1C1120B700C3566F"
-               BuildableName = "JumpToVC.app"
-               BlueprintName = "JumpToVC"
-               ReferencedContainer = "container:JumpToVC.xcodeproj">
+               BlueprintIdentifier = "188E22881CC4774000FD596E"
+               BuildableName = "UnitTestDemo.app"
+               BlueprintName = "UnitTestDemo"
+               ReferencedContainer = "container:UnitTestDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18E1C4481C1120B800C3566F"
-               BuildableName = "JumpToVCTests.xctest"
-               BlueprintName = "JumpToVCTests"
-               ReferencedContainer = "container:JumpToVC.xcodeproj">
+               BlueprintIdentifier = "188E22A11CC4774100FD596E"
+               BuildableName = "UnitTestDemoTests.xctest"
+               BlueprintName = "UnitTestDemoTests"
+               ReferencedContainer = "container:UnitTestDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18E1C4531C1120B800C3566F"
-               BuildableName = "JumpToVCUITests.xctest"
-               BlueprintName = "JumpToVCUITests"
-               ReferencedContainer = "container:JumpToVC.xcodeproj">
+               BlueprintIdentifier = "188E22AC1CC4774100FD596E"
+               BuildableName = "UnitTestDemoUITests.xctest"
+               BlueprintName = "UnitTestDemoUITests"
+               ReferencedContainer = "container:UnitTestDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18E1C42F1C1120B700C3566F"
-            BuildableName = "JumpToVC.app"
-            BlueprintName = "JumpToVC"
-            ReferencedContainer = "container:JumpToVC.xcodeproj">
+            BlueprintIdentifier = "188E22881CC4774000FD596E"
+            BuildableName = "UnitTestDemo.app"
+            BlueprintName = "UnitTestDemo"
+            ReferencedContainer = "container:UnitTestDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18E1C42F1C1120B700C3566F"
-            BuildableName = "JumpToVC.app"
-            BlueprintName = "JumpToVC"
-            ReferencedContainer = "container:JumpToVC.xcodeproj">
+            BlueprintIdentifier = "188E22881CC4774000FD596E"
+            BuildableName = "UnitTestDemo.app"
+            BlueprintName = "UnitTestDemo"
+            ReferencedContainer = "container:UnitTestDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18E1C42F1C1120B700C3566F"
-            BuildableName = "JumpToVC.app"
-            BlueprintName = "JumpToVC"
-            ReferencedContainer = "container:JumpToVC.xcodeproj">
+            BlueprintIdentifier = "188E22881CC4774000FD596E"
+            BuildableName = "UnitTestDemo.app"
+            BlueprintName = "UnitTestDemo"
+            ReferencedContainer = "container:UnitTestDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

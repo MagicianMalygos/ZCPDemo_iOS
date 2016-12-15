@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>JumpToVC.xcscheme</key>
+		<key>UnitTestDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18E1C42F1C1120B700C3566F</key>
+		<key>188E22881CC4774000FD596E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18E1C4481C1120B800C3566F</key>
+		<key>188E22A11CC4774100FD596E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18E1C4531C1120B800C3566F</key>
+		<key>188E22AC1CC4774100FD596E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
