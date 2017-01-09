@@ -25,7 +25,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 500; i++) {
         [self.infoArray addObject:@{@"label": @"啦啦", @"button": @"点击就送", @"image": @"001.jpg"}];
     }
     
@@ -68,6 +68,7 @@
     cell.testLabel.text = [self.infoArray objectAtIndex:indexPath.row][@"label"];
     [cell.testButton setTitle:[self.infoArray objectAtIndex:indexPath.row][@"button"] forState:UIControlStateNormal];
     cell.testImageView.image = [UIImage imageNamed:[self.infoArray objectAtIndex:indexPath.row][@"image"]];
+    [cell setFillet];
     return cell;
 }
 

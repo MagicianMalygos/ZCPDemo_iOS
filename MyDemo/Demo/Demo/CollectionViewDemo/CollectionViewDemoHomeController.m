@@ -174,7 +174,7 @@
 // support for custom transition layout
 // 重新布局时调用???
 - (nonnull UICollectionViewTransitionLayout *)collectionView:(UICollectionView *)collectionView transitionLayoutForOldLayout:(UICollectionViewLayout *)fromLayout newLayout:(UICollectionViewLayout *)toLayout {
-    return toLayout;
+    return (UICollectionViewTransitionLayout *)toLayout;
 }
 
 // Focus

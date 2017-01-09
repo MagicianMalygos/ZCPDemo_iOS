@@ -91,7 +91,9 @@
     }
     
     if ([object respondsToSelector:method]) {
-        [object performSelector:method];
+        SuppressPerformSelectorLeakWarning({
+            [object performSelector:method];
+        });
     }
 }
 

@@ -70,6 +70,7 @@
         NSLog(@"Length: %lli\n", operation.response.expectedContentLength);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
+    operationHEAD = nil;
     
     /**
      *  第一次只有当在文件读取结束的时候才能知道文件的大小

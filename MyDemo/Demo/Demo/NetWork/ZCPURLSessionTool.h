@@ -15,8 +15,6 @@
 @interface ZCPURLSessionTool : NSObject
 
 - (void)getRequest_Synchronouos_Session;
-- (void)getRequest_Asynchronous_Session;
-- (void)postRequest_Synchronous_Session;
 - (void)postRequest_Asynchronous_Session;
 
 @end

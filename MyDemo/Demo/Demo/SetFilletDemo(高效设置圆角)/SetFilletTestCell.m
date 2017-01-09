@@ -7,6 +7,7 @@
 //
 
 #import "SetFilletTestCell.h"
+#import "AYViewCorner.h"
 
 @implementation SetFilletTestCell
 
@@ -32,18 +33,23 @@
     [self.contentView addSubview:self.testLabel];
     [self.contentView addSubview:self.testButton];
     [self.contentView addSubview:self.testImageView];
-    
-    // 设置圆角
-    [self setLabelFillet:self.testLabel];
-    [self setButtonFillet:self.testButton];
-    [self setImageViewFillet:self.testImageView];
+}
+
+- (void)setFillet {
+    // 不触发离屏渲染的情况下设置圆角
+    // http://ayjkdev.top/2016/04/05/corner-radius-with-out-offscreen-rendered/
+    // https://github.com/AYJk/AYViewCorner
+    // 在设置前必须先设置好backgroundColor，或需使用下面的方法同时设置颜色和圆角；imageView要使用下面的方法同时设置image和圆角。
+    // 当需要改变backgroundColor或image时需要重新使用下面的方法设置一遍，方法使用有一定的局限性。
+    [self.testLabel ay_setCornerRadius:AYRadiusMake(10, 10, 10, 10) backgroundColor:[UIColor orangeColor]];
+    [self.testButton ay_setCornerRadius:AYRadiusMake(10, 10, 10, 10) backgroundColor:[UIColor orangeColor]];
+    [self.testImageView ay_setCornerRadius:AYRadiusMake(10, 10, 10, 10) backgroundColor:[UIColor orangeColor]];
 }
 
 #pragma mark - getter / setter
 - (UILabel *)testLabel {
     if (_testLabel == nil) {
         _testLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 8, 50, 34)];
-        _testLabel.backgroundColor = [UIColor redColor];
     }
     return _testLabel;
 }
@@ -51,48 +57,14 @@
     if (_testButton == nil) {
         _testButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _testButton.frame = CGRectMake(100, 8, 100, 34);
-        _testButton.backgroundColor = [UIColor greenColor];
     }
     return _testButton;
 }
 - (UIImageView *)testImageView {
     if (_testImageView == nil) {
         _testImageView = [[UIImageView alloc] initWithFrame:CGRectMake(250, 8, 34, 34)];
-        _testImageView.backgroundColor = [UIColor blueColor];
     }
     return _testImageView;
-}
-
-
-
-
-#pragma mark - Set Fillet
-#define Radius    10
-- (void)setLabelFillet:(UILabel *)label {
-    // 低效
-//    label.layer.cornerRadius = Radius;
-//    label.layer.masksToBounds = YES;
-    
-    // 高效
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(0, 0), NO, [UIScreen mainScreen].scale);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context, 0, 0);
-//    CGContextAddArcToPoint(context, <#CGFloat x1#>, <#CGFloat y1#>, <#CGFloat x2#>, <#CGFloat y2#>, Radius);
-    
-    CGContextDrawPath(UIGraphicsGetCurrentContext(), kCGPathFillStroke);
-    UIImage *output = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    UIImageView *filletBGView = [[UIImageView alloc] initWithImage:output];
-    [label insertSubview:filletBGView atIndex:0];
-}
-- (void)setButtonFillet:(UIButton *)button {
-    button.layer.cornerRadius = Radius;
-}
-- (void)setImageViewFillet:(UIImageView *)imageView {
-    imageView.layer.cornerRadius = Radius;
-    imageView.layer.masksToBounds = YES;
 }
 
 @end

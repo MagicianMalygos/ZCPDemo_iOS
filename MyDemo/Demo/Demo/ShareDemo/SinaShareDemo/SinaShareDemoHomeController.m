@@ -100,7 +100,7 @@
     
 //    NSLog(@"打开微博客户端程序：%d", [WeiboSDK openWeiboApp]); // V
     NSLog(@"微博客户端itunes安装地址：%@", [WeiboSDK getWeiboAppInstallUrl]);
-    NSLog(@"当前微博客户端所支持的SDK最高版本：%@", [WeiboSDK getWeiboAppSupportMaxSDKVersion]);
+//    NSLog(@"当前微博客户端所支持的SDK最高版本：%@", [WeiboSDK getWeiboAppSupportMaxSDKVersion]);
     NSLog(@"获取当前微博SDK的aid：%@", [WeiboSDK getWeiboAid]);
     
     

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIButton *testButton;
 @property (nonatomic, strong) UIImageView *testImageView;
 
+- (void)setFillet;
 + (NSString *)cellIdentifier;
 
 @end

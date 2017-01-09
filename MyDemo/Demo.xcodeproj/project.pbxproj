@@ -191,6 +191,8 @@
 		FB81A8E21DAB402700B6F46E /* QuartzCorePaletteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB81A8E01DAB402700B6F46E /* QuartzCorePaletteViewController.xib */; };
 		FB81A8E51DAB435100B6F46E /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8E41DAB435100B6F46E /* Line.m */; };
 		FB81A8E81DAB452400B6F46E /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81A8E71DAB452400B6F46E /* TouchDrawView.m */; };
+		FBF3B27C1E23776300090FCE /* UIImage+ClipRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B2791E23776300090FCE /* UIImage+ClipRoundCorner.m */; };
+		FBF3B27D1E23776300090FCE /* UIView+ViewCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF3B27B1E23776300090FCE /* UIView+ViewCorner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1492,6 +1494,11 @@
 		FB81A8E41DAB435100B6F46E /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 		FB81A8E61DAB452400B6F46E /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDrawView.h; sourceTree = "<group>"; };
 		FB81A8E71DAB452400B6F46E /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
+		FBF3B2771E23776300090FCE /* AYViewCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYViewCorner.h; sourceTree = "<group>"; };
+		FBF3B2781E23776300090FCE /* UIImage+ClipRoundCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ClipRoundCorner.h"; sourceTree = "<group>"; };
+		FBF3B2791E23776300090FCE /* UIImage+ClipRoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ClipRoundCorner.m"; sourceTree = "<group>"; };
+		FBF3B27A1E23776300090FCE /* UIView+ViewCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewCorner.h"; sourceTree = "<group>"; };
+		FBF3B27B1E23776300090FCE /* UIView+ViewCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewCorner.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1625,15 +1632,15 @@
 			path = "PhotoCarouselDemo(图片轮播)";
 			sourceTree = "<group>";
 		};
-		1839DCBC1C97FF16002EA526 /* SetFilletDemo(高效设置圆角)X */ = {
+		1839DCBC1C97FF16002EA526 /* SetFilletDemo(高效设置圆角) */ = {
 			isa = PBXGroup;
 			children = (
+				FBF3B2761E23776300090FCE /* AYViewCorner */,
 				1839DCBD1C97FF16002EA526 /* SetFilletDemoHomeController.h */,
 				1839DCBE1C97FF16002EA526 /* SetFilletDemoHomeController.m */,
 				1839DCD11C97FF6B002EA526 /* SetFilletTestCell.h */,
 				1839DCD21C97FF6B002EA526 /* SetFilletTestCell.m */,
 			);
-			name = "SetFilletDemo(高效设置圆角)X";
 			path = "SetFilletDemo(高效设置圆角)";
 			sourceTree = "<group>";
 		};
@@ -1741,7 +1748,7 @@
 				18BA09501C98F6D500550379 /* ShareDemoX */,
 				1839DC951C97FF16002EA526 /* OtherDemo(控制台程序) */,
 				1839DCB51C97FF16002EA526 /* PhotoCarouselDemo(图片轮播) */,
-				1839DCBC1C97FF16002EA526 /* SetFilletDemo(高效设置圆角)X */,
+				1839DCBC1C97FF16002EA526 /* SetFilletDemo(高效设置圆角) */,
 				1812C9E91C96B37800E387EE /* CollectionViewDemo */,
 				1872509C1C917DFB002D8C9E /* FontDemo */,
 				187250621C914B8B002D8C9E /* CameraAndAlbumDemo */,
@@ -4227,6 +4234,18 @@
 			path = PaletteDemo;
 			sourceTree = "<group>";
 		};
+		FBF3B2761E23776300090FCE /* AYViewCorner */ = {
+			isa = PBXGroup;
+			children = (
+				FBF3B2771E23776300090FCE /* AYViewCorner.h */,
+				FBF3B2781E23776300090FCE /* UIImage+ClipRoundCorner.h */,
+				FBF3B2791E23776300090FCE /* UIImage+ClipRoundCorner.m */,
+				FBF3B27A1E23776300090FCE /* UIView+ViewCorner.h */,
+				FBF3B27B1E23776300090FCE /* UIView+ViewCorner.m */,
+			);
+			path = AYViewCorner;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4492,9 +4511,11 @@
 				18A4C8A71D0EC69C0072F098 /* ZCPAFNetworkingTool.m in Sources */,
 				1839DCC41C97FF16002EA526 /* ClassB.m in Sources */,
 				18D6FCCB1D003E230034FCCE /* ZCPBaseNavigator.m in Sources */,
+				FBF3B27C1E23776300090FCE /* UIImage+ClipRoundCorner.m in Sources */,
 				18D6FCAC1D003E230034FCCE /* NSString+PACheckValid.m in Sources */,
 				18D6FCBA1D003E230034FCCE /* ZCPResponseDataModel.m in Sources */,
 				188E90481D100293006D0664 /* UIDemoHomeController.m in Sources */,
+				FBF3B27D1E23776300090FCE /* UIView+ViewCorner.m in Sources */,
 				18D6FCB21D003E230034FCCE /* UIImage+Category.m in Sources */,
 				18D6FCAB1D003E230034FCCE /* NSString+Category2.m in Sources */,
 				1839DCC91C97FF16002EA526 /* RuntimeDemo.m in Sources */,

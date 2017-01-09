@@ -115,6 +115,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     self.responseData = [self.outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
     NSString *result = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
+    result = nil;
     //    NSLog(@"%@，%@", self.responseData, result);
 }
 
