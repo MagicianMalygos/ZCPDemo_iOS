@@ -14,6 +14,9 @@
 #import <UIImageView+WebCache.h>
 #import "YYFPSLabel.h"  // 显示FPS
 
+// demo tableview基类
+#import "DemoBaseTableViewController.h"
+
 // PA
 #import "ZCPBaseNavigator.h"
 #import "ZCPDataModel.h"

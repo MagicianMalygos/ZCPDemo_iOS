@@ -12,74 +12,38 @@
 #import "ZCPURLSessionTool.h"
 #import "ZCPAFNetworkingTool.h"
 
-@interface NetWorkDemoHomeController () <UITableViewDataSource, UITableViewDelegate>
-
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *infoArray;
-
-@end
-
 @implementation NetWorkDemoHomeController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    [self.view addSubview:self.tableView];
+@synthesize infoArr = _infoArr;
+
+- (NSMutableArray *)infoArr {
+    if (_infoArr == nil) {
+        _infoArr = @[@{@"title": @"get异步 Connection", @"sel": @"getRequest_Asynchronous_Connection", @"type": @"connection"}
+                       , @{@"title": @"post异步 Connection", @"sel": @"postRequest_Asynchronous_Connection", @"type": @"connection"}
+                       , @{@"title": @"下载 Connection", @"sel": @"uploadRequest_Connection", @"type": @"connection"}
+                       
+                       , @{@"title": @"get同步 Session", @"sel": @"getRequest_Synchronouos_Session", @"type": @"session"}
+                       , @{@"title": @"post异步 Session", @"sel": @"postRequest_Asynchronous_Session", @"type": @"session"}
+                       
+                       , @{@"title": @"get异步 AF", @"sel": @"getRequest_Asynchronous_AF", @"type": @"AF"}
+                       , @{@"title": @"post异步 AF", @"sel": @"postRequest_Asynchronous_AF", @"type": @"AF"}
+                       , @{@"title": @"上传 AF", @"sel": @"uploadRequest_AF", @"type": @"AF"}
+                       , @{@"title": @"下载 AF", @"sel": @"downloadRequest_AF", @"type": @"AF"}
+                       , @{@"title": @"get异步 AF Session", @"sel": @"getRequest_Asynchronous_AF_Session", @"type": @"AF"}
+                       , @{@"title": @"post异步 AF Session", @"sel": @"postRequest_Asynchronous_AF_Session", @"type": @"AF"}
+                       , @{@"title": @"上传AF Session", @"sel": @"uploadRequest_AF_Session", @"type": @"AF"}
+                       , @{@"title": @"下载AF Session", @"sel": @"downloadRequest_AF_Session", @"type": @"AF"}
+                       , @{@"title": @"测试", @"sel": @"test", @"type": @"self"}
+                       ].mutableCopy;
+    }
+    return _infoArr;
 }
 
-#pragma mark - getter / setter
-- (UITableView *)tableView {
-    if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 64)];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-    }
-    return _tableView;
-}
-- (NSArray *)infoArray {
-    if (_infoArray == nil) {
-        _infoArray = @[@{@"info": @"get异步 Connection", @"sel": @"getRequest_Asynchronous_Connection", @"type": @"connection"}
-                       , @{@"info": @"post异步 Connection", @"sel": @"postRequest_Asynchronous_Connection", @"type": @"connection"}
-                       , @{@"info": @"下载 Connection", @"sel": @"uploadRequest_Connection", @"type": @"connection"}
-                       
-                       , @{@"info": @"get同步 Session", @"sel": @"getRequest_Synchronouos_Session", @"type": @"session"}
-                       , @{@"info": @"post异步 Session", @"sel": @"postRequest_Asynchronous_Session", @"type": @"session"}
-                       
-                       , @{@"info": @"get异步 AF", @"sel": @"getRequest_Asynchronous_AF", @"type": @"AF"}
-                       , @{@"info": @"post异步 AF", @"sel": @"postRequest_Asynchronous_AF", @"type": @"AF"}
-                       , @{@"info": @"上传 AF", @"sel": @"uploadRequest_AF", @"type": @"AF"}
-                       , @{@"info": @"下载 AF", @"sel": @"downloadRequest_AF", @"type": @"AF"}
-                       , @{@"info": @"get异步 AF Session", @"sel": @"getRequest_Asynchronous_AF_Session", @"type": @"AF"}
-                       , @{@"info": @"post异步 AF Session", @"sel": @"postRequest_Asynchronous_AF_Session", @"type": @"AF"}
-                       , @{@"info": @"上传AF Session", @"sel": @"uploadRequest_AF_Session", @"type": @"AF"}
-                       , @{@"info": @"下载AF Session", @"sel": @"downloadRequest_AF_Session", @"type": @"AF"}
-                       , @{@"info": @"测试", @"sel": @"test", @"type": @"self"}
-                       ];
-    }
-    return _infoArray;
-}
-
-#pragma mark - UITableView DataSource&Delegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.infoArray.count;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    cell.textLabel.text = [[self.infoArray objectAtIndex:indexPath.row] valueForKey:@"info"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SEL method = NSSelectorFromString([[self.infoArray objectAtIndex:indexPath.row] valueForKey:@"sel"]);
+- (void)didSelectCell:(NSIndexPath *)indexPath {
+    SEL method = NSSelectorFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"sel"]);
     
     NSObject *object = nil;
-    NSString *type = [[self.infoArray objectAtIndex:indexPath.row] valueForKey:@"type"];
+    NSString *type = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"type"];
     if ([type isEqualToString:@"connection"]) {
         object = [ZCPURLConnectionTool new];
     } else if ([type isEqualToString:@"session"]) {

@@ -1,5 +1,5 @@
 //
-//  UIDemoHomeController.h
+//  QiPaoDemoHomeController.h
 //  Demo
 //
 //  Created by apple on 16/6/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIDemoHomeController : DemoBaseTableViewController
+@interface QiPaoDemoHomeController : UIViewController
 
 @end

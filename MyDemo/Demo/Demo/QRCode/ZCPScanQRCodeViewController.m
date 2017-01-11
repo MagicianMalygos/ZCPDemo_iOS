@@ -110,13 +110,40 @@ static NSString     *kScanLineImageName     = @"scanLine";
         // 实现高质量的输出和摄像，默认为AVCaptureSessionPresetHigh
         [session setSessionPreset:AVCaptureSessionPresetHigh];
         
-        // 3.创建预览图层
+        // 3.获取输入设备（摄像头）
+        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        // 4.根据输入设备创建输入对象
+        AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:NULL];
+        if (input == nil) {
+            
+            // 提示
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许Demo访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+            return nil;
+        }
+        
+        // 5.添加输入输出到会话中
+        if ([session canAddInput:input]) {
+            [session addInput:input];
+        }
+        if ([session canAddOutput:output]) {
+            [session addOutput:output];
+        }
+        
+        // 6.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
+        output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode];
+        
+        // 7.创建预览图层（如果session中的输入设备为nil时，会crash）
         AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:session];
         [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
         previewLayer.frame = self.view.bounds;
         [self.view.layer insertSublayer:previewLayer atIndex:0];
         
-        // 4.设置有效扫描区域
+        // 8.设置有效扫描区域
         // AVCapture输出的图片大小是横着的，而iPhone的屏幕是竖的，设置有效扫描区域需要把它旋转90°
         CGRect validRect = CGRectMake(kValidY / [UIScreen mainScreen].bounds.size.height
                                       , kValidX / [UIScreen mainScreen].bounds.size.width
@@ -132,33 +159,6 @@ static NSString     *kScanLineImageName     = @"scanLine";
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         shapeLayer.path = rectPath.CGPath;
         maskView.layer.mask = shapeLayer;
-        
-        // 5.获取输入设备（摄像头）
-        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-        // 6.根据输入设备创建输入对象
-        AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:NULL];
-        if (input == nil) {
-            
-            // 提示
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许Demo访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            }];
-            [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
-            
-            return nil;
-        }
-        
-        // 7.添加输入输出到会话中
-        if ([session canAddInput:input]) {
-            [session addInput:input];
-        }
-        if ([session canAddOutput:output]) {
-            [session addOutput:output];
-        }
-        
-        // 8.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
-        output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode];
         
         _session = session;
     }

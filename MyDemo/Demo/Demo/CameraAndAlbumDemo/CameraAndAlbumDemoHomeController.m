@@ -116,6 +116,7 @@ static BOOL cameraAvailable;
             break;
         }
         case 2: {
+            // iOS10之后打开相册需要在info.plist设置访问权限的通知信息。
             if (photoLibraryAvailable) {
                 // UIImagePickerController
                 UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
