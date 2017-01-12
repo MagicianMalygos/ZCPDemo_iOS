@@ -24,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     self.button1 = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button2 = [UIButton buttonWithType:UIButtonTypeCustom];

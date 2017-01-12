@@ -90,6 +90,8 @@
 		9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BB1D2A850A0061664A /* libz.tbd */; };
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
+		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
+		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */; };
 		FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.m */; };
 		FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */; };
@@ -193,6 +195,8 @@
 		FB5079261E2618A900361E60 /* ZCPDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50789F1E2618A900361E60 /* ZCPDemoHomeController.m */; };
 		FB50795E1E26193A00361E60 /* chat_recive_press_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB50795B1E26193A00361E60 /* chat_recive_press_pic@2x.png */; };
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
+		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
+		FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50796C1E262DB200361E60 /* DemoBaseViewController.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -1296,6 +1300,9 @@
 		9E3E86BF1D2A86650061664A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A64F86DBCB8DEA9772D53AD7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4600701E2716DA003504AD /* DashedSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedSettingView.h; sourceTree = "<group>"; };
+		FB4600711E2716DA003504AD /* DashedSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedSettingView.m; sourceTree = "<group>"; };
+		FB4600771E27170E003504AD /* DashedSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashedSettingView.xib; sourceTree = "<group>"; };
 		FB5077571E2618A800361E60 /* AlertViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077591E2618A800361E60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1502,6 +1509,10 @@
 		FB50795B1E26193A00361E60 /* chat_recive_press_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_recive_press_pic@2x.png"; sourceTree = "<group>"; };
 		FB50795C1E26193A00361E60 /* QiPaoDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiPaoDemoHomeController.h; sourceTree = "<group>"; };
 		FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPaoDemoHomeController.m; sourceTree = "<group>"; };
+		FB5079641E262D8800361E60 /* DashedDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedDemoHomeController.h; sourceTree = "<group>"; };
+		FB5079651E262D8800361E60 /* DashedDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedDemoHomeController.m; sourceTree = "<group>"; };
+		FB50796B1E262DB200361E60 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
+		FB50796C1E262DB200361E60 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
 		FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
@@ -1545,6 +1556,8 @@
 			children = (
 				1839DCD81C980787002EA526 /* YYFPSLabel.h */,
 				1839DCD91C980787002EA526 /* YYFPSLabel.m */,
+				FB50796B1E262DB200361E60 /* DemoBaseViewController.h */,
+				FB50796C1E262DB200361E60 /* DemoBaseViewController.m */,
 				FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */,
 				FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */,
 			);
@@ -3662,8 +3675,6 @@
 			isa = PBXGroup;
 			children = (
 				FB5077561E2618A800361E60 /* AlertViewDemo */,
-				FB5077591E2618A800361E60 /* AppDelegate.h */,
-				FB50775A1E2618A800361E60 /* AppDelegate.m */,
 				FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */,
 				FB5077611E2618A800361E60 /* Category */,
 				FB5077641E2618A800361E60 /* CollectionViewDemo */,
@@ -3679,6 +3690,8 @@
 				FB50789A1E2618A900361E60 /* WebViewDemo */,
 				FB50789E1E2618A900361E60 /* ZCPDemoHomeController.h */,
 				FB50789F1E2618A900361E60 /* ZCPDemoHomeController.m */,
+				FB5077591E2618A800361E60 /* AppDelegate.h */,
+				FB50775A1E2618A800361E60 /* AppDelegate.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -4239,6 +4252,11 @@
 		FB5078991E2618A900361E60 /* 虚线 */ = {
 			isa = PBXGroup;
 			children = (
+				FB5079641E262D8800361E60 /* DashedDemoHomeController.h */,
+				FB5079651E262D8800361E60 /* DashedDemoHomeController.m */,
+				FB4600701E2716DA003504AD /* DashedSettingView.h */,
+				FB4600711E2716DA003504AD /* DashedSettingView.m */,
+				FB4600771E27170E003504AD /* DashedSettingView.xib */,
 			);
 			path = "虚线";
 			sourceTree = "<group>";
@@ -4393,6 +4411,7 @@
 				184D75211C97A9B70068D686 /* default.png in Resources */,
 				1844399B1D0012C700FDD7F7 /* tips_page_arrow_down@3x.png in Resources */,
 				18A5014C1C92BE67006EBEB4 /* 005.jpg in Resources */,
+				FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */,
 				FB5079061E2618A900361E60 /* scanLine@3x.png in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
@@ -4517,6 +4536,7 @@
 				FB5078D11E2618A900361E60 /* OCClassMethodDemo.m in Sources */,
 				FB5078CE1E2618A900361E60 /* ClassA.m in Sources */,
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
+				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
 				FB50790C1E2618A900361E60 /* ZCPScanQRCodeViewController.m in Sources */,
 				FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */,
 				FB5078D81E2618A900361E60 /* RuntimeTest3.m in Sources */,
@@ -4562,6 +4582,7 @@
 				FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */,
 				FB5078E51E2618A900361E60 /* UIViewController+Category.m in Sources */,
 				FB5078D71E2618A900361E60 /* RuntimeTest2.m in Sources */,
+				FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */,
 				FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */,
 				FB5078DF1E2618A900361E60 /* UIButton+Category.m in Sources */,
 				FB50791B1E2618A900361E60 /* TouchDrawView.m in Sources */,
@@ -4589,6 +4610,7 @@
 				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
 				FB5078F91E2618A900361E60 /* ZCPViewController.m in Sources */,
 				FB50790A1E2618A900361E60 /* ZCPGenerateQRCode.m in Sources */,
+				FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */,
 				FB5078EC1E2618A900361E60 /* ZCPTabBarController.m in Sources */,
 				FB5078A51E2618A900361E60 /* CollectionViewDemoHomeController.m in Sources */,
 				FB5078A41E2618A900361E60 /* NSString+Category.m in Sources */,

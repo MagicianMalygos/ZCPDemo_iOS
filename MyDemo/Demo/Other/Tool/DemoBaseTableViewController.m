@@ -10,9 +10,6 @@
 
 @interface DemoBaseTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
-
-
 @end
 
 @implementation DemoBaseTableViewController
@@ -21,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [self.view addSubview:self.tableView];
 }
@@ -51,6 +47,15 @@
     return _infoArr;
 }
 
+- (CGFloat)cellHeight {
+    return 50.0f;
+}
+
+- (void)setupCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"title"];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
 - (void)didSelectCell:(NSIndexPath *)indexPath {
     Class vcClass = NSClassFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"]);
     UIViewController *vc = [vcClass new];
@@ -69,12 +74,11 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"title"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self setupCell:cell indexPath:indexPath];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50.0f;
+    return [self cellHeight];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self didSelectCell:indexPath];

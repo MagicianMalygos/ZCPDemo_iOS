@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     UITextField *tf = [[UITextField alloc] initWithFrame:({
         CGRectMake(0, 64, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 50, 50);

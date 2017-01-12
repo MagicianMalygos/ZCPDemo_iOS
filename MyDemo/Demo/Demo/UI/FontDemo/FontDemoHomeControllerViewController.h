@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FontDemoHomeControllerViewController : UIViewController
+@interface FontDemoHomeControllerViewController : DemoBaseViewController
 
 @end

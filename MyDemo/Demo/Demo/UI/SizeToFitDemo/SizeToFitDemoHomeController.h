@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 //** 文本增增删删会Crash
-@interface SizeToFitDemoHomeController : UIViewController
+@interface SizeToFitDemoHomeController : DemoBaseViewController
 
 @end
 

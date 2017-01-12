@@ -28,8 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [self addChildViewController:self.pageVC];
     [self.view addSubview:self.pageVC.view];

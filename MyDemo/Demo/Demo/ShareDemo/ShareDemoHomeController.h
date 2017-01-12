@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareDemoHomeController : UIViewController
+@interface ShareDemoHomeController : DemoBaseTableViewController
 
 @end

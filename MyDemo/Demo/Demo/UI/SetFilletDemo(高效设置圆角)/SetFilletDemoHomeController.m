@@ -22,8 +22,6 @@
 #pragma mark - life circle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     for (int i = 0; i < 500; i++) {
         [self.infoArray addObject:@{@"label": @"啦啦", @"button": @"点击就送", @"image": @"001.jpg"}];

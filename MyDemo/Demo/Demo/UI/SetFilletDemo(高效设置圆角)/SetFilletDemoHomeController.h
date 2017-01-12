@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetFilletDemoHomeController : UIViewController
+@interface SetFilletDemoHomeController : DemoBaseViewController
 
 @end
 

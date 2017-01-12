@@ -60,8 +60,8 @@
     CGFloat height = 0;
     if ([object conformsToProtocol:@protocol(ZCPTableViewCellItemBasicProtocol)]
         && [object respondsToSelector:@selector(cellHeight)]) {
-        if ([object cellHeight]) {
-            height = [[object cellHeight] floatValue];
+        if ([(ZCPDataModel *)object cellHeight]) {
+            height = [[(ZCPDataModel *)object cellHeight] floatValue];
         }
         else {
             ZCPSectionCellItem *item = (ZCPSectionCellItem *)object;

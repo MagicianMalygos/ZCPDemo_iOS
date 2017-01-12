@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCarouselDemoHomeController : UIViewController
+@interface PhotoCarouselDemoHomeController : DemoBaseViewController
 
 @end

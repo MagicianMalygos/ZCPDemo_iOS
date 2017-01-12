@@ -19,7 +19,8 @@
                     @{@"title": @"FontDemo", @"class": @"FontDemoHomeControllerViewController"},
                     @{@"title": @"SetFilletDemo", @"class": @"SetFilletDemoHomeController"},
                     @{@"title": @"Palette", @"class": @"PaletteDemoHomeController"},
-                    @{@"title": @"QiPaoDemo", @"class": @"QiPaoDemoHomeController"}, nil];
+                    @{@"title": @"QiPaoDemo", @"class": @"QiPaoDemoHomeController"},
+                    @{@"title": @"虚线", @"class": @"DashedDemoHomeController"}, nil];
     }
     return _infoArr;
 }

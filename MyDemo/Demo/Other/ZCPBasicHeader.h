@@ -14,7 +14,8 @@
 #import <UIImageView+WebCache.h>
 #import "YYFPSLabel.h"  // 显示FPS
 
-// demo tableview基类
+// demo vc基类
+#import "DemoBaseViewController.h"
 #import "DemoBaseTableViewController.h"
 
 // PA

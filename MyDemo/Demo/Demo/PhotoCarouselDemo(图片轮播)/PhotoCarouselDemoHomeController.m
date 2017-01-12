@@ -21,8 +21,6 @@
 #pragma mark - life circle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     NSArray *imageArray = @[@"001.jpg"
                             , @"002.jpg"

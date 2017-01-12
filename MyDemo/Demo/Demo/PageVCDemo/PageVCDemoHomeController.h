@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageVCDemoHomeController : UIViewController
+@interface PageVCDemoHomeController : DemoBaseViewController
 
 @end
 

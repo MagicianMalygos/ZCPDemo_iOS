@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoBaseTableViewController : UIViewController
+@interface DemoBaseTableViewController : DemoBaseViewController
 
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *infoArr;
 
+- (void)setupCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath;
+- (CGFloat)cellHeight;
 - (void)didSelectCell:(NSIndexPath *)indexPath;
 
 @end

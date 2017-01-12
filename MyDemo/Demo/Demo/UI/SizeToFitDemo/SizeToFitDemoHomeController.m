@@ -24,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     // textView
     UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 20, SCREENWIDTH, 50)];

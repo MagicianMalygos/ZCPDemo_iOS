@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QRCodeDemoHomeController : UIViewController
+@interface QRCodeDemoHomeController : DemoBaseViewController
 
 @end
