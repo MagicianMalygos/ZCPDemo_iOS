@@ -8,6 +8,7 @@
 
 #import "DashedDemoHomeController.h"
 #import "DashedSettingView.h"
+#import "DashedView.h"
 
 #define SettingViewHeight 170
 
@@ -15,6 +16,7 @@
     float phaseV;
     CGFloat lengthsV[10];
     float countV;
+    CGRect dashedViewFrame;
 }
 
 @property (nonatomic, strong) DashedSettingView *settingView;
@@ -28,8 +30,11 @@
 #pragma mark - 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dashedViewFrame = CGRectMake(15, 25, self.view.frame.size.width - 30, 50);
     [self.view addSubview:self.settingView];
     [self.settingView.go addTarget:self action:@selector(reRender) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self reRender];
 }
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
@@ -65,7 +70,7 @@
 
 - (NSMutableArray *)infoArr {
     if (!_infoArr) {
-        _infoArr = @[@{},@{},@{},@{},@{},@{},@{},@{}].mutableCopy;
+        _infoArr = @[@{},@{},@{}].mutableCopy;
     }
     return _infoArr;
 }
@@ -80,16 +85,30 @@
         [oldView removeFromSuperview];
     }
     
-    UIImageView *view = [[UIImageView alloc] init];
-    view.frame = CGRectMake(15, 25, self.view.frame.size.width - 30, 20);
-    view.tag = 10010;
-    view.image = [self drawLineByImageView:view];
+    SEL selector = NSSelectorFromString([NSString stringWithFormat:@"drawDashed%i", (int)indexPath.row + 1]);
+    UIView *view = nil;
+    SuppressPerformSelectorLeakWarning({
+        view = [self performSelector:selector];
+        view.tag = 10010;
+    });
     [cell addSubview:view];
 }
 
 #pragma mark - Draw Dashed
+/*
+ 1.可设置线条首尾样式；有模糊，水平方向线宽不对
+ 2.可设置线条首尾样式，无模糊；水平方向线宽不对
+ 3.可设置连接处样式，无线宽异常
+ */
+
 // 通过 Quartz 2D 生成UIImage虚线
-- (UIImage *)drawLineByImageView:(UIImageView *)imageView {
+- (UIView *)drawDashed1 {
+    
+    /* - - - View - - - */
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = dashedViewFrame;
+    
+    /* - - - Draw Dashed - - - */
     // 设置frame
     UIGraphicsBeginImageContext(imageView.frame.size);
     [imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
@@ -98,12 +117,16 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // 设置线条颜色
-    CGContextSetStrokeColorWithColor(context, [UIColor colorFromHexRGB:@"ff0000"].CGColor);
-    // 设置线宽 X
-//    CGContextSetLineWidth(context, 10);
+    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    // 设置线宽
+    CGContextSetLineWidth(context, 2);
     
-    // 设置线条样式
+    //  设置线条首尾样式()
+    //  kCGLineCapButt,  无形状
+    //  kCGLineCapRound, 矩形首尾样式
+    //  kCGLineCapSquare 圆角首尾样式
     CGContextSetLineCap(context, kCGLineCapRound);
+    
     /*
     // 虚线长度参数
     CGFloat lengths[] = {5, 10, 50, 20};
@@ -117,8 +140,8 @@
     CGContextMoveToPoint(context, 0, 0);
     // 设置线的落点
     CGContextAddLineToPoint(context, imageView.width / 2, 0);
-    CGContextAddLineToPoint(context, imageView.width / 2, 20);
-    CGContextAddLineToPoint(context, imageView.width, 20);
+    CGContextAddLineToPoint(context, imageView.width / 2, 50);
+    CGContextAddLineToPoint(context, imageView.width, 50);
     // 画线
     CGContextStrokePath(context); // CGContextDrawPath(context, kCGPathStroke);
     
@@ -127,13 +150,72 @@
     // 结束
     UIGraphicsEndImageContext();
     
-    return outputImage;
+    
+    /* - - - Return - - - */
+    imageView.image = outputImage;
+    return imageView;
 }
-- (void)drawDashed2 {
+- (UIView *)drawDashed2 {
+    
+    /* - - - View - - - */
+    DashedView *view    = [[DashedView alloc] init];
+    view.phase          = phaseV;
+    view.lengths        = lengthsV;
+    view.count          = countV;
+    view.frame          = dashedViewFrame;
+    
+    /* - - - Draw Dashed - - - */
+    [view setNeedsLayout];
+    
+    /* - - - Return - - - */
+    
+    return view;
 }
-- (void)drawDashed3 {
-}
-- (void)drawDashed4 {
+- (UIView *)drawDashed3 {
+    
+    /* - - - View - - - */
+    UIView *view        = [[UIView alloc] init];
+    view.frame          = dashedViewFrame;
+    
+    /* - - - Draw Dashed - - - */
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    [shapeLayer setBounds:view.bounds];
+    [shapeLayer setPosition:CGPointMake(shapeLayer.bounds.size.width / 2, shapeLayer.bounds.size.height / 2)];
+    // 填充颜色
+    [shapeLayer setFillColor:[UIColor clearColor].CGColor];
+    // 画笔颜色
+    [shapeLayer setStrokeColor:[UIColor redColor].CGColor];
+    // 首尾样式
+    [shapeLayer setLineCap:kCALineCapRound];
+    // 虚线宽度
+    [shapeLayer setLineWidth:5];
+    // 线段连接方式
+    // kCALineJoinMiter 菱角
+    // kCALineJoinRound 平滑
+    // kCALineJoinBevel 折线
+    [shapeLayer setLineJoin:kCALineJoinRound];
+    
+    NSMutableArray *pattern = @[].mutableCopy;
+    int  length = sizeof(lengthsV) / sizeof(lengthsV[0]);
+    for (int i = 0; i < length; i++) {
+        if (lengthsV[i] == EOF) {
+            break;
+        }
+        [pattern addObject:@(lengthsV[i])];
+    }
+    [shapeLayer setLineDashPattern:pattern];
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, 0, 0);
+    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width / 2, 0);
+    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width / 2, 50);
+    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width, 50);
+    
+    [shapeLayer setPath:path];
+    [view.layer addSublayer:shapeLayer];
+    /* - - - Return - - - */
+    
+    return view;
 }
 
 #pragma mark - getter / setter
