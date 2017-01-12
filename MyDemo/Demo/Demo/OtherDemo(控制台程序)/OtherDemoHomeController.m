@@ -16,12 +16,12 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title":@"MacroDemo", @"class":@"MacroDemo"}
-                    , @{@"title":@"RuntimeDemo", @"class":@"RuntimeDemo"}
-                    , @{@"title":@"EnumAndFormatDemo", @"class":@"EnumAndFormatDemo"}
-                    , @{@"title":@"OCClassMethodDemo", @"class":@"OCClassMethodDemo"}
-                    , @{@"title":@"AlgorithmDemo", @"class":@"AlgorithmDemo"}
-                    , nil];
+                    @{@"title":@"MacroDemo", @"class":@"MacroDemo"},
+                    @{@"title":@"RuntimeDemo", @"class":@"RuntimeDemo"},
+                    @{@"title":@"EnumAndFormatDemo", @"class":@"EnumAndFormatDemo"},
+                    @{@"title":@"OCClassPropertyDemo", @"class":@"OCClassPropertyDemo"},
+                    @{@"title":@"OCClassMethodDemo", @"class":@"OCClassMethodDemo"},
+                    @{@"title":@"AlgorithmDemo", @"class":@"AlgorithmDemo"}, nil];
     }
     return _infoArr;
 }

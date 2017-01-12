@@ -97,7 +97,6 @@
 		FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.m */; };
 		FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */; };
 		FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077601E2618A800361E60 /* PAAssetPickerController.m */; };
-		FB5078A41E2618A900361E60 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077631E2618A800361E60 /* NSString+Category.m */; };
 		FB5078A51E2618A900361E60 /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077661E2618A800361E60 /* CollectionViewDemoHomeController.m */; };
 		FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */; };
 		FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */; };
@@ -199,6 +198,10 @@
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50796C1E262DB200361E60 /* DemoBaseViewController.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
+		FBB244531E278637002DAB59 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244521E278637002DAB59 /* NSString+Category.m */; };
+		FBB2445A1E278739002DAB59 /* OCClassPropertyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */; };
+		FBB244631E2789F8002DAB59 /* ZCPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244621E2789F8002DAB59 /* ZCPUser.m */; };
+		FBB244661E278A14002DAB59 /* ZCPUser+AddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -1314,8 +1317,6 @@
 		FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraAndAlbumDemoHomeController.m; sourceTree = "<group>"; };
 		FB50775F1E2618A800361E60 /* PAAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAssetPickerController.h; sourceTree = "<group>"; };
 		FB5077601E2618A800361E60 /* PAAssetPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAssetPickerController.m; sourceTree = "<group>"; };
-		FB5077621E2618A800361E60 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
-		FB5077631E2618A800361E60 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		FB5077651E2618A800361E60 /* CollectionViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB5077661E2618A800361E60 /* CollectionViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077B31E2618A800361E60 /* NetWorkDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkDemoHomeController.h; sourceTree = "<group>"; };
@@ -1517,6 +1518,14 @@
 		FB50796B1E262DB200361E60 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
 		FB50796C1E262DB200361E60 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FBB244511E278637002DAB59 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		FBB244521E278637002DAB59 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		FBB244581E278739002DAB59 /* OCClassPropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClassPropertyDemo.h; sourceTree = "<group>"; };
+		FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClassPropertyDemo.m; sourceTree = "<group>"; };
+		FBB244611E2789F8002DAB59 /* ZCPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPUser.h; sourceTree = "<group>"; };
+		FBB244621E2789F8002DAB59 /* ZCPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPUser.m; sourceTree = "<group>"; };
+		FBB244641E278A14002DAB59 /* ZCPUser+AddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZCPUser+AddProperty.h"; sourceTree = "<group>"; };
+		FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZCPUser+AddProperty.m"; sourceTree = "<group>"; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
 		FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3679,7 +3688,6 @@
 			children = (
 				FB5077561E2618A800361E60 /* AlertViewDemo */,
 				FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */,
-				FB5077611E2618A800361E60 /* Category */,
 				FB5077641E2618A800361E60 /* CollectionViewDemo */,
 				FB5077671E2618A800361E60 /* NetWork */,
 				FB5077BB1E2618A800361E60 /* OtherDemo(控制台程序) */,
@@ -3727,15 +3735,6 @@
 			path = "相册";
 			sourceTree = "<group>";
 		};
-		FB5077611E2618A800361E60 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				FB5077621E2618A800361E60 /* NSString+Category.h */,
-				FB5077631E2618A800361E60 /* NSString+Category.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		FB5077641E2618A800361E60 /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -3763,9 +3762,11 @@
 		FB5077BB1E2618A800361E60 /* OtherDemo(控制台程序) */ = {
 			isa = PBXGroup;
 			children = (
+				FBB244501E278637002DAB59 /* Category */,
 				FB5077BC1E2618A800361E60 /* AlgorithmDemo */,
 				FB5077BF1E2618A800361E60 /* EnumAndFormatDemo */,
 				FB5077C21E2618A800361E60 /* MacroDemo */,
+				FBB244571E27870E002DAB59 /* OCClassPropertyDemo */,
 				FB5077C51E2618A800361E60 /* OCClassMethodDemo */,
 				FB5077D31E2618A800361E60 /* RuntimeDemo */,
 				FB5077D11E2618A800361E60 /* OtherDemoHomeController.h */,
@@ -4286,6 +4287,28 @@
 			path = "气泡拉伸";
 			sourceTree = "<group>";
 		};
+		FBB244501E278637002DAB59 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FBB244511E278637002DAB59 /* NSString+Category.h */,
+				FBB244521E278637002DAB59 /* NSString+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FBB244571E27870E002DAB59 /* OCClassPropertyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FBB244581E278739002DAB59 /* OCClassPropertyDemo.h */,
+				FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */,
+				FBB244611E2789F8002DAB59 /* ZCPUser.h */,
+				FBB244621E2789F8002DAB59 /* ZCPUser.m */,
+				FBB244641E278A14002DAB59 /* ZCPUser+AddProperty.h */,
+				FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */,
+			);
+			path = OCClassPropertyDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4532,6 +4555,7 @@
 				FB50790D1E2618A900361E60 /* ShareDemoHomeController.m in Sources */,
 				FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */,
 				FB5078E91E2618A900361E60 /* ZCPResponseDataModel.m in Sources */,
+				FBB244661E278A14002DAB59 /* ZCPUser+AddProperty.m in Sources */,
 				FB5078DB1E2618A900361E60 /* NSObject+Category.m in Sources */,
 				FB5078EE1E2618A900361E60 /* ZCPButtonCell.m in Sources */,
 				FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */,
@@ -4542,6 +4566,7 @@
 				FB5078CE1E2618A900361E60 /* ClassA.m in Sources */,
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
+				FBB244631E2789F8002DAB59 /* ZCPUser.m in Sources */,
 				FB50790C1E2618A900361E60 /* ZCPScanQRCodeViewController.m in Sources */,
 				FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */,
 				FB5078D81E2618A900361E60 /* RuntimeTest3.m in Sources */,
@@ -4553,6 +4578,7 @@
 				FB5078DA1E2618A900361E60 /* NSDateFormatter+ExtraMethod.m in Sources */,
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB5078E21E2618A900361E60 /* UIImage+Category.m in Sources */,
+				FBB2445A1E278739002DAB59 /* OCClassPropertyDemo.m in Sources */,
 				FB5078CC1E2618A900361E60 /* MacroDemo.m in Sources */,
 				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5078D21E2618A900361E60 /* OtherDemoHomeController.m in Sources */,
@@ -4605,6 +4631,7 @@
 				FB5079121E2618A900361E60 /* TabBarDemoHomeController.m in Sources */,
 				FB5078F21E2618A900361E60 /* ZCPTableViewWithLineCell.m in Sources */,
 				FB5078E41E2618A900361E60 /* UIScrollView+ExtraMethod.m in Sources */,
+				FBB244531E278637002DAB59 /* NSString+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
 				FB5078F11E2618A900361E60 /* ZCPTableViewCell.m in Sources */,
 				FB5078F01E2618A900361E60 /* ZCPSectionCell.m in Sources */,
@@ -4619,7 +4646,6 @@
 				FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */,
 				FB5078EC1E2618A900361E60 /* ZCPTabBarController.m in Sources */,
 				FB5078A51E2618A900361E60 /* CollectionViewDemoHomeController.m in Sources */,
-				FB5078A41E2618A900361E60 /* NSString+Category.m in Sources */,
 				FB5078CD1E2618A900361E60 /* ClassA+Category.m in Sources */,
 				FB5078E01E2618A900361E60 /* UIColor+Category.m in Sources */,
 			);
