@@ -99,6 +99,10 @@
  1.可设置线条首尾样式；有模糊，水平方向线宽不对
  2.可设置线条首尾样式，无模糊；水平方向线宽不对
  3.可设置连接处样式，无线宽异常
+ 
+ 参考：
+ 画虚线几种方法：http://www.jianshu.com/p/d64b0abef349
+ CoreAnimation部分api解读：http://www.cnblogs.com/Free-Thinker/p/5117624.html
  */
 
 // 通过 Quartz 2D 生成UIImage虚线

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ AYViewCorner：https://github.com/AYJk/AYViewCorner
+ 用CoreAnimation画圆角
+ */
+
 @interface SetFilletDemoHomeController : DemoBaseViewController
 
 @end
