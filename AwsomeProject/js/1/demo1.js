@@ -18,7 +18,7 @@ export default class Demo1 extends Component {
     return(
       <View style={{flex: 1, backgroundColor: 'black', marginBottom: 64}}>
         <TitleView
-          title={'编写Hello Worldasdfasdf'}
+          title={'编写Hello World asdfasdf'}
           height={50}
           textMarginLeft={15}
           textMarginRight={15}

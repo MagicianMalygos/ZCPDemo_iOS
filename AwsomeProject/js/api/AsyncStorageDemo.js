@@ -56,6 +56,7 @@ var Model = [
   },
 ];
 
+// 商品列表项
 var Item = React.createClass({
   // props: press、url、title
   render() {
@@ -75,6 +76,7 @@ var Item = React.createClass({
   },
 });
 
+// 商品列表
 var List = React.createClass({
   getInitialState() {
     return {
@@ -97,7 +99,7 @@ var List = React.createClass({
       title: '购物车',
     });
   },
-  _press() {
+  _press(data) {
     var count = this.state.count;
     count ++;
     // 改变数字状态
@@ -105,12 +107,14 @@ var List = React.createClass({
       count: count,
     });
     // AsyncStorage存储
+    // key，value，回调方法
     AsyncStorage.setItem('SP-' + this._genId() + '-SP', JSON.stringify(data), function(err){
       if(err) {
         // 存储出错
       }
     });
   },
+  // 生成唯一ID
   _genId() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
       var r = Math.random() * 16 | 0,
@@ -120,16 +124,21 @@ var List = React.createClass({
   },
   render() {
     var list = [];
-    for (var i in Model) {
+    for (var i = 0; i < Model.length; i++) {
       if (i % 2 == 0) {
+        // Q:此处如果说用var的话会出现异常情况，
+        // A:问题是由于var定义的变量生命周期长导致的
+        // var为全局变量 let为局部变量 const为常量
+        let data1 = Model[i];
+        let data2 = Model[parseInt(i) + 1];
         var row = (
           <View style={listStyles.row} key={i}>
-            <Item url={Model[i].url}
-              title={Model[i].title}
-              press={()=>this._press(Model[i])}/>
-            <Item url={Model[i].url}
-              title={Model[i].title}
-              press={()=>this._press(Model[parseInt(i) + 1])}/>
+            <Item url={data1.url}
+              title={data1.title}
+              press={()=>this._press(data1)}/>
+            <Item url={data2.url}
+              title={data2.title}
+              press={()=>this._press(data2)}/>
           </View>
         );
         list.push(row);
@@ -142,15 +151,18 @@ var List = React.createClass({
       str = '，共' + count + '件商品';
     }
     return (
-      <ScrollView style={{marginTop: 10}}>
+      <ScrollView style={{marginTop: 10, marginBottom: 64,}}>
         {list}
-        <Text style={listStyles.btn}
-          onPress={this._goGouWu}>去结算{str}</Text>
+        <View style={listStyles.btn_container}>
+          <Text style={listStyles.btn}
+            onPress={this._goGouWu}>去结算{str}</Text>
+        </View>
       </ScrollView>
     );
   },
 });
 
+// 结算页
 var GouWu = React.createClass({
   getInitialState() {
     return({
@@ -158,19 +170,70 @@ var GouWu = React.createClass({
       price: 0,
     });
   },
+  componentDidMount() {
+    AsyncStorage.getAllKeys((err, keys)=>{
+      if(err) {
+        // 存储数据出错
+      }
+      AsyncStorage.multiGet(keys, (err, result)=>{
+        if (err) {
+          // 错误处理
+        }
+        // result是二位数组，result[i][0]为key，result[i][1]为value
+        var arr = [];
+        for (var i in result) {
+          arr.push(JSON.parse(result[i][1]));
+        }
+        this.setState({
+          data: arr,
+        });
+      });
+    });
+  },
+  _clearGoShop() {
+    AsyncStorage.clear((err)=>{
+      if (!err) {
+        this.setState({
+          data:[],
+          price: 0,
+        });
+        alert('购物车已经清空');
+      }
+    });
+  },
   render() {
     var data = this.state.data;
     var price = this.state.price;
     var list = [];
     for (var i in data) {
+      price += parseFloat(data[i].price);
+      list.push(
+        <View style={[gouwuStyles.row, gouwuStyles.list_item]} key={i}>
+          <Text style={gouwuStyles.list_item_desc}>{data[i].title}{data[i].desc}</Text>
+          <Text style={gouwuStyles.list_item_price}>￥{data[i].price}</Text>
+        </View>
+      );
     }
+    var str = null;
+    if (price) {
+      str = '，共' + price.toFixed(1) + '元';
+    }
+    return(
+      <ScrollView style={gouwuStyles.container}>
+        {list}
+        <Text style={gouwuStyles.pay}>支付</Text>
+        <Text style={gouwuStyles.clear}
+          onPress={this._clearGoShop}>清空购物车</Text>
+      </ScrollView>
+    );
   },
 });
 
+// Demo
 var AsyncStorageDemo = React.createClass({
   render() {
     return(
-      <List />
+      <List navigator={this.props.navigator}/>
     );
   },
 });
@@ -180,15 +243,20 @@ var listStyles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: 10,
   },
-  btn: {
+  btn_container: {
+    height: 50,
     backgroundColor: '#ff7200',
-    height: 33,
-    textAlign: 'center',
-    color: '#fff',
+    justifyContent: 'center',
     marginLeft: 10,
     marginRight: 10,
-    lineHeight: 24,
     marginTop: 40,
+  },
+  btn: {
+    backgroundColor: '#ff7200',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    color: '#fff',
+    lineHeight: 24,
     fontSize: 18,
   },
 });
@@ -214,6 +282,59 @@ var itemStyles = StyleSheet.create({
     lineHeight: 18,
     textAlign: 'center',
     marginTop: 74,
+  },
+});
+
+var gouwuStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 10,
+  },
+  row: {
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
+  list_item: {
+    height: 30,
+    marginLeft: 5,
+    marginRight: 5,
+    padding: 5,
+    borderWidth: 1,
+    borderRadius: 3,
+    borderColor: '#ddd',
+  },
+  list_item_desc: {
+    flex: 2,
+    fontSize: 15,
+  },
+  list_item_price: {
+    flex: 1,
+    textAlign: 'right',
+    fontSize: 15,
+  },
+  pay: {
+    flex: 1,
+    height: 35,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: '#ff8447',
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#fff',
+  },
+  clear: {
+    flex: 1,
+    height: 35,
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: '#ff8447',
+    textAlign: 'center',
+    fontSize: 14,
+    color: '#fff',
   },
 });
 

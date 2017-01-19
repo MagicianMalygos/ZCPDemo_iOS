@@ -12,6 +12,9 @@ import ImageDemo from './component/ImageDemo'
 import TabBarIOSDemo from './component/TabBarIOSDemo'
 import WebViewDemo from './component/WebViewDemo'
 import AsyncStorageDemo from './api/AsyncStorageDemo'
+import AlertIOSDemo from './api/AlertIOSDemo'
+import ActionSheetIOSDemo from './api/ActionSheetIOSDemo'
+import PixelRatioDemo from './api/PixelRatioDemo'
 
 module.exports = {
   组件: [
@@ -61,20 +64,20 @@ module.exports = {
     },
     {
       index: 2,
-      title: 'AsyncStorage',
-      component: AsyncStorageDemo,
+      title: 'AlertIOSDemo',
+      component: AlertIOSDemo,
       hideNav: false,
     },
     {
       index: 3,
-      title: 'AsyncStorage',
-      component: AsyncStorageDemo,
+      title: 'ActionSheetIOSDemo',
+      component: ActionSheetIOSDemo,
       hideNav: false,
     },
     {
       index: 4,
-      title: 'AsyncStorage',
-      component: AsyncStorageDemo,
+      title: 'PixelRatioDemo',
+      component: PixelRatioDemo,
       hideNav: false,
     },
   ],
