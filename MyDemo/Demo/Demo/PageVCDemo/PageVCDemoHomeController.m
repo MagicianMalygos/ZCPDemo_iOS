@@ -8,6 +8,7 @@
 
 #import "PageVCDemoHomeController.h"
 #import "MyViewController.h"
+#import "UIImage+Category.h"
 
 @interface PageVCDemoHomeController ()
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) UISwipeGestureRecognizer *leftSwipe;
 @property (nonatomic, strong) UISwipeGestureRecognizer *rightSwipe;
 
+
+@property (nonatomic, strong) NSMutableDictionary *headerDict;
 @end
 
 @implementation PageVCDemoHomeController
@@ -53,6 +56,53 @@
     jumpButton.backgroundColor = [UIColor magentaColor];
     [jumpButton addTarget:self action:@selector(jumpToNextVC) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:jumpButton];
+    
+    
+    // Test
+    [self sdTest];
+}
+
+#pragma mark - sd test
+
+// 测试给url添加HeaderField
+- (void)sdTest {
+    
+    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] clearMemory];
+    self.headerDict = [NSMutableDictionary dictionary];
+    
+    NSArray *urlArr = @[@"http://avatar.csdn.net/2/A/5/1_yiya1989.jpg",
+                        @"http://bpic.588ku.com/element_banner/20/16/12/50a1a3be752815245c8891004465717c.jpg",
+                        @"http://bpic.588ku.com/element_banner/20/17/02/c01d4b880f4b4d408805c61c726f16fc.png"];
+    
+    for (int i = 0; i < urlArr.count; i++) {
+        [self loadphoto:(NSString *)[urlArr objectAtIndex:i] index:i];
+    }
+    
+    WEAK_SELF;
+    [SDWebImageManager sharedManager].imageDownloader.headersFilter =  ^(NSURL *url, NSDictionary *headers) {
+        NSMutableDictionary *h = [NSMutableDictionary dictionary];
+        [h setDictionary:headers];
+        [h setDictionary:[weakSelf.headerDict valueForKey:url.absoluteString]];
+        return h;
+    };
+}
+
+- (void)loadphoto:(NSString *)url index:(NSInteger)i {
+    
+    // post获取header
+    NSDictionary *header = @{@"url": url};
+    [self.headerDict setValue:header forKey:[NSURL URLWithString:url].absoluteString];
+    
+    // get请求
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageAllowInvalidSSLCertificates progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    }];
+    
+    imageView.frame = CGRectMake(i * 50, 0, 50, 50);
+    [self.firstVC.view addSubview:imageView];
+    
 }
 
 #pragma mark - swipe gesture recognizer

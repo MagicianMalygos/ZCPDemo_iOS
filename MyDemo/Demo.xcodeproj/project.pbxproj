@@ -90,6 +90,8 @@
 		9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BB1D2A850A0061664A /* libz.tbd */; };
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
 		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
+		FB1A27C41E5152E40057D0DD /* RuntimeExampleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1A27C11E5152E40057D0DD /* RuntimeExampleDemo.m */; };
+		FB1A27C51E5152E40057D0DD /* UIImage+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1A27C31E5152E40057D0DD /* UIImage+Runtime.m */; };
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
 		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
@@ -198,10 +200,11 @@
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50796C1E262DB200361E60 /* DemoBaseViewController.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
+		FB97A2A41E52A5ED000D0F6E /* ZCPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FB97A2A11E52A5ED000D0F6E /* ZCPUser.m */; };
+		FB97A2A51E52A5ED000D0F6E /* ZCPUser+AddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FB97A2A31E52A5ED000D0F6E /* ZCPUser+AddProperty.m */; };
+		FB9D668F1E51AC5400401274 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9D668E1E51AC5400401274 /* rocket.png */; };
+		FB9D66931E51ACA800401274 /* rocket_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9D66921E51ACA800401274 /* rocket_ios7.png */; };
 		FBB244531E278637002DAB59 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244521E278637002DAB59 /* NSString+Category.m */; };
-		FBB2445A1E278739002DAB59 /* OCClassPropertyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */; };
-		FBB244631E2789F8002DAB59 /* ZCPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244621E2789F8002DAB59 /* ZCPUser.m */; };
-		FBB244661E278A14002DAB59 /* ZCPUser+AddProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -1304,6 +1307,10 @@
 		9E3E86BF1D2A86650061664A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		A64F86DBCB8DEA9772D53AD7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC8C4866F9A8BA5B7BBEDCF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1A27C11E5152E40057D0DD /* RuntimeExampleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeExampleDemo.m; sourceTree = "<group>"; };
+		FB1A27C21E5152E40057D0DD /* UIImage+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Runtime.h"; sourceTree = "<group>"; };
+		FB1A27C31E5152E40057D0DD /* UIImage+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Runtime.m"; sourceTree = "<group>"; };
+		FB4376001E53F31E00014DB3 /* ZCPUserMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPUserMethod.h; sourceTree = "<group>"; };
 		FB4600701E2716DA003504AD /* DashedSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedSettingView.h; sourceTree = "<group>"; };
 		FB4600711E2716DA003504AD /* DashedSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedSettingView.m; sourceTree = "<group>"; };
 		FB4600771E27170E003504AD /* DashedSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashedSettingView.xib; sourceTree = "<group>"; };
@@ -1518,14 +1525,15 @@
 		FB50796B1E262DB200361E60 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
 		FB50796C1E262DB200361E60 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB97A2A01E52A5ED000D0F6E /* ZCPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPUser.h; sourceTree = "<group>"; };
+		FB97A2A11E52A5ED000D0F6E /* ZCPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPUser.m; sourceTree = "<group>"; };
+		FB97A2A21E52A5ED000D0F6E /* ZCPUser+AddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZCPUser+AddProperty.h"; sourceTree = "<group>"; };
+		FB97A2A31E52A5ED000D0F6E /* ZCPUser+AddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZCPUser+AddProperty.m"; sourceTree = "<group>"; };
+		FB9D668E1E51AC5400401274 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
+		FB9D66911E51ACA000401274 /* RuntimeExampleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeExampleDemo.h; sourceTree = "<group>"; };
+		FB9D66921E51ACA800401274 /* rocket_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket_ios7.png; sourceTree = "<group>"; };
 		FBB244511E278637002DAB59 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		FBB244521E278637002DAB59 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
-		FBB244581E278739002DAB59 /* OCClassPropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClassPropertyDemo.h; sourceTree = "<group>"; };
-		FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClassPropertyDemo.m; sourceTree = "<group>"; };
-		FBB244611E2789F8002DAB59 /* ZCPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPUser.h; sourceTree = "<group>"; };
-		FBB244621E2789F8002DAB59 /* ZCPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPUser.m; sourceTree = "<group>"; };
-		FBB244641E278A14002DAB59 /* ZCPUser+AddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZCPUser+AddProperty.h"; sourceTree = "<group>"; };
-		FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZCPUser+AddProperty.m"; sourceTree = "<group>"; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
 		FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3683,6 +3691,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB1A27BF1E5152E40057D0DD /* RuntimeExample */ = {
+			isa = PBXGroup;
+			children = (
+				FB9D66921E51ACA800401274 /* rocket_ios7.png */,
+				FB9D668E1E51AC5400401274 /* rocket.png */,
+				FB9D66911E51ACA000401274 /* RuntimeExampleDemo.h */,
+				FB1A27C11E5152E40057D0DD /* RuntimeExampleDemo.m */,
+				FB1A27C21E5152E40057D0DD /* UIImage+Runtime.h */,
+				FB1A27C31E5152E40057D0DD /* UIImage+Runtime.m */,
+				FB97A2A01E52A5ED000D0F6E /* ZCPUser.h */,
+				FB97A2A11E52A5ED000D0F6E /* ZCPUser.m */,
+				FB97A2A21E52A5ED000D0F6E /* ZCPUser+AddProperty.h */,
+				FB97A2A31E52A5ED000D0F6E /* ZCPUser+AddProperty.m */,
+				FB4376001E53F31E00014DB3 /* ZCPUserMethod.h */,
+			);
+			path = RuntimeExample;
+			sourceTree = "<group>";
+		};
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -3766,7 +3792,6 @@
 				FB5077BC1E2618A800361E60 /* AlgorithmDemo */,
 				FB5077BF1E2618A800361E60 /* EnumAndFormatDemo */,
 				FB5077C21E2618A800361E60 /* MacroDemo */,
-				FBB244571E27870E002DAB59 /* OCClassPropertyDemo */,
 				FB5077C51E2618A800361E60 /* OCClassMethodDemo */,
 				FB5077D31E2618A800361E60 /* RuntimeDemo */,
 				FB5077D11E2618A800361E60 /* OtherDemoHomeController.h */,
@@ -3823,6 +3848,7 @@
 		FB5077D31E2618A800361E60 /* RuntimeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FB1A27BF1E5152E40057D0DD /* RuntimeExample */,
 				FB5077D41E2618A800361E60 /* class.png */,
 				FB5077D51E2618A800361E60 /* objc_msgSend.png */,
 				FB5077D61E2618A800361E60 /* RuntimeDemo.h */,
@@ -4296,19 +4322,6 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		FBB244571E27870E002DAB59 /* OCClassPropertyDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FBB244581E278739002DAB59 /* OCClassPropertyDemo.h */,
-				FBB244591E278739002DAB59 /* OCClassPropertyDemo.m */,
-				FBB244611E2789F8002DAB59 /* ZCPUser.h */,
-				FBB244621E2789F8002DAB59 /* ZCPUser.m */,
-				FBB244641E278A14002DAB59 /* ZCPUser+AddProperty.h */,
-				FBB244651E278A14002DAB59 /* ZCPUser+AddProperty.m */,
-			);
-			path = OCClassPropertyDemo;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4468,6 +4481,7 @@
 				184439961D0012C700FDD7F7 /* tips_page_arrow.png in Resources */,
 				187250371C91189A002D8C9E /* LaunchScreen.storyboard in Resources */,
 				18A501491C92BE67006EBEB4 /* 002.jpg in Resources */,
+				FB9D668F1E51AC5400401274 /* rocket.png in Resources */,
 				184439971D0012C700FDD7F7 /* tips_page_arrow@2x.png in Resources */,
 				1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */,
 				1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */,
@@ -4476,6 +4490,7 @@
 				1844399A1D0012C700FDD7F7 /* tips_page_arrow_down@2x.png in Resources */,
 				187250A21C91870A002D8C9E /* Info.plist in Resources */,
 				FB5079081E2618A900361E60 /* turn_on.png in Resources */,
+				FB9D66931E51ACA800401274 /* rocket_ios7.png in Resources */,
 				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
@@ -4555,7 +4570,6 @@
 				FB50790D1E2618A900361E60 /* ShareDemoHomeController.m in Sources */,
 				FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */,
 				FB5078E91E2618A900361E60 /* ZCPResponseDataModel.m in Sources */,
-				FBB244661E278A14002DAB59 /* ZCPUser+AddProperty.m in Sources */,
 				FB5078DB1E2618A900361E60 /* NSObject+Category.m in Sources */,
 				FB5078EE1E2618A900361E60 /* ZCPButtonCell.m in Sources */,
 				FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */,
@@ -4566,7 +4580,6 @@
 				FB5078CE1E2618A900361E60 /* ClassA.m in Sources */,
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
-				FBB244631E2789F8002DAB59 /* ZCPUser.m in Sources */,
 				FB50790C1E2618A900361E60 /* ZCPScanQRCodeViewController.m in Sources */,
 				FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */,
 				FB5078D81E2618A900361E60 /* RuntimeTest3.m in Sources */,
@@ -4578,7 +4591,6 @@
 				FB5078DA1E2618A900361E60 /* NSDateFormatter+ExtraMethod.m in Sources */,
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB5078E21E2618A900361E60 /* UIImage+Category.m in Sources */,
-				FBB2445A1E278739002DAB59 /* OCClassPropertyDemo.m in Sources */,
 				FB5078CC1E2618A900361E60 /* MacroDemo.m in Sources */,
 				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5078D21E2618A900361E60 /* OtherDemoHomeController.m in Sources */,
@@ -4591,8 +4603,10 @@
 				FB5078E61E2618A900361E60 /* ZCPTableViewCell+Category.m in Sources */,
 				FB5079111E2618A900361E60 /* WeiXinShareDemoHomeController.m in Sources */,
 				FB5078DC1E2618A900361E60 /* NSString+Category2.m in Sources */,
+				FB97A2A41E52A5ED000D0F6E /* ZCPUser.m in Sources */,
 				FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */,
 				FB5078FD1E2618A900361E60 /* TipsViewDemoHomeController.m in Sources */,
+				FB1A27C41E5152E40057D0DD /* RuntimeExampleDemo.m in Sources */,
 				FB5078E71E2618A900361E60 /* ZCPDataModel.m in Sources */,
 				FB5078ED1E2618A900361E60 /* ZCPListTableViewAdaptor.m in Sources */,
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
@@ -4615,6 +4629,7 @@
 				FB5078E51E2618A900361E60 /* UIViewController+Category.m in Sources */,
 				FB5078D71E2618A900361E60 /* RuntimeTest2.m in Sources */,
 				FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */,
+				FB97A2A51E52A5ED000D0F6E /* ZCPUser+AddProperty.m in Sources */,
 				FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */,
 				FB5078DF1E2618A900361E60 /* UIButton+Category.m in Sources */,
 				FB50791B1E2618A900361E60 /* TouchDrawView.m in Sources */,
@@ -4646,6 +4661,7 @@
 				FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */,
 				FB5078EC1E2618A900361E60 /* ZCPTabBarController.m in Sources */,
 				FB5078A51E2618A900361E60 /* CollectionViewDemoHomeController.m in Sources */,
+				FB1A27C51E5152E40057D0DD /* UIImage+Runtime.m in Sources */,
 				FB5078CD1E2618A900361E60 /* ClassA+Category.m in Sources */,
 				FB5078E01E2618A900361E60 /* UIColor+Category.m in Sources */,
 			);

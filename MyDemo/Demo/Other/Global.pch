@@ -22,7 +22,7 @@
 #define SCREENHEIGHT                                [[UIScreen mainScreen] bounds].size.height
 
 // Log
-#define ZCPLog(FORMAT, ...) fprintf(stderr,"\n> > > > > > > > > > > > > > > ZCPLog\n%s:%d\n%s\n< < < < < < < < < < < < < < <\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#define ZCPLog(FORMAT, ...) fprintf(stderr,"\n> > > > > > > > > > > > > > > ZCPLog\n%s:%d\n%s\n< < < < < < < < < < < < < < <\n\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 // 忽略PerformSelectorleak警告宏
 #define SuppressPerformSelectorLeakWarning(Stuff) \

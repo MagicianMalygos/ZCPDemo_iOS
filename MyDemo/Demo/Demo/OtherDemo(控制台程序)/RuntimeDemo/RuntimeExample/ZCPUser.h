@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZCPUser : NSObject
+@interface ZCPUser : NSObject <NSCoding>
+{
+    NSString *_age;
+}
+
+- (NSString *)age;
+- (void)setAge:(NSString *)age;
 
 @property (nonatomic, copy) NSString *uID;
 
 @end
+
+#import "ZCPUser+AddProperty.h"

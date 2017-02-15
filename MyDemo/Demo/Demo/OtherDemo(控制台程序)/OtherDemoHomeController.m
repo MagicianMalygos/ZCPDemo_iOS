@@ -18,6 +18,7 @@
         _infoArr = [NSMutableArray arrayWithObjects:
                     @{@"title":@"MacroDemo", @"class":@"MacroDemo"},
                     @{@"title":@"RuntimeDemo", @"class":@"RuntimeDemo"},
+                    @{@"title":@"RuntimeExampleDemo", @"class":@"RuntimeExampleDemo"},
                     @{@"title":@"EnumAndFormatDemo", @"class":@"EnumAndFormatDemo"},
                     @{@"title":@"OCClassPropertyDemo", @"class":@"OCClassPropertyDemo"},
                     @{@"title":@"OCClassMethodDemo", @"class":@"OCClassMethodDemo"},
@@ -27,10 +28,18 @@
 }
 
 - (void)didSelectCell:(NSIndexPath *)indexPath {
-    Class class = NSClassFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"]);
-    NSObject *object = [class new];
-    if (class && object) {
-        [object performSelector:@selector(run)];
+    NSString *classString = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"];
+    Class class = NSClassFromString(classString);
+    if ([classString isEqualToString:@"RuntimeExampleDemo"]) {
+        UIViewController *vc = [class new];
+        if (class && vc) {
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    } else {
+        NSObject *object = [class new];
+        if (class && object) {
+            [object performSelector:@selector(run)];
+        }
     }
 }
 

@@ -19,6 +19,8 @@
  
 @implementation ZCPUser (AddProperty)
 
+//@dynamic age;
+
 // @synthesize not allowed in a category`s implementation
 // @synthesize name = _name;
 // @dynamic name;
@@ -44,9 +46,14 @@ static NSString *name_var = @"name";
  */
 
 - (NSString *)name {
+    // 根据关联的key获取关联的值
     return objc_getAssociatedObject(self, &name_var);
 }
 - (void)setName:(NSString *)name {
+    // param1：给那个对象添加关联
+    // param2：关联的key
+    // param3：关联的value
+    // param4：关联的策略
     objc_setAssociatedObject(self, &name_var, name, OBJC_ASSOCIATION_COPY);
 }
 

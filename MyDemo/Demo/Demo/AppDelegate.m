@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+        
     // share相关
     [WeiboSDK enableDebugMode:YES];  // 设置调试模式
     [WeiboSDK registerApp:kAppKey];  // 向微博注册第三方应用

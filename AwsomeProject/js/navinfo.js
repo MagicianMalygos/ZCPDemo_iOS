@@ -15,6 +15,8 @@ import AsyncStorageDemo from './api/AsyncStorageDemo'
 import AlertIOSDemo from './api/AlertIOSDemo'
 import ActionSheetIOSDemo from './api/ActionSheetIOSDemo'
 import PixelRatioDemo from './api/PixelRatioDemo'
+import AppStateDemo from './api/AppStateDemo'
+import StatusBarDemo from './api/StatusBarDemo'
 
 module.exports = {
   组件: [
@@ -78,6 +80,18 @@ module.exports = {
       index: 4,
       title: 'PixelRatioDemo',
       component: PixelRatioDemo,
+      hideNav: false,
+    },
+    {
+      index: 5,
+      title: 'AppStateDemo',
+      component: AppStateDemo,
+      hideNav: false,
+    },
+    {
+      index: 6,
+      title: 'StatusBarDemo',
+      component: StatusBarDemo,
       hideNav: false,
     },
   ],

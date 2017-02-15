@@ -10,6 +10,7 @@
 #import "RuntimeTest1.h"
 #import "RuntimeTest2.h"
 #import "RuntimeTest3.h"
+#import "RuntimeExampleDemo.h"
 
 @implementation RuntimeDemo
 
