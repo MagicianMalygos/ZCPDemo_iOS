@@ -22,7 +22,6 @@
                     @{@"title": @"CameraAndAlbumDemo", @"class": @"CameraAndAlbumDemoHomeController"},
                     @{@"title": @"OtherDemo", @"class": @"OtherDemoHomeController"},
                     @{@"title": @"PhotoCarouselDemo", @"class": @"PhotoCarouselDemoHomeController"},
-                    @{@"title": @"CollectionViewDemo", @"class": @"CollectionViewDemoHomeController"},
                     @{@"title": @"ShareDemo", @"class": @"ShareDemoHomeController"},
                     @{@"title": @"PADemo", @"class": @"PADemoHomeController"},
                     @{@"title": @"TabBarDemo", @"class": @"TabBarDemoHomeController"},

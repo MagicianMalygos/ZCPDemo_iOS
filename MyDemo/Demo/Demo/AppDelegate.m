@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZCPDemoHomeController.h"
+#import "AppManager.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    [AppManager checkAppVersion];
+//    [AppManager checkAppVersion_custom];
     
     return YES;
 }

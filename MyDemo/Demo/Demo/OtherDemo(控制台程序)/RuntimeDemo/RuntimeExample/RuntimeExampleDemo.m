@@ -74,6 +74,23 @@
     NSArray *resultArray = [NSKeyedUnarchiver unarchiveObjectWithData:data2];
     ZCPLog(@"运行时归档解档2结果：%@", resultArray);
     
+//    ZCPUser *userArchiver = [[ZCPUser alloc] init];
+//    userArchiver.uID = @"1001";
+//    userArchiver.name = @"飞花蝶舞剑";
+//    userArchiver.age = @"18";
+    UIImage *imageTest = [UIImage imageNamed:@"rocket"];
+    UIImageAsset *asset1 = imageTest.imageAsset;
+    imageTest = [UIImage imageWithCGImage:imageTest.CGImage];
+    UIImageAsset *asset2 = imageTest.imageAsset;
+    
+    // 归档
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *file = [[paths objectAtIndex:0] stringByAppendingString:@"/a.data"];
+    [NSKeyedArchiver archiveRootObject:imageTest toFile:file];
+    
+    // 解档
+    id object = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+    
     // 4.动态添加方法
     // 如果一个类方法非常多，加载类到内存的时候也比较耗费资源，需要给每个方法生成映射表，可以使用动态给某个类，添加方法解决。
     [user performSelector:@selector(eat)];

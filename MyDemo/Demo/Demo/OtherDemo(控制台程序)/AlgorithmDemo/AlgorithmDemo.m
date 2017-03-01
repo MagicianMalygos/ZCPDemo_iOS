@@ -7,17 +7,27 @@
 //
 
 #import "AlgorithmDemo.h"
-
-
+#import "TreeDemo.h"
 
 @implementation AlgorithmDemo
 
 - (void)run {
     [self noRepeatRandomListWithMin:1 max:4];
+    
+    NSLog(@"%@", [self getListWithMax:13 count:5]);
+    NSLog(@"%@", [self getListWithMax:13 count:5]);
+    NSLog(@"%@", [self getListWithMax:13 count:5]);
+    NSLog(@"%@", [self getListWithMax:13 count:5]);
+    
+    NSLog(@"%@", [self getListWithMax:13 count:5]);
+    NSLog(@"%@", [self getListWithMax:15 count:10]);
+    NSLog(@"%@", [self getListWithMax:10 count:5]);
+    NSLog(@"%@", [self getListWithMax:9 count:2]);
 }
 
 - (void)noRepeatRandomListWithMin:(int)min max:(int)max {
     
+    // -- 生成随机序列 --
     // 1
     // 初始化数组
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:max - min + 1];
@@ -58,6 +68,29 @@
         printf("%d", a[i]);
     }
     printf("\n");
+    
+    
+    // -- 二叉树 --
+    [TreeDemo run];
+}
+
+
+
+- (NSArray *)getListWithMax:(int)max count:(int)count {
+    NSMutableArray *arr = [NSMutableArray array];
+    NSMutableArray *resultArr = [NSMutableArray array];
+
+    for (int i = 1; i <= max; i++) {
+        [arr addObject:@(i)];
+    }
+    
+    for (int alreadyCount = 0; alreadyCount < count; alreadyCount++) {
+        int randomIndex = RANDOM(0, arr.count - 1);
+        NSNumber *resultNumber = arr[randomIndex];
+        [resultArr addObject:[NSNumber numberWithInt:[resultNumber intValue]]];
+        [arr removeObject:resultNumber];
+    }
+    return resultArr;
 }
 
 @end

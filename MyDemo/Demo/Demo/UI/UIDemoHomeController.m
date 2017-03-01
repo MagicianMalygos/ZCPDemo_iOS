@@ -20,7 +20,9 @@
                     @{@"title": @"SetFilletDemo", @"class": @"SetFilletDemoHomeController"},
                     @{@"title": @"Palette", @"class": @"PaletteDemoHomeController"},
                     @{@"title": @"QiPaoDemo", @"class": @"QiPaoDemoHomeController"},
-                    @{@"title": @"虚线", @"class": @"DashedDemoHomeController"}, nil];
+                    @{@"title": @"虚线", @"class": @"DashedDemoHomeController"},
+                    @{@"title": @"CollectionViewDemo", @"class": @"CollectionViewDemoHomeController"},
+                    @{@"title": @"CATransform3DDemo", @"class": @"CATransform3DDemoHomeController"}, nil];
     }
     return _infoArr;
 }
