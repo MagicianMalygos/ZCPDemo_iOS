@@ -65,7 +65,7 @@
 + (void)customRequestAppVersion:(NSString *)appVersion success:(void(^)(AppUpdateModel *model))success {
     // 请求接口
     
-    // test data
+    // 使用测试数据，模拟接口请求成功。
     // 由服务端下发是否需要更新的字段（不使用version进行比对是因为：可能会有类似1.1.0这种带有三级版本号的情况，这种情况不太容易进行大小比较，需要进行特殊处理）
     NSDictionary *responseDic = @{@"needUpdate": @"1",
                                   @"version": @"2.0.0",
@@ -73,6 +73,7 @@
                                   @"title": @"发现新版本",
                                   @"message": @"新增6大功能，更新后体验。",
                                   @"need_forced_update": @"1"};
+    
     
     // 封装model返回
     AppUpdateModel *model   = [AppUpdateModel new];
