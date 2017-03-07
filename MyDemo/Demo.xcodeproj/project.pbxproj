@@ -208,6 +208,7 @@
 		FB9D668F1E51AC5400401274 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9D668E1E51AC5400401274 /* rocket.png */; };
 		FB9D66931E51ACA800401274 /* rocket_ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = FB9D66921E51ACA800401274 /* rocket_ios7.png */; };
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
+		FBA976FF1E681AAC00C88BE5 /* RegexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976FE1E681AAC00C88BE5 /* RegexDemo.m */; };
 		FBB244531E278637002DAB59 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244521E278637002DAB59 /* NSString+Category.m */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -1543,6 +1544,8 @@
 		FB9D66921E51ACA800401274 /* rocket_ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket_ios7.png; sourceTree = "<group>"; };
 		FBA976CE1E669D5D00C88BE5 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		FBA976CF1E669D5D00C88BE5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		FBA976FD1E681AAC00C88BE5 /* RegexDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexDemo.h; sourceTree = "<group>"; };
+		FBA976FE1E681AAC00C88BE5 /* RegexDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexDemo.m; sourceTree = "<group>"; };
 		FBB244511E278637002DAB59 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		FBB244521E278637002DAB59 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
@@ -3790,6 +3793,7 @@
 		FB5077BB1E2618A800361E60 /* OtherDemo(控制台程序) */ = {
 			isa = PBXGroup;
 			children = (
+				FBA976F51E6819CC00C88BE5 /* RegexDemo */,
 				FBB244501E278637002DAB59 /* Category */,
 				FB5077BC1E2618A800361E60 /* AlgorithmDemo */,
 				FB5077BF1E2618A800361E60 /* EnumAndFormatDemo */,
@@ -4347,6 +4351,15 @@
 			path = "App弹窗升级";
 			sourceTree = "<group>";
 		};
+		FBA976F51E6819CC00C88BE5 /* RegexDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FBA976FD1E681AAC00C88BE5 /* RegexDemo.h */,
+				FBA976FE1E681AAC00C88BE5 /* RegexDemo.m */,
+			);
+			path = RegexDemo;
+			sourceTree = "<group>";
+		};
 		FBB244501E278637002DAB59 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -4621,6 +4634,7 @@
 				FB5078F81E2618A900361E60 /* ZCPRequestManager.m in Sources */,
 				FB5078FE1E2618A900361E60 /* MyViewController.m in Sources */,
 				FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */,
+				FBA976FF1E681AAC00C88BE5 /* RegexDemo.m in Sources */,
 				FB92C8981E5D66490095F31E /* TreeDemo.m in Sources */,
 				FB5078D51E2618A900361E60 /* RuntimeDemo.m in Sources */,
 				FB5078D01E2618A900361E60 /* ClassB.m in Sources */,

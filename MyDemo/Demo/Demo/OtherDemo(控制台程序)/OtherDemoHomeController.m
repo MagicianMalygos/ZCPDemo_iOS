@@ -22,7 +22,8 @@
                     @{@"title":@"EnumAndFormatDemo", @"class":@"EnumAndFormatDemo"},
                     @{@"title":@"OCClassPropertyDemo", @"class":@"OCClassPropertyDemo"},
                     @{@"title":@"OCClassMethodDemo", @"class":@"OCClassMethodDemo"},
-                    @{@"title":@"AlgorithmDemo", @"class":@"AlgorithmDemo"}, nil];
+                    @{@"title":@"AlgorithmDemo", @"class":@"AlgorithmDemo"},
+                    @{@"title": @"RegexDemo", @"class": @"RegexDemo"}, nil];
     }
     return _infoArr;
 }
