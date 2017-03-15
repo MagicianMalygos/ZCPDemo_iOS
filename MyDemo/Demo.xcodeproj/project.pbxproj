@@ -4422,6 +4422,7 @@
 					187250061C911810002D8C9E = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = WG5B567WWS;
+						ProvisioningStyle = Automatic;
 					};
 					18CB41DA1D123D150051B651 = {
 						CreatedOnToolsVersion = 7.3;
@@ -4892,6 +4893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WG5B567WWS;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Demo/Other/Global.pch;
@@ -4940,7 +4942,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zcp.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -4953,6 +4955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WG5B567WWS;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = Demo/Other/Global.pch;
@@ -5001,7 +5004,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zcp.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
