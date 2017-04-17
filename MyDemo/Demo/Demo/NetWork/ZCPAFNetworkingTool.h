@@ -25,4 +25,6 @@
 - (NSURLSessionUploadTask *)uploadRequest_AF_Session;
 - (NSURLSessionDownloadTask *)downloadRequest_AF_Session;
 
+- (void)testHttps;
+
 @end

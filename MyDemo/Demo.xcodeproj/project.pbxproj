@@ -95,6 +95,8 @@
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
 		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
+		FB46F4691EA493C400FDBD5B /* 朱超鹏.cer in Resources */ = {isa = PBXBuildFile; fileRef = FB46F4681EA493C400FDBD5B /* 朱超鹏.cer */; };
+		FB46F46F1EA49FFC00FDBD5B /* zcp.cer in Resources */ = {isa = PBXBuildFile; fileRef = FB46F46E1EA49FFC00FDBD5B /* zcp.cer */; };
 		FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */; };
 		FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.m */; };
 		FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */; };
@@ -1323,6 +1325,8 @@
 		FB4600771E27170E003504AD /* DashedSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashedSettingView.xib; sourceTree = "<group>"; };
 		FB46007B1E27322F003504AD /* DashedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedView.h; sourceTree = "<group>"; };
 		FB46007C1E27322F003504AD /* DashedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedView.m; sourceTree = "<group>"; };
+		FB46F4681EA493C400FDBD5B /* 朱超鹏.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "朱超鹏.cer"; sourceTree = "<group>"; };
+		FB46F46E1EA49FFC00FDBD5B /* zcp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = zcp.cer; sourceTree = "<group>"; };
 		FB5077571E2618A800361E60 /* AlertViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077591E2618A800361E60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1657,6 +1661,8 @@
 		1872502A1C91189A002D8C9E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				FB46F46E1EA49FFC00FDBD5B /* zcp.cer */,
+				FB46F4681EA493C400FDBD5B /* 朱超鹏.cer */,
 				1839DCD71C980787002EA526 /* Tool */,
 				187250A11C91870A002D8C9E /* Info.plist */,
 				1872502B1C91189A002D8C9E /* Assets.xcassets */,
@@ -3784,12 +3790,12 @@
 			children = (
 				FB5077B31E2618A800361E60 /* NetWorkDemoHomeController.h */,
 				FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */,
-				FB5077B51E2618A800361E60 /* ZCPAFNetworkingTool.h */,
-				FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */,
 				FB5077B71E2618A800361E60 /* ZCPURLConnectionTool.h */,
 				FB5077B81E2618A800361E60 /* ZCPURLConnectionTool.m */,
 				FB5077B91E2618A800361E60 /* ZCPURLSessionTool.h */,
 				FB5077BA1E2618A800361E60 /* ZCPURLSessionTool.m */,
+				FB5077B51E2618A800361E60 /* ZCPAFNetworkingTool.h */,
+				FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -4522,6 +4528,7 @@
 				184439991D0012C700FDD7F7 /* tips_page_arrow_down.png in Resources */,
 				184439A01D0012C700FDD7F7 /* tips_page_star@2x.png in Resources */,
 				FB50791A1E2618A900361E60 /* QuartzCorePaletteViewController.xib in Resources */,
+				FB46F46F1EA49FFC00FDBD5B /* zcp.cer in Resources */,
 				FB5079181E2618A900361E60 /* PaletteDemoHomeController.xib in Resources */,
 				1897E2981D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png in Resources */,
 				FB5079041E2618A900361E60 /* scanBackground@3x.png in Resources */,
@@ -4551,6 +4558,7 @@
 				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
+				FB46F4691EA493C400FDBD5B /* 朱超鹏.cer in Resources */,
 				184439A11D0012C700FDD7F7 /* tips_page_star@3x.png in Resources */,
 				1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */,
 				FB5078D41E2618A900361E60 /* objc_msgSend.png in Resources */,

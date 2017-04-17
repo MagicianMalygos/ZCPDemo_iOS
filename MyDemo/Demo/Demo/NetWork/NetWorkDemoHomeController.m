@@ -18,23 +18,53 @@
 
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
-        _infoArr = @[@{@"title": @"get异步 Connection", @"sel": @"getRequest_Asynchronous_Connection", @"type": @"connection"}
-                       , @{@"title": @"post异步 Connection", @"sel": @"postRequest_Asynchronous_Connection", @"type": @"connection"}
-                       , @{@"title": @"下载 Connection", @"sel": @"uploadRequest_Connection", @"type": @"connection"}
-                       
-                       , @{@"title": @"get同步 Session", @"sel": @"getRequest_Synchronouos_Session", @"type": @"session"}
-                       , @{@"title": @"post异步 Session", @"sel": @"postRequest_Asynchronous_Session", @"type": @"session"}
-                       
-                       , @{@"title": @"get异步 AF", @"sel": @"getRequest_Asynchronous_AF", @"type": @"AF"}
-                       , @{@"title": @"post异步 AF", @"sel": @"postRequest_Asynchronous_AF", @"type": @"AF"}
-                       , @{@"title": @"上传 AF", @"sel": @"uploadRequest_AF", @"type": @"AF"}
-                       , @{@"title": @"下载 AF", @"sel": @"downloadRequest_AF", @"type": @"AF"}
-                       , @{@"title": @"get异步 AF Session", @"sel": @"getRequest_Asynchronous_AF_Session", @"type": @"AF"}
-                       , @{@"title": @"post异步 AF Session", @"sel": @"postRequest_Asynchronous_AF_Session", @"type": @"AF"}
-                       , @{@"title": @"上传AF Session", @"sel": @"uploadRequest_AF_Session", @"type": @"AF"}
-                       , @{@"title": @"下载AF Session", @"sel": @"downloadRequest_AF_Session", @"type": @"AF"}
-                       , @{@"title": @"测试", @"sel": @"test", @"type": @"self"}
-                       ].mutableCopy;
+        _infoArr = @[@{@"title": @"get异步 Connection",
+                       @"sel": @"getRequest_Asynchronous_Connection",
+                       @"type": @"connection"},
+                     @{@"title": @"post异步 Connection",
+                       @"sel": @"postRequest_Asynchronous_Connection",
+                       @"type": @"connection"},
+                     @{@"title": @"下载 Connection",
+                       @"sel": @"uploadRequest_Connection",
+                       @"type": @"connection"},
+                     
+                     @{@"title": @"get同步 Session",
+                       @"sel": @"getRequest_Synchronouos_Session",
+                       @"type": @"session"},
+                     @{@"title": @"post异步 Session",
+                       @"sel": @"postRequest_Asynchronous_Session",
+                       @"type": @"session"},
+                     
+                     @{@"title": @"get异步 AF",
+                       @"sel": @"getRequest_Asynchronous_AF",
+                       @"type": @"AF"},
+                     @{@"title": @"post异步 AF",
+                       @"sel": @"postRequest_Asynchronous_AF",
+                       @"type": @"AF"},
+                     @{@"title": @"上传 AF",
+                       @"sel": @"uploadRequest_AF",
+                       @"type": @"AF"},
+                     @{@"title": @"下载 AF",
+                       @"sel": @"downloadRequest_AF",
+                       @"type": @"AF"},
+                     @{@"title": @"get异步 AF Session",
+                       @"sel": @"getRequest_Asynchronous_AF_Session",
+                       @"type": @"AF"},
+                     @{@"title": @"post异步 AF Session",
+                       @"sel": @"postRequest_Asynchronous_AF_Session",
+                       @"type": @"AF"},
+                     @{@"title": @"上传AF Session",
+                       @"sel": @"uploadRequest_AF_Session",
+                       @"type": @"AF"},
+                     @{@"title": @"下载AF Session",
+                       @"sel": @"downloadRequest_AF_Session",
+                       @"type": @"AF"},
+                     @{@"title": @"测试Https",
+                       @"sel": @"testHttps",
+                       @"type": @"AF"},
+                     @{@"title": @"测试",
+                       @"sel": @"test",
+                       @"type": @"self"}].mutableCopy;
     }
     return _infoArr;
 }
