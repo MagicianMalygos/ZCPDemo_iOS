@@ -92,115 +92,6 @@ static NSString     *kScanLineImageName     = @"scanLine";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(openAlbum)];
 }
 
-#pragma mark - setter / setter
-
-#pragma mark 懒加载session
-- (AVCaptureSession *)session {
-    if (!_session) {
-        
-        // 1.创建元数据的输出对象
-        AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
-        // 设置代理和 dispatch ********
-        dispatch_queue_t dispatchQueue;
-        dispatchQueue = dispatch_queue_create(kScanQRCodeQueueName, NULL);
-        [output setMetadataObjectsDelegate:self queue:dispatchQueue];
-        
-        // 2.创建会话
-        AVCaptureSession *session = [[AVCaptureSession alloc] init];
-        // 实现高质量的输出和摄像，默认为AVCaptureSessionPresetHigh
-        [session setSessionPreset:AVCaptureSessionPresetHigh];
-        
-        // 3.获取输入设备（摄像头）
-        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-        // 4.根据输入设备创建输入对象
-        AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:NULL];
-        if (input == nil) {
-            
-            // 提示
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许Demo访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            }];
-            [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
-            
-            return nil;
-        }
-        
-        // 5.添加输入输出到会话中
-        if ([session canAddInput:input]) {
-            [session addInput:input];
-        }
-        if ([session canAddOutput:output]) {
-            [session addOutput:output];
-        }
-        
-        // 6.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
-        output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode];
-        
-        // 7.创建预览图层（如果session中的输入设备为nil时，会crash）
-        AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:session];
-        [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-        previewLayer.frame = self.view.bounds;
-        [self.view.layer insertSublayer:previewLayer atIndex:0];
-        
-        // 8.设置有效扫描区域
-        // AVCapture输出的图片大小是横着的，而iPhone的屏幕是竖的，设置有效扫描区域需要把它旋转90°
-        CGRect validRect = CGRectMake(kValidY / [UIScreen mainScreen].bounds.size.height
-                                      , kValidX / [UIScreen mainScreen].bounds.size.width
-                                      , kValidWidth / [UIScreen mainScreen].bounds.size.height
-                                      , kValidHeight / [UIScreen mainScreen].bounds.size.width);
-        output.rectOfInterest = validRect;
-        // 添加矩形环形蒙版，以便于突出显示有效扫描区
-        UIView *maskView = [[UIView alloc] initWithFrame:self.view.bounds];
-        maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:kBgAlpha];
-        [self.view addSubview:maskView];
-        UIBezierPath *rectPath = [UIBezierPath bezierPathWithRect:self.view.bounds];
-        [rectPath appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(kValidX, kValidY, kValidWidth, kValidHeight) cornerRadius:5] bezierPathByReversingPath]];
-        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-        shapeLayer.path = rectPath.CGPath;
-        maskView.layer.mask = shapeLayer;
-        
-        _session = session;
-    }
-    return _session;
-}
-#pragma mark 懒加载有效扫描区
-- (UIImageView *)validAreaImageView {
-    if (_validAreaImageView == nil) {
-        _validAreaImageView = [[UIImageView alloc] initWithFrame:({
-            CGRectMake(kValidX, kValidY, kValidWidth, kValidHeight);
-        })];
-        _validAreaImageView.image = [UIImage imageNamed:kValidAreaImageName];
-    }
-    return _validAreaImageView;
-}
-#pragma mark 懒加载扫描线
-- (UIImageView *)scanLineImageView {
-    if (_scanLineImageView == nil) {
-        _scanLineImageView = [[UIImageView alloc] initWithFrame:({
-            CGRectMake(kValidX, kValidY, kValidWidth, kScanLineHeight);
-        })];
-        _scanLineImageView.image = [UIImage imageNamed:kScanLineImageName];
-    }
-    return _scanLineImageView;
-}
-
-#pragma mark 懒加载照明灯按钮
-- (UIButton *)lampButton {
-    if (!_lampButton) {
-        CGFloat lampWidth = 60 * Ratio;
-        CGFloat lampHeight = 60 * Ratio;
-        CGFloat lampX = ([[UIScreen mainScreen] bounds].size.width - lampWidth) / 2;
-        CGFloat lampY = kValidY + kValidHeight + 60;
-        _lampButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _lampButton.frame = CGRectMake(lampX, lampY, lampWidth, lampHeight);
-        _lampButton.backgroundColor = [UIColor clearColor];
-        [_lampButton setImage:[UIImage imageNamed:@"turn_off"] forState:UIControlStateNormal];
-        [_lampButton addTarget:self action:@selector(touchLamp:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _lampButton;
-}
-
 #pragma mark - call back
 
 #pragma mark 线条上下往复移动
@@ -437,5 +328,113 @@ static NSString     *kScanLineImageName     = @"scanLine";
     _link = nil;
 }
 
+#pragma mark - setter / setter
+
+#pragma mark 懒加载session
+- (AVCaptureSession *)session {
+    if (!_session) {
+        
+        // 1.创建元数据的输出对象
+        AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
+        // 设置代理和 dispatch ********
+        dispatch_queue_t dispatchQueue;
+        dispatchQueue = dispatch_queue_create(kScanQRCodeQueueName, NULL);
+        [output setMetadataObjectsDelegate:self queue:dispatchQueue];
+        
+        // 2.创建会话
+        AVCaptureSession *session = [[AVCaptureSession alloc] init];
+        // 实现高质量的输出和摄像，默认为AVCaptureSessionPresetHigh
+        [session setSessionPreset:AVCaptureSessionPresetHigh];
+        
+        // 3.获取输入设备（摄像头）
+        AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+        // 4.根据输入设备创建输入对象
+        AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:NULL];
+        if (input == nil) {
+            
+            // 提示
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许Demo访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+            return nil;
+        }
+        
+        // 5.添加输入输出到会话中
+        if ([session canAddInput:input]) {
+            [session addInput:input];
+        }
+        if ([session canAddOutput:output]) {
+            [session addOutput:output];
+        }
+        
+        // 6.设置输出对象, 需要输出什么样的数据 (二维码还是条形码等) 要先创建会话才能设置
+        output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeAztecCode];
+        
+        // 7.创建预览图层（如果session中的输入设备为nil时，会crash）
+        AVCaptureVideoPreviewLayer *previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:session];
+        [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+        previewLayer.frame = self.view.bounds;
+        [self.view.layer insertSublayer:previewLayer atIndex:0];
+        
+        // 8.设置有效扫描区域
+        // AVCapture输出的图片大小是横着的，而iPhone的屏幕是竖的，设置有效扫描区域需要把它旋转90°
+        CGRect validRect = CGRectMake(kValidY / [UIScreen mainScreen].bounds.size.height
+                                      , kValidX / [UIScreen mainScreen].bounds.size.width
+                                      , kValidWidth / [UIScreen mainScreen].bounds.size.height
+                                      , kValidHeight / [UIScreen mainScreen].bounds.size.width);
+        output.rectOfInterest = validRect;
+        // 添加矩形环形蒙版，以便于突出显示有效扫描区
+        UIView *maskView = [[UIView alloc] initWithFrame:self.view.bounds];
+        maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:kBgAlpha];
+        [self.view addSubview:maskView];
+        UIBezierPath *rectPath = [UIBezierPath bezierPathWithRect:self.view.bounds];
+        [rectPath appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(kValidX, kValidY, kValidWidth, kValidHeight) cornerRadius:5] bezierPathByReversingPath]];
+        CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+        shapeLayer.path = rectPath.CGPath;
+        maskView.layer.mask = shapeLayer;
+        
+        _session = session;
+    }
+    return _session;
+}
+#pragma mark 懒加载有效扫描区
+- (UIImageView *)validAreaImageView {
+    if (_validAreaImageView == nil) {
+        _validAreaImageView = [[UIImageView alloc] initWithFrame:({
+            CGRectMake(kValidX, kValidY, kValidWidth, kValidHeight);
+        })];
+        _validAreaImageView.image = [UIImage imageNamed:kValidAreaImageName];
+    }
+    return _validAreaImageView;
+}
+#pragma mark 懒加载扫描线
+- (UIImageView *)scanLineImageView {
+    if (_scanLineImageView == nil) {
+        _scanLineImageView = [[UIImageView alloc] initWithFrame:({
+            CGRectMake(kValidX, kValidY, kValidWidth, kScanLineHeight);
+        })];
+        _scanLineImageView.image = [UIImage imageNamed:kScanLineImageName];
+    }
+    return _scanLineImageView;
+}
+
+#pragma mark 懒加载照明灯按钮
+- (UIButton *)lampButton {
+    if (!_lampButton) {
+        CGFloat lampWidth = 60 * Ratio;
+        CGFloat lampHeight = 60 * Ratio;
+        CGFloat lampX = ([[UIScreen mainScreen] bounds].size.width - lampWidth) / 2;
+        CGFloat lampY = kValidY + kValidHeight + 60;
+        _lampButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _lampButton.frame = CGRectMake(lampX, lampY, lampWidth, lampHeight);
+        _lampButton.backgroundColor = [UIColor clearColor];
+        [_lampButton setImage:[UIImage imageNamed:@"turn_off"] forState:UIControlStateNormal];
+        [_lampButton addTarget:self action:@selector(touchLamp:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _lampButton;
+}
 
 @end

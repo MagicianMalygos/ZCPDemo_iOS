@@ -15,7 +15,12 @@
 + (UIImage *)generateQRCodeWithString:(NSString *)string;
 // 将UIImage中黑色的内容转换成参数对应的RGB颜色
 + (UIImage *)imageBlackToTransparent:(UIImage *)image withRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
-// 给UIImageView添加阴影(暂时没效果)
-+ (void)addShadow:(UIColor *)color forImageView:(UIImageView *)imageView;
+//
++ (UIImage *)imageBlackToTransparentWithRandomColor:(UIImage *)image;
+// 生成带logo的二维码图片
++ (UIImage *)imageWithQRCode:(UIImage *)qrCode logo:(UIImage *)logo;
+
+// 给UIImageView添加阴影
+//+ (void)addShadow:(UIColor *)color forImageView:(UIImageView *)imageView;
 
 @end
