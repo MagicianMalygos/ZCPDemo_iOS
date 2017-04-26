@@ -29,6 +29,6 @@
 @property (nonatomic, assign) NSInteger totalRecords;
 
 // 获取列表中对应下标的对象
-- (id) objectAtIndex:(NSUInteger)index;
+- (id)objectAtIndex:(NSUInteger)index;
 
 @end

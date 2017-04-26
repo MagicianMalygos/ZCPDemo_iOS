@@ -56,7 +56,9 @@
 - (AFHTTPRequestOperation *)downloadRequest_AF {
     
     // ! 当服务器返回的头信息中有Content-Length时，才能获取到下载文件的大小 !
-#pragma mark 公共部分
+    // 断点续传其实就是利用了http的range请求头
+    
+    // 公共部分
     NSString *url = @"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/software/RTX_V1.1%20For%20Mac.dmg";
     // 创建请求队列管理者
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -65,7 +67,7 @@
     // 设置response解析方式
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-#pragma mark HEAD请求
+    // HEAD请求
     AFHTTPRequestOperation *operationHEAD = [manager HEAD:url parameters:@{} success:^(AFHTTPRequestOperation *operation) {
         NSLog(@"头信息：%@, 编码方式：%@, 文件名：%@", operation.response.allHeaderFields, operation.response.textEncodingName, operation.response.suggestedFilename);
         NSLog(@"Length: %lli\n", operation.response.expectedContentLength);
@@ -74,7 +76,7 @@
     operationHEAD = nil;
     
     /**
-     *  第一次只有当在文件读取结束的时候才能知道文件的大小
+     *  当头信息中无Content-Length时，第一次只有当在文件读取结束的时候才能知道文件的大小
      */
     AFHTTPRequestOperation *operationGET = [manager GET:url parameters:@{} success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //        NSLog(@"%@ %@", responseObject, [responseObject className]);

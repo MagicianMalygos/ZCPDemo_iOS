@@ -121,6 +121,7 @@ IMP_SINGLETON(ZCPToastUtil)
 
 
 #pragma mark - private method
+
 + (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay cancelPreviousOperation:(BOOL)cancel {
     if (cancel) {
         [NSObject cancelPreviousPerformRequestsWithTarget:self];

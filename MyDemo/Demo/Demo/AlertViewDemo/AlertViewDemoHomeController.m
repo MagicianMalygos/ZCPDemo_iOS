@@ -45,8 +45,8 @@
     [self.view addSubview:self.button2];
     [self.view addSubview:self.button3];
     [self.view addSubview:self.button4];
-
 }
+
 // 基本alertView
 - (void)click1 {
     /*

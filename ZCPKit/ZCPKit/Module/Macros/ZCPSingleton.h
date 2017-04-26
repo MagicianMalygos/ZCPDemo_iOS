@@ -11,6 +11,7 @@
 #ifndef ZCPSingleton_h
 #define ZCPSingleton_h
 
+#pragma mark - 单例宏
 
 // 定义 define
 #if __has_feature(objc_instancetype)

@@ -11,6 +11,7 @@
 @implementation ZCPListDataModel
 
 #pragma mark - Public Method
+
 // 获取列表中对应下标的对象
 - (id)objectAtIndex:(NSUInteger)index {
     if (index < [self.items count]) {
@@ -20,6 +21,7 @@
 }
 
 #pragma mark - getter / setter
+
 - (NSMutableArray *)items {
     if (_items == nil) {
         _items = [NSMutableArray array];
