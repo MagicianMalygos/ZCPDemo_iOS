@@ -201,6 +201,7 @@
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50796C1E262DB200361E60 /* DemoBaseViewController.m */; };
+		FB784AC81EB307B9000A921E /* TemporaryUITestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
 		FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */; };
 		FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */; };
@@ -1535,6 +1536,8 @@
 		FB5079651E262D8800361E60 /* DashedDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedDemoHomeController.m; sourceTree = "<group>"; };
 		FB50796B1E262DB200361E60 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
 		FB50796C1E262DB200361E60 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
+		FB784AC61EB307B9000A921E /* TemporaryUITestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryUITestHomeController.h; sourceTree = "<group>"; };
+		FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryUITestHomeController.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB92C8891E5C177B0095F31E /* CollectionViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoHomeController.m; sourceTree = "<group>"; };
@@ -4229,6 +4232,7 @@
 		FB5078761E2618A900361E60 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB784AC11EB3076A000A921E /* 临时测试UI用 */,
 				FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
 				FB50795A1E26193A00361E60 /* 气泡拉伸 */,
@@ -4336,6 +4340,15 @@
 				FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */,
 			);
 			path = "气泡拉伸";
+			sourceTree = "<group>";
+		};
+		FB784AC11EB3076A000A921E /* 临时测试UI用 */ = {
+			isa = PBXGroup;
+			children = (
+				FB784AC61EB307B9000A921E /* TemporaryUITestHomeController.h */,
+				FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */,
+			);
+			path = "临时测试UI用";
 			sourceTree = "<group>";
 		};
 		FB92C8881E5C177B0095F31E /* CollectionViewDemo */ = {
@@ -4729,6 +4742,7 @@
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB5078E31E2618A900361E60 /* UIImageView+Category.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
+				FB784AC81EB307B9000A921E /* TemporaryUITestHomeController.m in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB5078F91E2618A900361E60 /* ZCPViewController.m in Sources */,
 				FB50790A1E2618A900361E60 /* ZCPGenerateQRCode.m in Sources */,

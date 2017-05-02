@@ -15,6 +15,7 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
+                    @{@"title": @"UI临时测试", @"class": @"TemporaryUITestHomeController"},
                     @{@"title": @"SizeToFitDemo", @"class": @"SizeToFitDemoHomeController"},
                     @{@"title": @"FontDemo", @"class": @"FontDemoHomeControllerViewController"},
                     @{@"title": @"SetFilletDemo", @"class": @"SetFilletDemoHomeController"},
@@ -22,7 +23,8 @@
                     @{@"title": @"QiPaoDemo", @"class": @"QiPaoDemoHomeController"},
                     @{@"title": @"虚线", @"class": @"DashedDemoHomeController"},
                     @{@"title": @"CollectionViewDemo", @"class": @"CollectionViewDemoHomeController"},
-                    @{@"title": @"CATransform3DDemo", @"class": @"CATransform3DDemoHomeController"}, nil];
+                    @{@"title": @"CATransform3DDemo", @"class": @"CATransform3DDemoHomeController"},
+                    nil];
     }
     return _infoArr;
 }
