@@ -201,7 +201,7 @@
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB50796D1E262DB200361E60 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50796C1E262DB200361E60 /* DemoBaseViewController.m */; };
-		FB784AC81EB307B9000A921E /* TemporaryUITestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */; };
+		FB64212B1EC1991A002DFA6D /* SocketDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB64212A1EC1991A002DFA6D /* SocketDemo.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
 		FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */; };
 		FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */; };
@@ -214,6 +214,7 @@
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
 		FBA976FF1E681AAC00C88BE5 /* RegexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976FE1E681AAC00C88BE5 /* RegexDemo.m */; };
 		FBB244531E278637002DAB59 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB244521E278637002DAB59 /* NSString+Category.m */; };
+		FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
@@ -1536,8 +1537,8 @@
 		FB5079651E262D8800361E60 /* DashedDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedDemoHomeController.m; sourceTree = "<group>"; };
 		FB50796B1E262DB200361E60 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
 		FB50796C1E262DB200361E60 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
-		FB784AC61EB307B9000A921E /* TemporaryUITestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryUITestHomeController.h; sourceTree = "<group>"; };
-		FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryUITestHomeController.m; sourceTree = "<group>"; };
+		FB6421291EC1991A002DFA6D /* SocketDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketDemo.h; sourceTree = "<group>"; };
+		FB64212A1EC1991A002DFA6D /* SocketDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketDemo.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB92C8891E5C177B0095F31E /* CollectionViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoHomeController.m; sourceTree = "<group>"; };
@@ -1559,6 +1560,8 @@
 		FBA976FE1E681AAC00C88BE5 /* RegexDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexDemo.m; sourceTree = "<group>"; };
 		FBB244511E278637002DAB59 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		FBB244521E278637002DAB59 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryTestHomeController.h; sourceTree = "<group>"; };
+		FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryTestHomeController.m; sourceTree = "<group>"; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
 		FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
@@ -3741,6 +3744,7 @@
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FBB836041EB9DFCD00C064A8 /* 临时测试用 */,
 				FBA976C91E669D3600C88BE5 /* App弹窗升级 */,
 				FB5077561E2618A800361E60 /* AlertViewDemo */,
 				FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */,
@@ -3808,6 +3812,7 @@
 		FB5077BB1E2618A800361E60 /* OtherDemo(控制台程序) */ = {
 			isa = PBXGroup;
 			children = (
+				FB6421241EC19908002DFA6D /* Socket */,
 				FBA976F51E6819CC00C88BE5 /* RegexDemo */,
 				FBB244501E278637002DAB59 /* Category */,
 				FB5077BC1E2618A800361E60 /* AlgorithmDemo */,
@@ -4232,7 +4237,6 @@
 		FB5078761E2618A900361E60 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FB784AC11EB3076A000A921E /* 临时测试UI用 */,
 				FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
 				FB50795A1E26193A00361E60 /* 气泡拉伸 */,
@@ -4342,13 +4346,13 @@
 			path = "气泡拉伸";
 			sourceTree = "<group>";
 		};
-		FB784AC11EB3076A000A921E /* 临时测试UI用 */ = {
+		FB6421241EC19908002DFA6D /* Socket */ = {
 			isa = PBXGroup;
 			children = (
-				FB784AC61EB307B9000A921E /* TemporaryUITestHomeController.h */,
-				FB784AC71EB307B9000A921E /* TemporaryUITestHomeController.m */,
+				FB6421291EC1991A002DFA6D /* SocketDemo.h */,
+				FB64212A1EC1991A002DFA6D /* SocketDemo.m */,
 			);
-			path = "临时测试UI用";
+			path = Socket;
 			sourceTree = "<group>";
 		};
 		FB92C8881E5C177B0095F31E /* CollectionViewDemo */ = {
@@ -4395,6 +4399,15 @@
 				FBB244521E278637002DAB59 /* NSString+Category.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		FBB836041EB9DFCD00C064A8 /* 临时测试用 */ = {
+			isa = PBXGroup;
+			children = (
+				FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */,
+				FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */,
+			);
+			path = "临时测试用";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4671,6 +4684,7 @@
 				FBA976FF1E681AAC00C88BE5 /* RegexDemo.m in Sources */,
 				FB92C8981E5D66490095F31E /* TreeDemo.m in Sources */,
 				FB5078D51E2618A900361E60 /* RuntimeDemo.m in Sources */,
+				FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */,
 				FB5078D01E2618A900361E60 /* ClassB.m in Sources */,
 				FB5078DA1E2618A900361E60 /* NSDateFormatter+ExtraMethod.m in Sources */,
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
@@ -4686,6 +4700,7 @@
 				FB5078D91E2618A900361E60 /* NSDate+Category.m in Sources */,
 				FB5078E61E2618A900361E60 /* ZCPTableViewCell+Category.m in Sources */,
 				FB5079111E2618A900361E60 /* WeiXinShareDemoHomeController.m in Sources */,
+				FB64212B1EC1991A002DFA6D /* SocketDemo.m in Sources */,
 				FB5078DC1E2618A900361E60 /* NSString+Category2.m in Sources */,
 				FB97A2A41E52A5ED000D0F6E /* ZCPUser.m in Sources */,
 				FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */,
@@ -4742,7 +4757,6 @@
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB5078E31E2618A900361E60 /* UIImageView+Category.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
-				FB784AC81EB307B9000A921E /* TemporaryUITestHomeController.m in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB5078F91E2618A900361E60 /* ZCPViewController.m in Sources */,
 				FB50790A1E2618A900361E60 /* ZCPGenerateQRCode.m in Sources */,

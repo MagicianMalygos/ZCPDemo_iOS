@@ -60,6 +60,7 @@
     
     // 公共部分
     NSString *url = @"https://raw.githubusercontent.com/MagicianMalygos/MyDocuments/master/software/RTX_V1.1%20For%20Mac.dmg";
+    url = @"https://raw.githubusercontent.com/Tencent/mars/master/mars/libraries/build_apple.py";
     // 创建请求队列管理者
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     // 设置request解析方式

@@ -32,29 +32,8 @@
     
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];
-    
-    [self cal:8.05];
-    [self cal:8.00];
-    [self cal:7.95];
-    [self cal:7.94];
-    [self cal:7.93];
-    [self cal:7.92];
-    [self cal:7.91];
-    [self cal:7.90];
-    [self cal:7.85];
-    [self cal:7.84];
-    return YES;
-}
 
-- (void)cal:(float)min {
-    float r = 0;
-    r += (min - 7.71)*200;
-    r += (min - 7.70)*200;
-    r += (min - 8.00)*400;
-    r += (min - 7.99)*700;
-    r -= 5 + (1500 * min)*0.1/100;
-    r -= 5 * 4;
-    NSLog(@"%f : %f", min, r);
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

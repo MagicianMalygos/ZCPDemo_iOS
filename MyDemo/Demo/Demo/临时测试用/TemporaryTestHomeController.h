@@ -1,5 +1,5 @@
 //
-//  TemporaryUITestHomeController.h
+//  TemporaryTestHomeController.h
 //  Demo
 //
 //  Created by 朱超鹏 on 17/4/28.
@@ -10,6 +10,6 @@
 
 #pragma mark - 临时测试用
 
-@interface TemporaryUITestHomeController : DemoBaseViewController
+@interface TemporaryTestHomeController : DemoBaseViewController
 
 @end

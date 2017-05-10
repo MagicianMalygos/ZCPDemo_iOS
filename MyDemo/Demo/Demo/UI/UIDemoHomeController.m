@@ -15,7 +15,6 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"UI临时测试", @"class": @"TemporaryUITestHomeController"},
                     @{@"title": @"SizeToFitDemo", @"class": @"SizeToFitDemoHomeController"},
                     @{@"title": @"FontDemo", @"class": @"FontDemoHomeControllerViewController"},
                     @{@"title": @"SetFilletDemo", @"class": @"SetFilletDemoHomeController"},

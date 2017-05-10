@@ -141,8 +141,9 @@
     __block NSString *testResult = @"";
     __block NSString *trueResult = @"";
     for (NSDictionary *dic in arr) {
+        WEAK_SELF;
         [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            BOOL result     = [self performSelector:NSSelectorFromString(method) withObject:key];
+            BOOL result     = [weakSelf performSelector:NSSelectorFromString(method) withObject:key];
             trueResult      = [trueResult stringByAppendingString:[NSString stringWithFormat:@"%@ ", obj]];
             if (result) {
                 testResult  = [testResult stringByAppendingString:@"YES "];

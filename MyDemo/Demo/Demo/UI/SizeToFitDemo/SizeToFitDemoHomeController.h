@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-//** 文本增增删删会Crash
+// FIXME 文本增增删删会Crash
+#pragma mark - 计算文本bounds
+
 @interface SizeToFitDemoHomeController : DemoBaseViewController
 
 @end
