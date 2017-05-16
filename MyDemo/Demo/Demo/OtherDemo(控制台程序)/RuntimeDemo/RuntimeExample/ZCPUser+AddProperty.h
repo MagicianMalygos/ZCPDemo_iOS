@@ -11,7 +11,6 @@
 @interface ZCPUser (AddProperty)
 
 @property (nonatomic, copy) NSString *name;
-//@property (nonatomic, copy) NSString *age;
 
 - (NSString *)name;
 - (void)setName:(NSString *)name;

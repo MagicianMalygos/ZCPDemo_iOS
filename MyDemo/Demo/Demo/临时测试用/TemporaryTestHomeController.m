@@ -28,7 +28,7 @@
     [self testXXX]; // 范例
 //    [self testSD];  // 测试给url添加HeaderField
 //    [self testCreateNSString];
-    [self testGetImageFromView];
+//    [self testGetImageFromView];
 }
 
 #pragma mark - test

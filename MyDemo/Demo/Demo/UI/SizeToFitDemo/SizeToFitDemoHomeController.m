@@ -20,7 +20,7 @@
                 NSStringDrawingOptions枚举：
                 NSStringDrawingUsesLineFragmentOrigin：以每行组成的矩形为单位计算整个文本的尺寸
                 NSStringDrawingUsesFontLeading：使用行距计算行高。行距 = 字体大小 + 行间距，从一行文字的底部到下一行文字的底部距离
-                NSStringDrawingUsesDeviceMetrics：计算布局时使用图元字形（而不是印刷字体）
+                NSStringDrawingUsesDeviceMetrics：将文字以图像符号计算文本占用范围，而不是以字符计算。也即是以每一个字体所占用的空间来计算文本范围
                 NSStringDrawingTruncatesLastVisibleLine：计算文本尺寸时将以每个字或字形为单位来计算。如果文本内容超出指定的矩形限制，文本将被截去并在最后一个字符后加上省略号，如果没有指定NSStringDrawingUsesLineFragmentOrigin选项，则该选项被忽略。
     attributes: 文字的属性字典，指明文本的属性。
                 属性字典key有：
@@ -95,9 +95,12 @@
 
 @interface SizeToFitDemoHomeController () <UITextViewDelegate>
 
+// 输入框
 @property (nonatomic, strong) UITextView *inputTextView;
+// 用户输入字符串
 @property (nonatomic, copy)   NSString   *userInput;
 
+// test labels
 @property (nonatomic, strong) UILabel *drawingUsesLineFragmentOriginLabel;
 @property (nonatomic, strong) UILabel *drawingUsesFontLeadingLabel;
 @property (nonatomic, strong) UILabel *drawingUsesDeviceMetricsLabel;
@@ -108,6 +111,8 @@
 @end
 
 @implementation SizeToFitDemoHomeController
+
+#pragma mark - life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -126,55 +131,63 @@
     [self.view addSubview:self.sizeToFitLabel];
 }
 
-
-- (void)textViewDidChange:(UITextView *)textView {
-    self.userInput = textView.text ? textView.text : @"";
-    
-    self.drawingUsesLineFragmentOriginLabel.text   = self.userInput;
-    self.drawingUsesFontLeadingLabel.text          = self.userInput;
-    self.drawingUsesDeviceMetricsLabel.text        = self.userInput;
-    self.drawingTruncatesLastVisibleLineLabel.text = self.userInput;
-    self.sizeToFitLabel.text                       = self.userInput;
-    
-    [self.view setNeedsLayout];
-}
-
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     CGSize size;
     
+    // NSStringDrawingUsesLineFragmentOrigin
     size = [self.userInput boundingRectWithSize:CGSizeMake(SCREENWIDTH / 2, MAXFLOAT)
                                         options:NSStringDrawingUsesLineFragmentOrigin
                                      attributes:@{NSFontAttributeName: DEFAULT_TEST_FONT}
                                         context:nil].size;
-    self.drawingUsesLineFragmentOriginLabel.frame = CGRectMake(0, 100, size.width, size.height);
+    self.drawingUsesLineFragmentOriginLabel.frame = CGRectMake(0, 100, SCREENWIDTH / 2, size.height);
     
+    // NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin
     size = [self.userInput boundingRectWithSize:CGSizeMake(SCREENWIDTH / 2, MAXFLOAT)
-                                        options:NSStringDrawingUsesFontLeading
+                                        options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin
                                      attributes:@{NSFontAttributeName: DEFAULT_TEST_FONT}
                                         context:nil].size;
-    self.drawingUsesFontLeadingLabel.frame = CGRectMake(SCREENWIDTH / 2, 100, size.width, size.height);
+    self.drawingUsesFontLeadingLabel.frame = CGRectMake(SCREENWIDTH / 2, 100, SCREENWIDTH / 2, size.height);
     
+    // NSStringDrawingUsesDeviceMetrics | NSStringDrawingUsesLineFragmentOrigin
     size = [self.userInput boundingRectWithSize:CGSizeMake(SCREENWIDTH / 2, MAXFLOAT)
-                                        options:NSStringDrawingUsesDeviceMetrics
+                                        options:NSStringDrawingUsesDeviceMetrics | NSStringDrawingUsesLineFragmentOrigin
                                      attributes:@{NSFontAttributeName: DEFAULT_TEST_FONT}
                                         context:nil].size;
-    self.drawingUsesDeviceMetricsLabel.frame = CGRectMake(0, 200, size.width, size.height);
+    self.drawingUsesDeviceMetricsLabel.frame = CGRectMake(0, 200, SCREENWIDTH / 2, size.height);
     
+    // NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
     size = [self.userInput boundingRectWithSize:CGSizeMake(SCREENWIDTH / 2, MAXFLOAT)
                                         options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
                                      attributes:@{NSFontAttributeName: DEFAULT_TEST_FONT}
                                         context:nil].size;
-    self.drawingTruncatesLastVisibleLineLabel.frame = CGRectMake(SCREENWIDTH / 2, 200, size.width, size.height);
+    self.drawingTruncatesLastVisibleLineLabel.frame = CGRectMake(SCREENWIDTH / 2, 200, SCREENWIDTH / 2, size.height);
     
+    //
     CGSize fitSize = [self.sizeToFitLabel sizeThatFits:CGSizeMake(SCREENWIDTH / 2, MAXFLOAT)];
     ZCPLog(@"fitSize: %f %f", fitSize.width, fitSize.height);
+    
+    // sizeToFit
     [self.sizeToFitLabel sizeToFit];
-    self.sizeToFitLabel.frame = CGRectMake(0, 300, SCREENWIDTH, self.sizeToFitLabel.frame.size.height);
+    self.sizeToFitLabel.frame = CGRectMake(0, 300, SCREENWIDTH / 2, self.sizeToFitLabel.frame.size.height);
 }
 
-#pragma mark - factory method
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    self.userInput = textView.text ? textView.text : @"";
+    
+    self.drawingUsesLineFragmentOriginLabel.text    = self.userInput;
+    self.drawingUsesFontLeadingLabel.text           = self.userInput;
+    self.drawingUsesDeviceMetricsLabel.text         = self.userInput;
+    self.drawingTruncatesLastVisibleLineLabel.text  = self.userInput;
+    self.sizeToFitLabel.text                        = self.userInput;
+    
+    [self.view setNeedsLayout];
+}
+
+#pragma mark - factory method (just for test)
 
 - (UILabel *)createTestLabel {
     UILabel *label          = [[UILabel alloc] init];

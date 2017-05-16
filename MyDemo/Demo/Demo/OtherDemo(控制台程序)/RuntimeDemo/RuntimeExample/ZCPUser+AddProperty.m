@@ -46,14 +46,25 @@ static NSString *name_var = @"name";
  */
 
 - (NSString *)name {
-    // 根据关联的key获取关联的值
+    /**
+     根据关联对象的key从指定对象中获取关联对象
+     
+     @param self        从哪个对象中获取
+     @param name_var    关联对象的key
+     @return            关联对象
+     */
     return objc_getAssociatedObject(self, &name_var);
 }
+
 - (void)setName:(NSString *)name {
-    // param1：给那个对象添加关联
-    // param2：关联的key
-    // param3：关联的value
-    // param4：关联的策略
+    /**
+     设置某个对象的关联对象
+     
+     @param self        给哪个对象添加关联
+     @param name_var    关联对象的key
+     @param name        关联对象
+     @param OBJC_ASSOCIATION_COPY   关联策略
+     */
     objc_setAssociatedObject(self, &name_var, name, OBJC_ASSOCIATION_COPY);
 }
 

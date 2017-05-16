@@ -72,14 +72,29 @@
 
 #pragma mark - 给对象增加方法
 
+// 当一个类调用未实现的方法时，会调用这个方法处理
+// 如果类有N个静态方法，则这个方法会被调用N次，sel为遍历所有方法的某一个
++ (BOOL)resolveClassMethod:(SEL)sel {
+    if (sel == @selector(privilegeList)) {
+        // 类方法不能动态添加
+        return NO;
+    }
+    return [super resolveClassMethod:sel];
+}
+
 // 当一个对象调用未实现的方法时，会调用这个方法处理
-// 这个方法会被调用N次，每次sel都不同
+// 如果对象所属类有N个实例方法，则这个方法会被调用N次，sel为遍历所有方法的某一个
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     if (sel == @selector(eat)) {
-        // param1：给哪个类添加方法
-        // param2：添加方法的方法编号
-        // param3：添加方法的函数实现
-        // param4：函数的类型（返回值+参数类型）（v@:中v表示void、@表示对象、:表示SEL）
+        /**
+         给类添加实例方法
+
+         @param self 要添加的是哪个类
+         @param @selector(eat) 方法指针
+         @param eat 方法的实现
+         @param "v@:" 方法的类型（返回值+参数），v表示返回值为void、@表示对象、:表示SEL，每个方法一定要有Class和SEL这两个参数
+         @return 是否添加成功
+         */
         class_addMethod(self, @selector(eat), eat, "v@:");
     }
     return [super resolveInstanceMethod:sel];
@@ -93,11 +108,11 @@
 
 #pragma mark - getter / setter
 
-- (NSString *)age {
-    return _age;
+- (NSNumber *)level {
+    return _level;
 }
-- (void)setAge:(NSString *)age {
-    _age = [age copy];
+- (void)setLevel:(NSNumber *)level {
+    _level = [level copy];
 }
 
 #pragma mark - override

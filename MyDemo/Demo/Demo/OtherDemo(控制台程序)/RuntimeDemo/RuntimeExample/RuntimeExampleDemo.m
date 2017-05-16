@@ -17,19 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 1.不同系统使用不同样式的图片
-    [UIImage openRuntimeTest];
-    UIImage *image = [UIImage imageNamed:@"rocket"];
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.frame = CGRectMake(100, 100, 200, 200);
-    imageView.image = image;
+    // 1.不同系统使用不同样式的图片，详见UIImage+Runtime
+    [UIImage openUIImageRuntimeTest];
+    UIImage *image          = [UIImage imageNamed:@"rocket"];
+    UIImageView *imageView  = [[UIImageView alloc] init];
+    imageView.frame         = CGRectMake(100, 100, 200, 200);
+    imageView.image         = image;
     [self.view addSubview:imageView];
     
-    // 2.分类增加属性，详见OCClassPropertyDemo
-    // 1.给分类添加属性
+    // 2.在分类中增加属性，详见OCClassPropertyDemo
     /*
-     http://www.jianshu.com/p/3cbab68fb856
-     
      1.当直接在category中加属性使用时，会crash。
      *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[ZCPUser setName:]: unrecognized selector sent to instance 0x60000001f2d0'
      
@@ -43,64 +40,109 @@
      -[ZCPUser(AddProperty) setName:] in ZCPUser+AddProperty.o
      ld: symbol(s) not found for architecture x86_64
      
-     4.runtime解决问题
+     4.使用runtime将self关联一个name属性
      objc_getAssociatedObject(self, &name_var);
      objc_setAssociatedObject(self, &name_var, name, OBJC_ASSOCIATION_COPY);
      
      */
-    ZCPUser *user = [ZCPUser new];
-    user.uID = @"001";
-    user.name = @"Zcp大官人";
-    ZCPLog(@"分类添加属性结果：%@", user);
+    ZCPUser *user001    = [ZCPUser new];
+    user001.uID         = @"001";
+    user001.name        = @"Zcp大官人";
+    user001.level       = @(120);
+    ZCPLog(@"分类添加属性结果：%@", user001);
     
-    // 3.运行时归档
+    ZCPUser *user002    = [ZCPUser new];
+    user002.uID         = @"002";
+    user002.name        = @"飞花蝶舞剑";
+    user002.level       = @(320);
     
+    // 3.运行时归档，详见ZCPUser类的NSCoding协议实现
     // 3.1
-    NSMutableData *data1 = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data1];
-    [archiver encodeObject:user forKey:@"user"];
-    [archiver finishEncoding];
-    // 存data
-    // 取data
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data1];
-    ZCPUser *resultUser = [unarchiver decodeObjectForKey:@"user"];
-    ZCPLog(@"运行时归档解档1结果：%@", resultUser);
+    {
+        NSMutableData *user001Data      = [[NSMutableData alloc] init];
+        NSKeyedArchiver *archiver       = [[NSKeyedArchiver alloc] initForWritingWithMutableData:user001Data];
+        [archiver encodeObject:user001 forKey:@"user"];
+        [archiver finishEncoding];
+        // 存data
+        [self writeData:user001Data withKey:@"user001"];
+    }
+    {
+        // 取data
+        NSData *user001Data             = [self readDataWithKey:@"user001"];
+        NSKeyedUnarchiver *unarchiver   = [[NSKeyedUnarchiver alloc] initForReadingWithData:user001Data];
+        ZCPUser *resultUser             = [unarchiver decodeObjectForKey:@"user"];
+        ZCPLog(@"运行时归档解档1结果：%@", resultUser);
+    }
     
     // 3.2
-    NSArray *array = @[@"我是Test字符串", @(9527), user];
-    NSData *data2 = [NSKeyedArchiver archivedDataWithRootObject:array];
-    // 存data
-    // 取data
-    NSArray *resultArray = [NSKeyedUnarchiver unarchiveObjectWithData:data2];
-    ZCPLog(@"运行时归档解档2结果：%@", resultArray);
+    {
+        NSArray *userGroup              = @[user001, user002];
+        NSData *userGroupData           = [NSKeyedArchiver archivedDataWithRootObject:userGroup];
+        // 存data
+        [self writeData:userGroupData withKey:@"group"];
+    }
+    {
+        // 取data
+        NSData *userGroupData           = [self readDataWithKey:@"group"];
+        NSArray *resultArray            = [NSKeyedUnarchiver unarchiveObjectWithData:userGroupData];
+        ZCPLog(@"运行时归档解档2结果：%@", resultArray);
+    }
     
-//    ZCPUser *userArchiver = [[ZCPUser alloc] init];
-//    userArchiver.uID = @"1001";
-//    userArchiver.name = @"飞花蝶舞剑";
-//    userArchiver.age = @"18";
-    UIImage *imageTest = [UIImage imageNamed:@"rocket"];
-    UIImageAsset *asset1 = imageTest.imageAsset;
-    imageTest = [UIImage imageWithCGImage:imageTest.CGImage];
-    UIImageAsset *asset2 = imageTest.imageAsset;
-    
-    // 归档
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *file = [[paths objectAtIndex:0] stringByAppendingString:@"/a.data"];
-    [NSKeyedArchiver archiveRootObject:imageTest toFile:file];
-    
-    // 解档
-    id object = [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+    // e:归档解档时发现的一个问题
+    {
+        NSArray *paths                  = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        
+        // UIImage实现了NSSecureCoding协议，应该是可以归档解档
+        
+        // image1进行归档解档
+        UIImage *testImage1             = [UIImage imageNamed:@"rocket"];
+        UIImageAsset *asset1            = testImage1.imageAsset;
+        NSString *filePath1             = [[paths objectAtIndex:0] stringByAppendingString:@"/image1.data"];
+        [NSKeyedArchiver archiveRootObject:testImage1 toFile:filePath1];
+        id object1                      = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath1];
+        
+        // image2进行归档解档
+        UIImage *testImage2             = [UIImage imageWithCGImage:testImage1.CGImage];
+        UIImageAsset *asset2            = testImage2.imageAsset;
+        NSString *filePath2             = [[paths objectAtIndex:0] stringByAppendingString:@"/image2.data"];
+        [NSKeyedArchiver archiveRootObject:testImage2 toFile:filePath2];
+        id object2                      = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath2];
+        
+        // 结果会发现，object1是nil，object2是有值的。这是由于UIImage实例的imageAsset属性导致的。如果对UIImage的实例进行归档解档，需要做一次CGImage的转换
+        ZCPLog(@"image1:%@ asset1:%@\nimage2:%@ asset1:%@", object1, asset1, object2, asset2);
+    }
     
     // 4.动态添加方法
-    // 如果一个类方法非常多，加载类到内存的时候也比较耗费资源，需要给每个方法生成映射表，可以使用动态给某个类，添加方法解决。
-    [user performSelector:@selector(eat)];
+    /*
+     问题：如果一个类的实例方法非常多，加载类到内存的时候也比较耗费资源，需要给每个方法生成映射表。
+     解决：可以动态给某个类添加方法解决。
+     */
+    [user001 performSelector:@selector(eat)];
     
     // 5.字典转模型
-    NSDictionary *userDict = @{@"uID": @"1001", @"name": @"Zcp大官人", @"age": @"18", @"sex": @"male"};
-    ZCPUser *userModel = [[ZCPUser alloc] init];
+    NSDictionary *userDict              = @{@"uID": @"1001", @"name": @"Zcp大官人", @"level": @"107", @"sex": @"male"};
+    ZCPUser *userModel                  = [[ZCPUser alloc] init];
     [userModel setValuesForKeysWithDictionary:userDict];
     ZCPLog(@"字典转模型结果：%@", userModel);
-    
+}
+
+#pragma mark - private method
+
+// 读取数据
+- (NSData *)readDataWithKey:(NSString *)key {
+    NSArray *arrDocumentPaths   = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *documentPath      = [arrDocumentPaths objectAtIndex:0];
+    NSString *filePath          = [documentPath stringByAppendingString:@"/user.data"];
+    NSData *resultData          = [NSData dataWithContentsOfFile:filePath];
+    return resultData;
+}
+
+// 写入数据
+- (void)writeData:(NSData *)data withKey:(NSString *)key {
+    NSArray *arrDocumentPaths   = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *documentPath      = [arrDocumentPaths objectAtIndex:0];
+    NSString *filePath          = [documentPath stringByAppendingString:@"/user.data"];
+    [data writeToFile:filePath atomically:NO];
 }
 
 @end

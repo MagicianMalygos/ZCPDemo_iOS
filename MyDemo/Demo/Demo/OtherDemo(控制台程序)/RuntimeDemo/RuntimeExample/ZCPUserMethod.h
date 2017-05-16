@@ -8,7 +8,21 @@
 
 #pragma mark - ZCPUser method
 
-// 每个方法都有这两个隐式参数
+//
+
+
+/**
+ 每个实例方法都有 self和 sel这两个隐式参数
+
+ @param self 实例对象
+ @param sel  类实例方法指针，特指本方法
+ */
+
 void eat(id self, SEL sel) {
-    ZCPLog(@"%@ 调用了 %@ 方法", self, NSStringFromSelector(sel));
+    ZCPLog(@"%@类的实例 调用了 %@ 方法", NSStringFromClass([self class]), NSStringFromSelector(sel));
+}
+
+
+void privilegeList(id self, SEL sel) {
+    ZCPLog(@"%@类的成员享有以下优惠特权：1、X；2、Y；3、Z", NSStringFromClass([self class]));
 }

@@ -10,11 +10,11 @@
 
 @interface ZCPUser : NSObject <NSCoding>
 {
-    NSString *_age;
+    NSNumber *_level;
 }
 
-- (NSString *)age;
-- (void)setAge:(NSString *)age;
+- (NSNumber *)level;
+- (void)setLevel:(NSNumber *)level;
 
 @property (nonatomic, copy) NSString *uID;
 

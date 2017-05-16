@@ -10,7 +10,7 @@
 
 @interface UIImage (Runtime)
 
++ (void)openUIImageRuntimeTest;
 + (UIImage *)custom_imageNamed:(NSString *)name;
-+ (void)openRuntimeTest;
 
 @end
