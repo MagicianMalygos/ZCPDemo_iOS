@@ -157,6 +157,9 @@
  @return        UIImage
  */
 - (UIImage*) resizableImage:(UIEdgeInsets)insets;
+
++ (UIImage*)imageFromView:(UIView*)view;
+
 @end
 
 
