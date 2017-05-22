@@ -10,4 +10,6 @@
 
 @interface DemoBaseViewController : UIViewController
 
+- (void)test;
+
 @end

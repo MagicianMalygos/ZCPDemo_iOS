@@ -48,7 +48,7 @@
 
 #pragma mark - button click
 - (void)shareButtonPressed {
-    AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
     authRequest.redirectURI = kRedirectURI;

@@ -21,6 +21,10 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
 //    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickView)]];
+    [self test];
+}
+
+- (void)test {
 }
 
 //- (void)clickView {
