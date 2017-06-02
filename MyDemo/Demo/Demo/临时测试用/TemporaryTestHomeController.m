@@ -7,6 +7,8 @@
 //
 
 #import "TemporaryTestHomeController.h"
+#import <IQKeyboardManager.h>
+#import <IQKeyboardReturnKeyHandler.h>
 
 #define SCALE 1
 #define S(s) ((s)*SCALE)
@@ -16,6 +18,7 @@
 @interface TemporaryTestHomeController ()
 
 @property (nonatomic, strong) NSMutableDictionary *headerDict;
+@property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
 
 @end
 
@@ -29,6 +32,7 @@
 //    [self testSD];  // 测试给url添加HeaderField
 //    [self testCreateNSString];
 //    [self testGetImageFromView];
+    [self testIQKeyboardManagerReturn];
 }
 
 #pragma mark - test
@@ -160,6 +164,19 @@
         UIGraphicsEndImageContext();
         return image;
     }
+}
+
+#pragma mark - testIQKeyboardManagerReturn
+
+- (void)testIQKeyboardManagerReturn {
+    
+    for (int i = 0; i < 5; i++) {
+        UITextField *tf = [[UITextField alloc] init];
+        tf.frame = CGRectMake(0, 50*i + 10, 100, 50);
+        tf.backgroundColor = RANDOM_COLOR;
+        [self.view addSubview:tf];
+    }
+    self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
 }
 
 @end

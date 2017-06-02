@@ -67,8 +67,8 @@
     UIImage *bgImage;
     
     // 气泡1：使用系统拉伸方法。参考：http://blog.csdn.net/chaoyuan899/article/details/19811889
-    bgImageOrigin   = [UIImage imageNamed:@"chat_recive_press_pic"];
-    bgImage         = [bgImageOrigin resizableImageWithCapInsets:UIEdgeInsetsMake(bgImageOrigin.size.height / 2 - 1, bgImageOrigin.size.width / 2 + 1, bgImageOrigin.size.height / 2 - 1, bgImageOrigin.size.width / 2 + 1) resizingMode:UIImageResizingModeStretch];
+    bgImageOrigin   = [UIImage imageNamed:@"bubble_mine_green"];
+    bgImage         = [bgImageOrigin resizableImageWithCapInsets:UIEdgeInsetsMake(bgImageOrigin.size.height / 2 + 2, 4, bgImageOrigin.size.height / 2 - 3, 17) resizingMode:UIImageResizingModeStretch];
     [self.qipaoButton1 setBackgroundImage:bgImage forState:UIControlStateNormal];
     [self.qipaoButton1 setTitle:self.tf.text forState:UIControlStateNormal];
     

@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - IQKeyboardManager (4.0.8)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -29,12 +30,16 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
+  - IQKeyboardManager (~> 4.0.8)
   - SDWebImage (~> 3.7.4)
   - YYKit (~> 1.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   YYKit: 8b618ca8d8cefa534d8d4fe2cad10fe9fbd030ed
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 12058a5f78355bfddab4e05af67fd94e93d6d92a
+
+COCOAPODS: 1.1.1
