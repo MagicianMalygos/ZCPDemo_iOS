@@ -216,6 +216,9 @@
 		FB92C8931E5C21280095F31E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FB92C8921E5C21280095F31E /* fire.png */; };
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
 		FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */; };
+		FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E4081EEE43AC006482B8 /* BookViewController.m */; };
+		FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */; };
+		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
 		FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
@@ -1571,6 +1574,11 @@
 		FBA976CF1E669D5D00C88BE5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryTestHomeController.h; sourceTree = "<group>"; };
 		FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryTestHomeController.m; sourceTree = "<group>"; };
+		FBC4E4071EEE43AC006482B8 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		FBC4E4081EEE43AC006482B8 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		FBC4E40A1EEE44CF006482B8 /* BookPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPageViewController.h; sourceTree = "<group>"; };
+		FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPageViewController.m; sourceTree = "<group>"; };
+		FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笑傲江湖.txt"; sourceTree = "<group>"; };
 		FBEB496A1E26152400A485A3 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
 		FBEB496B1E26152400A485A3 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
@@ -4151,6 +4159,7 @@
 		FB50783C1E2618A900361E60 /* PageVCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FBC4E4061EEE43AC006482B8 /* 模仿图书控制器demo */,
 				FB50783D1E2618A900361E60 /* MyViewController.h */,
 				FB50783E1E2618A900361E60 /* MyViewController.m */,
 				FB50783F1E2618A900361E60 /* PageVCDemoHomeController.h */,
@@ -4415,6 +4424,18 @@
 			path = "临时测试用";
 			sourceTree = "<group>";
 		};
+		FBC4E4061EEE43AC006482B8 /* 模仿图书控制器demo */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */,
+				FBC4E4071EEE43AC006482B8 /* BookViewController.h */,
+				FBC4E4081EEE43AC006482B8 /* BookViewController.m */,
+				FBC4E40A1EEE44CF006482B8 /* BookPageViewController.h */,
+				FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */,
+			);
+			path = "模仿图书控制器demo";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4600,6 +4621,7 @@
 				FB5079081E2618A900361E60 /* turn_on.png in Resources */,
 				FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */,
 				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
+				FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
 				FB46F4691EA493C400FDBD5B /* 朱超鹏.cer in Resources */,
@@ -4681,6 +4703,7 @@
 				FB5078DB1E2618A900361E60 /* NSObject+Category.m in Sources */,
 				FB5078EE1E2618A900361E60 /* ZCPButtonCell.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
+				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
 				FB0621C71ED275DC000AA258 /* EnumAndFormatDemo.m in Sources */,
 				FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */,
 				FB5079161E2618A900361E60 /* Line.m in Sources */,
@@ -4757,6 +4780,7 @@
 				FB5079211E2618A900361E60 /* SetFilletTestCell.m in Sources */,
 				FB5079121E2618A900361E60 /* TabBarDemoHomeController.m in Sources */,
 				FB5078F21E2618A900361E60 /* ZCPTableViewWithLineCell.m in Sources */,
+				FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */,
 				FB5078E41E2618A900361E60 /* UIScrollView+ExtraMethod.m in Sources */,
 				FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */,
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,

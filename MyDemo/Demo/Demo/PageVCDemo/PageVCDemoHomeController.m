@@ -8,6 +8,7 @@
 
 #import "PageVCDemoHomeController.h"
 #import "MyViewController.h"
+#import "BookViewController.h"
 #import "UIImage+Category.h"
 #import <malloc/malloc.h>
 
@@ -49,12 +50,23 @@
     [self.pageVC.view addGestureRecognizer:self.leftSwipe];
     [self.pageVC.view addGestureRecognizer:self.rightSwipe];
     
-    // Jump to next ViewController
-    UIButton *jumpButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    jumpButton.frame = CGRectMake(0, 20, 50, 50);
-    jumpButton.backgroundColor = [UIColor magentaColor];
-    [jumpButton addTarget:self action:@selector(jumpToNextVC) forControlEvents:UIControlEventTouchUpInside];
+    // Jump to switch style view controller
+    UIButton *jumpButton        = [UIButton buttonWithType:UIButtonTypeCustom];
+    jumpButton.frame            = CGRectMake(0, 20, 100, 50);
+    jumpButton.backgroundColor  = [UIColor magentaColor];
+    jumpButton.tag              = 1;
+    [jumpButton setTitle:@"swichStyle" forState:UIControlStateNormal];
+    [jumpButton addTarget:self action:@selector(jumpToNextVC:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:jumpButton];
+    
+    // Jump to book view controller
+    UIButton *jumpButton2       = [UIButton buttonWithType:UIButtonTypeCustom];
+    jumpButton2.frame           = CGRectMake(100, 20, 100, 50);
+    jumpButton2.backgroundColor = [UIColor orangeColor];
+    jumpButton2.tag             = 2;
+    [jumpButton2 setTitle:@"book" forState:UIControlStateNormal];
+    [jumpButton2 addTarget:self action:@selector(jumpToNextVC:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:jumpButton2];
 }
 
 #pragma mark - swipe gesture recognizer
@@ -76,8 +88,13 @@
     [self.pageVC setViewControllers:@[self.secondVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
     }];
 }
-- (void)jumpToNextVC {
-    [self.navigationController pushViewController:[MyViewController new] animated:YES];
+- (void)jumpToNextVC:(UIButton *)button {
+    if (button.tag == 1) {
+        [self.navigationController pushViewController:[MyViewController new] animated:YES];
+    } else if (button.tag == 2) {
+        BookViewController *bookVC = [[BookViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        [self.navigationController pushViewController:bookVC animated:YES];
+    }
 }
 
 #pragma mark - getter / setter
@@ -99,6 +116,7 @@
         _firstButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _firstButton.frame = CGRectMake(0, 150, SCREENWIDTH / 2, 50);
         _firstButton.backgroundColor = [UIColor purpleColor];
+        [_firstButton setTitle:@"切换到第一个控制器" forState:UIControlStateNormal];
     }
     return _firstButton;
 }
@@ -107,6 +125,7 @@
         _secondButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _secondButton.frame = CGRectMake(SCREENWIDTH / 2, 150, SCREENWIDTH / 2, 50);
         _secondButton.backgroundColor = [UIColor orangeColor];
+        [_secondButton setTitle:@"切换到第二个控制器" forState:UIControlStateNormal];
     }
     return _secondButton;
 }

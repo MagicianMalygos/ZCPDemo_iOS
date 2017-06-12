@@ -20,16 +20,11 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-//    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickView)]];
     [self test];
 }
 
 - (void)test {
 }
-
-//- (void)clickView {
-//    [self.view resignFirstResponder];
-//}as
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:NO];
