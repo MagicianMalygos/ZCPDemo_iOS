@@ -27,7 +27,8 @@
                     @{@"title": @"PADemo", @"class": @"PADemoHomeController"},
                     @{@"title": @"TabBarDemo", @"class": @"TabBarDemoHomeController"},
                     @{@"title": @"NetWorkDemo", @"class": @"NetWorkDemoHomeController"},
-                    @{@"title": @"二维码扫描", @"class": @"QRCodeDemoHomeController"}, nil];
+                    @{@"title": @"二维码扫描", @"class": @"QRCodeDemoHomeController"},
+                    @{@"title": @"国际化", @"class": @"InternationalizationDemoHomeController"}, nil];
     }
     return _infoArr;
 }

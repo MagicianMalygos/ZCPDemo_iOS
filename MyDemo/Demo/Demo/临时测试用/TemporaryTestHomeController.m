@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSMutableDictionary *headerDict;
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
+@property (nonatomic, strong) NSArray *directorys;
+@property (nonatomic, copy) NSString *path;
 
 @end
 
@@ -32,7 +34,9 @@
 //    [self testSD];  // 测试给url添加HeaderField
 //    [self testCreateNSString];
 //    [self testGetImageFromView];
-    [self testIQKeyboardManagerReturn];
+//    [self testIQKeyboardManagerReturn];
+//    [self testSandBoxPath];
+//    [self testSettings];
 }
 
 #pragma mark - test
@@ -177,6 +181,98 @@
         [self.view addSubview:tf];
     }
     self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
+}
+
+#pragma mark - testSandBoxPath
+
+- (void)testSandBoxPath {
+    /*
+        1./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/10CB9AFC-A114-4E5F-B760-065EDAC5D31B/Documents
+        2.~/Documents
+     */
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, NO);
+
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, NO); // ~/Applications
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDemoApplicationDirectory, NSUserDomainMask, NO); // ~/Applications/Demos
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDeveloperApplicationDirectory, NSUserDomainMask, NO); // ~/Developer/Applications
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSAdminApplicationDirectory, NSUserDomainMask, NO); // ~/Applications/Utilities
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, NO); // ~/Library
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDeveloperDirectory, NSUserDomainMask, NO); // ~/Developer
+    
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSUserDirectory, NSUserDomainMask, NO); //
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, NO); // ~/Library/Documentation
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, NO); // ~/Documents
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSCoreServiceDirectory, NSUserDomainMask, NO); //
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSAutosavedInformationDirectory, NSUserDomainMask, NO); // ~/Library/Autosave Information
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, NO); // ~/Desktop
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, NO); // ~/Library/Caches
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, NO); // ~/Library/Application Support
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, NO); // ~/Downloads
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSInputMethodsDirectory, NSUserDomainMask, NO); // ~/Library/Input Methods
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSMoviesDirectory, NSUserDomainMask, NO); // ~/Movies
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, NO); // ~/Music
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, NO); // ~/Pictures
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSPrinterDescriptionDirectory, NSUserDomainMask, NO); //
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSSharedPublicDirectory, NSUserDomainMask, NO); // ~/Public
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, NO); // ~/Library/PreferencePanes
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSItemReplacementDirectory, NSUserDomainMask, NO); //
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSAllApplicationsDirectory, NSUserDomainMask, NO); // ~/Applications、~/Applications/Utilities、~/Developer/Applications、~/Applications/Demos"
+    self.directorys = NSSearchPathForDirectoriesInDomains(NSAllLibrariesDirectory, NSUserDomainMask, NO); // ~/Library、~/Developer
+    
+    /*
+     1.
+     2.
+     3./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72
+     4./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72
+     5./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72/tmp/
+     6./
+     */
+    self.path = NSUserName();
+    self.path = NSFullUserName();
+    self.path = NSHomeDirectory();
+    self.path = NSHomeDirectoryForUser(@"zcp");
+    self.path = NSTemporaryDirectory();
+    self.path = NSOpenStepRootDirectory();
+    
+    
+    // 总结：
+    // 1.document目录
+    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    // 2.library目录：caches、preferences
+    NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES);
+    // 3.tmp目录
+    NSTemporaryDirectory();
+}
+
+- (void)setDirectorys:(NSArray *)directorys {
+    _directorys = directorys;
+    NSLog(@"%@", directorys);
+}
+
+- (void)setPath:(NSString *)path {
+    _path = path;
+    NSLog(@"%@", self.path);
+}
+
+#pragma mark - testSettings
+
+// 读取Settings.bundle中的设置
+- (void)testSettings {
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    // 如果app第一次启动，则设置默认值
+    [userDefaults setObject:@"zcp" forKey:@"user_name"];
+    [userDefaults setObject:@"bobo4" forKey:@"cheat_code"];
+    
+    
+    NSString *userName = [userDefaults stringForKey:@"user_name"];
+    NSString *cheatCode = [userDefaults stringForKey:@"cheat_code"];
+    NSString *area = [userDefaults stringForKey:@"area"];
+    NSLog(@"%@ %@ %@", userName, cheatCode, area);
 }
 
 @end
