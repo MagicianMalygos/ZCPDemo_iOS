@@ -116,6 +116,7 @@
 		FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621C01ED275DC000AA258 /* RuntimeTest3.m */; };
 		FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621C31ED275DC000AA258 /* SocketDemo.m */; };
 		FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */; };
+		FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */; };
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
 		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
@@ -212,15 +213,22 @@
 		FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */; };
 		FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */; };
 		FB92C8931E5C21280095F31E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FB92C8921E5C21280095F31E /* fire.png */; };
+		FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03D51EFD0DE300B7591C /* MapViewController.m */; };
+		FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9F03D61EFD0DE300B7591C /* MapViewController.xib */; };
+		FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */; };
 		FBA5F3CD1EF3B8FE00F97958 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3CF1EF3B8FE00F97958 /* InfoPlist.strings */; };
 		FBA5F3DA1EF3C3CF00F97958 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3DC1EF3C3CF00F97958 /* Localizable.strings */; };
 		FBA5F3F11EF3CAC100F97958 /* InternationalizationDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA5F3F01EF3CAC100F97958 /* InternationalizationDemoHomeController.m */; };
 		FBA5F3FB1EF3CB2500F97958 /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F31EF3CB2500F97958 /* flag@2x.png */; };
 		FBA5F3FC1EF3CB2500F97958 /* flag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F51EF3CB2500F97958 /* flag@3x.png */; };
+		FBA5F40D1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */; };
+		FBA5F40E1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */; };
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
 		FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */; };
 		FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E4081EEE43AC006482B8 /* BookViewController.m */; };
 		FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */; };
+		FBD4ABB91EFA5BF70030EFD2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */; };
+		FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */; };
 		FBD836F01EF23AAF0081672B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBD836EF1EF23AAF0081672B /* Settings.bundle */; };
 		FBD836F91EF23AD00081672B /* zcp.cer in Resources */ = {isa = PBXBuildFile; fileRef = FBD836F71EF23AD00081672B /* zcp.cer */; };
 		FBD836FA1EF23AD00081672B /* 朱超鹏.cer in Resources */ = {isa = PBXBuildFile; fileRef = FBD836F81EF23AD00081672B /* 朱超鹏.cer */; };
@@ -1386,6 +1394,8 @@
 		FB0621C31ED275DC000AA258 /* SocketDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketDemo.m; sourceTree = "<group>"; };
 		FB0621DD1ED2762D000AA258 /* NSTimer+WTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WTUtils.h"; sourceTree = "<group>"; };
 		FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WTUtils.m"; sourceTree = "<group>"; };
+		FB1608201EFA0DD900064DA2 /* MapDemoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoHomeViewController.h; sourceTree = "<group>"; };
+		FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoHomeViewController.m; sourceTree = "<group>"; };
 		FB4600701E2716DA003504AD /* DashedSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedSettingView.h; sourceTree = "<group>"; };
 		FB4600711E2716DA003504AD /* DashedSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedSettingView.m; sourceTree = "<group>"; };
 		FB4600771E27170E003504AD /* DashedSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashedSettingView.xib; sourceTree = "<group>"; };
@@ -1574,6 +1584,11 @@
 		FB92C88F1E5C17CF0095F31E /* CATransform3DDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DDemoHomeController.h; sourceTree = "<group>"; };
 		FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DDemoHomeController.m; sourceTree = "<group>"; };
 		FB92C8921E5C21280095F31E /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		FB9F03D41EFD0DE300B7591C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FB9F03D51EFD0DE300B7591C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FB9F03D61EFD0DE300B7591C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		FB9F03DE1EFD1AE500B7591C /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		FBA5F3CE1EF3B8FE00F97958 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FBA5F3D01EF3B8FF00F97958 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		FBA5F3D31EF3BFE000F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -1592,6 +1607,9 @@
 		FBA5F3F81EF3CB2500F97958 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/flag@3x.png"; sourceTree = "<group>"; };
 		FBA5F3F91EF3CB2500F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/flag@2x.png"; sourceTree = "<group>"; };
 		FBA5F3FA1EF3CB2500F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/flag@3x.png"; sourceTree = "<group>"; };
+		FBA5F40A1EF7AAFE00F97958 /* ZCPMinesweeperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPMinesweeperViewController.h; sourceTree = "<group>"; };
+		FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPMinesweeperViewController.m; sourceTree = "<group>"; };
+		FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCPMinesweeperViewController.xib; sourceTree = "<group>"; };
 		FBA976CE1E669D5D00C88BE5 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		FBA976CF1E669D5D00C88BE5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryTestHomeController.h; sourceTree = "<group>"; };
@@ -1600,6 +1618,9 @@
 		FBC4E4081EEE43AC006482B8 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FBC4E40A1EEE44CF006482B8 /* BookPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPageViewController.h; sourceTree = "<group>"; };
 		FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookPageViewController.m; sourceTree = "<group>"; };
+		FBD4ABB61EFA5BF70030EFD2 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		FBD836EF1EF23AAF0081672B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FBD836F71EF23AD00081672B /* zcp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = zcp.cer; sourceTree = "<group>"; };
 		FBD836F81EF23AD00081672B /* 朱超鹏.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "朱超鹏.cer"; sourceTree = "<group>"; };
@@ -1617,6 +1638,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3E828E1D2A83990061664A /* CoreLocation.framework in Frameworks */,
 				FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */,
 				9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */,
 				9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */,
@@ -1624,7 +1646,6 @@
 				9E3E86BA1D2A84FE0061664A /* libstdc++.6.0.9.tbd in Frameworks */,
 				9E3E86B81D2A84D70061664A /* libxml2.2.tbd in Frameworks */,
 				9E3E86B61D2A84BB0061664A /* libz.1.2.5.tbd in Frameworks */,
-				9E3E828E1D2A83990061664A /* CoreLocation.framework in Frameworks */,
 				9E3E828C1D2A83920061664A /* CoreMedia.framework in Frameworks */,
 				9E3E828A1D2A838B0061664A /* AudioToolbox.framework in Frameworks */,
 				FB50790E1E2618A900361E60 /* libWeiboSDK.a in Frameworks */,
@@ -3901,9 +3922,28 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
+		FB16081A1EFA0DC200064DA2 /* 地图&定位 */ = {
+			isa = PBXGroup;
+			children = (
+				FB1608201EFA0DD900064DA2 /* MapDemoHomeViewController.h */,
+				FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */,
+				FBD4ABB61EFA5BF70030EFD2 /* LocationViewController.h */,
+				FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */,
+				FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */,
+				FB9F03D41EFD0DE300B7591C /* MapViewController.h */,
+				FB9F03D51EFD0DE300B7591C /* MapViewController.m */,
+				FB9F03D61EFD0DE300B7591C /* MapViewController.xib */,
+				FB9F03DE1EFD1AE500B7591C /* MyAnnotation.h */,
+				FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */,
+			);
+			path = "地图&定位";
+			sourceTree = "<group>";
+		};
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FB16081A1EFA0DC200064DA2 /* 地图&定位 */,
+				FBA5F4041EF7AABC00F97958 /* 扫雷 */,
 				FBA5F3EE1EF3CA8200F97958 /* 国际化 */,
 				FB06218A1ED275DC000AA258 /* OtherDemo */,
 				FBB836041EB9DFCD00C064A8 /* 临时测试用 */,
@@ -4455,6 +4495,16 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		FBA5F4041EF7AABC00F97958 /* 扫雷 */ = {
+			isa = PBXGroup;
+			children = (
+				FBA5F40A1EF7AAFE00F97958 /* ZCPMinesweeperViewController.h */,
+				FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */,
+				FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */,
+			);
+			path = "扫雷";
+			sourceTree = "<group>";
+		};
 		FBA976C91E669D3600C88BE5 /* App弹窗升级 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4548,6 +4598,14 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = WG5B567WWS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					18CB41DA1D123D150051B651 = {
 						CreatedOnToolsVersion = 7.3;
@@ -4639,6 +4697,7 @@
 				18A5014C1C92BE67006EBEB4 /* 005.jpg in Resources */,
 				FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */,
 				FB5079061E2618A900361E60 /* scanLine@3x.png in Resources */,
+				FBA5F40E1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
 				1844399C1D0012C700FDD7F7 /* tips_page_next_step.png in Resources */,
@@ -4674,6 +4733,7 @@
 				187250371C91189A002D8C9E /* LaunchScreen.storyboard in Resources */,
 				18A501491C92BE67006EBEB4 /* 002.jpg in Resources */,
 				FB0621D41ED275DD000AA258 /* rocket_ios9.png in Resources */,
+				FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */,
 				184439971D0012C700FDD7F7 /* tips_page_arrow@2x.png in Resources */,
 				1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */,
 				FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */,
@@ -4690,6 +4750,7 @@
 				FBD836F01EF23AAF0081672B /* Settings.bundle in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
+				FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */,
 				184439A11D0012C700FDD7F7 /* tips_page_star@3x.png in Resources */,
 				1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */,
 				1844399E1D0012C700FDD7F7 /* tips_page_next_step@3x.png in Resources */,
@@ -4768,6 +4829,7 @@
 				FB5078DB1E2618A900361E60 /* NSObject+Category.m in Sources */,
 				FB5078EE1E2618A900361E60 /* ZCPButtonCell.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
+				FBA5F40D1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m in Sources */,
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
 				FB0621C71ED275DC000AA258 /* EnumAndFormatDemo.m in Sources */,
 				FBEB496C1E26152400A485A3 /* DemoBaseTableViewController.m in Sources */,
@@ -4811,6 +4873,7 @@
 				FB0621CD1ED275DD000AA258 /* OCClassMethodDemo.m in Sources */,
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
 				FB5079151E2618A900361E60 /* FontDemoHomeControllerViewController.m in Sources */,
+				FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */,
 				FB50791E1E2618A900361E60 /* UIImage+ClipRoundCorner.m in Sources */,
 				FB5078DD1E2618A900361E60 /* NSString+PACheckValid.m in Sources */,
 				FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */,
@@ -4855,12 +4918,15 @@
 				FB5078F41E2618A900361E60 /* ZCPBasicDataConstructor.m in Sources */,
 				FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */,
 				FB0621D61ED275DD000AA258 /* UIImage+Runtime.m in Sources */,
+				FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */,
 				1872503B1C91189A002D8C9E /* main.m in Sources */,
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB5078E31E2618A900361E60 /* UIImageView+Category.m in Sources */,
+				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB0621D71ED275DD000AA258 /* ZCPUser+AddProperty.m in Sources */,
+				FBD4ABB91EFA5BF70030EFD2 /* LocationViewController.m in Sources */,
 				FB5078F91E2618A900361E60 /* ZCPViewController.m in Sources */,
 				FBA5F3F11EF3CAC100F97958 /* InternationalizationDemoHomeController.m in Sources */,
 				FB50790A1E2618A900361E60 /* ZCPGenerateQRCode.m in Sources */,

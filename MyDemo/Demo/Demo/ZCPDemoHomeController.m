@@ -28,7 +28,8 @@
                     @{@"title": @"TabBarDemo", @"class": @"TabBarDemoHomeController"},
                     @{@"title": @"NetWorkDemo", @"class": @"NetWorkDemoHomeController"},
                     @{@"title": @"二维码扫描", @"class": @"QRCodeDemoHomeController"},
-                    @{@"title": @"国际化", @"class": @"InternationalizationDemoHomeController"}, nil];
+                    @{@"title": @"国际化", @"class": @"InternationalizationDemoHomeController"},
+                    @{@"title": @"地图&定位", @"class": @"MapDemoHomeViewController"},nil];
     }
     return _infoArr;
 }
