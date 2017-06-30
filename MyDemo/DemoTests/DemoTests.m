@@ -36,4 +36,7 @@
     }];
 }
 
+- (void)testDemo {
+}
+
 @end

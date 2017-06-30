@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,11 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
             <connections>
-                <outlet property="HybridMapView" destination="TbY-Us-Bmr" id="usP-Ph-J7R"/>
-                <outlet property="SatelliteMapView" destination="rTD-yq-mI7" id="Zn0-t5-N4a"/>
-                <outlet property="StandardMapView" destination="l1a-GR-nMy" id="p6N-Op-Hqb"/>
                 <outlet property="addressTextField" destination="Mky-hP-SKg" id="ju0-zn-qs6"/>
+                <outlet property="hybridMapView" destination="TbY-Us-Bmr" id="rPY-Rg-bMP"/>
+                <outlet property="locationButton" destination="jzt-co-gaH" id="ZYE-2N-fsG"/>
+                <outlet property="satelliteMapView" destination="rTD-yq-mI7" id="kCN-Uz-5yD"/>
                 <outlet property="searchButton" destination="cWt-LS-Ijm" id="ss5-nL-LET"/>
+                <outlet property="standardMapView" destination="l1a-GR-nMy" id="HTd-79-fhr"/>
+                <outlet property="usingThirdMapsSwitch" destination="btX-96-Y1N" id="M2F-S4-54w"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +45,7 @@
                     </connections>
                 </mapView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-hP-SKg">
-                    <rect key="frame" x="8" y="72" width="301" height="30"/>
+                    <rect key="frame" x="8" y="72" width="166" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="dmw-JR-6rS"/>
                     </constraints>
@@ -52,12 +54,15 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWt-LS-Ijm">
-                    <rect key="frame" x="317" y="72" width="50" height="30"/>
+                    <rect key="frame" x="182" y="72" width="50" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Of4-Hc-DFg"/>
                         <constraint firstAttribute="width" constant="50" id="TZC-dG-fUF"/>
                     </constraints>
-                    <state key="normal" title="搜索"/>
+                    <state key="normal" title="搜索">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="clickSearchButton:" destination="-1" eventType="touchUpInside" id="Cdk-cW-MJN"/>
                     </connections>
@@ -71,25 +76,50 @@
                         <outlet property="delegate" destination="-1" id="xpA-qi-P2C"/>
                     </connections>
                 </mapView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="btX-96-Y1N">
+                    <rect key="frame" x="318" y="72" width="51" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ze9-h0-mDu"/>
+                    </constraints>
+                </switch>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzt-co-gaH">
+                    <rect key="frame" x="240" y="72" width="70" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="9Pd-uc-HDg"/>
+                        <constraint firstAttribute="height" constant="30" id="vDl-EL-P39"/>
+                    </constraints>
+                    <state key="normal" title="开始定位">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickLocationButton:" destination="-1" eventType="touchUpInside" id="Dlo-n2-jG6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Mky-hP-SKg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="0Ua-Gp-Xns"/>
                 <constraint firstItem="rTD-yq-mI7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0fB-BE-3s4"/>
                 <constraint firstItem="rTD-yq-mI7" firstAttribute="top" secondItem="l1a-GR-nMy" secondAttribute="bottom" constant="8" id="0kO-c5-ecH"/>
+                <constraint firstItem="jzt-co-gaH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="3QO-Ai-zjy"/>
                 <constraint firstItem="cWt-LS-Ijm" firstAttribute="leading" secondItem="Mky-hP-SKg" secondAttribute="trailing" constant="8" id="Chu-uU-3kR"/>
-                <constraint firstAttribute="trailing" secondItem="cWt-LS-Ijm" secondAttribute="trailing" constant="8" id="LLZ-0M-CZW"/>
+                <constraint firstAttribute="trailing" secondItem="btX-96-Y1N" secondAttribute="trailing" constant="8" id="NYh-iz-1FT"/>
                 <constraint firstItem="l1a-GR-nMy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P4e-0r-P35"/>
+                <constraint firstItem="btX-96-Y1N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="QK0-q1-GoC"/>
                 <constraint firstAttribute="trailing" secondItem="TbY-Us-Bmr" secondAttribute="trailing" id="Ucq-5T-202"/>
+                <constraint firstItem="jzt-co-gaH" firstAttribute="leading" secondItem="cWt-LS-Ijm" secondAttribute="trailing" constant="8" id="Usl-Ne-trR"/>
                 <constraint firstItem="TbY-Us-Bmr" firstAttribute="top" secondItem="rTD-yq-mI7" secondAttribute="bottom" constant="8" id="WAI-Zi-BP4"/>
                 <constraint firstItem="Mky-hP-SKg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="XHd-np-I8d"/>
                 <constraint firstAttribute="trailing" secondItem="l1a-GR-nMy" secondAttribute="trailing" id="YPz-ba-wyA"/>
                 <constraint firstItem="l1a-GR-nMy" firstAttribute="top" secondItem="Mky-hP-SKg" secondAttribute="bottom" constant="8" id="ZW0-XM-77N"/>
                 <constraint firstItem="cWt-LS-Ijm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="ckX-kh-QMA"/>
+                <constraint firstItem="l1a-GR-nMy" firstAttribute="top" secondItem="jzt-co-gaH" secondAttribute="bottom" constant="8" id="dDc-4d-mvo"/>
                 <constraint firstAttribute="trailing" secondItem="rTD-yq-mI7" secondAttribute="trailing" id="ggh-EJ-4ij"/>
                 <constraint firstItem="TbY-Us-Bmr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vxq-DI-eFs"/>
+                <constraint firstItem="btX-96-Y1N" firstAttribute="leading" secondItem="jzt-co-gaH" secondAttribute="trailing" constant="8" id="xAY-0Y-H3K"/>
             </constraints>
-            <point key="canvasLocation" x="-281" y="72"/>
+            <point key="canvasLocation" x="-467" y="-254"/>
         </view>
     </objects>
 </document>

@@ -96,14 +96,14 @@
 
 #pragma mark - judege
 
-// 校验密码强度。包含大小写字母和数字，不能使用特殊字符，长度在8-16之间
+// 校验密码强度。包含大小写字母和数字，不能使用特殊字符，长度在6-16之间
 - (BOOL)judgePassword:(NSString *)str {
-    return [self judge:str regex:@"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$"];
+    BOOL result =[self judge:str regex:@"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$"];
+    return result;
 }
 // 校验中文
 - (BOOL)judgeChinese:(NSString *)str {
     return [self judge:str regex:@"^[\u4e00-\u9fa5]{0,}$"];
-    
 }
 // 校验纯数字英文下划线
 - (BOOL)judgeNumberWordUpperLine:(NSString *)str {
@@ -132,10 +132,7 @@
 // 
 
 
-
-
-
-#pragma mark - private method
+#pragma mark - test method
 
 - (void)test:(NSString *)msg method:(NSString *)method data:(NSArray *)arr  {
     __block NSString *testResult = @"";

@@ -23,6 +23,9 @@
     NSLog(@"%@", [self getListWithMax:15 count:10]);
     NSLog(@"%@", [self getListWithMax:10 count:5]);
     NSLog(@"%@", [self getListWithMax:9 count:2]);
+    
+    // -- 二叉树 --
+    [TreeDemo run];
 }
 
 - (void)noRepeatRandomListWithMin:(int)min max:(int)max {
@@ -68,13 +71,7 @@
         printf("%d", a[i]);
     }
     printf("\n");
-    
-    
-    // -- 二叉树 --
-    [TreeDemo run];
 }
-
-
 
 - (NSArray *)getListWithMax:(int)max count:(int)count {
     NSMutableArray *arr = [NSMutableArray array];

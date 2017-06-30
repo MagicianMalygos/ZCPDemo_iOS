@@ -10,6 +10,9 @@
 
 @interface MyAnnotation : NSObject <MKAnnotation>
 
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+
 @property (nonatomic, copy) NSString *streetAddress;
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, copy) NSString *state;
