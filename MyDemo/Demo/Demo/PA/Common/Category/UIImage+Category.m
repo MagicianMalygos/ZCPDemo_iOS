@@ -270,6 +270,7 @@ CGFloat _RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	bitmapData = malloc( bitmapByteCount );
 	
 	if (bitmapData == NULL) {
+        CGColorSpaceRelease( colorSpace );
 		fprintf (stderr, "Memory not allocated!");
 		return NULL;
 	}
@@ -285,6 +286,7 @@ CGFloat _RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	CGContextSetAllowsAntialiasing (context,NO);
 	
 	if (context== NULL) {
+        CGColorSpaceRelease( colorSpace );
 		free (bitmapData);
 		fprintf (stderr, "Context not created!");
 		return NULL;

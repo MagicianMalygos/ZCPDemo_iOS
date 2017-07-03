@@ -206,7 +206,7 @@
         [(ZCPTableViewCell *)cell setObject:object];
     }
     
-    if ([self.delegate respondsToSelector:@selector(tableView:didSetObject:cell:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableView:didSetObject:cell:)]) {
         [self.delegate tableView:tableView didSetObject:object cell:cell];
     }
     

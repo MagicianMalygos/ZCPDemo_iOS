@@ -106,6 +106,8 @@
     
     [videoIcon drawAtPoint:CGPointMake(2, (height - videoIcon.size.height) / 2)];
     
+    CGColorSpaceRelease(baseSpace);
+    CGGradientRelease(gradient);
 }
 
 @end
@@ -305,7 +307,7 @@ static UIColor *titleColor;
 @implementation ZYQAssetViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    if ([super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
@@ -391,8 +393,8 @@ static UIColor *titleColor;
 @implementation ZYQAssetViewController
 @synthesize tableView = _tableView;
 
-- (id)init
-{
+- (instancetype)init {
+    if (self = [super init]) {
     _indexPathsForSelectedItems=[[NSMutableArray alloc] init];
     
     if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)){
@@ -405,8 +407,7 @@ static UIColor *titleColor;
         minimumLineSpacing=2;
     }
     
-    if (self = [super init])
-    {
+    
         if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
             [self setEdgesForExtendedLayout:UIRectEdgeNone];
         

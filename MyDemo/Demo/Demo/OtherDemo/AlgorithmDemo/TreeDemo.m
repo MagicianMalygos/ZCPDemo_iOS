@@ -110,6 +110,8 @@ void PostOrderTraverse (BiTree T) {
     printf("\n");
     PostOrderTraverse(T);
     printf("\n");
+    
+    free(T);
 }
 
 @end

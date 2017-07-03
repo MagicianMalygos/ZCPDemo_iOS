@@ -217,6 +217,8 @@
     
     [shapeLayer setPath:path];
     [view.layer addSublayer:shapeLayer];
+    
+    CGPathRelease(path);
     /* - - - Return - - - */
     
     return view;

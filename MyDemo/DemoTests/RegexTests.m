@@ -20,6 +20,9 @@
 - (void)setUp {
     [super setUp];
     self.regexDemo = [RegexDemo new];
+    
+    // 暂停测试5秒，用于测试异步方法
+    [self waitForExpectationsWithTimeout:5.0f handler:nil];
 }
 
 - (void)tearDown {

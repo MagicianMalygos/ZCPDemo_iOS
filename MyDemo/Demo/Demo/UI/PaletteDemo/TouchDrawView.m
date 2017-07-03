@@ -12,7 +12,7 @@
 @implementation TouchDrawView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if ([super initWithCoder:aDecoder]) {
+    if (self = [super initWithCoder:aDecoder]) {
         [self setMultipleTouchEnabled:YES];
     }
     return self;
