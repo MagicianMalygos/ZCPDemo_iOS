@@ -737,7 +737,7 @@
 		9E3E848B1D2A84A30061664A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		9E3E848C1D2A84A30061664A /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		9E3E848D1D2A84A30061664A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E3E848E1D2A84A30061664A /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		9E3E848E1D2A84A30061664A /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E3E848F1D2A84A30061664A /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		9E3E84931D2A84A30061664A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		9E3E84941D2A84A30061664A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -4942,9 +4942,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Demo/Demo/ShareDemo/SinaShareDemo/libWeiboSDK",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK_4.0.5",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK_4.0.5/Libs",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK4.1.1/Libs",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -5004,9 +5001,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Demo/Demo/ShareDemo/SinaShareDemo/libWeiboSDK",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK_4.0.5",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK_4.0.5/Libs",
-					"$(PROJECT_DIR)/Demo/Demo/LCPlayerSDKDemo/SDK4.1.1/Libs",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
