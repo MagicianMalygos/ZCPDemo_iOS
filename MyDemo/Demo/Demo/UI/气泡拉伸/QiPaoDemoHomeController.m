@@ -31,12 +31,13 @@
     self.reRenderButton.frame   = CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - 50, 20, 50, 50);
     self.qipaoButton1.frame     = CGRectMake(0, 100, 240, 0);
     self.qipaoButton2.frame     = CGRectMake(0, 200, 240, 0);
+    
     UIImage *colorImage         = [UIImage imageFromView:self.nineSquareColorView];
     UIImage *colorZoomImage     = [colorImage resizableImageWithCapInsets:UIEdgeInsetsMake(30, 30, 30, 30) resizingMode:UIImageResizingModeStretch];
     self.colorOriginView.image  = colorImage;
     self.colorZoomView.image    = colorZoomImage;
     self.colorOriginView.frame  = CGRectMake(0, 300, colorImage.size.width, colorImage.size.height);
-    self.colorZoomView.frame    = CGRectMake(200, 300, 180, 180);
+    self.colorZoomView.frame    = CGRectMake(100, 300, 180, 180);
     
     [self.view addSubview:self.tf];
     [self.view addSubview:self.reRenderButton];
@@ -46,7 +47,7 @@
     [self.view addSubview:self.colorZoomView];
 }
 
-#pragma mark - update
+#pragma mark - event response
 
 // qq聊天气泡的拉伸效果
 - (void)reRender {
