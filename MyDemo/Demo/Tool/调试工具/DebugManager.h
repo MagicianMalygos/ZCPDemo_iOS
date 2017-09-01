@@ -16,9 +16,9 @@ void DebugLog(NSString *format, ...);
 
 @property (nonatomic, strong) DebugStatusBallView *statusBallView;
 @property (nonatomic, strong) DebugConsoleLogView *consoleLogView;
+@property (nonatomic, assign, getter=isAlwaysShowStatusBall) BOOL alwaysShowStatusBall;
 
 + (instancetype)defaultManager;
 + (void)log:(NSString *)log;
-- (void)setup;
 
 @end

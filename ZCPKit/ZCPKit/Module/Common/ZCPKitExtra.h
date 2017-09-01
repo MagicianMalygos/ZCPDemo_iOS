@@ -1,15 +1,15 @@
 //
-//  ZCPMVVMExtra.h
+//  ZCPKitExtra.h
 //  ZCPKit
 //
 //  Created by zhuchaopeng on 16/9/21.
 //  Copyright © 2016年 zcp. All rights reserved.
 //
 
-#ifndef ZCPMVVMExtra_h
-#define ZCPMVVMExtra_h
+#ifndef ZCPKitExtra_h
+#define ZCPKitExtra_h
 
-#import "ZCPMVVMBasic.h"
+#import "ZCPKitBasic.h"
 
 #pragma mark - Other
 #import "ZCPIndicator.h"
@@ -29,4 +29,4 @@
 #pragma mark - Control
 #import "ZCPWebViewController.h"
 
-#endif /* ZCPMVVMExtra_h */
+#endif /* ZCPKitExtra_h */

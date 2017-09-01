@@ -1,13 +1,13 @@
 //
-//  ZCPMVVMBasic.h
+//  ZCPKitBasic.h
 //  ZCPKit
 //
 //  Created by zhuchaopeng on 16/9/21.
 //  Copyright © 2016年 zcp. All rights reserved.
 //
 
-#ifndef ZCPMVVMBasic_h
-#define ZCPMVVMBasic_h
+#ifndef ZCPKitBasic_h
+#define ZCPKitBasic_h
 
 #pragma mark - Other
 #import "ZCPViewMap.h"
@@ -40,4 +40,4 @@
 #import "ZCPNavigationController.h"
 #import "ZCPTabBarController.h"
 
-#endif /* ZCPMVVMBasic_h */
+#endif /* ZCPKitBasic_h */

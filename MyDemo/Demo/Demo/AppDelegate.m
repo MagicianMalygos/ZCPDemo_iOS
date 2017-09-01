@@ -31,7 +31,7 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
-    [[DebugManager defaultManager] setup];
+    [DebugManager defaultManager].alwaysShowStatusBall = YES;
     
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];

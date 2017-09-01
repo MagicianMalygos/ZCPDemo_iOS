@@ -7,4 +7,5 @@ target ‘ZCPKit’ do
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'MJRefresh', '~> 3.1.12'
     pod 'IQKeyboardManager', '~> 4.0.4'
+    pod 'Aspects', '~> 1.4.1'
 end

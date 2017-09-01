@@ -23,13 +23,16 @@ void DebugLog(NSString *format, ...) {
 
 @interface DebugManager () <DebugStatusBallViewDelegate, DebugConsoleLogViewDelegate>
 
-@property (nonatomic, assign, getter=isAlwaysShowStatusBall) BOOL alwaysShowStatusBall;
-
 @end
 
 @implementation DebugManager
 
 #pragma mark - life cycle
+
++ (void)load {
+    dfm = [[NSDateFormatter alloc] init];
+    [dfm setDateFormat:@"YY-MM-dd HH:mm:ss"];
+}
 
 + (instancetype)defaultManager {
     static DebugManager     *singleton;
@@ -42,20 +45,6 @@ void DebugLog(NSString *format, ...) {
 }
 
 #pragma mark - public method
-
-- (void)setup {
-    
-    dfm = [[NSDateFormatter alloc] init];
-    [dfm setDateFormat:@"YY-MM-dd HH:mm:ss"];
-    
-    // 从setting中读取是否一直显示状态球
-    self.alwaysShowStatusBall = YES;    // 模拟读取
-    
-    if (self.isAlwaysShowStatusBall) {
-        [self.statusBallView show];
-        [self.consoleLogView hide];
-    }
-}
 
 + (void)log:(NSString *)log {
     NSString *date = [dfm stringFromDate:[NSDate date]];
@@ -73,10 +62,23 @@ void DebugLog(NSString *format, ...) {
 #pragma mark - DebugConsoleLogViewDelegate
 
 - (void)debugConsoleLogViewWillHide:(DebugConsoleLogView *)view {
-    [self.statusBallView show];
+    if (self.isAlwaysShowStatusBall) {
+        [self.statusBallView show];
+    }
 }
 
 #pragma mark - getter / setter
+
+- (void)setAlwaysShowStatusBall:(BOOL)alwaysShowStatusBall {
+    _alwaysShowStatusBall = alwaysShowStatusBall;
+    if (self.isAlwaysShowStatusBall) {
+        [self.statusBallView show];
+        [self.consoleLogView hide];
+    } else {
+        [self.statusBallView hide];
+        [self.consoleLogView hide];
+    }
+}
 
 - (DebugStatusBallView *)statusBallView {
     if (!_statusBallView) {
