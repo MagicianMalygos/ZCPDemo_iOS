@@ -7,3 +7,7 @@
 //
 
 #import "UIViewController+AOP.h"
+
+void setupAOP () {
+    [UIViewController load_aop];
+}

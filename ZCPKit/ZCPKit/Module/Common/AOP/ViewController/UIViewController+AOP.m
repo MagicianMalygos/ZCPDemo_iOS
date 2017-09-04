@@ -14,8 +14,7 @@
 
 @implementation UIViewController (AOP)
 
-+ (void)load {
-    return;
++ (void)load_aop {
     NSError *error;
     [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
         UIViewController *vc = aspectInfo.instance;

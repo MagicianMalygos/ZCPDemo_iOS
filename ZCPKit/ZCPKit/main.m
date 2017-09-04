@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "AOPManager.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        setupAOP();
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

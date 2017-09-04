@@ -10,6 +10,6 @@
 
 @interface UIViewController (AOP)
 
-+ (void)load;
++ (void)load_aop;
 
 @end
