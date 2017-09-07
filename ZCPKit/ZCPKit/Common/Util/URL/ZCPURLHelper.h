@@ -6,6 +6,9 @@
 //  Copyright © 2016年 zcp. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import "ZCPMacros.h"
+
 #define APP_URL_SCHEME          @"zcp"
 
 /**

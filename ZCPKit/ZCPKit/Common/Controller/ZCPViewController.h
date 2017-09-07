@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ZCPBaseNavigator.h"
+#import "ZCPMacros.h"
+#import "ZCPCategory.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - 视图控制器基类

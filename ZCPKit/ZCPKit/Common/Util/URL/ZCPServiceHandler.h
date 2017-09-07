@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZCPMacros.h"
 @class ZCPServiceResult;
 @class ZCPServiceHandler;
 

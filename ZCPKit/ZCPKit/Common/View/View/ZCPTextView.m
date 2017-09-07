@@ -7,6 +7,7 @@
 //
 
 #import "ZCPTextView.h"
+#import "ZCPCategory.h"
 
 @interface ZCPTextView ()
 

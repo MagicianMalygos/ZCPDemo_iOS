@@ -6,7 +6,8 @@
 //  Copyright © 2016年 zcp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "ZCPMacros.h"
 
 #pragma mark - 指示控制类，比如loading，activity等
 @interface ZCPIndicator : NSObject

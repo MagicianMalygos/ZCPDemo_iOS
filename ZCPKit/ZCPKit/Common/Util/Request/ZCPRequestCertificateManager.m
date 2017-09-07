@@ -1,12 +1,13 @@
 //
 //  PARequestCertificateManager.m
-//  haofang
+//  ZCPKit
 //
-//  Created by 朱超鹏(外包) on 16/8/2.
-//  Copyright © 2016年 平安好房. All rights reserved.
+//  Created by zhuchaopeng on 16/9/21.
+//  Copyright © 2016年 zcp. All rights reserved.
 //
 
 #import "ZCPRequestCertificateManager.h"
+#import "ZCPCategory.h"
 
 typedef void (^ZCPRequestCertificateSuccessHandler)(void);
 typedef void (^ZCPRequestCertificateFailureHandler)(void);

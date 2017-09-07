@@ -14,6 +14,8 @@
 #import "ZCPNavigator.h"
 #import "ZCPRequestCertificateManager.h"
 
+#import "ZCPCategory.h"
+
 // ----------------------------------------------------------------------
 #pragma mark - 打开url
 // ----------------------------------------------------------------------

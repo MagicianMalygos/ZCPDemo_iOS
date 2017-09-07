@@ -7,6 +7,7 @@
 //
 
 #import "UIView+EasyFrame.h"
+#import "ZCPMacros.h"
 
 @implementation UIView (Background)
 

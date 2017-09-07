@@ -7,6 +7,7 @@
 //
 
 #import "ZCPOptionView.h"
+#import "ZCPCategory.h"
 
 @interface ZCPOptionView ()
 

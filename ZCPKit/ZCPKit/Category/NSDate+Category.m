@@ -7,6 +7,7 @@
 //
 
 #import "NSDate+Category.h"
+#import "NSDateFormatter+Category.h"
 
 #pragma mark - 日期与字符串转换相关
 

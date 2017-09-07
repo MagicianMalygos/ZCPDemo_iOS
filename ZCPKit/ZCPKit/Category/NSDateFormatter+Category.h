@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZCPMacros.h"
 
 #pragma mark - 日期格式化单例对象
 

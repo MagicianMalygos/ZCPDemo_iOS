@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZCPCellDataModel.h"
+#import "ZCPCategory.h"
 
 // 配置块声明
 typedef void(^ZCPButtonConfigBlock)(UIButton *button);  // 按钮配置块

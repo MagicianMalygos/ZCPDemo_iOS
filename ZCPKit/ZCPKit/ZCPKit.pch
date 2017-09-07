@@ -9,9 +9,9 @@
 #ifndef ZCPKit_pch
 #define ZCPKit_pch
 
-#import "ZCPMacros.h"
-#import "ZCPCategory.h"
-#import "ZCPUtil.h"
-#import "ZCPCommon.h"
+//#import "ZCPMacros.h"
+//#import "ZCPCategory.h"
+//#import "ZCPUtil.h"
+//#import "ZCPCommon.h"
 
 #endif /* ZCPKit_pch */

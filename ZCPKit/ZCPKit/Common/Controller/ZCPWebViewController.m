@@ -7,6 +7,7 @@
 //
 
 #import "ZCPWebViewController.h"
+#import "ZCPUtil.h"
 
 @interface ZCPWebViewController () <NSURLConnectionDataDelegate>
 

@@ -7,6 +7,7 @@
 //
 
 #import "ZCPBaseNavigator.h"
+#import "ZCPMacros.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - 自定义导航器

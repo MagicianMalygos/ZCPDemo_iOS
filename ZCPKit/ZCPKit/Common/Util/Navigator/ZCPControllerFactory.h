@@ -6,7 +6,8 @@
 //  Copyright © 2015年 zcp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "ZCPMacros.h"
 @class ZCPVCDataModel;
 
 // ----------------------------------------------------------------------

@@ -7,6 +7,7 @@
 //
 
 #import "ZCPCommentView.h"
+#import "ZCPCategory.h"
 
 @implementation ZCPCommentView
 
