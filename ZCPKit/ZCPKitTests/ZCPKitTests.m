@@ -2,12 +2,12 @@
 //  ZCPKitTests.m
 //  ZCPKitTests
 //
-//  Created by 朱超鹏(外包) on 16/10/27.
-//  Copyright © 2016年 zcp. All rights reserved.
+//  Created by 朱超鹏 on 2017/9/1.
+//  Copyright © 2017年 zcp. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "ZCPMVVM.h"
+#import "ZCPCommon.h"
 
 @interface ZCPKitTests : XCTestCase
 
