@@ -11,7 +11,8 @@
 
 @implementation NSString (Category)
 
-#pragma mark 是否包含特定字符串
+#pragma mark -
+// 判断是否包含特定字符串
 - (BOOL)contains:(NSString *)str {
     if (nil == str || [str length] < 1) {
         return NO;
@@ -19,37 +20,47 @@
     return [self rangeOfString:str].location != NSNotFound;
 }
 
-@end
-
-#pragma mark - 日期与字符串转换相关
-
-@implementation NSString (Date)
-
-#pragma mark 日期转换成字符串
+#pragma mark - 日期/字符串转换
+// 日期转换成字符串 yyyy-MM-dd格式
 + (NSString *)stringFromDate:(NSDate *)date {
-    return [self stringFromDate:date withDateFormat:@"yyyy-MM-dd"];
+    NSString *sDate = [self stringFromDate:date withDateFormat:@"yyyy-MM-dd"];
+    return sDate;
 }
+
+// 日期转换成字符串 yyyy-MM-dd HH-mm-ss格式
 + (NSString *)stringFromYDMHmsDate:(NSDate *)date {
-    return [self stringFromDate:date withDateFormat:@"yyyy-MM-dd HH-mm-ss"];
+    NSString *sDate = [self stringFromDate:date withDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return sDate;
 }
+
+// 日期转换成字符串 自定义转换格式
 + (NSString *)stringFromDate:(NSDate *)date withDateFormat:(NSString *)format {
     NSDateFormatter *formatter = [NSDateFormatter staticDateFormatter];
     [formatter setDateFormat:format];
-    return [formatter stringFromDate:date];
+    NSString *sDate = [formatter stringFromDate:date];
+    return sDate;
 }
 
-#pragma mark 当前NSString对象转换成日期
+// 转换成日期 yyyy-MM-dd格式
 - (NSDate *)toDate {
-    return [NSDate dateFromString:self withDateFormat:@"yyyy-MM-dd HH-mm-ss"];
+    NSDate *date = [NSDate dateFromString:self];
+    return date;
 }
 
-@end
+// 转换成日期 yyyy-MM-dd HH:mm:ss格式
+- (NSDate *)toYDMHmsDate {
+    NSDate *date = [NSDate dateFromYDMHmsString:self];
+    return date;
+}
+
+// 转换成日期 自定义格式
+- (NSDate *)toDateWithDateFormat:(NSString *)format {
+    NSDate *date = [NSDate dateFromString:self withDateFormat:format];
+    return date;
+}
 
 #pragma mark - Remove Emoji
-
-@implementation NSString (RemoveEmoji)
-
-#pragma mark 判断字符串中是否含有Emoji表情
+// 判断字符串中是否含有Emoji表情
 - (BOOL)isIncludeEmoji {
     BOOL __block result = NO;
     
@@ -63,8 +74,9 @@
                           }];
     return result;
 }
-#pragma mark 移除字符串中的Emoji表情
-- (instancetype)stringRemoveEmoji {
+
+// 移除字符串中的Emoji表情。不改变原字符串，返回移除后的字符串
+- (NSString *)stringRemoveEmoji {
     NSMutableString* __block buffer = [NSMutableString stringWithCapacity:[self length]];
     
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
@@ -76,7 +88,7 @@
     return buffer;
 }
 
-#pragma mark 判断字符是否是Emoji
+// 判断字符是否是Emoji
 - (BOOL)isEmoji {
     
     NSCharacterSet *variationSelectors = [NSCharacterSet characterSetWithRange:NSMakeRange(0xFE00, 16)];
@@ -99,27 +111,25 @@
     }
 }
 
-@end
-
 #pragma mark - URL
-
-#pragma mark 获取url里面的参数
-@implementation NSString (URL)
-
+// app url协议
 + (NSString *)appURLScheme {
     return APP_URL_SCHEME;
 }
 
+// 是否是web url
 - (BOOL)isWebURL {
-    NSURL *URL = [NSURL URLWithString:self];
-    return ([URL.scheme caseInsensitiveCompare:@"http"] == NSOrderedSame)
-    || ([URL.scheme caseInsensitiveCompare:@"https"] == NSOrderedSame)
-    || ([URL.scheme caseInsensitiveCompare:@"ftp"] == NSOrderedSame)
-    || ([URL.scheme caseInsensitiveCompare:@"ftps"] == NSOrderedSame)
-    || ([URL.scheme caseInsensitiveCompare:@"data"] == NSOrderedSame)
-    || ([URL.scheme caseInsensitiveCompare:@"file"] == NSOrderedSame);
+    NSURL *URL      = [NSURL URLWithString:self];
+    BOOL isWebURL   = ([URL.scheme caseInsensitiveCompare:@"http"] == NSOrderedSame) ||
+    ([URL.scheme caseInsensitiveCompare:@"https"] == NSOrderedSame) ||
+    ([URL.scheme caseInsensitiveCompare:@"ftp"] == NSOrderedSame) ||
+    ([URL.scheme caseInsensitiveCompare:@"ftps"] == NSOrderedSame) ||
+    ([URL.scheme caseInsensitiveCompare:@"data"] == NSOrderedSame) ||
+    ([URL.scheme caseInsensitiveCompare:@"file"] == NSOrderedSame);
+    return isWebURL;
 }
 
+// 是否是app url
 - (BOOL)isAppURL {
     NSURL       *URL            = [NSURL URLWithString:self];
     NSString    *appScheme      = [NSString appURLScheme];
@@ -127,7 +137,7 @@
     return flag;
 }
 
-#pragma mark 获取url里面的参数
+// 获取url里面的参数
 - (NSDictionary *)getURLParams {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionary];
     NSURL *url = [NSURL URLWithString:self];
