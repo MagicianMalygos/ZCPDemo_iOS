@@ -46,7 +46,9 @@
 
 #pragma mark - Test
 // 测试视图控制器
-#define APPURL_VIEW_IDENTIFIER_TESTVIEW         @"testview"         // ViewController
+#define APPURL_VIEW_IDENTIFIER_TESTVIEW         @"testView"         // TestViewController
+#define APPURL_VIEW_IDENTIFIER_TESTTABLEVIEW    @"testTableview"    // TestTableViewController
+#define APPURL_VIEW_IDENTIFIER_TESTWEBVIEW      @"testWebView"      // TestWebViewController
 
 
 #endif /* ZCPViewMap_h */

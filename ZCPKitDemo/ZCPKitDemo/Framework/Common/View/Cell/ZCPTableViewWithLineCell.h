@@ -9,7 +9,7 @@
 #import "ZCPBlankCell.h"
 
 // 直接配置subview block
-typedef void(^PACellConfigBlock)(id subview);
+typedef void(^ZCPCellConfigBlock)(id subview);
 
 // ----------------------------------------------------------------------
 #pragma mark - 上下都有自定义边线的Cell

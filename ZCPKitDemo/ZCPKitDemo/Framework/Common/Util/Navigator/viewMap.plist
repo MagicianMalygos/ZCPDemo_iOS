@@ -4,51 +4,27 @@
 <array>
 	<dict>
 		<key>className</key>
-		<string>ZCPViewController</string>
+		<string>TestViewController</string>
 		<key>identifier</key>
-		<string>view</string>
+		<string>testView</string>
 		<key>description</key>
-		<string>视图控制器</string>
+		<string>测试视图控制器</string>
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>ZCPTableViewController</string>
+		<string>TestTableViewController</string>
 		<key>identifier</key>
-		<string>tableview</string>
+		<string>testTableview</string>
 		<key>description</key>
-		<string>列表视图控制器</string>
+		<string>测试列表视图控制器</string>
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>ZCPNavigationController</string>
+		<string>TestWebViewController</string>
 		<key>identifier</key>
-		<string>navigationview</string>
+		<string>testWebView</string>
 		<key>description</key>
-		<string>导航视图控制器</string>
-	</dict>
-	<dict>
-		<key>className</key>
-		<string>ZCPTabBarController</string>
-		<key>identifier</key>
-		<string>tabbarview</string>
-		<key>description</key>
-		<string>选项卡视图控制器</string>
-	</dict>
-	<dict>
-		<key>className</key>
-		<string>ZCPWebViewController</string>
-		<key>identifier</key>
-		<string>webview</string>
-		<key>description</key>
-		<string>浏览器视图控制器</string>
-	</dict>
-	<dict>
-		<key>className</key>
-		<string>ViewController</string>
-		<key>identifier</key>
-		<string>testview</string>
-		<key>description</key>
-		<string>测试view</string>
+		<string>测试网络视图控制器</string>
 	</dict>
 </array>
 </plist>

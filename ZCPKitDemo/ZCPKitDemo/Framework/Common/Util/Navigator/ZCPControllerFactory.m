@@ -148,11 +148,9 @@ IMP_SINGLETON(ZCPControllerFactory)
      */
     
     NSArray *vcIdentifiers = @[APPURL_VIEW_IDENTIFIER_TESTVIEW,
-                               APPURL_VIEW_IDENTIFIER_VIEW,
-                               APPURL_VIEW_IDENTIFIER_VIEW,
-                               APPURL_VIEW_IDENTIFIER_VIEW,
-                               APPURL_VIEW_IDENTIFIER_VIEW];
-    NSArray *titles = @[@"1", @"2", @"3", @"4", @"5"];
+                               APPURL_VIEW_IDENTIFIER_TESTTABLEVIEW,
+                               APPURL_VIEW_IDENTIFIER_TESTWEBVIEW];
+    NSArray *titles = @[@"View", @"Table", @"Web"];
     NSArray *images = @[];
     NSArray *selectedImages = @[];
     
