@@ -176,6 +176,16 @@
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
 		FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */; };
 		FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */; };
+		FB90927F1F6AD1C6007EC93B /* MultiThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */; };
+		FB9092841F6BC4DC007EC93B /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092831F6BC4DC007EC93B /* TestOperation.m */; };
+		FB90929C1F6F56F7007EC93B /* NokiaPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90929B1F6F56F7007EC93B /* NokiaPhone.m */; };
+		FB9092A21F6F5735007EC93B /* Decorator.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092A11F6F5735007EC93B /* Decorator.m */; };
+		FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092A41F6F5753007EC93B /* DecoratorGPS.m */; };
+		FB9092A81F6F5762007EC93B /* DecoratorBlueTooth.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092A71F6F5762007EC93B /* DecoratorBlueTooth.m */; };
+		FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092AA1F6F59E4007EC93B /* DesignPatternDemo.m */; };
+		FB9092B11F6F5D0E007EC93B /* Nokia5230Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092B01F6F5D0E007EC93B /* Nokia5230Phone.m */; };
+		FB9092B41F6F5D83007EC93B /* MotoPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092B31F6F5D83007EC93B /* MotoPhone.m */; };
+		FB9092B71F6F5E11007EC93B /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092B61F6F5E11007EC93B /* Phone.m */; };
 		FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */; };
 		FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */; };
 		FB92C8931E5C21280095F31E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FB92C8921E5C21280095F31E /* fire.png */; };
@@ -1481,6 +1491,27 @@
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@2x.png"; sourceTree = "<group>"; };
 		FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@3x.png"; sourceTree = "<group>"; };
+		FB90927D1F6AD1C6007EC93B /* MultiThreadDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadDemo.h; sourceTree = "<group>"; };
+		FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadDemo.m; sourceTree = "<group>"; };
+		FB9092821F6BC4DC007EC93B /* TestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
+		FB9092831F6BC4DC007EC93B /* TestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOperation.m; sourceTree = "<group>"; };
+		FB90929A1F6F56F7007EC93B /* NokiaPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NokiaPhone.h; sourceTree = "<group>"; };
+		FB90929B1F6F56F7007EC93B /* NokiaPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NokiaPhone.m; sourceTree = "<group>"; };
+		FB9092A01F6F5735007EC93B /* Decorator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
+		FB9092A11F6F5735007EC93B /* Decorator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Decorator.m; sourceTree = "<group>"; };
+		FB9092A31F6F5753007EC93B /* DecoratorGPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorGPS.h; sourceTree = "<group>"; };
+		FB9092A41F6F5753007EC93B /* DecoratorGPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecoratorGPS.m; sourceTree = "<group>"; };
+		FB9092A61F6F5762007EC93B /* DecoratorBlueTooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorBlueTooth.h; sourceTree = "<group>"; };
+		FB9092A71F6F5762007EC93B /* DecoratorBlueTooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecoratorBlueTooth.m; sourceTree = "<group>"; };
+		FB9092A91F6F59E4007EC93B /* DesignPatternDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignPatternDemo.h; sourceTree = "<group>"; };
+		FB9092AA1F6F59E4007EC93B /* DesignPatternDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignPatternDemo.m; sourceTree = "<group>"; };
+		FB9092AC1F6F5A7B007EC93B /* DecoratorHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecoratorHead.h; sourceTree = "<group>"; };
+		FB9092AF1F6F5D0E007EC93B /* Nokia5230Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nokia5230Phone.h; sourceTree = "<group>"; };
+		FB9092B01F6F5D0E007EC93B /* Nokia5230Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nokia5230Phone.m; sourceTree = "<group>"; };
+		FB9092B21F6F5D83007EC93B /* MotoPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotoPhone.h; sourceTree = "<group>"; };
+		FB9092B31F6F5D83007EC93B /* MotoPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotoPhone.m; sourceTree = "<group>"; };
+		FB9092B51F6F5E11007EC93B /* Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		FB9092B61F6F5E11007EC93B /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
 		FB92C8891E5C177B0095F31E /* CollectionViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB92C88F1E5C17CF0095F31E /* CATransform3DDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DDemoHomeController.h; sourceTree = "<group>"; };
@@ -3586,6 +3617,8 @@
 		FB06218A1ED275DC000AA258 /* OtherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FB9092901F6F56BA007EC93B /* 设计模式 */,
+				FB9092771F6AD185007EC93B /* 多线程 */,
 				FB06218B1ED275DC000AA258 /* AlgorithmDemo */,
 				FB0621901ED275DC000AA258 /* Category */,
 				FB0621931ED275DC000AA258 /* EnumAndFormatDemo */,
@@ -4249,6 +4282,49 @@
 			path = "气泡拉伸";
 			sourceTree = "<group>";
 		};
+		FB9092771F6AD185007EC93B /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				FB90927D1F6AD1C6007EC93B /* MultiThreadDemo.h */,
+				FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */,
+				FB9092821F6BC4DC007EC93B /* TestOperation.h */,
+				FB9092831F6BC4DC007EC93B /* TestOperation.m */,
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
+		FB9092901F6F56BA007EC93B /* 设计模式 */ = {
+			isa = PBXGroup;
+			children = (
+				FB9092911F6F56BA007EC93B /* 装饰模式 */,
+				FB9092A91F6F59E4007EC93B /* DesignPatternDemo.h */,
+				FB9092AA1F6F59E4007EC93B /* DesignPatternDemo.m */,
+			);
+			path = "设计模式";
+			sourceTree = "<group>";
+		};
+		FB9092911F6F56BA007EC93B /* 装饰模式 */ = {
+			isa = PBXGroup;
+			children = (
+				FB9092B51F6F5E11007EC93B /* Phone.h */,
+				FB9092B61F6F5E11007EC93B /* Phone.m */,
+				FB90929A1F6F56F7007EC93B /* NokiaPhone.h */,
+				FB90929B1F6F56F7007EC93B /* NokiaPhone.m */,
+				FB9092B21F6F5D83007EC93B /* MotoPhone.h */,
+				FB9092B31F6F5D83007EC93B /* MotoPhone.m */,
+				FB9092AF1F6F5D0E007EC93B /* Nokia5230Phone.h */,
+				FB9092B01F6F5D0E007EC93B /* Nokia5230Phone.m */,
+				FB9092A01F6F5735007EC93B /* Decorator.h */,
+				FB9092A11F6F5735007EC93B /* Decorator.m */,
+				FB9092A31F6F5753007EC93B /* DecoratorGPS.h */,
+				FB9092A41F6F5753007EC93B /* DecoratorGPS.m */,
+				FB9092A61F6F5762007EC93B /* DecoratorBlueTooth.h */,
+				FB9092A71F6F5762007EC93B /* DecoratorBlueTooth.m */,
+				FB9092AC1F6F5A7B007EC93B /* DecoratorHead.h */,
+			);
+			path = "装饰模式";
+			sourceTree = "<group>";
+		};
 		FB92C8881E5C177B0095F31E /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -4666,6 +4742,7 @@
 				FB5078DB1E2618A900361E60 /* NSObject+Category.m in Sources */,
 				FB5078EE1E2618A900361E60 /* ZCPButtonCell.m in Sources */,
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,
+				FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
 				FBA5F40D1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m in Sources */,
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
@@ -4681,8 +4758,10 @@
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
 				FB0621CA1ED275DD000AA258 /* ClassA.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
+				FB90927F1F6AD1C6007EC93B /* MultiThreadDemo.m in Sources */,
 				FB50790C1E2618A900361E60 /* ZCPScanQRCodeViewController.m in Sources */,
 				FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */,
+				FB9092B71F6F5E11007EC93B /* Phone.m in Sources */,
 				FB5078F81E2618A900361E60 /* ZCPRequestManager.m in Sources */,
 				FBB91DBB1F288AC000D41838 /* DebugManager.m in Sources */,
 				FB5078FE1E2618A900361E60 /* MyViewController.m in Sources */,
@@ -4704,6 +4783,7 @@
 				FBB91DA81F2871CA00D41838 /* DemoBaseTableViewController.m in Sources */,
 				FB5078E61E2618A900361E60 /* ZCPTableViewCell+Category.m in Sources */,
 				FB5079111E2618A900361E60 /* WeiXinShareDemoHomeController.m in Sources */,
+				FB9092A81F6F5762007EC93B /* DecoratorBlueTooth.m in Sources */,
 				FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */,
 				FB5078DC1E2618A900361E60 /* NSString+Category2.m in Sources */,
 				FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */,
@@ -4715,8 +4795,10 @@
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
 				FB5079151E2618A900361E60 /* FontDemoHomeControllerViewController.m in Sources */,
 				FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */,
+				FB9092841F6BC4DC007EC93B /* TestOperation.m in Sources */,
 				FB50791E1E2618A900361E60 /* UIImage+ClipRoundCorner.m in Sources */,
 				FB5078DD1E2618A900361E60 /* NSString+PACheckValid.m in Sources */,
+				FB9092B41F6F5D83007EC93B /* MotoPhone.m in Sources */,
 				FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */,
 				FB5078EB1E2618A900361E60 /* ZCPNavigationController.m in Sources */,
 				FBB91DB41F2873E100D41838 /* DebugConsoleLogView.m in Sources */,
@@ -4726,9 +4808,11 @@
 				FB5079101E2618A900361E60 /* SinaShareDemoHomeController.m in Sources */,
 				FB5078F51E2618A900361E60 /* ZCPNetworkDataConstructor.m in Sources */,
 				FB5078DE1E2618A900361E60 /* NSString+PAFormat.m in Sources */,
+				FB9092A21F6F5735007EC93B /* Decorator.m in Sources */,
 				FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */,
 				FB5078E51E2618A900361E60 /* UIViewController+Category.m in Sources */,
 				FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */,
+				FB9092B11F6F5D0E007EC93B /* Nokia5230Phone.m in Sources */,
 				FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */,
 				FB5078DF1E2618A900361E60 /* UIButton+Category.m in Sources */,
 				FBCC21001F03786C006FE26C /* ADDemoHomeViewController.m in Sources */,
@@ -4755,6 +4839,7 @@
 				FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */,
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
+				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
 				FB5078F11E2618A900361E60 /* ZCPTableViewCell.m in Sources */,
 				FB5078F01E2618A900361E60 /* ZCPSectionCell.m in Sources */,
 				FB5078F41E2618A900361E60 /* ZCPBasicDataConstructor.m in Sources */,
@@ -4775,6 +4860,7 @@
 				FB5078EC1E2618A900361E60 /* ZCPTabBarController.m in Sources */,
 				FB5078E01E2618A900361E60 /* UIColor+Category.m in Sources */,
 				FB0621CF1ED275DD000AA258 /* RegexDemo.m in Sources */,
+				FB90929C1F6F56F7007EC93B /* NokiaPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

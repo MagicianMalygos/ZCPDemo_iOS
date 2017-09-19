@@ -37,7 +37,6 @@
 //    [self testIQKeyboardManagerReturn];
 //    [self testSandBoxPath];
 //    [self testSettings];
-    [self testSemaphore];
 }
 
 #pragma mark - test
@@ -274,47 +273,6 @@
     NSString *cheatCode = [userDefaults stringForKey:@"cheat_code"];
     NSString *area = [userDefaults stringForKey:@"area"];
     NSLog(@"%@ %@ %@", userName, cheatCode, area);
-}
-
-#pragma mark - testSemaphore
-
-- (void)testSemaphore {
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSLog(@"子线程开始执行");
-        sleep(5);
-        NSLog(@"子线程结束执行");
-        dispatch_semaphore_signal(semaphore);
-    });
-    
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    
-    NSLog(@"testSemaphore结束");
-}
-
-- (void)testSemaphore2 {
-    // 创建一个信号量为0的调度信号
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    
-    // 开启子线程
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        sleep(5);
-        NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-        // 使调度信号的信号量+1
-        dispatch_semaphore_signal(semaphore);
-    });
-    while(1) {
-        // 如果调度信号的信号量为0则等待，阻塞当前线程
-        long wait = dispatch_semaphore_wait(semaphore, 2 * NSEC_PER_SEC);
-        NSLog(@"%li", wait);
-        if (!wait) {
-            break;
-        }
-        NSLog(@"++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
-    }
-    NSLog(@"=========================================================");
 }
 
 @end

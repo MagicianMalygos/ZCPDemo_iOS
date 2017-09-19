@@ -47,31 +47,31 @@
      */
     
     /**/
-    WEAK_SELF;
-    NSTimer *timer1 = [NSTimer wt_timerWithTimeInterval:1 target:self userInfo:@{@"msg": NSStringFromSelector(@selector(wt_timerWithTimeInterval:target:userInfo:repeats:block:))} repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"Timer Block");
-        [weakSelf fire:timer];
-        
-        NSLog(@"Current Thread: %@ Current RunLoop Mode: %@", [NSThread currentThread], [NSRunLoop currentRunLoop].currentMode);
-    }];
-    NSTimer *timer2 = [NSTimer wt_timerWithTimeInterval:1 target:self selector:@selector(fire:) userInfo:@{@"msg": NSStringFromSelector(@selector(wt_timerWithTimeInterval:target:selector:userInfo:repeats:))} repeats:YES];
-    
-    [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:UITrackingRunLoopMode];
+//    WEAK_SELF;
+//    NSTimer *timer1 = [NSTimer wt_timerWithTimeInterval:1 target:self userInfo:@{@"msg": NSStringFromSelector(@selector(wt_timerWithTimeInterval:target:userInfo:repeats:block:))} repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"Timer Block");
+//        [weakSelf fire:timer];
+//
+//        NSLog(@"Current Thread: %@ Current RunLoop Mode: %@", [NSThread currentThread], [NSRunLoop currentRunLoop].currentMode);
+//    }];
+//    NSTimer *timer2 = [NSTimer wt_timerWithTimeInterval:1 target:self selector:@selector(fire:) userInfo:@{@"msg": NSStringFromSelector(@selector(wt_timerWithTimeInterval:target:selector:userInfo:repeats:))} repeats:YES];
+//
+//    [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSDefaultRunLoopMode];
+//    [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:NSDefaultRunLoopMode];
+//    [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:UITrackingRunLoopMode];
 }
 
-- (void)fire:(id)obj {
-    NSLog(@"Current Thread: %@ Current RunLoop Mode: %@", [NSThread currentThread], [NSRunLoop currentRunLoop].currentMode);
-    if ([obj isKindOfClass:[NSString class]]) {
-        ZCPLog(@"Fire %@", obj);
-    } else if ([obj isKindOfClass:[NSTimer class]]) {
-        NSTimer *timer = (NSTimer *)obj;
-        ZCPLog(@"Fire %@", [timer.userInfo objectForKey:@"msg"]);
-    } else {
-        ZCPLog(@"Fire");
-    }
-}
+//- (void)fire:(id)obj {
+//    NSLog(@"Current Thread: %@ Current RunLoop Mode: %@", [NSThread currentThread], [NSRunLoop currentRunLoop].currentMode);
+//    if ([obj isKindOfClass:[NSString class]]) {
+//        ZCPLog(@"Fire %@", obj);
+//    } else if ([obj isKindOfClass:[NSTimer class]]) {
+//        NSTimer *timer = (NSTimer *)obj;
+//        ZCPLog(@"Fire %@", [timer.userInfo objectForKey:@"msg"]);
+//    } else {
+//        ZCPLog(@"Fire");
+//    }
+//}
 
 #pragma mark - tableview
 
@@ -85,7 +85,9 @@
                     @{@"title":@"OCClassPropertyDemo", @"class":@"OCClassPropertyDemo"},
                     @{@"title":@"OCClassMethodDemo", @"class":@"OCClassMethodDemo"},
                     @{@"title":@"AlgorithmDemo", @"class":@"AlgorithmDemo"},
-                    @{@"title": @"RegexDemo", @"class": @"RegexDemo"}, nil];
+                    @{@"title": @"RegexDemo", @"class": @"RegexDemo"},
+                    @{@"title": @"MultiThreadDemo", @"class": @"MultiThreadDemo"},
+                    @{@"title": @"DesignPatternDemo", @"class": @"DesignPatternDemo"}, nil];
     }
     return _infoArr;
 }
