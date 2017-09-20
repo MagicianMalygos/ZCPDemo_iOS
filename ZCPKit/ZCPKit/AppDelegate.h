@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  ZCPKitDemo
+//  ZCPKit
 //
-//  Created by 朱超鹏 on 2017/9/11.
+//  Created by 朱超鹏 on 2017/9/19.
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 

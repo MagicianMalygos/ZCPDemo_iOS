@@ -1,18 +1,18 @@
 //
-//  ZCPKitDemoTests.m
-//  ZCPKitDemoTests
+//  ZCPKitTests.m
+//  ZCPKitTests
 //
-//  Created by 朱超鹏 on 2017/9/11.
+//  Created by 朱超鹏 on 2017/9/19.
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ZCPKitDemoTests : XCTestCase
+@interface ZCPKitTests : XCTestCase
 
 @end
 
-@implementation ZCPKitDemoTests
+@implementation ZCPKitTests
 
 - (void)setUp {
     [super setUp];

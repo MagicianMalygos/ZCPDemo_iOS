@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  ZCPKitDemo
+//  ZCPKit
 //
-//  Created by 朱超鹏 on 2017/9/11.
+//  Created by 朱超鹏 on 2017/9/19.
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ZCPKit.h"
 
 @interface AppDelegate ()
 
@@ -15,15 +14,16 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window = window;
-    self.window.rootViewController = [[ZCPControllerFactory sharedInstance] generate_Nav_Tab_VCs_Stack];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [ZCPNavigator sharedInstance].rootViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

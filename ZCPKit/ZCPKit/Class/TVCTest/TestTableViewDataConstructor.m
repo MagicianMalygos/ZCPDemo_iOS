@@ -11,8 +11,6 @@
 @implementation TestTableViewDataConstructor
 
 - (void)constructData {
-    
-    [self.items addObject:nil];
 }
 
 @end
