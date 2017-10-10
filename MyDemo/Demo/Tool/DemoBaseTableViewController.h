@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemoBaseTableViewController : DemoBaseViewController
+@interface DemoBaseTableViewController : ZCPTableViewController
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *infoArr;
 
 - (void)setupCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath;

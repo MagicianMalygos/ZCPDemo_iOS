@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QiPaoDemoHomeController : DemoBaseViewController
+@interface QiPaoDemoHomeController : ZCPViewController
 
 @end

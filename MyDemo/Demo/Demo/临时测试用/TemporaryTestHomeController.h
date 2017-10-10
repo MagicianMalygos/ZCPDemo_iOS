@@ -10,6 +10,6 @@
 
 #pragma mark - 临时测试用
 
-@interface TemporaryTestHomeController : DemoBaseViewController
+@interface TemporaryTestHomeController : ZCPViewController
 
 @end

@@ -105,7 +105,7 @@
     dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_SERIAL);
     
     for (int i = 0; i < 10; i++) {
-        void(^task)() = ^() {
+        void(^task)(void) = ^() {
             sleep(1);
             NSLog(@"%d %@", i, [NSThread currentThread]);
         };
@@ -119,7 +119,7 @@
     dispatch_queue_t queue = dispatch_queue_create("asyncTask_SerialQueue", DISPATCH_QUEUE_SERIAL);
     
     for (int i = 0; i < 10; i++) {
-        void(^task)() = ^() {
+        void(^task)(void) = ^() {
             sleep(1);
             NSLog(@"%d %@", i, [NSThread currentThread]);
         };
@@ -133,7 +133,7 @@
     dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
     
     for (int i = 0; i < 10; i++) {
-        void(^task)() = ^() {
+        void(^task)(void) = ^() {
             for (int i = 0; i < 100; i++) {
                 DebugLog(@"%d %@", i, [NSThread currentThread]);
             }
@@ -150,7 +150,7 @@
     dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
     
     for (int i = 0; i < 10; i++) {
-        void(^task)() = ^() {
+        void(^task)(void) = ^() {
             sleep(1);
             NSLog(@"%d %@", i, [NSThread currentThread]);
         };
@@ -164,15 +164,15 @@
     
     // 1.主线程中在主队列上执行同步任务导致死锁。
     // 由于是同步任务，只有当前一个任务执行完毕后才会执行下一个任务。此时主队列正在执行testException方法，该方法中又在主队列上执行mainTask。由于testException还未执行完毕，所以mainTask任务会等待testException执行完毕，又因为mainTask执行完毕后testException方法才能走下去，所以产生死锁。
-    void(^mainTask)() = ^() {
+    void(^mainTask)(void) = ^() {
         NSLog(@"主线程中执行，在主队列中执行同步任务");
     };
     dispatch_sync(dispatch_get_main_queue(), mainTask);
     
     // 2.模拟主线程中执行同步任务导致的死锁原因一致的情况
     dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_SERIAL);
-    void(^task1)() = ^() {
-        void(^task2)() = ^() {
+    void(^task1)(void) = ^() {
+        void(^task2)(void) = ^() {
             NSLog(@"hehe");
         };
         dispatch_sync(queue, task2);

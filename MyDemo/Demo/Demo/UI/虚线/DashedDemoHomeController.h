@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashedDemoHomeController : DemoBaseTableViewController
+@interface DashedDemoHomeController : ZCPTableViewController
 
 @end

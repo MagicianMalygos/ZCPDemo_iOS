@@ -14,20 +14,20 @@
 
 @implementation DemoBaseViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    [self test];
-}
-
-- (void)test {
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:NO];
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//
+//    [self.view setBackgroundColor:[UIColor whiteColor]];
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//
+//    [self test];
+//}
+//
+//- (void)test {
+//}
+//
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self.view endEditing:NO];
+//}
 
 @end

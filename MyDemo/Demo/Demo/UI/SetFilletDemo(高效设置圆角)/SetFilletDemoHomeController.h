@@ -13,7 +13,7 @@
  用CoreAnimation画圆角
  */
 
-@interface SetFilletDemoHomeController : DemoBaseViewController
+@interface SetFilletDemoHomeController : ZCPViewController
 
 @end
 

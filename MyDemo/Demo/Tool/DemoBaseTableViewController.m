@@ -18,26 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.tableView];
 }
 
-#pragma mark - getter / setter
-- (UITableView *)tableView {
-    if (_tableView == nil) {
-        // GCC编译器的语法
-        _tableView = ({
-            UITableView *tableView = [[UITableView alloc] initWithFrame:({
-                CGRect frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT - 64);
-                frame;
-            })];
-            tableView.dataSource = self;
-            tableView.delegate = self;
-            tableView;
-        });
-    }
-    return _tableView;
-}
 
 #pragma mark - Override method
 - (NSMutableArray *)infoArr {

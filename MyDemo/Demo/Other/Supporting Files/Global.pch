@@ -1,0 +1,72 @@
+//
+//  Global.pch
+//  Demo
+//
+//  Created by apple on 16/3/10.
+//  Copyright © 2016年 zcp. All rights reserved.
+//
+
+#ifndef Global_pch
+#define Global_pch
+
+
+#import <ZCPKit.h>
+#import "ZCPDemoViewMap.h"
+
+
+#import "ZCPBasicHeader.h"
+
+// Block循环引用
+#define WEAK_SELF __weak typeof(self)weakSelf = self
+#define STRONG_SELF __strong typeof(weakSelf)self = weakSelf
+
+// size
+// 屏幕宽度
+#define SCREENWIDTH                                 [[UIScreen mainScreen] bounds].size.width
+//屏幕高度
+#define SCREENHEIGHT                                [[UIScreen mainScreen] bounds].size.height
+
+// 生成随机颜色
+#define RANDOM_COLOR [UIColor colorWithRed:arc4random() % 10 / 10.0f green:arc4random() % 10 / 10.0f blue:arc4random() % 10 / 10.0f alpha:1.0f]
+
+// share相关
+#import "WeiboSDK.h"
+#define kAppKey         @"2163609371"
+#define kSecret         @"fe34b6ef5a554531acdc9970fa811db5"
+#define kRedirectURI    @"https://itunes.apple.com.cn"
+
+
+// 时间性能测量用
+// 结束时间除以CLOCKS_PER_SEC得到耗时秒数
+/*
+ 例子：
+ START_COUNT_TIME(start);
+ staticDateFormatter = [[NSDateFormatter alloc] init];
+ TTDPRINT(@"init date formatter use %f seconds", (float)END_COUNT_TIME(start)/CLOCKS_PER_SEC);
+ */
+#define START_COUNT_TIME(start)         clock_t start = clock()
+#define END_COUNT_TIME(start)           (clock() - start)
+
+// 懒加载宏
+// 失败了，只要写了类似：@[@"", @""]的代码就会报错，编译器会认为‘,’是参数分隔符
+//#define LAZY_POINTER(name, type, content) \
+//- (type *)name { \
+//    if (!_##name) { \
+//        ( \
+//            content \
+//        ); \
+//    } \
+//    return _##name; \
+//}
+//
+//#define LAZY_BASIC(name, type, content) \
+//- (type)name { \
+//    if (!_##name) { \
+//        ( \
+//            content; \
+//        ); \
+//    } \
+//    return _##name; \
+//}
+
+#endif /* Global_pch */

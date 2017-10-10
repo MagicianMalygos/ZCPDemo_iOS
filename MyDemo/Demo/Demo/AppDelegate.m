@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ZCPDemoHomeController.h"
 #import "AppManager.h"
 #import "DebugManager.h"
+#import "ZCPControllerFactory+Category.h"
 
 @interface AppDelegate ()
 
@@ -24,14 +24,15 @@
     [WeiboSDK enableDebugMode:YES];  // 设置调试模式
     [WeiboSDK registerApp:kAppKey];  // 向微博注册第三方应用
     
-    ZCPDemoHomeController *vc = [ZCPDemoHomeController new];
-    vc.view.backgroundColor = [UIColor whiteColor];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [ZCPControllerFactory setViewMap:@"demoViewMap"];
+    UINavigationController *nav = [[ZCPControllerFactory sharedInstance] generateCustomStack];
+    [[ZCPNavigator sharedInstance] setupRootViewController:nav];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [ZCPNavigator sharedInstance].rootViewController;
     [self.window makeKeyAndVisible];
     
-    [DebugManager defaultManager].alwaysShowStatusBall = YES;
+//    [DebugManager defaultManager].alwaysShowStatusBall = YES;
     
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];

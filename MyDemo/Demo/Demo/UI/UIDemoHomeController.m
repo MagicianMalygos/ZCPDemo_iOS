@@ -15,14 +15,14 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"SizeToFitDemo", @"class": @"SizeToFitDemoHomeController"},
-                    @{@"title": @"FontDemo", @"class": @"FontDemoHomeControllerViewController"},
-                    @{@"title": @"SetFilletDemo", @"class": @"SetFilletDemoHomeController"},
-                    @{@"title": @"Palette", @"class": @"PaletteDemoHomeController"},
-                    @{@"title": @"QiPaoDemo", @"class": @"QiPaoDemoHomeController"},
-                    @{@"title": @"虚线", @"class": @"DashedDemoHomeController"},
-                    @{@"title": @"CollectionViewDemo", @"class": @"CollectionViewDemoHomeController"},
-                    @{@"title": @"CATransform3DDemo", @"class": @"CATransform3DDemoHomeController"},
+                    @{@"title": @"SizeToFitDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SIZETOFIT},
+                    @{@"title": @"FontDemo"             , @"class": APPURL_VIEW_IDENTIFIER_FONT},
+                    @{@"title": @"SetFilletDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SETFILLET},
+                    @{@"title": @"Palette"              , @"class": APPURL_VIEW_IDENTIFIER_PALETTE},
+                    @{@"title": @"QiPaoDemo"            , @"class": APPURL_VIEW_IDENTIFIER_QIPAO},
+                    @{@"title": @"虚线"                  , @"class": APPURL_VIEW_IDENTIFIER_DASHED},
+                    @{@"title": @"CollectionViewDemo"   , @"class":APPURL_VIEW_IDENTIFIER_COLLECTION},
+                    @{@"title": @"CATransform3DDemo"    , @"class": APPURL_VIEW_IDENTIFIER_CATRANSFORM3D},
                     nil];
     }
     return _infoArr;

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DashedModel.h"
 
 @interface DashedView : UIView
 
-@property (nonatomic, assign) float phase;
-@property (nonatomic, assign) CGFloat *lengths;
-@property (nonatomic, assign) float count;
++ (UIView *)drawDashed1:(DashedModel *)dashedModel;
++ (UIView *)drawDashed2:(DashedModel *)dashedModel;
++ (UIView *)drawDashed3:(DashedModel *)dashedModel;
 
 @end

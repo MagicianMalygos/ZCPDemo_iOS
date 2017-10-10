@@ -10,7 +10,7 @@
 
 #pragma mark - 计算文本bounds
 
-@interface SizeToFitDemoHomeController : DemoBaseViewController
+@interface SizeToFitDemoHomeController : ZCPViewController
 
 @end
 

@@ -9,7 +9,6 @@
 #import "PageVCDemoHomeController.h"
 #import "MyViewController.h"
 #import "BookViewController.h"
-#import "UIImage+Category.h"
 #import <malloc/malloc.h>
 
 @interface PageVCDemoHomeController ()
