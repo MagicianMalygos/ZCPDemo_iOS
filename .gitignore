@@ -1,0 +1,13 @@
+*.mode1v3
+*.pbxuser
+.DS_Store
+build
+project.xcworkspace
+xcuserdata
+xcuserdata/*
+xcuserdatad/*
+*.moved-aside
+DerivedData
+*.swp
+*.d
+
