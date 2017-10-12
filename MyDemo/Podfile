@@ -6,10 +6,17 @@ inhibit_all_warnings!
 
 target:'Demo' do
 
+# zcp
 pod 'ZCPKit', '~> 0.0.2'
+# 网络请求
 pod 'AFNetworking', '~> 2.5.4'
-pod 'SDWebImage', '~> 3.7.4'
-pod 'YYKit', '~> 1.0.1'
-pod 'IQKeyboardManager', '~> 4.0.8'
+# 图片加载
+pod 'SDWebImage', '~> 4.1.0'
+# 各种
+pod 'YYKit', '~> 1.0.9'
+# 键盘
+pod 'IQKeyboardManager', '~> 5.0.2'
+# swizzing
+pod 'Aspects', '~> 1.4.1'
 
 end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PADemoHomeController : UIViewController
+@interface PADemoHomeController : ZCPViewController
 
 @end

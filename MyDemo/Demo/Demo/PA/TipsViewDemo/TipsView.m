@@ -69,9 +69,10 @@
         _textDescriptionLabel = [[UILabel alloc] init];
         NSMutableAttributedString *attrStr = [NSMutableAttributedString new];
         ;
-        NSAttributedString *newAttributedString1 = [[NSAttributedString alloc] initWithString:@"全新" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ff8447"], NSUnderlineStyleAttributeName: false ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
+        NSAttributedString *newAttributedString1 = [[NSAttributedString alloc] initWithString:@"全新" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ff8447"], NSUnderlineStyleAttributeName: @(NSUnderlineStyleNone)}];
+        
         [attrStr appendAttributedString:newAttributedString1];
-        NSAttributedString *newAttributedString2 = [[NSAttributedString alloc] initWithString:@"租房频道倾情上线" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: false ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
+        NSAttributedString *newAttributedString2 = [[NSAttributedString alloc] initWithString:@"租房频道倾情上线" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: @(NSUnderlineStyleNone)}];
         [attrStr appendAttributedString:newAttributedString2];
         _textDescriptionLabel.attributedText = attrStr;
         [_textDescriptionLabel sizeToFit];

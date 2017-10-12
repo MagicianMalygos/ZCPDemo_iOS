@@ -16,8 +16,6 @@
 #import "DebugManager.h"
 
 // demo vc基类
-#import "DemoBaseViewController.h"
-#import "DemoBaseTableViewController.h"
 #import "ZCPDemoBaseTableViewController.h"
 
 // PA

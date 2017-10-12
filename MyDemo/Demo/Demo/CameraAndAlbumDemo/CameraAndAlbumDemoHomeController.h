@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraAndAlbumDemoHomeController : DemoBaseViewController
+@interface CameraAndAlbumDemoHomeController : ZCPViewController
 
 @end
 

@@ -22,8 +22,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    NSLog(@"Will Appear：%@", NSStringFromClass(self.class));
 }
 
 #pragma mark - tableview

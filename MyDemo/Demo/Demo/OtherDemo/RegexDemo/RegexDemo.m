@@ -140,7 +140,10 @@
     for (NSDictionary *dic in arr) {
         WEAK_SELF;
         [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             BOOL result     = [weakSelf performSelector:NSSelectorFromString(method) withObject:key];
+#pragma clang diagnostic pop
             trueResult      = [trueResult stringByAppendingString:[NSString stringWithFormat:@"%@ ", obj]];
             if (result) {
                 testResult  = [testResult stringByAppendingString:@"YES "];

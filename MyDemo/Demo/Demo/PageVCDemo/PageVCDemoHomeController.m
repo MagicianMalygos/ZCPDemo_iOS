@@ -164,7 +164,7 @@
     if (_firstVC == nil) {
         _firstVC                        = [[UIViewController alloc] init];
         _firstVC.view.frame             = CGRectMake(0, 150, SCREENWIDTH, SCREENHEIGHT - 150);
-        _pageVC.view.backgroundColor    = [UIColor redColor];
+        _pageVC.view.backgroundColor    = [UIColor purpleColor];
     }
     return _firstVC;
 }
@@ -172,7 +172,7 @@
     if (_secondVC == nil) {
         _secondVC                       = [[UIViewController alloc] init];
         _secondVC.view.frame            = CGRectMake(0, 150, SCREENWIDTH, SCREENHEIGHT - 150);
-        _secondVC.view.backgroundColor  = [UIColor greenColor];
+        _secondVC.view.backgroundColor  = [UIColor orangeColor];
     }
     return _secondVC;
 }
@@ -181,7 +181,7 @@
     if (_thirdVC == nil) {
         _thirdVC                       = [[UIViewController alloc] init];
         _thirdVC.view.frame            = CGRectMake(0, 150, SCREENWIDTH, SCREENHEIGHT - 150);
-        _thirdVC.view.backgroundColor  = [UIColor blueColor];
+        _thirdVC.view.backgroundColor  = [UIColor brownColor];
     }
     return _thirdVC;
 }

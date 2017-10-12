@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75F8753D75AEED5767C32CDB3CC3716A"
+               BlueprintIdentifier = "680E10AFF816450356A4B02EA958252E"
                BuildableName = "libZCPKit.a"
                BlueprintName = "ZCPKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75F8753D75AEED5767C32CDB3CC3716A"
+            BlueprintIdentifier = "680E10AFF816450356A4B02EA958252E"
             BuildableName = "libZCPKit.a"
             BlueprintName = "ZCPKit"
             ReferencedContainer = "container:Pods.xcodeproj">

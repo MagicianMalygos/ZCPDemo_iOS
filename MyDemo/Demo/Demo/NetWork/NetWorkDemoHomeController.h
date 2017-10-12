@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NetWorkDemoHomeController : DemoBaseTableViewController
+@interface NetWorkDemoHomeController : ZCPDemoBaseTableViewController
 
 @end

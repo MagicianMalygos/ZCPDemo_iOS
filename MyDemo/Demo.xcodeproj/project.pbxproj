@@ -156,12 +156,8 @@
 		FBA5F3F11EF3CAC100F97958 /* InternationalizationDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA5F3F01EF3CAC100F97958 /* InternationalizationDemoHomeController.m */; };
 		FBA5F3FB1EF3CB2500F97958 /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F31EF3CB2500F97958 /* flag@2x.png */; };
 		FBA5F3FC1EF3CB2500F97958 /* flag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F51EF3CB2500F97958 /* flag@3x.png */; };
-		FBA5F40D1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */; };
-		FBA5F40E1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */; };
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
 		FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */; };
-		FBB91DA81F2871CA00D41838 /* DemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DA31F2871CA00D41838 /* DemoBaseTableViewController.m */; };
-		FBB91DA91F2871CA00D41838 /* DemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DA51F2871CA00D41838 /* DemoBaseViewController.m */; };
 		FBB91DAA1F2871CA00D41838 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */; };
 		FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DB01F28738D00D41838 /* DebugStatusBallView.m */; };
 		FBB91DB41F2873E100D41838 /* DebugConsoleLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DB31F2873E100D41838 /* DebugConsoleLogView.m */; };
@@ -189,13 +185,17 @@
 		FBCF6B391F8CBC0A00E3B58C /* zcp.cer in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B1D1F8CBC0A00E3B58C /* zcp.cer */; };
 		FBCF6B3A1F8CBC0A00E3B58C /* 朱超鹏.cer in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B1E1F8CBC0A00E3B58C /* 朱超鹏.cer */; };
 		FBCF6B3B1F8CBC0A00E3B58C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B1F1F8CBC0A00E3B58C /* Settings.bundle */; };
-		FBCF6B3C1F8CBC0A00E3B58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B211F8CBC0A00E3B58C /* Assets.xcassets */; };
 		FBCF6B3D1F8CBC0A00E3B58C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B221F8CBC0A00E3B58C /* LaunchScreen.storyboard */; };
 		FBCF6B3F1F8CBC0A00E3B58C /* demoViewMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B261F8CBC0A00E3B58C /* demoViewMap.plist */; };
 		FBCF6B411F8CBC0A00E3B58C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B291F8CBC0A00E3B58C /* main.m */; };
 		FBCF6B421F8CBC0A00E3B58C /* ZCPControllerFactory+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B2C1F8CBC0A00E3B58C /* ZCPControllerFactory+Category.m */; };
 		FBCF6B461F8CBF3B00E3B58C /* DashedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B451F8CBF3B00E3B58C /* DashedCell.m */; };
 		FBCF6B491F8CC5CE00E3B58C /* DashedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B481F8CC5CE00E3B58C /* DashedModel.m */; };
+		FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */; };
+		FBCF6B661F8E04B800E3B58C /* SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B651F8E04B800E3B58C /* SquareButton.m */; };
+		FBCF6B6A1F8E0A9800E3B58C /* MinesweeperToolMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B691F8E0A9800E3B58C /* MinesweeperToolMethod.m */; };
+		FBCF6B761F8F528800E3B58C /* ZCPMinesweeperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B741F8F528800E3B58C /* ZCPMinesweeperViewController.m */; };
+		FBCF6B771F8F528800E3B58C /* ZCPMinesweeperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B751F8F528800E3B58C /* ZCPMinesweeperViewController.xib */; };
 		FBD4ABB91EFA5BF70030EFD2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */; };
 		FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */; };
 		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
@@ -252,6 +252,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 40022CCDD00280FE4357420486B2E13A;
 			remoteInfo = ZCPKit;
+		};
+		FBCF6B621F8DEBDA00E3B58C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF98C7269E8F85B2EB06A7CE0BB6899A;
+			remoteInfo = Aspects;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1443,17 +1450,10 @@
 		FBA5F3F81EF3CB2500F97958 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/flag@3x.png"; sourceTree = "<group>"; };
 		FBA5F3F91EF3CB2500F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/flag@2x.png"; sourceTree = "<group>"; };
 		FBA5F3FA1EF3CB2500F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/flag@3x.png"; sourceTree = "<group>"; };
-		FBA5F40A1EF7AAFE00F97958 /* ZCPMinesweeperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPMinesweeperViewController.h; sourceTree = "<group>"; };
-		FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPMinesweeperViewController.m; sourceTree = "<group>"; };
-		FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCPMinesweeperViewController.xib; sourceTree = "<group>"; };
 		FBA976CE1E669D5D00C88BE5 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		FBA976CF1E669D5D00C88BE5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryTestHomeController.h; sourceTree = "<group>"; };
 		FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryTestHomeController.m; sourceTree = "<group>"; };
-		FBB91DA21F2871CA00D41838 /* DemoBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseTableViewController.h; sourceTree = "<group>"; };
-		FBB91DA31F2871CA00D41838 /* DemoBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseTableViewController.m; sourceTree = "<group>"; };
-		FBB91DA41F2871CA00D41838 /* DemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoBaseViewController.h; sourceTree = "<group>"; };
-		FBB91DA51F2871CA00D41838 /* DemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoBaseViewController.m; sourceTree = "<group>"; };
 		FBB91DA61F2871CA00D41838 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		FBB91DAF1F28738D00D41838 /* DebugStatusBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugStatusBallView.h; sourceTree = "<group>"; };
@@ -1491,7 +1491,6 @@
 		FBCF6B1D1F8CBC0A00E3B58C /* zcp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = zcp.cer; sourceTree = "<group>"; };
 		FBCF6B1E1F8CBC0A00E3B58C /* 朱超鹏.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "朱超鹏.cer"; sourceTree = "<group>"; };
 		FBCF6B1F1F8CBC0A00E3B58C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		FBCF6B211F8CBC0A00E3B58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCF6B231F8CBC0A00E3B58C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBCF6B261F8CBC0A00E3B58C /* demoViewMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demoViewMap.plist; sourceTree = "<group>"; };
 		FBCF6B271F8CBC0A00E3B58C /* Global.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.pch; sourceTree = "<group>"; };
@@ -1505,6 +1504,17 @@
 		FBCF6B451F8CBF3B00E3B58C /* DashedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashedCell.m; sourceTree = "<group>"; };
 		FBCF6B471F8CC5CE00E3B58C /* DashedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashedModel.h; sourceTree = "<group>"; };
 		FBCF6B481F8CC5CE00E3B58C /* DashedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashedModel.m; sourceTree = "<group>"; };
+		FBCF6B581F8DEBD900E3B58C /* ZCPViewController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZCPViewController+Category.h"; sourceTree = "<group>"; };
+		FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZCPViewController+Category.m"; sourceTree = "<group>"; };
+		FBCF6B641F8E04B800E3B58C /* SquareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareButton.h; sourceTree = "<group>"; };
+		FBCF6B651F8E04B800E3B58C /* SquareButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareButton.m; sourceTree = "<group>"; };
+		FBCF6B671F8E053400E3B58C /* MinesweeperHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinesweeperHeader.h; sourceTree = "<group>"; };
+		FBCF6B681F8E0A9800E3B58C /* MinesweeperToolMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinesweeperToolMethod.h; sourceTree = "<group>"; };
+		FBCF6B691F8E0A9800E3B58C /* MinesweeperToolMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinesweeperToolMethod.m; sourceTree = "<group>"; };
+		FBCF6B731F8F528800E3B58C /* ZCPMinesweeperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPMinesweeperViewController.h; sourceTree = "<group>"; };
+		FBCF6B741F8F528800E3B58C /* ZCPMinesweeperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPMinesweeperViewController.m; sourceTree = "<group>"; };
+		FBCF6B751F8F528800E3B58C /* ZCPMinesweeperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCPMinesweeperViewController.xib; sourceTree = "<group>"; };
+		FBCF6B7A1F8F5B1500E3B58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBD4ABB61EFA5BF70030EFD2 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
@@ -3116,6 +3126,7 @@
 			isa = PBXGroup;
 			children = (
 				9E3E86AE1D2A84A40061664A /* libAFNetworking.a */,
+				FBCF6B631F8DEBDA00E3B58C /* libAspects.a */,
 				FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */,
 				FBB1A1ED1EE10CBC004F013F /* libPods-Demo.a */,
 				9E3E86B21D2A84A40061664A /* libSDWebImage.a */,
@@ -3698,7 +3709,7 @@
 			children = (
 				FBCC20FC1F03783B006FE26C /* 广告 */,
 				FB16081A1EFA0DC200064DA2 /* 地图&定位 */,
-				FBA5F4041EF7AABC00F97958 /* 扫雷X */,
+				FBA5F4041EF7AABC00F97958 /* 扫雷 */,
 				FBA5F3EE1EF3CA8200F97958 /* 国际化 */,
 				FB06218A1ED275DC000AA258 /* OtherDemo */,
 				FBB836041EB9DFCD00C064A8 /* 临时测试用 */,
@@ -4104,14 +4115,18 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		FBA5F4041EF7AABC00F97958 /* 扫雷X */ = {
+		FBA5F4041EF7AABC00F97958 /* 扫雷 */ = {
 			isa = PBXGroup;
 			children = (
-				FBA5F40A1EF7AAFE00F97958 /* ZCPMinesweeperViewController.h */,
-				FBA5F40B1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m */,
-				FBA5F40C1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib */,
+				FBCF6B731F8F528800E3B58C /* ZCPMinesweeperViewController.h */,
+				FBCF6B741F8F528800E3B58C /* ZCPMinesweeperViewController.m */,
+				FBCF6B751F8F528800E3B58C /* ZCPMinesweeperViewController.xib */,
+				FBCF6B641F8E04B800E3B58C /* SquareButton.h */,
+				FBCF6B651F8E04B800E3B58C /* SquareButton.m */,
+				FBCF6B671F8E053400E3B58C /* MinesweeperHeader.h */,
+				FBCF6B681F8E0A9800E3B58C /* MinesweeperToolMethod.h */,
+				FBCF6B691F8E0A9800E3B58C /* MinesweeperToolMethod.m */,
 			);
-			name = "扫雷X";
 			path = "扫雷";
 			sourceTree = "<group>";
 		};
@@ -4137,14 +4152,12 @@
 			isa = PBXGroup;
 			children = (
 				FBB91DAB1F2871E100D41838 /* 调试工具 */,
-				FBB91DA21F2871CA00D41838 /* DemoBaseTableViewController.h */,
-				FBB91DA31F2871CA00D41838 /* DemoBaseTableViewController.m */,
-				FBB91DA41F2871CA00D41838 /* DemoBaseViewController.h */,
-				FBB91DA51F2871CA00D41838 /* DemoBaseViewController.m */,
 				FBB91DA61F2871CA00D41838 /* YYFPSLabel.h */,
 				FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */,
 				FBCF6AF81F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.h */,
 				FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */,
+				FBCF6B581F8DEBD900E3B58C /* ZCPViewController+Category.h */,
+				FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -4228,7 +4241,7 @@
 		FBCF6B201F8CBC0A00E3B58C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBCF6B211F8CBC0A00E3B58C /* Assets.xcassets */,
+				FBCF6B7A1F8F5B1500E3B58C /* Assets.xcassets */,
 				FBCF6B221F8CBC0A00E3B58C /* LaunchScreen.storyboard */,
 				FBCF6B261F8CBC0A00E3B58C /* demoViewMap.plist */,
 				FBCF6B271F8CBC0A00E3B58C /* Global.pch */,
@@ -4386,6 +4399,13 @@
 			remoteRef = FBCF6AE01F8CA8B700E3B58C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FBCF6B631F8DEBDA00E3B58C /* libAspects.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAspects.a;
+			remoteRef = FBCF6B621F8DEBDA00E3B58C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -4411,7 +4431,7 @@
 				FBCF6B2F1F8CBC0A00E3B58C /* flag@3x.png in Resources */,
 				FBCF6B341F8CBC0A00E3B58C /* Localizable.strings in Resources */,
 				FBCF6B391F8CBC0A00E3B58C /* zcp.cer in Resources */,
-				FBA5F40E1EF7AAFE00F97958 /* ZCPMinesweeperViewController.xib in Resources */,
+				FBCF6B771F8F528800E3B58C /* ZCPMinesweeperViewController.xib in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
 				1844399C1D0012C700FDD7F7 /* tips_page_next_step.png in Resources */,
@@ -4424,7 +4444,6 @@
 				FB5079071E2618A900361E60 /* turn_off.png in Resources */,
 				FB92C8931E5C21280095F31E /* fire.png in Resources */,
 				18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */,
-				FBCF6B3C1F8CBC0A00E3B58C /* Assets.xcassets in Resources */,
 				184439991D0012C700FDD7F7 /* tips_page_arrow_down.png in Resources */,
 				FB0621D31ED275DD000AA258 /* rocket.png in Resources */,
 				FBCF6B3D1F8CBC0A00E3B58C /* LaunchScreen.storyboard in Resources */,
@@ -4541,6 +4560,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCF6B661F8E04B800E3B58C /* SquareButton.m in Sources */,
+				FBCF6B6A1F8E0A9800E3B58C /* MinesweeperToolMethod.m in Sources */,
 				FB50791F1E2618A900361E60 /* UIView+ViewCorner.m in Sources */,
 				FB50790D1E2618A900361E60 /* ShareDemoHomeController.m in Sources */,
 				FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */,
@@ -4548,7 +4569,6 @@
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,
 				FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
-				FBA5F40D1EF7AAFE00F97958 /* ZCPMinesweeperViewController.m in Sources */,
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
 				FBB91DAA1F2871CA00D41838 /* YYFPSLabel.m in Sources */,
 				FB0621C71ED275DC000AA258 /* EnumAndFormatDemo.m in Sources */,
@@ -4580,13 +4600,11 @@
 				FB5079201E2618A900361E60 /* SetFilletDemoHomeController.m in Sources */,
 				FB5078C91E2618A900361E60 /* ZCPURLSessionTool.m in Sources */,
 				FB5079131E2618A900361E60 /* TBDemoVC1.m in Sources */,
-				FBB91DA81F2871CA00D41838 /* DemoBaseTableViewController.m in Sources */,
 				FB5079111E2618A900361E60 /* WeiXinShareDemoHomeController.m in Sources */,
 				FB9092A81F6F5762007EC93B /* DecoratorBlueTooth.m in Sources */,
 				FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */,
 				FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */,
 				FB5078FD1E2618A900361E60 /* TipsViewDemoHomeController.m in Sources */,
-				FBB91DA91F2871CA00D41838 /* DemoBaseViewController.m in Sources */,
 				FB0621CD1ED275DD000AA258 /* OCClassMethodDemo.m in Sources */,
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
 				FB5079151E2618A900361E60 /* FontDemoHomeControllerViewController.m in Sources */,
@@ -4610,6 +4628,7 @@
 				FB5079221E2618A900361E60 /* SizeToFitDemoHomeController.m in Sources */,
 				FB0621D81ED275DD000AA258 /* ZCPUser.m in Sources */,
 				FB5078FC1E2618A900361E60 /* TipsView.m in Sources */,
+				FBCF6B761F8F528800E3B58C /* ZCPMinesweeperViewController.m in Sources */,
 				FB0621D21ED275DD000AA258 /* RuntimeDemo.m in Sources */,
 				FB5079141E2618A900361E60 /* TBDemoVC2.m in Sources */,
 				FB0621C61ED275DC000AA258 /* NSString+Demo.m in Sources */,
@@ -4624,6 +4643,7 @@
 				FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */,
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,
 				FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */,
+				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
 				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
 				FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */,

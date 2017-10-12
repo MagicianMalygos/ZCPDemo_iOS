@@ -20,7 +20,7 @@
     return _infoArr;
 }
 
-- (void)didSelectCell:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
     Class vcClass = NSClassFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"]);
     UIViewController *vc = [vcClass new];
     if (vcClass && vc) {

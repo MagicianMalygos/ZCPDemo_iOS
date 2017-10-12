@@ -76,13 +76,8 @@
                                          orientation:UIImageOrientationUp];
     UIImage *selectedIMG = [UIImage imageWithCGImage:selectedImage.CGImage scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
     
-    // 设置图片
-    if ([[UIDevice currentDevice].systemVersion integerValue] >= 7) {
-        [tabBarItem setImage:normalIMG];
-        [tabBarItem setSelectedImage:selectedIMG];
-    } else {
-        [tabBarItem setFinishedSelectedImage:selectedIMG withFinishedUnselectedImage:normalIMG];
-    }
+    [tabBarItem setImage:normalIMG];
+    [tabBarItem setSelectedImage:selectedIMG];
     
     return tabBarItem;
 }

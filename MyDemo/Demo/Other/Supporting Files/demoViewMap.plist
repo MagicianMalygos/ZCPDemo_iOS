@@ -14,7 +14,7 @@
 		<key>className</key>
 		<string>TemporaryTestHomeController</string>
 		<key>identifier</key>
-		<string>tempTest</string>
+		<string>tempTestHome</string>
 		<key>description</key>
 		<string>临时测试控制器</string>
 	</dict>
@@ -89,6 +89,126 @@
 		<string>dashed</string>
 		<key>description</key>
 		<string>虚线</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>WebViewDemoHomeController</string>
+		<key>identifier</key>
+		<string>webHome</string>
+		<key>description</key>
+		<string>web容器</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>AlertViewDemoHomeController</string>
+		<key>identifier</key>
+		<string>alertHome</string>
+		<key>description</key>
+		<string>alert</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>PageVCDemoHomeController</string>
+		<key>identifier</key>
+		<string>pageVCHome</string>
+		<key>description</key>
+		<string>UIPageViewController</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>CameraAndAlbumDemoHomeController</string>
+		<key>identifier</key>
+		<string>albumHome</string>
+		<key>description</key>
+		<string>相机/相册</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>OtherDemoHomeController</string>
+		<key>identifier</key>
+		<string>otherHome</string>
+		<key>description</key>
+		<string>其他</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>PhotoCarouselDemoHomeController</string>
+		<key>identifier</key>
+		<string>photoCarouselHome</string>
+		<key>description</key>
+		<string>图片轮播</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ShareDemoHomeController</string>
+		<key>identifier</key>
+		<string>shareHome</string>
+		<key>description</key>
+		<string>分享</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>PADemoHomeController</string>
+		<key>identifier</key>
+		<string>PAHome</string>
+		<key>description</key>
+		<string>平安</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>TabBarDemoHomeController</string>
+		<key>identifier</key>
+		<string>tabbarHome</string>
+		<key>description</key>
+		<string>tabbar</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>NetWorkDemoHomeController</string>
+		<key>identifier</key>
+		<string>networkHome</string>
+		<key>description</key>
+		<string>网络</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>QRCodeDemoHomeController</string>
+		<key>identifier</key>
+		<string>qrCodeHome</string>
+		<key>description</key>
+		<string>二维码扫描</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>InternationalizationDemoHomeController</string>
+		<key>identifier</key>
+		<string>internationalHome</string>
+		<key>description</key>
+		<string>国际化</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>MapDemoHomeViewController</string>
+		<key>identifier</key>
+		<string>mapHome</string>
+		<key>description</key>
+		<string>地图</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ADDemoHomeViewController</string>
+		<key>identifier</key>
+		<string>adHome</string>
+		<key>description</key>
+		<string>广告</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ZCPMinesweeperViewController</string>
+		<key>identifier</key>
+		<string>minesweeper</string>
+		<key>description</key>
+		<string>扫雷</string>
 	</dict>
 </array>
 </plist>

@@ -13,7 +13,7 @@ static const char *treeSetup;
 static int charIndex;
 
 // method define
-BiTree _createBiTree ();
+BiTree _createBiTree (void);
 BiTreeNode* treeSearch (BiTreeNode *node, char query);
 void printBiTreeNode(BiTreeNode *node);
 

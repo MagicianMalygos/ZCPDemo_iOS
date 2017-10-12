@@ -14,4 +14,4 @@
 
 @end
 
-void staticTest();
+void staticTest(void);

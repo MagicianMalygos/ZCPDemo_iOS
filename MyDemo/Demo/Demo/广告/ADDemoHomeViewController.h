@@ -6,8 +6,8 @@
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 
-#import "DemoBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ADDemoHomeViewController : DemoBaseViewController
+@interface ADDemoHomeViewController : ZCPViewController
 
 @end

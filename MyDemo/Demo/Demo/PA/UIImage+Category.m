@@ -558,13 +558,6 @@ CGFloat _RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return wImage;
 }
 
-+ (UIImage*)imageFromView:(UIView*)view{
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, view.layer.contentsScale);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
 @end
 
 
@@ -575,6 +568,14 @@ CGFloat _RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     }
     
     return [self stretchableImageWithLeftCapWidth:insets.left topCapHeight:insets.top];
+}
+
++ (UIImage*)imageFromView:(UIView*)view{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, view.layer.contentsScale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end

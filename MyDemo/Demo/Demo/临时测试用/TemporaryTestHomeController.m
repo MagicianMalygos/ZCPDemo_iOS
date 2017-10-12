@@ -50,7 +50,7 @@
 // 测试给url添加HeaderField
 - (void)testSD {
     
-    [[SDImageCache sharedImageCache] clearDisk];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
     [[SDImageCache sharedImageCache] clearMemory];
     self.headerDict = [NSMutableDictionary dictionary];
     
@@ -79,10 +79,13 @@
     
     // get请求
     UIImageView *imageView = [[UIImageView alloc] init];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageAllowInvalidSSLCertificates progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-    }];
     
+    [imageView sd_setImageWithURL:[NSURL URLWithString:url]
+                 placeholderImage:[UIImage imageNamed:@""]
+                          options:SDWebImageAllowInvalidSSLCertificates
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+                         } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                         }];
     imageView.frame = CGRectMake(i * 50, 0, 50, 50);
     [self.view addSubview:imageView];
 }
