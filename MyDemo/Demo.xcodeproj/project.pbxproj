@@ -135,6 +135,7 @@
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
+		FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */; };
 		FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */; };
 		FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */; };
 		FB90927F1F6AD1C6007EC93B /* MultiThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */; };
@@ -1407,6 +1408,8 @@
 		FB5079641E262D8800361E60 /* DashedDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedDemoHomeController.h; sourceTree = "<group>"; };
 		FB5079651E262D8800361E60 /* DashedDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedDemoHomeController.m; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB8216191FC5761400BB7710 /* WaveLineDemoHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveLineDemoHomeController.h; sourceTree = "<group>"; };
+		FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveLineDemoHomeController.m; sourceTree = "<group>"; };
 		FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@2x.png"; sourceTree = "<group>"; };
 		FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@3x.png"; sourceTree = "<group>"; };
 		FB90927D1F6AD1C6007EC93B /* MultiThreadDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadDemo.h; sourceTree = "<group>"; };
@@ -3920,6 +3923,7 @@
 		FB5078761E2618A900361E60 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB8216111FC575D300BB7710 /* 波浪线 */,
 				FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
 				FB50795A1E26193A00361E60 /* 气泡拉伸 */,
@@ -4032,6 +4036,15 @@
 				FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */,
 			);
 			path = "气泡拉伸";
+			sourceTree = "<group>";
+		};
+		FB8216111FC575D300BB7710 /* 波浪线 */ = {
+			isa = PBXGroup;
+			children = (
+				FB8216191FC5761400BB7710 /* WaveLineDemoHomeController.h */,
+				FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */,
+			);
+			path = "波浪线";
 			sourceTree = "<group>";
 		};
 		FB9092771F6AD185007EC93B /* 多线程 */ = {
@@ -4652,6 +4665,7 @@
 				FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */,
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,
+				FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB0621D71ED275DD000AA258 /* ZCPUser+AddProperty.m in Sources */,

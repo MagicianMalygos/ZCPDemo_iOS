@@ -40,5 +40,6 @@
 #define APPURL_VIEW_IDENTIFIER_DASHED               @"dashed"               // 虚线 DashedDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_COLLECTION           @"collection"           // collection CollectionViewDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_CATRANSFORM3D        @"catransform3d"        // UIHomeDemo CATransform3DDemoHomeController
+#define APPURL_VIEW_IDENTIFIER_WAVELINE             @"waveLine"             // 波浪线 WaveLineDemoHomeController
 
 #endif /* ZCPDemoViewMap_h */

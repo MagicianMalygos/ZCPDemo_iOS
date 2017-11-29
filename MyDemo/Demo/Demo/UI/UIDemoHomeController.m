@@ -23,6 +23,7 @@
                     @{@"title": @"虚线"                  , @"class": APPURL_VIEW_IDENTIFIER_DASHED},
                     @{@"title": @"CollectionViewDemo"   , @"class":APPURL_VIEW_IDENTIFIER_COLLECTION},
                     @{@"title": @"CATransform3DDemo"    , @"class": APPURL_VIEW_IDENTIFIER_CATRANSFORM3D},
+                    @{@"title": @"波浪线"                 , @"class": APPURL_VIEW_IDENTIFIER_WAVELINE},
                     nil];
     }
     return _infoArr;

@@ -37,6 +37,7 @@
 //    [self testIQKeyboardManagerReturn];
 //    [self testSandBoxPath];
 //    [self testSettings];
+    [self testNotification];
 }
 
 #pragma mark - test
@@ -276,6 +277,33 @@
     NSString *cheatCode = [userDefaults stringForKey:@"cheat_code"];
     NSString *area = [userDefaults stringForKey:@"area"];
     NSLog(@"%@ %@ %@", userName, cheatCode, area);
+}
+
+#pragma mark - testNotification
+
+- (void)testNotification {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 100, 100);
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"发通知" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"notification" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull notification) {
+        BOOL showAlert = [notification.userInfo[@"showAlert"] boolValue];
+        if (showAlert) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"aaa" message:nil delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
+            [alert show];
+        } else {
+            NSLog(@"%@", notification.userInfo);
+        }
+    }];
+}
+
+- (void)clickButton {
+    static BOOL showAlert;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification" object:nil userInfo:@{@"showAlert": @(showAlert)}];
+    showAlert = !showAlert;
 }
 
 @end

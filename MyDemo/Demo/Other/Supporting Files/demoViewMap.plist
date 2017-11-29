@@ -210,5 +210,13 @@
 		<key>description</key>
 		<string>扫雷</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>WaveLineDemoHomeController</string>
+		<key>identifier</key>
+		<string>waveLine</string>
+		<key>description</key>
+		<string>波浪线</string>
+	</dict>
 </array>
 </plist>
