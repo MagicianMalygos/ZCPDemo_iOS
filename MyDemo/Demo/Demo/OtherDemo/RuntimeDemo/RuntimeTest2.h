@@ -18,10 +18,9 @@
 
 // 关联对象，解决不能在分类中定义成员变量的问题
 - (void)associatedObject;
-- (void)setTapActionWithBlock:(void (^)())block;
+- (void)setTapActionWithBlock:(void (^)(void))block;
 
 - (void)propertyOperation;
-
 
 @end
 

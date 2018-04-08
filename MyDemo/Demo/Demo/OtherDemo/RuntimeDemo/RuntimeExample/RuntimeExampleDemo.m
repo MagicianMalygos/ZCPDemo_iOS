@@ -117,7 +117,10 @@
      问题：如果一个类的实例方法非常多，加载类到内存的时候也比较耗费资源，需要给每个方法生成映射表。
      解决：可以动态给某个类添加方法解决。
      */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     [user001 performSelector:@selector(eat)];
+#pragma clang diagnostic pop
     
     // 5.字典转模型
     NSDictionary *userDict              = @{@"uID": @"1001", @"name": @"Zcp大官人", @"level": @"107", @"sex": @"male"};

@@ -276,7 +276,9 @@ void subMethod(id self, SEL _cmd) {
     // 返回指向给定对象分配的任何额外字节的指针 void* (MRC)
 //    object_getIndexedIvars(id obj);
     // 返回对象中实例变量的值 id
-    Ivar ivar;
+    unsigned int outCount;
+    Ivar *ivars = class_copyIvarList([NSObject class], &outCount);
+    Ivar ivar = ivars[0];
     object_getIvar([NSObject class], ivar);
     // 设置对象中实例变量的值 void
     object_setIvar([NSObject class], ivar, @"");

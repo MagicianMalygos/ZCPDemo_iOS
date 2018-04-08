@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB48DFD5201077E600C38C47 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFD4201077E600C38C47 /* ListViewController.swift */; };
+		FB48DFD720107F6D00C38C47 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFD620107F6D00C38C47 /* ListCell.swift */; };
+		FB48DFD92010A19C00C38C47 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFD82010A19C00C38C47 /* ProjectManager.swift */; };
+		FB48DFDB2011D57700C38C47 /* P1TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFDA2011D57700C38C47 /* P1TimerViewController.swift */; };
+		FB48DFDE2011DFC400C38C47 /* UIView+MGEasyFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFDD2011DFC400C38C47 /* UIView+MGEasyFrame.swift */; };
+		FB48DFE02011F66F00C38C47 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFDF2011F66F00C38C47 /* String+Utils.swift */; };
+		FB48DFE22015D99C00C38C47 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFE12015D99C00C38C47 /* UIColor+Utils.swift */; };
+		FB48DFE62016D85800C38C47 /* P1CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48DFE52016D85800C38C47 /* P1CircleButton.swift */; };
 		FB68CE4A1E71593B000CE412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CE491E71593B000CE412 /* AppDelegate.swift */; };
 		FB68CE4C1E71593B000CE412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CE4B1E71593B000CE412 /* ViewController.swift */; };
 		FB68CE4F1E71593B000CE412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB68CE4D1E71593B000CE412 /* Main.storyboard */; };
 		FB68CE511E71593B000CE412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB68CE501E71593B000CE412 /* Assets.xcassets */; };
 		FB68CE541E71593B000CE412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB68CE521E71593B000CE412 /* LaunchScreen.storyboard */; };
+		FBC2ADCE2029A55E00DF4B49 /* P1LapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2ADCD2029A55E00DF4B49 /* P1LapCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB48DFD4201077E600C38C47 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FB48DFD620107F6D00C38C47 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		FB48DFD82010A19C00C38C47 /* ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
+		FB48DFDA2011D57700C38C47 /* P1TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1TimerViewController.swift; sourceTree = "<group>"; };
+		FB48DFDD2011DFC400C38C47 /* UIView+MGEasyFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MGEasyFrame.swift"; sourceTree = "<group>"; };
+		FB48DFDF2011F66F00C38C47 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		FB48DFE12015D99C00C38C47 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		FB48DFE52016D85800C38C47 /* P1CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1CircleButton.swift; sourceTree = "<group>"; };
 		FB68CE461E71593B000CE412 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB68CE491E71593B000CE412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB68CE4B1E71593B000CE412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +39,7 @@
 		FB68CE501E71593B000CE412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB68CE531E71593B000CE412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB68CE551E71593B000CE412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC2ADCD2029A55E00DF4B49 /* P1LapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1LapCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB48DFDC2011DECC00C38C47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FB48DFDD2011DFC400C38C47 /* UIView+MGEasyFrame.swift */,
+				FB48DFDF2011F66F00C38C47 /* String+Utils.swift */,
+				FB48DFE12015D99C00C38C47 /* UIColor+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FB68CE3D1E71593B000CE412 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +82,37 @@
 		FB68CE481E71593B000CE412 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FB48DFDC2011DECC00C38C47 /* Utils */,
+				FBF5CB4B20060155006AEB34 /* 30Projects */,
 				FB68CE491E71593B000CE412 /* AppDelegate.swift */,
 				FB68CE4B1E71593B000CE412 /* ViewController.swift */,
+				FB48DFD4201077E600C38C47 /* ListViewController.swift */,
+				FB48DFD620107F6D00C38C47 /* ListCell.swift */,
+				FB48DFD82010A19C00C38C47 /* ProjectManager.swift */,
 				FB68CE4D1E71593B000CE412 /* Main.storyboard */,
 				FB68CE501E71593B000CE412 /* Assets.xcassets */,
 				FB68CE521E71593B000CE412 /* LaunchScreen.storyboard */,
 				FB68CE551E71593B000CE412 /* Info.plist */,
 			);
 			path = SwiftDemo;
+			sourceTree = "<group>";
+		};
+		FBF5CB4B20060155006AEB34 /* 30Projects */ = {
+			isa = PBXGroup;
+			children = (
+				FBF5CB4D2006019E006AEB34 /* Project 01 */,
+			);
+			path = 30Projects;
+			sourceTree = "<group>";
+		};
+		FBF5CB4D2006019E006AEB34 /* Project 01 */ = {
+			isa = PBXGroup;
+			children = (
+				FB48DFDA2011D57700C38C47 /* P1TimerViewController.swift */,
+				FB48DFE52016D85800C38C47 /* P1CircleButton.swift */,
+				FBC2ADCD2029A55E00DF4B49 /* P1LapCell.swift */,
+			);
+			path = "Project 01";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB48DFE62016D85800C38C47 /* P1CircleButton.swift in Sources */,
+				FB48DFE22015D99C00C38C47 /* UIColor+Utils.swift in Sources */,
+				FB48DFD92010A19C00C38C47 /* ProjectManager.swift in Sources */,
+				FB48DFD5201077E600C38C47 /* ListViewController.swift in Sources */,
+				FB48DFD720107F6D00C38C47 /* ListCell.swift in Sources */,
+				FB48DFE02011F66F00C38C47 /* String+Utils.swift in Sources */,
+				FBC2ADCE2029A55E00DF4B49 /* P1LapCell.swift in Sources */,
+				FB48DFDB2011D57700C38C47 /* P1TimerViewController.swift in Sources */,
 				FB68CE4C1E71593B000CE412 /* ViewController.swift in Sources */,
 				FB68CE4A1E71593B000CE412 /* AppDelegate.swift in Sources */,
+				FB48DFDE2011DFC400C38C47 /* UIView+MGEasyFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +362,7 @@
 				FB68CE5A1E71593B000CE412 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

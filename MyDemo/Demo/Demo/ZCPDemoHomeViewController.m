@@ -32,11 +32,12 @@
                     @{@"title": @"PADemo"               , @"class": APPURL_VIEW_IDENTIFIER_PAHOME},
                     @{@"title": @"TabBarDemo"           , @"class": APPURL_VIEW_IDENTIFIER_TABBARHOME},
                     @{@"title": @"NetWorkDemo"          , @"class": APPURL_VIEW_IDENTIFIER_NETWORKHOME},
-                    @{@"title": @"二维码扫描"            , @"class": APPURL_VIEW_IDENTIFIER_QRCODEHOME},
-                    @{@"title": @"国际化"              , @"class": APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME},
-                    @{@"title": @"地图&定位"            , @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
-                    @{@"title": @"广告"               , @"class": APPURL_VIEW_IDENTIFIER_ADHOME},
-                    @{@"title": @"扫雷"               , @"class": APPURL_VIEW_IDENTIFIER_MINESWEEPER}, nil];
+                    @{@"title": @"二维码扫描"             , @"class": APPURL_VIEW_IDENTIFIER_QRCODEHOME},
+                    @{@"title": @"国际化"                , @"class": APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME},
+                    @{@"title": @"地图&定位"             , @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
+                    @{@"title": @"广告"                  , @"class": APPURL_VIEW_IDENTIFIER_ADHOME},
+                    @{@"title": @"扫雷"                  , @"class": APPURL_VIEW_IDENTIFIER_MINESWEEPER},
+                    @{@"title": @"日志"                  , @"class": APPURL_VIEW_IDENTIFIER_LOG}, nil];
     }
     return _infoArr;
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <mars/xlog/xloggerbase.h>
 
 @interface OtherDemoHomeController : ZCPDemoBaseTableViewController
 

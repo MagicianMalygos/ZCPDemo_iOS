@@ -75,7 +75,10 @@
 // 当一个类调用未实现的方法时，会调用这个方法处理
 // 如果类有N个静态方法，则这个方法会被调用N次，sel为遍历所有方法的某一个
 + (BOOL)resolveClassMethod:(SEL)sel {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     if (sel == @selector(privilegeList)) {
+#pragma clang diagnostic pop
         // 类方法不能动态添加
         return NO;
     }
@@ -85,7 +88,10 @@
 // 当一个对象调用未实现的方法时，会调用这个方法处理
 // 如果对象所属类有N个实例方法，则这个方法会被调用N次，sel为遍历所有方法的某一个
 + (BOOL)resolveInstanceMethod:(SEL)sel {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     if (sel == @selector(eat)) {
+        #pragma clang diagnostic pop
         /**
          给类添加实例方法
 
@@ -95,7 +101,10 @@
          @param "v@:" 方法的类型（返回值+参数），v表示返回值为void、@表示对象、:表示SEL，每个方法一定要有Class和SEL这两个参数
          @return 是否添加成功
          */
-        class_addMethod(self, @selector(eat), eat, "v@:");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+        class_addMethod(self, @selector(eat), (IMP)eat, "v@:");
+#pragma clang diagnostic pop
     }
     return [super resolveInstanceMethod:sel];
 }

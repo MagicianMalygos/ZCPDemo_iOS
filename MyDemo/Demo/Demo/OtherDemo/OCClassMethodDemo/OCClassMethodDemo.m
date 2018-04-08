@@ -34,8 +34,9 @@
     [ClassA classMethodA];
     [a methodA];
     
-    SuppressPerformSelectorLeakWarning(
     // 2.OC的动态消息传递机制，使得OC没有严格意义上的私有方法。
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
     [a performSelector:@selector(privateMethodA)];
     [ClassA performSelector:@selector(privateClassMethodA)];
     // 3.子类会继承父类的私有方法，使用OC动态消息传递机制就可以访问到父类的私有方法，并且该私有方法遵循方法重写
@@ -45,8 +46,8 @@
     [a performSelector:@selector(categoryPrivateMethod)];
     // 5.extension同上
     [a performSelector:@selector(extensionMethod)];
-    );
-                                       
+#pragma clang diagnostic pop
+    
 #pragma mark - 访问变量
     // 1.实例变量遵循使用@public、@protected、@private修饰的规则，另外使用@property声明的变量是私有变量。
     NSLog(@"%d", a->varPublic);            // 可以访问共有变量

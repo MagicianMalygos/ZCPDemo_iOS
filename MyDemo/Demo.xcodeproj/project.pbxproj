@@ -84,7 +84,7 @@
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
 		FB46525E1EA76096006667EA /* codeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB46525D1EA76096006667EA /* codeLogo.png */; };
 		FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */; };
-		FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.m */; };
+		FB5078A11E2618A900361E60 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.mm */; };
 		FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */; };
 		FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077601E2618A800361E60 /* PAAssetPickerController.m */; };
 		FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */; };
@@ -134,6 +134,12 @@
 		FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50789D1E2618A900361E60 /* WebViewDemoHomeController.m */; };
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
+		FB7E4FAF1FFE1C0900B366FA /* EPLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F961FFE1C0900B366FA /* EPLog.mm */; };
+		FB7E4FB01FFE1C0900B366FA /* mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7E4F9A1FFE1C0900B366FA /* mars.framework */; };
+		FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F9B1FFE1C0900B366FA /* longlink_packer.mm */; };
+		FB7E4FB21FFE1C0900B366FA /* shortlink_packer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F9C1FFE1C0900B366FA /* shortlink_packer.mm */; };
+		FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F9D1FFE1C0900B366FA /* log_crypt.mm */; };
+		FB7E4FC01FFE1C2300B366FA /* LogDemoHomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
 		FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */; };
 		FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */; };
@@ -1307,7 +1313,7 @@
 		FB5077571E2618A800361E60 /* AlertViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077591E2618A800361E60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FB50775A1E2618A800361E60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB50775A1E2618A800361E60 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		FB50775C1E2618A800361E60 /* CameraAndAlbumDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraAndAlbumDemoHomeController.h; sourceTree = "<group>"; };
 		FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraAndAlbumDemoHomeController.m; sourceTree = "<group>"; };
 		FB50775F1E2618A800361E60 /* PAAssetPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAssetPickerController.h; sourceTree = "<group>"; };
@@ -1407,6 +1413,18 @@
 		FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPaoDemoHomeController.m; sourceTree = "<group>"; };
 		FB5079641E262D8800361E60 /* DashedDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedDemoHomeController.h; sourceTree = "<group>"; };
 		FB5079651E262D8800361E60 /* DashedDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedDemoHomeController.m; sourceTree = "<group>"; };
+		FB7E4F961FFE1C0900B366FA /* EPLog.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EPLog.mm; sourceTree = "<group>"; };
+		FB7E4F971FFE1C0900B366FA /* EPLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPLog.h; sourceTree = "<group>"; };
+		FB7E4F991FFE1C0900B366FA /* shortlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortlink_packer.h; sourceTree = "<group>"; };
+		FB7E4F9A1FFE1C0900B366FA /* mars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mars.framework; sourceTree = "<group>"; };
+		FB7E4F9B1FFE1C0900B366FA /* longlink_packer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = longlink_packer.mm; sourceTree = "<group>"; };
+		FB7E4F9C1FFE1C0900B366FA /* shortlink_packer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = shortlink_packer.mm; sourceTree = "<group>"; };
+		FB7E4F9D1FFE1C0900B366FA /* log_crypt.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = log_crypt.mm; sourceTree = "<group>"; };
+		FB7E4F9E1FFE1C0900B366FA /* longlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longlink_packer.h; sourceTree = "<group>"; };
+		FB7E4F9F1FFE1C0900B366FA /* log_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log_crypt.h; sourceTree = "<group>"; };
+		FB7E4FAE1FFE1C0900B366FA /* stnproto_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stnproto_logic.h; sourceTree = "<group>"; };
+		FB7E4FBE1FFE1C2300B366FA /* LogDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogDemoHomeViewController.h; sourceTree = "<group>"; };
+		FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LogDemoHomeViewController.mm; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FB8216191FC5761400BB7710 /* WaveLineDemoHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveLineDemoHomeController.h; sourceTree = "<group>"; };
 		FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveLineDemoHomeController.m; sourceTree = "<group>"; };
@@ -1544,6 +1562,7 @@
 				9E3E86B61D2A84BB0061664A /* libz.1.2.5.tbd in Frameworks */,
 				9E3E828C1D2A83920061664A /* CoreMedia.framework in Frameworks */,
 				9E3E828A1D2A838B0061664A /* AudioToolbox.framework in Frameworks */,
+				FB7E4FB01FFE1C0900B366FA /* mars.framework in Frameworks */,
 				FB50790E1E2618A900361E60 /* libWeiboSDK.a in Frameworks */,
 				9E3E82881D2A83830061664A /* VideoToolbox.framework in Frameworks */,
 				9E3E82861D2A837B0061664A /* SystemConfiguration.framework in Frameworks */,
@@ -3710,6 +3729,7 @@
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FB7E4F951FFE1C0900B366FA /* Log */,
 				FBCC20FC1F03783B006FE26C /* 广告 */,
 				FB16081A1EFA0DC200064DA2 /* 地图&定位 */,
 				FBA5F4041EF7AABC00F97958 /* 扫雷 */,
@@ -3729,7 +3749,7 @@
 				FB5078761E2618A900361E60 /* UI */,
 				FB50789A1E2618A900361E60 /* WebViewDemo */,
 				FB5077591E2618A800361E60 /* AppDelegate.h */,
-				FB50775A1E2618A800361E60 /* AppDelegate.m */,
+				FB50775A1E2618A800361E60 /* AppDelegate.mm */,
 				FBCF6AF51F8CAD3E00E3B58C /* ZCPDemoHomeViewController.h */,
 				FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */,
 			);
@@ -4036,6 +4056,33 @@
 				FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */,
 			);
 			path = "气泡拉伸";
+			sourceTree = "<group>";
+		};
+		FB7E4F951FFE1C0900B366FA /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				FB7E4F981FFE1C0900B366FA /* XLog */,
+				FB7E4F961FFE1C0900B366FA /* EPLog.mm */,
+				FB7E4F971FFE1C0900B366FA /* EPLog.h */,
+				FB7E4FBE1FFE1C2300B366FA /* LogDemoHomeViewController.h */,
+				FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		FB7E4F981FFE1C0900B366FA /* XLog */ = {
+			isa = PBXGroup;
+			children = (
+				FB7E4F991FFE1C0900B366FA /* shortlink_packer.h */,
+				FB7E4F9A1FFE1C0900B366FA /* mars.framework */,
+				FB7E4F9B1FFE1C0900B366FA /* longlink_packer.mm */,
+				FB7E4F9C1FFE1C0900B366FA /* shortlink_packer.mm */,
+				FB7E4F9D1FFE1C0900B366FA /* log_crypt.mm */,
+				FB7E4F9E1FFE1C0900B366FA /* longlink_packer.h */,
+				FB7E4F9F1FFE1C0900B366FA /* log_crypt.h */,
+				FB7E4FAE1FFE1C0900B366FA /* stnproto_logic.h */,
+			);
+			path = XLog;
 			sourceTree = "<group>";
 		};
 		FB8216111FC575D300BB7710 /* 波浪线 */ = {
@@ -4574,6 +4621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCF6B661F8E04B800E3B58C /* SquareButton.m in Sources */,
+				FB7E4FB21FFE1C0900B366FA /* shortlink_packer.mm in Sources */,
 				FBCF6B6A1F8E0A9800E3B58C /* MinesweeperToolMethod.m in Sources */,
 				FB50791F1E2618A900361E60 /* UIView+ViewCorner.m in Sources */,
 				FB50790D1E2618A900361E60 /* ShareDemoHomeController.m in Sources */,
@@ -4610,6 +4658,8 @@
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
 				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
+				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,
+				FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */,
 				FB5079201E2618A900361E60 /* SetFilletDemoHomeController.m in Sources */,
 				FB5078C91E2618A900361E60 /* ZCPURLSessionTool.m in Sources */,
 				FB5079131E2618A900361E60 /* TBDemoVC1.m in Sources */,
@@ -4632,6 +4682,7 @@
 				FB5079101E2618A900361E60 /* SinaShareDemoHomeController.m in Sources */,
 				FB9092A21F6F5735007EC93B /* Decorator.m in Sources */,
 				FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */,
+				FB7E4FC01FFE1C2300B366FA /* LogDemoHomeViewController.mm in Sources */,
 				FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */,
 				FB9092B11F6F5D0E007EC93B /* Nokia5230Phone.m in Sources */,
 				FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */,
@@ -4641,6 +4692,7 @@
 				FB5079221E2618A900361E60 /* SizeToFitDemoHomeController.m in Sources */,
 				FB0621D81ED275DD000AA258 /* ZCPUser.m in Sources */,
 				FB5078FC1E2618A900361E60 /* TipsView.m in Sources */,
+				FB7E4FAF1FFE1C0900B366FA /* EPLog.mm in Sources */,
 				FBCF6B761F8F528800E3B58C /* ZCPMinesweeperViewController.m in Sources */,
 				FB0621D21ED275DD000AA258 /* RuntimeDemo.m in Sources */,
 				FB5079141E2618A900361E60 /* TBDemoVC2.m in Sources */,
@@ -4666,7 +4718,7 @@
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,
 				FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */,
-				FB5078A11E2618A900361E60 /* AppDelegate.m in Sources */,
+				FB5078A11E2618A900361E60 /* AppDelegate.mm in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB0621D71ED275DD000AA258 /* ZCPUser+AddProperty.m in Sources */,
 				FBCF6B411F8CBC0A00E3B58C /* main.m in Sources */,
@@ -4941,10 +4993,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WG5B567WWS;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/Demo/OtherDemo/Log/XLog",
+					"$(PROJECT_DIR)/Demo/Demo/Log/XLog",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
@@ -5001,10 +5059,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WG5B567WWS;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/Demo/OtherDemo/Log/XLog",
+					"$(PROJECT_DIR)/Demo/Demo/Log/XLog",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";

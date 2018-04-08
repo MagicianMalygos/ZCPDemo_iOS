@@ -123,11 +123,12 @@
                 
                 // 设置描述文字
                 NSMutableAttributedString *attrStr = [NSMutableAttributedString new];
-                NSAttributedString *newAttributedString1 = [[NSAttributedString alloc] initWithString:@"更多" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: false ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
+                BOOL underline = NO;
+                NSAttributedString *newAttributedString1 = [[NSAttributedString alloc] initWithString:@"更多" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: underline ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
                 [attrStr appendAttributedString:newAttributedString1];
-                NSAttributedString *newAttributedString2 = [[NSAttributedString alloc] initWithString:@"精彩活动" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ff8447"], NSUnderlineStyleAttributeName: false ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
+                NSAttributedString *newAttributedString2 = [[NSAttributedString alloc] initWithString:@"精彩活动" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ff8447"], NSUnderlineStyleAttributeName: underline ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
                 [attrStr appendAttributedString:newAttributedString2];
-                NSAttributedString *newAttributedString3 = [[NSAttributedString alloc] initWithString:@"请关注这里" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: false ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
+                NSAttributedString *newAttributedString3 = [[NSAttributedString alloc] initWithString:@"请关注这里" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15 * SCREENWIDTH / 375], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"ffffff"], NSUnderlineStyleAttributeName: underline ? @(NSUnderlineStyleSingle) : @(NSUnderlineStyleNone)}];
                 [attrStr appendAttributedString:newAttributedString3];
                 weakSelf.textDescriptionLabel.attributedText = attrStr;
                 [weakSelf.textDescriptionLabel sizeToFit];

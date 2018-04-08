@@ -29,6 +29,7 @@
 #define APPURL_VIEW_IDENTIFIER_MAPHOME              @"mapHome"              // 地图 MapDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_ADHOME               @"adHome"               // 广告 ADDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_MINESWEEPER          @"minesweeper"          // 扫雷 ZCPMinesweeperViewController
+#define APPURL_VIEW_IDENTIFIER_LOG                  @"log"                  // 日志 LogDemoHomeViewController
 
 #pragma mark - UI
 

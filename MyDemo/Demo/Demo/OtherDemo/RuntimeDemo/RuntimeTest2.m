@@ -87,7 +87,7 @@ static NSMutableDictionary *map = nil;
 static char kDTActionHandlerTapGestureKey;
 static char kDTActionHandlerTapBlockKey;
 // 设置手势响应事件Block
-- (void)setTapActionWithBlock:(void (^)())block {
+- (void)setTapActionWithBlock:(void (^)(void))block {
     UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &kDTActionHandlerTapGestureKey);
     if (!gesture) {
         gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__handleActionForTapGesture:)];
@@ -100,7 +100,7 @@ static char kDTActionHandlerTapBlockKey;
 // 响应方法
 - (void)__handleActionForTapGesture:(UITapGestureRecognizer *)gesture {
     if (gesture.state == UIGestureRecognizerStateRecognized) {
-        void(^action)() = objc_getAssociatedObject(self, &kDTActionHandlerTapBlockKey);
+        void(^action)(void) = objc_getAssociatedObject(self, &kDTActionHandlerTapBlockKey);
         if (action) {
             action();
         }
