@@ -14,7 +14,7 @@
 
 @implementation ZCPIndicator
 
-IMP_SINGLETON(ZCPIndicator)
+IMP_SINGLETON
 
 #pragma mark - public methods
 - (void)showIndicator {

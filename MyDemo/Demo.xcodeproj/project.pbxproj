@@ -79,6 +79,7 @@
 		FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621C31ED275DC000AA258 /* SocketDemo.m */; };
 		FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */; };
 		FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */; };
+		FB2ECFF720B6595B00F362A0 /* LockDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2ECFF620B6595B00F362A0 /* LockDemoHomeViewController.m */; };
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
 		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
@@ -1304,6 +1305,8 @@
 		FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WTUtils.m"; sourceTree = "<group>"; };
 		FB1608201EFA0DD900064DA2 /* MapDemoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoHomeViewController.h; sourceTree = "<group>"; };
 		FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoHomeViewController.m; sourceTree = "<group>"; };
+		FB2ECFF520B6595B00F362A0 /* LockDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockDemoHomeViewController.h; sourceTree = "<group>"; };
+		FB2ECFF620B6595B00F362A0 /* LockDemoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockDemoHomeViewController.m; sourceTree = "<group>"; };
 		FB4600701E2716DA003504AD /* DashedSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedSettingView.h; sourceTree = "<group>"; };
 		FB4600711E2716DA003504AD /* DashedSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedSettingView.m; sourceTree = "<group>"; };
 		FB4600771E27170E003504AD /* DashedSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashedSettingView.xib; sourceTree = "<group>"; };
@@ -3726,9 +3729,19 @@
 			path = "地图&定位";
 			sourceTree = "<group>";
 		};
+		FB2ECFEB20B6583600F362A0 /* 锁 */ = {
+			isa = PBXGroup;
+			children = (
+				FB2ECFF520B6595B00F362A0 /* LockDemoHomeViewController.h */,
+				FB2ECFF620B6595B00F362A0 /* LockDemoHomeViewController.m */,
+			);
+			path = "锁";
+			sourceTree = "<group>";
+		};
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FB2ECFEB20B6583600F362A0 /* 锁 */,
 				FB7E4F951FFE1C0900B366FA /* Log */,
 				FBCC20FC1F03783B006FE26C /* 广告 */,
 				FB16081A1EFA0DC200064DA2 /* 地图&定位 */,
@@ -4062,8 +4075,8 @@
 			isa = PBXGroup;
 			children = (
 				FB7E4F981FFE1C0900B366FA /* XLog */,
-				FB7E4F961FFE1C0900B366FA /* EPLog.mm */,
 				FB7E4F971FFE1C0900B366FA /* EPLog.h */,
+				FB7E4F961FFE1C0900B366FA /* EPLog.mm */,
 				FB7E4FBE1FFE1C2300B366FA /* LogDemoHomeViewController.h */,
 				FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */,
 			);
@@ -4602,7 +4615,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/ZCPKit/ZCPKit/Common/Util/Navigator/viewMap.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -4625,6 +4637,7 @@
 				FBCF6B6A1F8E0A9800E3B58C /* MinesweeperToolMethod.m in Sources */,
 				FB50791F1E2618A900361E60 /* UIView+ViewCorner.m in Sources */,
 				FB50790D1E2618A900361E60 /* ShareDemoHomeController.m in Sources */,
+				FB2ECFF720B6595B00F362A0 /* LockDemoHomeViewController.m in Sources */,
 				FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */,
 				FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */,
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,

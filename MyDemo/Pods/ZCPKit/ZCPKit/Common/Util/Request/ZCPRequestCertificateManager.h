@@ -15,7 +15,7 @@
 DEF_SINGLETON
 
 // 允许https的证书通过
-- (void)allowHttpsCertificate:(NSString * _Nonnull)httpsURL completion:(void(^ _Nonnull)(void))completion;
-- (void)allowHttpsCertificate:(NSString * _Nonnull)httpsURL success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(void))failure;
+- (void)allowHttpsCertificate:(NSString *)httpsURL completion:(void(^)(void))completion;
+- (void)allowHttpsCertificate:(NSString *)httpsURL success:(void (^)(void))success failure:(void (^)(void))failure;
 
 @end

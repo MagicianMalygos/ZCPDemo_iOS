@@ -17,7 +17,7 @@
 // ----------------------------------------------------------------------
 #pragma mark - init
 // ----------------------------------------------------------------------
-- (instancetype)initWithParams:(NSDictionary *)params {
+- (instancetype)initWithQuery:(NSDictionary *)query {
     if (self = [super init]) {
     }
     return self;

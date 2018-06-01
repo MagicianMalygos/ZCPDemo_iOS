@@ -36,7 +36,7 @@
 
  @return 是否成功打开
  */
-BOOL openURL(NSString * _Nonnull url);
+BOOL openURL(NSString *url);
 
 // ----------------------------------------------------------------------
 #pragma mark - url工具类
@@ -46,6 +46,6 @@ BOOL openURL(NSString * _Nonnull url);
 
 DEF_SINGLETON
 
-- (BOOL)openURL:(nonnull NSString *)url;
+- (BOOL)openURL:(NSString *)url;
 
 @end

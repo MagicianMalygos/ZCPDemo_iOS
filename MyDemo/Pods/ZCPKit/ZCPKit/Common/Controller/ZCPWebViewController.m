@@ -267,12 +267,8 @@
     
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
         if ([request.URL isAppURL]) {
-            // pahaofang://
             openURL(urlString);
-//            [[PANavigator sharedInstance] openURL:request.URL.absoluteString];
         } else {
-            // http://
-            // always open in new view controller
             openURL(urlString);
         }
         flag = NO;

@@ -45,7 +45,7 @@ static NSDictionary *params;
 
 @implementation ZCPURLHelper
 
-IMP_SINGLETON(ZCPURLHelper)
+IMP_SINGLETON
 
 - (BOOL)openURL:(NSString *)url {
     BOOL handles = NO;
@@ -149,14 +149,14 @@ IMP_SINGLETON(ZCPURLHelper)
             self.urlString                      = url;
             shouldRetrospect                    = retrospect ? [retrospect boolValue] : ((openWith && [openWith isEqualToString:@"webview_keep"]) ? YES : NO);
             ZCPVCDataModel * vcDataModel        = [[ZCPControllerFactory sharedInstance] generateVCModelWithIdentifier:vcIdentifier];
-            vcDataModel.paramsForInitMethod     = [NSMutableDictionary dictionaryWithDictionary:params];
+            vcDataModel.queryForInitMethod     = [NSMutableDictionary dictionaryWithDictionary:params];
             [[ZCPNavigator sharedInstance] pushViewControllerWithViewDataModel:vcDataModel retrospect:shouldRetrospect animated:shouldAnaimate];
         }
         
     // app url - view
     } else {
         ZCPVCDataModel *vcDataModel         = [[ZCPControllerFactory sharedInstance] generateVCModelWithIdentifier:vcIdentifier];
-        vcDataModel.paramsForInitMethod     = [NSMutableDictionary dictionaryWithDictionary:params];
+        vcDataModel.queryForInitMethod     = [NSMutableDictionary dictionaryWithDictionary:params];
         [[ZCPNavigator sharedInstance] pushViewControllerWithViewDataModel:vcDataModel retrospect:shouldRetrospect animated:shouldAnaimate];
     }
 }

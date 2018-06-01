@@ -11,7 +11,7 @@
 @class ZCPServiceResult;
 @class ZCPServiceHandler;
 
-typedef void (^_Nullable ZCPServiceResultBlock)(void);
+typedef void (^ ZCPServiceResultBlock)(void);
 
 // ----------------------------------------------------------------------
 #pragma mark - ZCPServiceHandlerDelegate
@@ -20,7 +20,7 @@ typedef void (^_Nullable ZCPServiceResultBlock)(void);
 @protocol ZCPServiceHandlerDelegate <NSObject>
 
 // service处理后的回调协议
-- (void)service:(ZCPServiceHandler * _Nonnull)handler finishedWithResult:(ZCPServiceResult * _Nonnull)result;
+- (void)service:(ZCPServiceHandler *)handler finishedWithResult:(ZCPServiceResult *)result;
 
 @end
 
@@ -40,7 +40,7 @@ DEF_SINGLETON
 
 @interface ZCPServiceResult : NSObject
 
-@property (nonatomic, strong, nullable) NSError *error;
+@property (nonatomic, strong) NSError *error;
 @property (nonatomic, copy) ZCPServiceResultBlock action;
 
 @end

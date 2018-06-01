@@ -37,7 +37,8 @@
                     @{@"title": @"地图&定位"             , @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
                     @{@"title": @"广告"                  , @"class": APPURL_VIEW_IDENTIFIER_ADHOME},
                     @{@"title": @"扫雷"                  , @"class": APPURL_VIEW_IDENTIFIER_MINESWEEPER},
-                    @{@"title": @"日志"                  , @"class": APPURL_VIEW_IDENTIFIER_LOG}, nil];
+                    @{@"title": @"日志"                  , @"class": APPURL_VIEW_IDENTIFIER_LOG},
+                    @{@"title": @"锁"                    , @"class": APPURL_VIEW_IDENTIFIER_LOCK}, nil];
     }
     return _infoArr;
 }

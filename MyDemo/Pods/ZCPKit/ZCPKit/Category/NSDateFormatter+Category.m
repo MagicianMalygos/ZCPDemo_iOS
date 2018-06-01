@@ -14,6 +14,6 @@ static NSDateFormatter *staticDateFormatter;
 
 @implementation NSDateFormatter (Category)
 
-IMP_SINGLETON_P(NSDateFormatter, staticDateFormatter)
+IMP_SINGLETON_C(staticDateFormatter)
 
 @end

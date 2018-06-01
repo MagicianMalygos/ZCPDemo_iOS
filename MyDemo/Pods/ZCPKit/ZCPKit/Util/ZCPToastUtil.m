@@ -17,7 +17,7 @@ static UIView *toastView    = nil;  // toastView
 
 @implementation ZCPToastUtil
 
-IMP_SINGLETON(ZCPToastUtil)
+IMP_SINGLETON
 
 #pragma mark - function
 

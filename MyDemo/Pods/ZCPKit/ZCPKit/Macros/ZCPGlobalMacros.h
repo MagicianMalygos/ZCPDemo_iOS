@@ -59,11 +59,11 @@
 // 应用宽度
 #define APPLICATIONWIDTH                [[UIScreen mainScreen] bounds].size.width
 // 状态栏高度
-#define Height_StatusBar                20
+#define Height_StatusBar                (iPhoneX?44:20)
 // 导航栏高度
 #define Height_NavigationBar            44
 // TabBar高度
-#define Height_TabBar                   48
+#define Height_TabBar                   (iPhoneX?83:49)
 // 默认水平边距
 #define MARGIN_HORIZONTAL               15
 
@@ -97,11 +97,13 @@
 #endif
 
 // Block循环引用
-#define WEAK_SELF                       __weak typeof(self)weakSelf = self
-#define STRONG_SELF                     __strong typeof(weakSelf)self = weakSelf
+#define weakify(obj) autoreleasepool{} __weak typeof(obj) weak ## obj   = obj;
+#define strongify(obj) autoreleasepool{} __strong typeof(obj) obj = weak ## obj;
 
 // 从hex string获得uicolor
-#define UIColorFromRGB(rgbValue)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIColorFromRGB(rgbValue)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+                                                        green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+                                                         blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 // RGB色值
 #define RGB(r,g,b,a)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a/1.0]
 
@@ -128,8 +130,5 @@ do { \
 #define RANDOM(a, b)                    ((arc4random() % ((b) - (a) + 1)) + (a))
 // 生成随机颜色
 #define RANDOM_COLOR                    [UIColor colorWithRed:arc4random() % 10 / 10.0f green:arc4random() % 10 / 10.0f blue:arc4random() % 10 / 10.0f alpha:1.0f]
-// 盐，四位随机数
-#define SALT                            (arc4random() % 9000 + 1000)
-
 
 #endif /* ZCPGlobalMacros_h */

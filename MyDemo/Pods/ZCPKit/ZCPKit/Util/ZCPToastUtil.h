@@ -22,7 +22,7 @@ DEF_SINGLETON
  
  @param msg        要显示信息
  */
-+ (void)showToast:(nullable NSString *)msg;
++ (void)showToast:(NSString *)msg;
 /**
  显示吐司
  view为nil，则显示在keyWindow上
@@ -30,7 +30,7 @@ DEF_SINGLETON
  @param msg        要显示信息
  @param view       要在哪个视图上添加
  */
-+ (void)showToast:(nullable NSString *)msg inView:(nullable UIView *)view;
++ (void)showToast:(NSString *)msg inView:(UIView *)view;
 /**
  显示吐司
  
@@ -38,7 +38,7 @@ DEF_SINGLETON
  @param view       要在哪个视图上添加
  @param duration   显示时间
  */
-+ (void)showToast:(nullable NSString *)msg inView:(nullable UIView *)view duration:(NSTimeInterval)duration;
++ (void)showToast:(NSString *)msg inView:(UIView *)view duration:(NSTimeInterval)duration;
 
 /**
  显示吐司
@@ -48,7 +48,7 @@ DEF_SINGLETON
  @param duration   显示时间
  @param completion 完成执行块
  */
-+ (void)showToast:(nullable NSString *)msg inView:(nullable UIView *)view duration:(NSTimeInterval)duration completion:(void(^ __nullable)(void))completion;
++ (void)showToast:(NSString *)msg inView:(UIView *)view duration:(NSTimeInterval)duration completion:(void(^)(void))completion;
 /**
  显示吐司
  
@@ -57,6 +57,6 @@ DEF_SINGLETON
  @param duration   显示时间
  @param completion 完成执行块
  */
-+ (void)showToastWithCustomView:(nonnull UIView *)customView inView:(nullable UIView *)view duration:(NSTimeInterval)duration completion:(void(^ __nullable)(void))completion;
++ (void)showToastWithCustomView:(UIView *)customView inView:(UIView *)view duration:(NSTimeInterval)duration completion:(void(^)(void))completion;
 
 @end

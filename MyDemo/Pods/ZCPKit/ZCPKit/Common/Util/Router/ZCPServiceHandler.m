@@ -13,7 +13,7 @@
 // ----------------------------------------------------------------------
 @implementation ZCPServiceHandler
 
-IMP_SINGLETON(ZCPServiceHandler)
+IMP_SINGLETON
 
 // hello world
 - (void)helloWorld:(NSDictionary *)params {

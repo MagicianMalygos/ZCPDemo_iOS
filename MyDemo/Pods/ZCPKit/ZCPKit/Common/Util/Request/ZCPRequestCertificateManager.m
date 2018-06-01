@@ -25,7 +25,7 @@ typedef void (^ZCPRequestCertificateFailureHandler)(void);
 
 @implementation ZCPRequestCertificateManager
 
-IMP_SINGLETON(ZCPRequestCertificateManager)
+IMP_SINGLETON
 
 #pragma mark - public method
 

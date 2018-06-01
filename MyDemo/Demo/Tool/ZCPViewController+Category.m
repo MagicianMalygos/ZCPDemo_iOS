@@ -20,7 +20,7 @@
 }
 
 - (void)hook_viewWillAppear:(BOOL)animated {
-    NSLog(@"%@ will Appear", NSStringFromClass(self.class));
+//    NSLog(@"%@ will Appear", NSStringFromClass(self.class));
 }
 
 @end

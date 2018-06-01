@@ -16,11 +16,23 @@
 
 DEF_SINGLETON
 
-- (void)setupRootViewController:(nonnull UIViewController *)rootViewController;
+#pragma mark - 初始化
 
-// ----------------------------------------------------------------------
+/**
+ 读取viewMap文件中的控制器信息
+ 
+ @param viewMapNamed viewMap文件名
+ */
++ (void)readViewControllerMapWithViewMapNamed:(NSString *)viewMapNamed;
+
+/**
+ 初始化根视图控制器
+
+ @param rootViewController 根视图控制器
+ */
+- (void)setupRootViewController:(UIViewController *)rootViewController;
+
 #pragma mark - jump
-// ----------------------------------------------------------------------
 
 /**
  根据配置参数进行页面跳转
@@ -29,9 +41,9 @@ DEF_SINGLETON
  @param initParams         初始化方法参数
  @param propertyDictionary 属性字典
  */
-- (void)gotoViewWithIdentifier:(nonnull NSString *)identifier
-                  queryForInit:(nullable NSDictionary *)initParams
-            propertyDictionary:(nullable NSDictionary *)propertyDictionary;
+- (void)gotoViewWithIdentifier:(NSString *)identifier
+                  queryForInit:(NSDictionary *)initParams
+            propertyDictionary:(NSDictionary *)propertyDictionary;
 
 /**
  根据配置参数进行页面跳转
@@ -42,9 +54,9 @@ DEF_SINGLETON
  @param retrospect         是否回溯
  @param animated           是否需要跳转动画
  */
-- (void)gotoViewWithIdentifier:(nonnull NSString *)identifier
-                  queryForInit:(nullable NSDictionary *)initParams
-            propertyDictionary:(nullable NSDictionary *)propertyDictionary
+- (void)gotoViewWithIdentifier:(NSString *)identifier
+                  queryForInit:(NSDictionary *)initParams
+            propertyDictionary:(NSDictionary *)propertyDictionary
                     retrospect:(BOOL)retrospect
                       animated:(BOOL)animated;
 

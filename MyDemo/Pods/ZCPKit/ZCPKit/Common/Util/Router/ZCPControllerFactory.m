@@ -13,47 +13,31 @@
 #import "ZCPViewMap.h"
 #import "ZCPBaseNavigator.h"
 
-static NSString *viewMapFileName = @"viewMap";
-
 @interface ZCPControllerFactory ()
 
-@property (nonatomic, strong) NSMutableDictionary *viewModelDict;
+@property (nonatomic, strong) NSMutableDictionary *vcDataModelDict;
 
 @end
 
 @implementation ZCPControllerFactory
 
-IMP_SINGLETON(ZCPControllerFactory)
+@synthesize vcDataModelDict = _vcDataModelDict;
 
-// ----------------------------------------------------------------------
-#pragma mark - init
-// ----------------------------------------------------------------------
+IMP_SINGLETON
 
-+ (void)setViewMap:(NSString *)viewMap {
-    viewMapFileName = viewMap;
-}
-
-- (instancetype)init {
-    if (self = [super init]) {
-        [self readViewControllerMap];
-    }
-    return self;
-}
-
-// ----------------------------------------------------------------------
 #pragma mark - 生成控制器方法
-// ----------------------------------------------------------------------
 
-#pragma mark 通过控制器标识 生成 控制器模型
-- (nullable ZCPVCDataModel *)generateVCModelWithIdentifier:(nonnull NSString *)identifier {
+// 通过控制器标识 生成 控制器模型
+- (ZCPVCDataModel *)generateVCModelWithIdentifier:(NSString *)identifier {
     if (!identifier) {
         return nil;
     }
-    ZCPVCDataModel *vcDataModel = [self.viewModelDict objectForKey:identifier];
+    ZCPVCDataModel *vcDataModel = [self.vcDataModelDict objectForKey:identifier];
     return vcDataModel;
 }
-#pragma mark 通过控制器模型 生成 控制器对象
-- (nullable UIViewController *)generateVCWithVCModel:(nonnull ZCPVCDataModel *)vcDataModel {
+
+// 通过控制器模型 生成 控制器对象
+- (UIViewController *)generateVCWithVCModel:(ZCPVCDataModel *)vcDataModel {
     if (!vcDataModel) {
         return nil;
     }
@@ -66,32 +50,35 @@ IMP_SINGLETON(ZCPControllerFactory)
     }
     return viewController;
 }
-#pragma mark 通过控制器标识 生成 控制器对象
-- (nullable UIViewController *)generateVCWithIdentifier:(nonnull NSString *)identifier {
+
+// 通过控制器标识 生成 控制器对象
+- (UIViewController *)generateVCWithIdentifier:(NSString *)identifier {
     ZCPVCDataModel      *vcDataModel    = [self generateVCModelWithIdentifier:identifier];
     UIViewController    *vc             = [self generateVCWithVCModel:vcDataModel];
     return vc;
 }
 
-// ----------------------------------------------------------------------
 #pragma mark - 控制器配置方法
-// ----------------------------------------------------------------------
 
+// 根据控制器模型去设置控制器对象
 - (void)configController:(UIViewController *)controller withVCDataModel:(ZCPVCDataModel *)vcDataModel shouldCallInitMethod:(BOOL)shouldCallInitMethod {
     if (controller && vcDataModel) {
         // 获取相关参数
         Class           viewClass           = vcDataModel.vcClass;
         SEL             initMethod          = [vcDataModel.vcInitMethod pointerValue];
-        NSDictionary    *paramsForInit      = vcDataModel.paramsForInitMethod;
+        SEL             instanceMethod      = [vcDataModel.vcInstanceMethod pointerValue];
+        NSDictionary    *queryForInitM      = vcDataModel.queryForInitMethod;
+        NSDictionary    *queryForInstanceM  = vcDataModel.queryForInstanceMethod;
         NSDictionary    *propertyDict       = vcDataModel.propertyDictionary;
         
         if (viewClass && initMethod) {
             // 初始化方法
             if ([controller respondsToSelector:initMethod] && shouldCallInitMethod) {
                 if ([controller respondsToSelector:initMethod]) {
-                    SuppressPerformSelectorLeakWarning(
-                                                       [controller performSelector:initMethod withObject:paramsForInit];
-                                                       );
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                    [controller performSelector:initMethod withObject:queryForInitM];
+#pragma clang diagnostic pop
                 }
             }
             // 属性设置
@@ -104,48 +91,21 @@ IMP_SINGLETON(ZCPControllerFactory)
                     }
                 }
             }
-        }
-    }
-}
-
-// ----------------------------------------------------------------------
-#pragma mark - 私有方法
-// ----------------------------------------------------------------------
-
-#pragma mark 从viewmap中读取控制器信息
--  (void)readViewControllerMap {
-    
-    NSString *viewMapPath   = [[NSBundle mainBundle] pathForResource:viewMapFileName ofType:@"plist"];
-    NSArray *viewMaps       = [NSArray arrayWithContentsOfFile:viewMapPath];
-    
-    if (viewMapPath && viewMaps.count) {
-        for (NSDictionary *viewMap in viewMaps) {
-            NSString *className                 = [viewMap objectForKey:@"className"];
-            NSString *identifier                = [viewMap objectForKey:@"identifier"];
-            
-            // 生成identifier:viewDataModel键值对，并加入视图模型字典
-            if (className && className.length && identifier && identifier.length) {
-                Class vcClass                   = NSClassFromString(className);
-                SEL initMethod                  = @selector(initWithParams:);
-                
-                // 创建ViewController 配置对象
-                ZCPVCDataModel *viewDataModel   = [[ZCPVCDataModel alloc] init];
-                viewDataModel.vcClass           = vcClass;
-                viewDataModel.vcInitMethod      = [NSValue valueWithPointer:initMethod];
-                
-                [self.viewModelDict setObject:viewDataModel forKey:identifier];
+            // 实例方法
+            if (queryForInstanceM && [controller respondsToSelector:instanceMethod]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                [controller performSelector:instanceMethod withObject:queryForInstanceM];
+#pragma clang diagnostic pop
             }
         }
     }
 }
 
-// ----------------------------------------------------------------------
 #pragma mark - 自定义生成控制器栈方法
-// ----------------------------------------------------------------------
 
-#pragma mark 生成 Nav - Tab - VCs 控制器栈
-- (nonnull UINavigationController *)generate_Nav_Tab_VCs_Stack {
-    
+// 生成 Nav - Tab - VCs 控制器栈
+- (UINavigationController *)generate_Nav_Tab_VCs_Stack {
     /*
      iOS 7 设置UIImage的渲染模式：UIImageRenderingMode
      UIImageRenderingModeAutomatic           // 根据图片的使用环境和所处的绘图上下文自动调整渲染模式。
@@ -191,14 +151,20 @@ IMP_SINGLETON(ZCPControllerFactory)
     return navigationController;
 }
 
-// ----------------------------------------------------------------------
-#pragma mark - getter / setter
-// ----------------------------------------------------------------------
-- (NSMutableDictionary *)viewModelDict {
-    if (!_viewModelDict) {
-        _viewModelDict = [NSMutableDictionary dictionary];
+#pragma mark - getters and setters
+
+- (void)setVCDataModelDict:(NSMutableDictionary *)vcDataModelDict {
+    if (!vcDataModelDict) {
+        return;
     }
-    return _viewModelDict;
+    _vcDataModelDict = vcDataModelDict;
+}
+
+- (NSMutableDictionary *)vcDataModelDict {
+    if (!_vcDataModelDict) {
+        _vcDataModelDict = [NSMutableDictionary dictionary];
+    }
+    return _vcDataModelDict;
 }
 
 @end

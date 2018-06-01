@@ -226,5 +226,13 @@
 		<key>description</key>
 		<string>日志</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>LockDemoHomeViewController</string>
+		<key>identifier</key>
+		<string>lock</string>
+		<key>description</key>
+		<string>锁</string>
+	</dict>
 </array>
 </plist>

@@ -13,6 +13,6 @@
 
 @interface NSDateFormatter (Category)
 
-DEF_SINGLETON_P(staticDateFormatter)
+DEF_SINGLETON_C(staticDateFormatter)
 
 @end

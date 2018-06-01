@@ -102,6 +102,28 @@
     }
 }
 
+- (void)goToTabBarItemIndex:(int)index {
+    if ([self.rootViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)self.rootViewController;
+        UIViewController *rootViewController = navigationController.viewControllers[0];
+        
+        if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+            UITabBarController *tabBarController = (UITabBarController *)rootViewController;
+            
+            int tabBarItemIndex             = index;
+            int tabBarItemCount             = (int)tabBarController.viewControllers.count;
+            
+            // popToRoot
+            [self popToRoot:nil];
+            
+            // change tabItem
+            if (tabBarItemIndex >= 0 && tabBarItemIndex < tabBarItemCount) {
+                [tabBarController setSelectedIndex:tabBarItemIndex];
+            }
+        }
+    }
+}
+
 // ----------------------------------------------------------------------
 #pragma mark - 安全基础跳转方法
 // ----------------------------------------------------------------------

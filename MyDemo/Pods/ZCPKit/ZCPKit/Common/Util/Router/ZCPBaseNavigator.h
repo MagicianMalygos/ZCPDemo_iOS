@@ -10,33 +10,73 @@
 @class ZCPVCDataModel;
 @protocol ZCPNavigatorProtocol;
 
-// 控制器跳转方式
+/**
+ 控制器跳转方式
+
+ - ZCPViewNavJumpMode: 导航方式跳转
+ - ZCPViewModalJumpMode: 模态方式跳转
+ */
 typedef NS_ENUM(NSInteger, ZCPViewJumpMode) {
-    ZCPViewNavJumpMode      = 1,    // 导航方式跳转
-    ZCPViewModalJumpMode    = 2     // 模态方式跳转
+    ZCPViewNavJumpMode      = 1,
+    ZCPViewModalJumpMode    = 2
 };
+
 
 // ----------------------------------------------------------------------
 #pragma mark - 基础导航器
 // ----------------------------------------------------------------------
 @interface ZCPBaseNavigator : NSObject
 
-// 导航栈
+/// 导航栈
 @property (nonatomic, strong, readonly) NSArray  *navigationStack;
-// 导航栈的根视图控制器
+/// 导航栈的根视图控制器
 @property (nonatomic, readonly) UIViewController *rootViewController;
-// 导航栈的顶部视图控制器
+/// 导航栈的顶部视图控制器
 @property (nonatomic, readonly) UIViewController *topViewController;
 
-// 根据ViewDataModel获得视图控制器对象，并进行跳转
+#pragma mark - push
+
+/**
+ 跳转到控制器模型描述的视图控制器
+
+ @param vcDataModel 控制器模型
+ @param animated 转场动画
+ @return 控制器对象
+ */
 - (UIViewController *)pushViewControllerWithViewDataModel:(ZCPVCDataModel *)vcDataModel animated:(BOOL)animated;
-// 根据viewDataModel配置进入一个新的viewcontroller页面
+
+/**
+ 跳转到控制器模型描述的视图控制器
+
+ @param vcDataModel 控制器模型
+ @param retrospect 回溯
+ @param animated 转场动画
+ @return 控制器对象
+ */
 - (UIViewController *)pushViewControllerWithViewDataModel:(ZCPVCDataModel *)vcDataModel retrospect:(BOOL)retrospect animated:(BOOL)animated;
 
-// 视图返回
+#pragma mark - pop
+
+/**
+ 栈顶控制器退出控制器栈
+
+ @param params APPURL_PARAM_ANIMATED
+ */
 - (void)viewExit:(NSDictionary *)params;
-// 退到root页面
+
+/**
+ 回退到栈底控制器
+
+ @param params APPURL_PARAM_ANIMATED
+ */
 - (void)popToRoot:(NSDictionary *)params;
+
+/**
+ 切换到指定TabBarItem
+
+ @param index tabBarItem索引值
+ */
+- (void)goToTabBarItemIndex:(int)index;
 
 @end
 
@@ -48,20 +88,21 @@ typedef NS_ENUM(NSInteger, ZCPViewJumpMode) {
 @protocol ZCPNavigatorProtocol <NSObject>
 
 @required
-- (instancetype)initWithParams:(NSDictionary *)params;
+- (instancetype)initWithQuery:(NSDictionary *)query;
 
 @end
+
 
 // ----------------------------------------------------------------------
 #pragma mark - UIViewController导航分类
 // ----------------------------------------------------------------------
 @interface UIViewController (ZCPNavigator)
 
-// 前一控制器
+/// 前一控制器
 @property (nonatomic, weak) UIViewController *formerViewController;
-// 后一控制器
+/// 后一控制器
 @property (nonatomic, weak) UIViewController *latterViewController;
-// 视图跳转模式
+/// 视图跳转模式
 @property (nonatomic, assign) ZCPViewJumpMode viewJumpModel;
 
 - (UIViewController *)formerViewController;
