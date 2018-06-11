@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB16875D1F94B346009B1B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16875C1F94B346009B1B04 /* AppDelegate.m */; };
+		FB1687601F94B346009B1B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16875F1F94B346009B1B04 /* ViewController.m */; };
+		FB1687631F94B346009B1B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1687611F94B346009B1B04 /* Main.storyboard */; };
+		FB1687651F94B346009B1B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1687641F94B346009B1B04 /* Assets.xcassets */; };
+		FB1687681F94B346009B1B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1687661F94B346009B1B04 /* LaunchScreen.storyboard */; };
+		FB16876B1F94B346009B1B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16876A1F94B346009B1B04 /* main.m */; };
+		FB1687751F94B346009B1B04 /* ARDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1687741F94B346009B1B04 /* ARDemoTests.m */; };
+		FB1687801F94B346009B1B04 /* ARDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16877F1F94B346009B1B04 /* ARDemoUITests.m */; };
+		FB16878F1F94B421009B1B04 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16878E1F94B421009B1B04 /* ARViewController.m */; };
+		FB1687921F94B430009B1B04 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1687911F94B430009B1B04 /* ARKit.framework */; };
+		FB1687941F94B436009B1B04 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1687931F94B436009B1B04 /* SceneKit.framework */; };
+		FB1687971F94BDAD009B1B04 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1687961F94BDAD009B1B04 /* art.scnassets */; };
+		FB1DAB0D1FB9834600998418 /* ARCapturePlaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DAB0C1FB9834600998418 /* ARCapturePlaneViewController.m */; };
+		FB7704DB1F9D9669001196E2 /* PlaneNetNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7704DA1F9D9669001196E2 /* PlaneNetNode.m */; };
+		FBCE5A591FBBEA1000DB2253 /* CameraTrackingStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE5A581FBBEA0F00DB2253 /* CameraTrackingStateView.m */; };
+		FBCE5A5C1FBC224600DB2253 /* ARCameraTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE5A5B1FBC224600DB2253 /* ARCameraTrackingViewController.m */; };
+		FBCE5A5F1FBC225400DB2253 /* ARObjectMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE5A5E1FBC225400DB2253 /* ARObjectMoveViewController.m */; };
+		FBCE5A621FBC3B5A00DB2253 /* ARManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCE5A611FBC3B5A00DB2253 /* ARManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB1687711F94B346009B1B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB1687501F94B346009B1B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB1687571F94B346009B1B04;
+			remoteInfo = ARDemo;
+		};
+		FB16877C1F94B346009B1B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB1687501F94B346009B1B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB1687571F94B346009B1B04;
+			remoteInfo = ARDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB1687581F94B346009B1B04 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB16875B1F94B346009B1B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB16875C1F94B346009B1B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB16875E1F94B346009B1B04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB16875F1F94B346009B1B04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB1687621F94B346009B1B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB1687641F94B346009B1B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB1687671F94B346009B1B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB1687691F94B346009B1B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB16876A1F94B346009B1B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB1687701F94B346009B1B04 /* ARDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1687741F94B346009B1B04 /* ARDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDemoTests.m; sourceTree = "<group>"; };
+		FB1687761F94B346009B1B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB16877B1F94B346009B1B04 /* ARDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB16877F1F94B346009B1B04 /* ARDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDemoUITests.m; sourceTree = "<group>"; };
+		FB1687811F94B346009B1B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB16878D1F94B421009B1B04 /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		FB16878E1F94B421009B1B04 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		FB1687911F94B430009B1B04 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		FB1687931F94B436009B1B04 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		FB1687961F94BDAD009B1B04 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		FB1DAB0B1FB9834600998418 /* ARCapturePlaneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCapturePlaneViewController.h; sourceTree = "<group>"; };
+		FB1DAB0C1FB9834600998418 /* ARCapturePlaneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARCapturePlaneViewController.m; sourceTree = "<group>"; };
+		FB7704D91F9D9669001196E2 /* PlaneNetNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaneNetNode.h; sourceTree = "<group>"; };
+		FB7704DA1F9D9669001196E2 /* PlaneNetNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaneNetNode.m; sourceTree = "<group>"; };
+		FBCE5A571FBBEA0F00DB2253 /* CameraTrackingStateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraTrackingStateView.h; sourceTree = "<group>"; };
+		FBCE5A581FBBEA0F00DB2253 /* CameraTrackingStateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraTrackingStateView.m; sourceTree = "<group>"; };
+		FBCE5A5A1FBC224600DB2253 /* ARCameraTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARCameraTrackingViewController.h; sourceTree = "<group>"; };
+		FBCE5A5B1FBC224600DB2253 /* ARCameraTrackingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARCameraTrackingViewController.m; sourceTree = "<group>"; };
+		FBCE5A5D1FBC225400DB2253 /* ARObjectMoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARObjectMoveViewController.h; sourceTree = "<group>"; };
+		FBCE5A5E1FBC225400DB2253 /* ARObjectMoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARObjectMoveViewController.m; sourceTree = "<group>"; };
+		FBCE5A601FBC3B5A00DB2253 /* ARManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARManager.h; sourceTree = "<group>"; };
+		FBCE5A611FBC3B5A00DB2253 /* ARManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB1687551F94B346009B1B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1687941F94B436009B1B04 /* SceneKit.framework in Frameworks */,
+				FB1687921F94B430009B1B04 /* ARKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16876D1F94B346009B1B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1687781F94B346009B1B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB16874F1F94B346009B1B04 = {
+			isa = PBXGroup;
+			children = (
+				FB16875A1F94B346009B1B04 /* ARDemo */,
+				FB1687731F94B346009B1B04 /* ARDemoTests */,
+				FB16877E1F94B346009B1B04 /* ARDemoUITests */,
+				FB1687591F94B346009B1B04 /* Products */,
+				FB1687901F94B430009B1B04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB1687591F94B346009B1B04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB1687581F94B346009B1B04 /* ARDemo.app */,
+				FB1687701F94B346009B1B04 /* ARDemoTests.xctest */,
+				FB16877B1F94B346009B1B04 /* ARDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB16875A1F94B346009B1B04 /* ARDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FB1687961F94BDAD009B1B04 /* art.scnassets */,
+				FB16875B1F94B346009B1B04 /* AppDelegate.h */,
+				FB16875C1F94B346009B1B04 /* AppDelegate.m */,
+				FB16875E1F94B346009B1B04 /* ViewController.h */,
+				FB16875F1F94B346009B1B04 /* ViewController.m */,
+				FB1687611F94B346009B1B04 /* Main.storyboard */,
+				FB1687641F94B346009B1B04 /* Assets.xcassets */,
+				FB1687661F94B346009B1B04 /* LaunchScreen.storyboard */,
+				FB1687691F94B346009B1B04 /* Info.plist */,
+				FB16876A1F94B346009B1B04 /* main.m */,
+				FBCE5A571FBBEA0F00DB2253 /* CameraTrackingStateView.h */,
+				FBCE5A581FBBEA0F00DB2253 /* CameraTrackingStateView.m */,
+				FB7704D91F9D9669001196E2 /* PlaneNetNode.h */,
+				FB7704DA1F9D9669001196E2 /* PlaneNetNode.m */,
+				FB16878D1F94B421009B1B04 /* ARViewController.h */,
+				FB16878E1F94B421009B1B04 /* ARViewController.m */,
+				FB1DAB0B1FB9834600998418 /* ARCapturePlaneViewController.h */,
+				FB1DAB0C1FB9834600998418 /* ARCapturePlaneViewController.m */,
+				FBCE5A5A1FBC224600DB2253 /* ARCameraTrackingViewController.h */,
+				FBCE5A5B1FBC224600DB2253 /* ARCameraTrackingViewController.m */,
+				FBCE5A5D1FBC225400DB2253 /* ARObjectMoveViewController.h */,
+				FBCE5A5E1FBC225400DB2253 /* ARObjectMoveViewController.m */,
+				FBCE5A601FBC3B5A00DB2253 /* ARManager.h */,
+				FBCE5A611FBC3B5A00DB2253 /* ARManager.m */,
+			);
+			path = ARDemo;
+			sourceTree = "<group>";
+		};
+		FB1687731F94B346009B1B04 /* ARDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB1687741F94B346009B1B04 /* ARDemoTests.m */,
+				FB1687761F94B346009B1B04 /* Info.plist */,
+			);
+			path = ARDemoTests;
+			sourceTree = "<group>";
+		};
+		FB16877E1F94B346009B1B04 /* ARDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB16877F1F94B346009B1B04 /* ARDemoUITests.m */,
+				FB1687811F94B346009B1B04 /* Info.plist */,
+			);
+			path = ARDemoUITests;
+			sourceTree = "<group>";
+		};
+		FB1687901F94B430009B1B04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB1687931F94B436009B1B04 /* SceneKit.framework */,
+				FB1687911F94B430009B1B04 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB1687571F94B346009B1B04 /* ARDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1687841F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemo" */;
+			buildPhases = (
+				FB1687541F94B346009B1B04 /* Sources */,
+				FB1687551F94B346009B1B04 /* Frameworks */,
+				FB1687561F94B346009B1B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARDemo;
+			productName = ARDemo;
+			productReference = FB1687581F94B346009B1B04 /* ARDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB16876F1F94B346009B1B04 /* ARDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1687871F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemoTests" */;
+			buildPhases = (
+				FB16876C1F94B346009B1B04 /* Sources */,
+				FB16876D1F94B346009B1B04 /* Frameworks */,
+				FB16876E1F94B346009B1B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1687721F94B346009B1B04 /* PBXTargetDependency */,
+			);
+			name = ARDemoTests;
+			productName = ARDemoTests;
+			productReference = FB1687701F94B346009B1B04 /* ARDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB16877A1F94B346009B1B04 /* ARDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB16878A1F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemoUITests" */;
+			buildPhases = (
+				FB1687771F94B346009B1B04 /* Sources */,
+				FB1687781F94B346009B1B04 /* Frameworks */,
+				FB1687791F94B346009B1B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB16877D1F94B346009B1B04 /* PBXTargetDependency */,
+			);
+			name = ARDemoUITests;
+			productName = ARDemoUITests;
+			productReference = FB16877B1F94B346009B1B04 /* ARDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB1687501F94B346009B1B04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = zcp;
+				TargetAttributes = {
+					FB1687571F94B346009B1B04 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					FB16876F1F94B346009B1B04 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB1687571F94B346009B1B04;
+					};
+					FB16877A1F94B346009B1B04 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB1687571F94B346009B1B04;
+					};
+				};
+			};
+			buildConfigurationList = FB1687531F94B346009B1B04 /* Build configuration list for PBXProject "ARDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB16874F1F94B346009B1B04;
+			productRefGroup = FB1687591F94B346009B1B04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB1687571F94B346009B1B04 /* ARDemo */,
+				FB16876F1F94B346009B1B04 /* ARDemoTests */,
+				FB16877A1F94B346009B1B04 /* ARDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB1687561F94B346009B1B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1687681F94B346009B1B04 /* LaunchScreen.storyboard in Resources */,
+				FB1687971F94BDAD009B1B04 /* art.scnassets in Resources */,
+				FB1687651F94B346009B1B04 /* Assets.xcassets in Resources */,
+				FB1687631F94B346009B1B04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16876E1F94B346009B1B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1687791F94B346009B1B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB1687541F94B346009B1B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBCE5A591FBBEA1000DB2253 /* CameraTrackingStateView.m in Sources */,
+				FB1687601F94B346009B1B04 /* ViewController.m in Sources */,
+				FBCE5A5C1FBC224600DB2253 /* ARCameraTrackingViewController.m in Sources */,
+				FB7704DB1F9D9669001196E2 /* PlaneNetNode.m in Sources */,
+				FBCE5A621FBC3B5A00DB2253 /* ARManager.m in Sources */,
+				FB16876B1F94B346009B1B04 /* main.m in Sources */,
+				FB1DAB0D1FB9834600998418 /* ARCapturePlaneViewController.m in Sources */,
+				FB16875D1F94B346009B1B04 /* AppDelegate.m in Sources */,
+				FB16878F1F94B421009B1B04 /* ARViewController.m in Sources */,
+				FBCE5A5F1FBC225400DB2253 /* ARObjectMoveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16876C1F94B346009B1B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1687751F94B346009B1B04 /* ARDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB1687771F94B346009B1B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1687801F94B346009B1B04 /* ARDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB1687721F94B346009B1B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB1687571F94B346009B1B04 /* ARDemo */;
+			targetProxy = FB1687711F94B346009B1B04 /* PBXContainerItemProxy */;
+		};
+		FB16877D1F94B346009B1B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB1687571F94B346009B1B04 /* ARDemo */;
+			targetProxy = FB16877C1F94B346009B1B04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB1687611F94B346009B1B04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1687621F94B346009B1B04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB1687661F94B346009B1B04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1687671F94B346009B1B04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB1687821F94B346009B1B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB1687831F94B346009B1B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB1687851F94B346009B1B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB1687861F94B346009B1B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB1687881F94B346009B1B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARDemo.app/ARDemo";
+			};
+			name = Debug;
+		};
+		FB1687891F94B346009B1B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARDemo.app/ARDemo";
+			};
+			name = Release;
+		};
+		FB16878B1F94B346009B1B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARDemo;
+			};
+			name = Debug;
+		};
+		FB16878C1F94B346009B1B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
+				INFOPLIST_FILE = ARDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.ARDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ARDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB1687531F94B346009B1B04 /* Build configuration list for PBXProject "ARDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1687821F94B346009B1B04 /* Debug */,
+				FB1687831F94B346009B1B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1687841F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1687851F94B346009B1B04 /* Debug */,
+				FB1687861F94B346009B1B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1687871F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1687881F94B346009B1B04 /* Debug */,
+				FB1687891F94B346009B1B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB16878A1F94B346009B1B04 /* Build configuration list for PBXNativeTarget "ARDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB16878B1F94B346009B1B04 /* Debug */,
+				FB16878C1F94B346009B1B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB1687501F94B346009B1B04 /* Project object */;
+}

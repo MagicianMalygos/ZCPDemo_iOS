@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQp-Rr-0Ah">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FZg-Ld-pAa">
+            <objects>
+                <navigationController id="KQp-Rr-0Ah" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NCh-5X-bMi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LjS-79-bLa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNy-VM-8u0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="34"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kxD-TX-ktL"/>
+                        <viewControllerLayoutGuide type="bottom" id="LAg-1h-F3i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-hl-3Ob">
+                                <rect key="frame" x="147.5" y="134" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.51394314240000005" blue="0.26139322920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3E2-s1-P4K"/>
+                                    <constraint firstAttribute="width" constant="80" id="CwK-Jb-Mbf"/>
+                                </constraints>
+                                <state key="normal" title="捕捉平地">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCapturePlaneButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WaF-lN-iqe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vke-u4-32N">
+                                <rect key="frame" x="147" y="84" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.51394314240000005" blue="0.26139322920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BOE-nd-3tI"/>
+                                    <constraint firstAttribute="width" constant="80" id="fha-wM-Hsk"/>
+                                </constraints>
+                                <state key="normal" title="开启AR">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOpenARButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4S-zo-tPk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfn-sS-b5A">
+                                <rect key="frame" x="147.5" y="184" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.51394314240000005" blue="0.26139322920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Loc-mb-dWx"/>
+                                    <constraint firstAttribute="width" constant="80" id="bH9-3B-X2j"/>
+                                </constraints>
+                                <state key="normal" title="相机追踪">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCameraTrackingButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIA-Pu-Gpm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wku-5w-xja">
+                                <rect key="frame" x="147" y="234" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.51394314240000005" blue="0.26139322920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="39g-i6-RBz"/>
+                                    <constraint firstAttribute="width" constant="80" id="S2z-Ss-W18"/>
+                                </constraints>
+                                <state key="normal" title="物体移动">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickObjectMoveButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySe-8d-mOH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vke-u4-32N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7UI-X4-NxQ"/>
+                            <constraint firstItem="wku-5w-xja" firstAttribute="top" secondItem="rfn-sS-b5A" secondAttribute="bottom" constant="20" id="8si-lc-b49"/>
+                            <constraint firstItem="rfn-sS-b5A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OZA-Sb-hLv"/>
+                            <constraint firstItem="A0U-hl-3Ob" firstAttribute="top" secondItem="vke-u4-32N" secondAttribute="bottom" constant="20" id="ewI-Dr-lbu"/>
+                            <constraint firstItem="wku-5w-xja" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ob9-b0-3cr"/>
+                            <constraint firstItem="rfn-sS-b5A" firstAttribute="top" secondItem="A0U-hl-3Ob" secondAttribute="bottom" constant="20" id="vEw-0b-UTX"/>
+                            <constraint firstItem="vke-u4-32N" firstAttribute="top" secondItem="kxD-TX-ktL" secondAttribute="bottom" constant="20" id="vcd-p3-KFe"/>
+                            <constraint firstItem="A0U-hl-3Ob" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGP-ij-LDm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f7I-0W-xun"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="34"/>
+        </scene>
+    </scenes>
+</document>
