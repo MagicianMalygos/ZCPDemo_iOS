@@ -68,7 +68,7 @@
 //    [self testNSRecursiveLock];
 
     // NSConditionLock
-    [self testNSConditionLock];
+//    [self testNSConditionLock];
     
     // synchronized
 //    [self testSynchronized];
@@ -79,7 +79,11 @@
 
 #pragma mark - lock
 
+- (void)testLock {
+}
+
 - (void)testOsAtomic {
+
     /*
      OS_SPINLOCK_INIT 默认值为 0，unlocked状态下为 0，在 locked 状态时就会大于 0
      OSSpinLockLock(volatile OSSpinLock *__lock) 上锁，参数为 OSSpinLock 地址
@@ -87,6 +91,15 @@
      OSSpinLockTry(volatile OSSpinLock *__lock) 尝试加锁，如果可以加锁则立即加锁并返回YES，反之返回NO
      */
     _osSpinLock = OS_SPINLOCK_INIT;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"线程1 准备上锁");
+        OSSpinLockLock(&_osSpinLock);
+        NSLog(@"线程1 执行任务");
+        sleep(2);
+        OSSpinLockUnlock(&_osSpinLock);
+        NSLog(@"线程1 解锁成功");
+    });
     
     // 线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -302,65 +315,37 @@
 - (void)testNSConditionLock {
     _nsConditionLock = [[NSConditionLock alloc] initWithCondition:0];
     
-    dispatch_queue_t produterQueue = dispatch_queue_create("Produter", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_queue_t customerQueue = dispatch_queue_create("Customer", DISPATCH_QUEUE_CONCURRENT);
-    
-    NSMutableArray *products = [NSMutableArray array];
-    
-    NSInteger HAS_DATA = 1;
-    NSInteger NO_DATA = 10;
-    
-    dispatch_async(produterQueue, ^{
-        while (1) {
-            // 符合条件1时加锁
-            [_nsConditionLock lockWhenCondition:NO_DATA];
-            
-            [products addObject:@"a product"];
-            NSLog(@"生产了一个产品");
-            sleep(1); // 生产一个产品需要1秒
-            
-            // 解锁并设置条件为2
-            [_nsConditionLock unlockWithCondition:HAS_DATA];
-        }
-    });
-    
-    dispatch_async(customerQueue, ^{
-        while (1) {
-            [_nsConditionLock lockWhenCondition:HAS_DATA];
-            
-            [products removeObjectAtIndex:0];
-            NSLog(@"消耗了一个产品");
-            
-            [_nsConditionLock unlockWithCondition:NO_DATA];
-        }
-    });
-    
-    NSInteger NO_LOADING    = 100;
-    NSInteger REQUEST2      = 102;
-    NSInteger REQUEST3      = 103;
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:NO_LOADING];
+        [_nsConditionLock lockWhenCondition:1];
         NSLog(@"请求数据1");
         sleep(2);
         NSLog(@"得到数据1");
-        [_nsConditionLock unlockWithCondition:REQUEST2];
+        [_nsConditionLock unlockWithCondition:2];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:REQUEST2];
+        sleep(1);
+        [_nsConditionLock lockWhenCondition:0];
         NSLog(@"请求数据2");
         sleep(2);
         NSLog(@"得到数据2");
-        [_nsConditionLock lockWhenCondition:REQUEST3];
+        [_nsConditionLock unlockWithCondition:1];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:REQUEST3];
+        [_nsConditionLock lockWhenCondition:2];
         NSLog(@"请求数据3");
         sleep(2);
         NSLog(@"得到数据3");
-        [_nsConditionLock lockWhenCondition:NO_LOADING];
+        [_nsConditionLock unlockWithCondition:0];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [_nsConditionLock lockWhenCondition:2];
+        NSLog(@"请求数据4");
+        sleep(2);
+        NSLog(@"得到数据4");
+        [_nsConditionLock unlock];
     });
 }
 
@@ -378,104 +363,6 @@
             NSLog(@"线程2");
         }
     });
-}
-
-- (void)testTime {
-    CFTimeInterval start;
-    CFTimeInterval end;
-    
-    // OSSpinLock
-    OSSpinLock spinLock = OS_SPINLOCK_INIT;
-    
-    start = CFAbsoluteTimeGetCurrent();
-    OSSpinLockLock(&spinLock);
-    NSLog(@"= = = = = = = = = =");
-    OSSpinLockUnlock(&spinLock);
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"OSSpinLock %lf", end - start);
-    
-    // semaphore
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-    
-    start = CFAbsoluteTimeGetCurrent();
-    dispatch_semaphore_wait(semaphore, 1000);
-    NSLog(@"= = = = = = = = = =");
-    dispatch_semaphore_signal(semaphore);
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"semaphore %lf", end - start);
-    
-    // pthread_mutex
-    pthread_mutex_t mutex;
-    pthread_mutex_init(&mutex, NULL);
-    
-    start = CFAbsoluteTimeGetCurrent();
-    pthread_mutex_lock(&mutex);
-    NSLog(@"= = = = = = = = = =");
-    pthread_mutex_unlock(&mutex);
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"pthread_mutex_t %lf", end - start);
-    
-    // NSLock
-    NSLock *nsLock = [NSLock new];
-    
-    start = CFAbsoluteTimeGetCurrent();
-    [nsLock lock];
-    NSLog(@"= = = = = = = = = =");
-    [nsLock unlock];
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"NSLock %lf", end - start);
-    
-    // NSCondition
-    NSCondition *condition = [NSCondition new];
-    
-    start = CFAbsoluteTimeGetCurrent();
-    [condition lock];
-    NSLog(@"= = = = = = = = = =");
-    [condition unlock];
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"NSCondition %lf", end - start);
-    
-    // pthread_mutex(recursive)
-    pthread_mutex_t recursiveMutex;
-    pthread_mutexattr_t mutexattr;
-    pthread_mutexattr_init(&mutexattr);
-    pthread_mutexattr_settype(&mutexattr, PTHREAD_MUTEX_RECURSIVE);
-    pthread_mutex_init(&recursiveMutex, &mutexattr);
-    pthread_mutexattr_destroy(&mutexattr);
-    
-    start = CFAbsoluteTimeGetCurrent();
-    pthread_mutex_lock(&recursiveMutex);
-    NSLog(@"= = = = = = = = = =");
-    pthread_mutex_unlock(&recursiveMutex);
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"pthread_mutex(recursive) %lf", end - start);
-    
-    // NSRecursiveLock
-    NSRecursiveLock *recursiveLock = [NSRecursiveLock new];
-    
-    start = CFAbsoluteTimeGetCurrent();
-    [recursiveLock lock];
-    NSLog(@"= = = = = = = = = =");
-    [recursiveLock unlock];
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"NSRecursiveLock %lf", end - start);
-    
-    // NSConditionLock
-    NSConditionLock *conditionLock = [NSConditionLock new];
-    
-    start = CFAbsoluteTimeGetCurrent();
-    [conditionLock lock];
-    NSLog(@"= = = = = = = = = =");
-    [conditionLock unlock];
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"NSConditionLock %lf", end - start);
-    
-    start = CFAbsoluteTimeGetCurrent();
-    @synchronized (self) {
-        NSLog(@"= = = = = = = = = =");
-    }
-    end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"synchronized %lf", end - start);
 }
 
 #pragma mark - task

@@ -29,6 +29,7 @@
  自旋锁
     1.在忙等时，线程不会主动让出时间片。如果任务执行时间较长，如文件读写，这种忙等没有必要且白白浪费了CPU的时间。
     2.存在优先级反转问题。主要原因发生在低优先级线程拿到锁时，高优先级线程进入忙等(busy-wait)状态，消耗大量 CPU 时间，从而导致低优先级线程拿不到 CPU 时间，也就无法完成任务并释放锁。
+    3.和 NSLock 不同的是 NSLock 请求加锁失败的话，会先轮询，但一秒过后便会使线程进入 waiting 状态，等待唤醒。而 OSSpinLock 会一直轮询，等待时会消耗大量 CPU 资源，不适用于较长时间的任务。
  
  信号量
     1.在等待时，线程会进入睡眠状态，主动让出时间片。
@@ -39,15 +40,24 @@
     2.可以有多种类型PTHREAD_MUTEX_NORMAL、PTHREAD_MUTEX_ERRORCHECK、PTHREAD_MUTEX_RECURSIVE。
     3.假设在已经获得锁的情况下再次申请锁，线程会因为等待锁的释放而进入睡眠状态，因此就不可能再释放锁，从而导致死锁。如某个函数申请了锁，在临界区内又递归调用了自己。pthread_mutex 支持递归锁，允许一个线程递归的申请锁，只要把 attr 的类型改成 PTHREAD_MUTEX_RECURSIVE 即可。
  
+ 
+ PTHREAD_MUTEX_NORMAL 缺省类型，也就是普通锁。当一个线程加锁以后，其余请求锁的线程将形成一个等待队列，并在解锁后先进先出原则获得锁。
+ PTHREAD_MUTEX_ERRORCHECK 检错锁，如果同一个线程请求同一个锁，则返回 EDEADLK，否则与普通锁类型动作相同。这样就保证当不允许多次加锁时不会出现嵌套情况下的死锁。
+ PTHREAD_MUTEX_RECURSIVE 递归锁，允许同一个线程对同一个锁成功获得多次，并通过多次 unlock 解锁。
+ PTHREAD_MUTEX_DEFAULT 适应锁，动作最简单的锁类型，仅等待解锁后重新竞争，没有等待队列。
+ 
  NSLock
     1.内部封装了一个PTHREAD_MUTEX_ERRORCHECK类型的互斥锁，以损失一定性能换来错误提示
     2.NSLock 比 pthread_mutex 略慢的原因在于它需要经过方法调用，同时由于缓存的存在，多次方法调用不会对性能产生太大的影响。
  
  NSCondition
     1.封装了一个互斥锁和条件变量
+    NSConditionLock 还可以实现任务之间的依赖。
+    只有 condition 参数与初始化时候的 condition 相等，lock 才能正确进行加锁操作。而 unlockWithCondition: 并不是当 Condition 符合条件时才解锁，而是解锁之后，修改 Condition 的值。
  
  NSRecursiveLock
     1.内部封装了一个PTHREAD_MUTEX_RECURSIVE类型的互斥锁
+    NSRecursiveLock 可以在一个线程中重复加锁
  
  NSConditionLock
     1.借助NSCondition实现
