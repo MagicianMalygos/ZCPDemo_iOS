@@ -32,12 +32,12 @@
     // Test
     [self testXXX]; // 范例
 //    [self testSD];  // 测试给url添加HeaderField
-//    [self testCreateNSString];
+//    [self testAutoreleasepool];
 //    [self testGetImageFromView];
 //    [self testIQKeyboardManagerReturn];
 //    [self testSandBoxPath];
 //    [self testSettings];
-    [self testNotification];
+//    [self testNotification];
 }
 
 #pragma mark - test
@@ -91,46 +91,61 @@
     [self.view addSubview:imageView];
 }
 
-#pragma mark - testCreateNSString
+#pragma mark - testAutoreleasepool
 
-- (void)testCreateNSString {
-//    START_COUNT_TIME(start);
-//    for (int i = 0; i < 100000; i++) {
+- (void)testAutoreleasepool {
+    // autoreleasepool主要用于创建大量临时变量的情况，例如for循环中的临时变量
+    
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"rocket.png"];
+    
+    // 内存暴增
+    while (1) {
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
+        [image description];
+    }
+    
+    // image被及时释放，不会暴增
+//    while (1) {
 //        @autoreleasepool {
-//            NSString *string = @"ABC";
-//            string = [string lowercaseString];
-//            string = [string stringByAppendingString:@"xyz"];
-//            NSLog(@"%@", string);
+//            UIImage *image = [UIImage imageWithContentsOfFile:path];
+//            [image description];
 //        }
 //    }
-//    NSLog(@"init date formatter use %f seconds", (float)END_COUNT_TIME(start)/CLOCKS_PER_SEC);
-    
-    START_COUNT_TIME(start2);
-    for (int i = 0; i < 100000; i++) {
-        NSString *string = @"ABC";
-        string = [string lowercaseString];
-        string = [string stringByAppendingString:@"xyz"];
-        NSLog(@"%@", string);
-    }
-    NSLog(@"init date formatter use %f seconds", (float)END_COUNT_TIME(start2)/CLOCKS_PER_SEC);
 }
 
 #pragma mark - testGetImageFromView
 
 - (void)testGetImageFromView {
     
-    int num = 0;
-    for (int i = 0; i < 100; i++) {
-        for (int j = 0; j < 50; j++) {
-            UIView *view = [self getColorView];
-            UIImage *image = [self getImageFromView:view];
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            imageView.frame = CGRectMake(i*50, j*50, 50, 50);
-            [self.view addSubview:imageView];
-            num++;
+    NSMutableArray *viewArr = [NSMutableArray array];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        START_COUNT_TIME(start);
+        int num = 0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 50; j++) {
+                @autoreleasepool {
+                    UIView *view = [self getColorView];
+                    UIImage *image = [self getImageFromView:view];
+                    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+                    imageView.frame = CGRectMake(i*50, j*50, 50, 50);
+                    [viewArr addObject:imageView];
+                    num++;
+                }
+            }
         }
-    }
-    NSLog(@"%i", num);
+        NSLog(@"%i", num);
+        
+        NSLog(@"创建花费 %lu 微妙", END_COUNT_TIME(start));
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            START_COUNT_TIME(start2);
+            for (UIView *view in viewArr) {
+                [self.view addSubview:view];
+            }
+            NSLog(@"添加花费 %lu 微妙", END_COUNT_TIME(start2));
+        });
+    });
 }
 
 - (UIView *)getColorView {
@@ -165,13 +180,11 @@
 }
 
 - (UIImage *)getImageFromView:(UIView *)view {
-    @autoreleasepool {
-        UIGraphicsBeginImageContext(view.bounds.size);
-        [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        return image;
-    }
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 #pragma mark - testIQKeyboardManagerReturn

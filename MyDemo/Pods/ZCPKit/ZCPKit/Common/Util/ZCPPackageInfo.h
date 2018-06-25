@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define kURLSchemeIdnentifier                           @"PingAnHaoFang"
-
 @interface ZCPPackageInfo : NSObject
 
 // 应用包名

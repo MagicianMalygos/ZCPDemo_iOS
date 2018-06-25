@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 #pragma mark - 吐司提示工具类
 @interface ZCPToastUtil : NSObject

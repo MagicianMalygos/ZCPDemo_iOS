@@ -17,7 +17,7 @@
 #import "ZCPControllerFactory.h"
 #import "ZCPURLHelper.h"
 #import "NSString+URL.h"
-#import "NSURL+Category.h"
+#import "NSURL+URL.h"
 #import "ZCPRequestCertificateManager.h"
 
 #pragma mark - Model

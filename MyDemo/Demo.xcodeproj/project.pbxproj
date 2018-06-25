@@ -78,6 +78,9 @@
 		FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621C01ED275DC000AA258 /* RuntimeTest3.m */; };
 		FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621C31ED275DC000AA258 /* SocketDemo.m */; };
 		FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */; };
+		FB139FE820D8ED5700DD6D34 /* AnimationDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */; };
+		FB139FEB20D8EE2600DD6D34 /* BoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB139FEA20D8EE2600DD6D34 /* BoomViewController.m */; };
+		FB139FED20D8EE2E00DD6D34 /* BoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB139FEC20D8EE2E00DD6D34 /* BoomViewController.xib */; };
 		FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */; };
 		FB2ECFF720B6595B00F362A0 /* LockDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2ECFF620B6595B00F362A0 /* LockDemoHomeViewController.m */; };
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
@@ -176,6 +179,9 @@
 		FBCC20F61F0377D9006FE26C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCC20F51F0377D9006FE26C /* iAd.framework */; };
 		FBCC21001F03786C006FE26C /* ADDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC20FE1F03786C006FE26C /* ADDemoHomeViewController.m */; };
 		FBCC210B1F03AA54006FE26C /* RegexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC210A1F03AA54006FE26C /* RegexTests.m */; };
+		FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0620E0C1B4002367F5 /* UIView+Explode.m */; };
+		FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */; };
+		FBCC6A0D20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */; };
 		FBCF6AEC1F8CAA7700E3B58C /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */; };
 		FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */; };
 		FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */; };
@@ -239,6 +245,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 5B00771B76EEFF43E17B99E83B980B6B;
 			remoteInfo = YYKit;
+		};
+		FB4B531C20DCC6C700EC6C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FC1197D0AFA39E946FE702975839582B;
+			remoteInfo = MagicalRecord;
 		};
 		FBB1A1EA1EE10CBC004F013F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1303,6 +1316,11 @@
 		FB0621C31ED275DC000AA258 /* SocketDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketDemo.m; sourceTree = "<group>"; };
 		FB0621DD1ED2762D000AA258 /* NSTimer+WTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WTUtils.h"; sourceTree = "<group>"; };
 		FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WTUtils.m"; sourceTree = "<group>"; };
+		FB139FE620D8ED5700DD6D34 /* AnimationDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDemoHomeViewController.h; sourceTree = "<group>"; };
+		FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationDemoHomeViewController.m; sourceTree = "<group>"; };
+		FB139FE920D8EE2600DD6D34 /* BoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoomViewController.h; sourceTree = "<group>"; };
+		FB139FEA20D8EE2600DD6D34 /* BoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoomViewController.m; sourceTree = "<group>"; };
+		FB139FEC20D8EE2E00DD6D34 /* BoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoomViewController.xib; sourceTree = "<group>"; };
 		FB1608201EFA0DD900064DA2 /* MapDemoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoHomeViewController.h; sourceTree = "<group>"; };
 		FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoHomeViewController.m; sourceTree = "<group>"; };
 		FB2ECFF520B6595B00F362A0 /* LockDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockDemoHomeViewController.h; sourceTree = "<group>"; };
@@ -1495,6 +1513,12 @@
 		FBCC20FD1F03786C006FE26C /* ADDemoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADDemoHomeViewController.h; sourceTree = "<group>"; };
 		FBCC20FE1F03786C006FE26C /* ADDemoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADDemoHomeViewController.m; sourceTree = "<group>"; };
 		FBCC210A1F03AA54006FE26C /* RegexTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexTests.m; sourceTree = "<group>"; };
+		FBCC6A0520E0C1B4002367F5 /* UIView+Explode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Explode.h"; sourceTree = "<group>"; };
+		FBCC6A0620E0C1B4002367F5 /* UIView+Explode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Explode.m"; sourceTree = "<group>"; };
+		FBCC6A0820E0C200002367F5 /* UIViewExplodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExplodeHelper.h; sourceTree = "<group>"; };
+		FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExplodeHelper.m; sourceTree = "<group>"; };
+		FBCC6A0B20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExplodeHelpMethod.h"; sourceTree = "<group>"; };
+		FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExplodeHelpMethod.m"; sourceTree = "<group>"; };
 		FBCF6AEA1F8CAA7700E3B58C /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FBCF6AF51F8CAD3E00E3B58C /* ZCPDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoHomeViewController.h; sourceTree = "<group>"; };
@@ -3153,6 +3177,7 @@
 				9E3E86AE1D2A84A40061664A /* libAFNetworking.a */,
 				FBCF6B631F8DEBDA00E3B58C /* libAspects.a */,
 				FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */,
+				FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */,
 				FBB1A1ED1EE10CBC004F013F /* libPods-Demo.a */,
 				9E3E86B21D2A84A40061664A /* libSDWebImage.a */,
 				9E3E86B41D2A84A40061664A /* libYYKit.a */,
@@ -3712,6 +3737,32 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
+		FB139FD820D8ED0100DD6D34 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				FB139FD920D8ED0100DD6D34 /* 爆炸效果 */,
+				FB139FE620D8ED5700DD6D34 /* AnimationDemoHomeViewController.h */,
+				FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		FB139FD920D8ED0100DD6D34 /* 爆炸效果 */ = {
+			isa = PBXGroup;
+			children = (
+				FB139FE920D8EE2600DD6D34 /* BoomViewController.h */,
+				FB139FEA20D8EE2600DD6D34 /* BoomViewController.m */,
+				FB139FEC20D8EE2E00DD6D34 /* BoomViewController.xib */,
+				FBCC6A0520E0C1B4002367F5 /* UIView+Explode.h */,
+				FBCC6A0620E0C1B4002367F5 /* UIView+Explode.m */,
+				FBCC6A0820E0C200002367F5 /* UIViewExplodeHelper.h */,
+				FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */,
+				FBCC6A0B20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.h */,
+				FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */,
+			);
+			path = "爆炸效果";
+			sourceTree = "<group>";
+		};
 		FB16081A1EFA0DC200064DA2 /* 地图&定位 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3956,6 +4007,7 @@
 		FB5078761E2618A900361E60 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB139FD820D8ED0100DD6D34 /* 动画 */,
 				FB8216111FC575D300BB7710 /* 波浪线 */,
 				FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
@@ -4339,7 +4391,6 @@
 				187250031C911810002D8C9E /* Sources */,
 				187250041C911810002D8C9E /* Frameworks */,
 				187250051C911810002D8C9E /* Resources */,
-				022412470E26036773F35BB0 /* [CP] Embed Pods Frameworks */,
 				BF1614ABD38DA928CEC7AF98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -4375,7 +4426,7 @@
 		18724FFF1C911810002D8C9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = zcp;
 				TargetAttributes = {
 					187250061C911810002D8C9E = {
@@ -4451,6 +4502,13 @@
 			remoteRef = 9E3E86B31D2A84A40061664A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMagicalRecord.a;
+			remoteRef = FB4B531C20DCC6C700EC6C8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -4493,6 +4551,7 @@
 				FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */,
 				FBA5F3FC1EF3CB2500F97958 /* flag@3x.png in Resources */,
 				184D75211C97A9B70068D686 /* default.png in Resources */,
+				FB139FED20D8EE2E00DD6D34 /* BoomViewController.xib in Resources */,
 				1844399B1D0012C700FDD7F7 /* tips_page_arrow_down@3x.png in Resources */,
 				18A5014C1C92BE67006EBEB4 /* 005.jpg in Resources */,
 				FBCF6B321F8CBC0A00E3B58C /* Main.strings in Resources */,
@@ -4574,21 +4633,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		022412470E26036773F35BB0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4422630C9145EA20C09428F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4615,10 +4659,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/ZCPKit/ZCPKit/Common/Router/viewMap.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/viewMap.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4641,6 +4687,7 @@
 				FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */,
 				FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */,
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,
+				FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */,
 				FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
@@ -4653,6 +4700,7 @@
 				FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */,
 				FB0621DA1ED275DD000AA258 /* RuntimeTest2.m in Sources */,
 				FB0621D51ED275DD000AA258 /* RuntimeExampleDemo.m in Sources */,
+				FB139FEB20D8EE2600DD6D34 /* BoomViewController.m in Sources */,
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
 				FB0621CA1ED275DD000AA258 /* ClassA.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
@@ -4674,6 +4722,8 @@
 				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,
 				FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */,
 				FB5079201E2618A900361E60 /* SetFilletDemoHomeController.m in Sources */,
+				FBCC6A0D20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m in Sources */,
+				FB139FE820D8ED5700DD6D34 /* AnimationDemoHomeViewController.m in Sources */,
 				FB5078C91E2618A900361E60 /* ZCPURLSessionTool.m in Sources */,
 				FB5079131E2618A900361E60 /* TBDemoVC1.m in Sources */,
 				FB5079111E2618A900361E60 /* WeiXinShareDemoHomeController.m in Sources */,
@@ -4721,6 +4771,7 @@
 				FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */,
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,
 				FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */,
+				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
 				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
 				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
@@ -4915,12 +4966,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -4967,12 +5020,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -5019,7 +5074,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5060,7 +5115,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -5085,7 +5140,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5126,7 +5181,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

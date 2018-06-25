@@ -7,7 +7,7 @@
 //
 
 #import "ZCPPickerView.h"
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 @interface ZCPPickerView () <UIPickerViewDelegate, UIPickerViewDataSource>
 

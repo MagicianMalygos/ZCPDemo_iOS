@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 // 网络请求的证书管理器
 @interface ZCPRequestCertificateManager : NSObject

@@ -14,9 +14,8 @@ FOUNDATION_EXPORT double ZCPKitVersionNumber;
 //! Project version string for ZCPKit.
 FOUNDATION_EXPORT const unsigned char ZCPKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <ZCPKit/PublicHeader.h>
-
-#import <ZCPKit/ZCPMacros.h>
+#import <ZCPKit/ZCPGlobal.h>
 #import <ZCPKit/ZCPCategory.h>
 #import <ZCPKit/ZCPUtil.h>
 #import <ZCPKit/ZCPCommon.h>
+#import <ZCPKit/ZCPCache.h>

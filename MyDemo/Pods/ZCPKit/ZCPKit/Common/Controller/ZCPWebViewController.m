@@ -227,7 +227,7 @@
 
 - (void)parseURL:(NSString *)url{
     if (url) {
-        NSDictionary * params   = [url getURLParams];
+        NSDictionary * params   = [ZCPURLHelper getUrlParams:url];
         self.urlParams          = params;
     }
 }
@@ -266,7 +266,7 @@
     }
     
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        if ([request.URL isAppURL]) {
+        if ([ZCPURLHelper isAppURL:request.URL]) {
             openURL(urlString);
         } else {
             openURL(urlString);

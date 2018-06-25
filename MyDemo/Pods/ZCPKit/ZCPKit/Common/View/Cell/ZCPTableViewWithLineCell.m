@@ -10,9 +10,6 @@
 
 @implementation ZCPTableViewWithLineCell
 
-// ----------------------------------------------------------------------
-#pragma mark - synthesize
-// ----------------------------------------------------------------------
 @synthesize lineUpper   = _lineUpper;
 @synthesize lineLower   = _lineLower;
 
@@ -48,7 +45,7 @@
     UIColor *upperLineColor     = model.topLineColor ? model.topLineColor : [UIColor colorFromHexRGB:@"dfdfdf"];
     UIColor *lowerLineColor     = model.bottomLineColor ? model.bottomLineColor : [UIColor colorFromHexRGB:@"dfdfdf"];
     
-    _lineUpper.frame = CGRectMake(upperOffset, OnePixel, upperWidth, OnePixel);
+    _lineUpper.frame = CGRectMake(upperOffset, 0, upperWidth, OnePixel);
     _lineLower.frame = CGRectMake(lowerOffset, self.height - OnePixel, lowerWidth, OnePixel);
     _lineUpper.backgroundColor  = upperLineColor;
     _lineLower.backgroundColor  = lowerLineColor;

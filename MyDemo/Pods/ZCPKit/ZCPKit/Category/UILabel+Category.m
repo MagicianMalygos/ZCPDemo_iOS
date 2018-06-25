@@ -8,7 +8,7 @@
 
 #import "UILabel+Category.h"
 #import "UIView+EasyFrame.h"
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 @implementation UILabel (Category)
 

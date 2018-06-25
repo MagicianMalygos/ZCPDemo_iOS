@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 #pragma mark - 指示控制类，比如loading，activity等
 @interface ZCPIndicator : NSObject

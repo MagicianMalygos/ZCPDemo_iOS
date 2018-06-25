@@ -1,13 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://gitlab.com/Malygos/zcprepo.git'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 inhibit_all_warnings!
 
 target:'Demo' do
 
 # zcp
-pod 'ZCPKit', '~> 0.0.1'
+pod 'ZCPKit', '~> 0.0.2'
 # 网络请求
 pod 'AFNetworking', '~> 2.5.4'
 # 图片加载

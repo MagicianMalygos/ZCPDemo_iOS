@@ -234,5 +234,21 @@
 		<key>description</key>
 		<string>锁</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>AnimationDemoHomeViewController</string>
+		<key>identifier</key>
+		<string>animationHome</string>
+		<key>description</key>
+		<string>动画首页</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>BoomViewController</string>
+		<key>identifier</key>
+		<string>boom</string>
+		<key>description</key>
+		<string>爆炸效果</string>
+	</dict>
 </array>
 </plist>

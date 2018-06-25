@@ -8,9 +8,6 @@
 
 #import "ZCPViewController.h"
 #import "ZCPURLHelper.h"
-#import "NSString+URL.h"
-#import "NSURL+Category.h"
-#import "NSString+Category.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - webview返回事件代理

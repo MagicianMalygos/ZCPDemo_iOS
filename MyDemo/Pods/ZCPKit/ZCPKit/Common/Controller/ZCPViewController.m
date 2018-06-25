@@ -13,6 +13,9 @@
 #pragma mark - synthesize
 @synthesize tap                         = _tap;
 @synthesize needsTapToDismissKeyboard   = _needsTapToDismissKeyboard;
+@synthesize formerViewController        = _formerViewController;
+@synthesize latterViewController        = _latterViewController;
+@synthesize viewJumpModel               = _viewJumpModel;
 
 // ----------------------------------------------------------------------
 #pragma mark - init
@@ -163,7 +166,7 @@
 // ----------------------------------------------------------------------
 #pragma mark - jump / back
 // ----------------------------------------------------------------------
-- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
+- (void)presentViewController:(UIViewController<ZCPNavigatorProtocol> *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
     self.latterViewController                       = viewControllerToPresent;
     viewControllerToPresent.formerViewController    = self;
     viewControllerToPresent.viewJumpModel           = ZCPViewModalJumpMode;

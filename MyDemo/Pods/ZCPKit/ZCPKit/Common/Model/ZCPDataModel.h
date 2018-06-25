@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - 模型基类

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ZCPBaseNavigator.h"
-#import "ZCPMacros.h"
+#import "ZCPGlobal.h"
 #import "ZCPCategory.h"
 
 // ----------------------------------------------------------------------
