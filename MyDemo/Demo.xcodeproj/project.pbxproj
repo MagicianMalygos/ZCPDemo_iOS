@@ -182,6 +182,7 @@
 		FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0620E0C1B4002367F5 /* UIView+Explode.m */; };
 		FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */; };
 		FBCC6A0D20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */; };
+		FBCC6A0F20E0DB58002367F5 /* testExplodPic.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FBCC6A0E20E0DB58002367F5 /* testExplodPic.jpeg */; };
 		FBCF6AEC1F8CAA7700E3B58C /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */; };
 		FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */; };
 		FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */; };
@@ -1519,6 +1520,7 @@
 		FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExplodeHelper.m; sourceTree = "<group>"; };
 		FBCC6A0B20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExplodeHelpMethod.h"; sourceTree = "<group>"; };
 		FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExplodeHelpMethod.m"; sourceTree = "<group>"; };
+		FBCC6A0E20E0DB58002367F5 /* testExplodPic.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testExplodPic.jpeg; sourceTree = "<group>"; };
 		FBCF6AEA1F8CAA7700E3B58C /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FBCF6AF51F8CAD3E00E3B58C /* ZCPDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoHomeViewController.h; sourceTree = "<group>"; };
@@ -3759,6 +3761,7 @@
 				FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */,
 				FBCC6A0B20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.h */,
 				FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */,
+				FBCC6A0E20E0DB58002367F5 /* testExplodPic.jpeg */,
 			);
 			path = "爆炸效果";
 			sourceTree = "<group>";
@@ -4605,6 +4608,7 @@
 				FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */,
 				1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */,
 				184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */,
+				FBCC6A0F20E0DB58002367F5 /* testExplodPic.jpeg in Resources */,
 				18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */,
 				FBB91DB61F2873EF00D41838 /* DebugStatusBallView.xib in Resources */,
 				1844399A1D0012C700FDD7F7 /* tips_page_arrow_down@2x.png in Resources */,
