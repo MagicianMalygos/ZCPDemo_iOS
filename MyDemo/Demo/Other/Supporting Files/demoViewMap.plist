@@ -244,11 +244,19 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>BoomViewController</string>
+		<string>ExplodeViewController</string>
 		<key>identifier</key>
-		<string>boom</string>
+		<string>explode</string>
 		<key>description</key>
 		<string>爆炸效果</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>UIElasticViewController</string>
+		<key>identifier</key>
+		<string>elastic</string>
+		<key>description</key>
+		<string>橡皮筋效果</string>
 	</dict>
 </array>
 </plist>

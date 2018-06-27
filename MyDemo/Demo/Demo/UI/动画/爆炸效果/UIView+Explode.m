@@ -11,15 +11,16 @@
 #import <objc/runtime.h>
 #import <Aspects.h>
 
-static NSString *helperKey          = @"helper";
-static NSString *explodeDelegateKey = @"explodeDelegateKey";
-
 static id<AspectToken> aop_willMoveToSuperview;
 static BOOL isOpenExplodeFunction;
 
+// property key
+static NSString *explodeHelperKey   = @"explodeHelper";
+static NSString *explodeDelegateKey = @"explodeDelegateKey";
+
 @implementation UIView (Explode)
 
-#pragma mark - init
+#pragma mark - setup
 
 + (NSError *)openExplodeFunction {
     NSError *error = nil;
@@ -41,46 +42,46 @@ static BOOL isOpenExplodeFunction;
 }
 
 - (void)aop_willMoveToSuperview:(UIView *)newSuperview {
-    if (self.helper.explodeState == UIViewExplodeStateExploding &&
+    if (self.explodeHelper.explodeState == UIViewExplodeStateExploding &&
         [newSuperview isKindOfClass:[NSNull class]]) {
         [self recoverUnexplodedState];
     }
 }
 
-#pragma mark - public
+#pragma mark - function
 
 - (void)explode {
     if (isOpenExplodeFunction) {
-        [self.helper explode];
+        [self.explodeHelper explode];
     }
 }
 
 - (void)recoverUnexplodedState {
     if (isOpenExplodeFunction) {
-        [self.helper recover];
+        [self.explodeHelper recover];
     }
 }
 
 #pragma mark - getters & setters
 
-- (UIViewExplodeHelper *)helper {
-    UIViewExplodeHelper *helper = objc_getAssociatedObject(self, &helperKey);
-    if (!helper) {
-        helper = [UIViewExplodeHelper new];
-        helper.view = self;
-        helper.explodeEffect = UIViewExplodeEffectShockWave;
-        [self setHelper:helper];
+- (UIViewExplodeHelper *)explodeHelper {
+    UIViewExplodeHelper *explodeHelper = objc_getAssociatedObject(self, &explodeHelperKey);
+    if (!explodeHelper) {
+        explodeHelper               = [UIViewExplodeHelper new];
+        explodeHelper.view          = self;
+        explodeHelper.explodeEffect = UIViewExplodeEffectShockWave;
+        [self setExplodeHelper:explodeHelper];
     }
-    return helper;
+    return explodeHelper;
 }
 
-- (void)setHelper:(UIViewExplodeHelper *)helper {
-    objc_setAssociatedObject(self, &helperKey, helper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setExplodeHelper:(UIViewExplodeHelper *)explodeHelper {
+    objc_setAssociatedObject(self, &explodeHelperKey, explodeHelper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (id<UIViewExplodeDelegate>)explodeDelegate {
-    id<UIViewExplodeDelegate> delegate = objc_getAssociatedObject(self, &explodeDelegateKey);
-    return delegate;
+    id<UIViewExplodeDelegate> explodeDelegate = objc_getAssociatedObject(self, &explodeDelegateKey);
+    return explodeDelegate;
 }
 
 - (void)setExplodeDelegate:(id<UIViewExplodeDelegate>)explodeDelegate {

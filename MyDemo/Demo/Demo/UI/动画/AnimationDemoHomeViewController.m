@@ -15,7 +15,8 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"爆炸效果"        , @"class": APPURL_VIEW_IDENTIFIER_BOOM},
+                    @{@"title": @"爆炸效果"         , @"class": APPURL_VIEW_IDENTIFIER_EXPLODE},
+                    @{@"title": @"橡皮筋效果"       , @"class": APPURL_VIEW_IDENTIFIER_ELASTIC},
                     nil];
     }
     return _infoArr;

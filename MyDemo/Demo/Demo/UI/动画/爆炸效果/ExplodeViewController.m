@@ -1,15 +1,15 @@
 //
-//  BoomViewController.m
+//  ExplodeViewController.m
 //  Demo
 //
-//  Created by 朱超鹏 on 2018/6/19.
+//  Created by 朱超鹏 on 2018/6/25.
 //  Copyright © 2018年 zcp. All rights reserved.
 //
 
-#import "BoomViewController.h"
+#import "ExplodeViewController.h"
 #import "UIView+Explode.h"
 
-@interface BoomViewController () <UIViewExplodeDelegate>
+@interface ExplodeViewController () <UIViewExplodeDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView         *testView;
 @property (weak, nonatomic) IBOutlet UIImageView    *testImageView;
@@ -18,10 +18,10 @@
 
 @end
 
-@implementation BoomViewController
+@implementation ExplodeViewController
 
 - (instancetype)initWithQuery:(NSDictionary *)query {
-    if ([self initWithNibName:@"BoomViewController" bundle:nil]) {
+    if ([self initWithNibName:@"ExplodeViewController" bundle:nil]) {
     }
     return self;
 }

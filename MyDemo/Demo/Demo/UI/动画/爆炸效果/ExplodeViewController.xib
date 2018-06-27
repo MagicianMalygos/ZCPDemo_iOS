@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BoomViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExplodeViewController">
             <connections>
                 <outlet property="testButton" destination="5TB-wf-Y75" id="P9U-d1-MJC"/>
                 <outlet property="testImageView" destination="whY-IA-Sgx" id="48R-6M-Lfv"/>

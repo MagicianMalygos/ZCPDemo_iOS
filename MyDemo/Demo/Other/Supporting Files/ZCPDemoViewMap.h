@@ -78,8 +78,11 @@
 
 // 动画首页 AnimationDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_ANIMATION            @"animationHome"
-// 爆炸效果 BoomViewController
-#define APPURL_VIEW_IDENTIFIER_BOOM                 @"boom"
+// 爆炸效果 ExplodeViewController
+#define APPURL_VIEW_IDENTIFIER_EXPLODE              @"explode"
+// 橡皮筋效果 UIElasticViewController
+#define APPURL_VIEW_IDENTIFIER_ELASTIC              @"elastic"
+
 
 
 #endif /* ZCPDemoViewMap_h */

@@ -15,6 +15,7 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
+                    @{@"title": @"动画"                  , @"class": APPURL_VIEW_IDENTIFIER_ANIMATION},
                     @{@"title": @"SizeToFitDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SIZETOFIT},
                     @{@"title": @"FontDemo"             , @"class": APPURL_VIEW_IDENTIFIER_FONT},
                     @{@"title": @"SetFilletDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SETFILLET},
@@ -24,7 +25,6 @@
                     @{@"title": @"CollectionViewDemo"   , @"class":APPURL_VIEW_IDENTIFIER_COLLECTION},
                     @{@"title": @"CATransform3DDemo"    , @"class": APPURL_VIEW_IDENTIFIER_CATRANSFORM3D},
                     @{@"title": @"波浪线"                , @"class": APPURL_VIEW_IDENTIFIER_WAVELINE},
-                    @{@"title": @"动画"                  , @"class": APPURL_VIEW_IDENTIFIER_ANIMATION},
                     nil];
     }
     return _infoArr;
