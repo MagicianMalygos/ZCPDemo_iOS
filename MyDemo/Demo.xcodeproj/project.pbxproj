@@ -183,10 +183,10 @@
 		FBCC6A0D20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0C20E0C39D002367F5 /* UIImage+ExplodeHelpMethod.m */; };
 		FBCC6A0F20E0DB58002367F5 /* testExplodPic.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FBCC6A0E20E0DB58002367F5 /* testExplodPic.jpeg */; };
 		FBCC6A3520E0EBD8002367F5 /* ExplodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A3320E0EBD8002367F5 /* ExplodeViewController.m */; };
-		FBCC6A3920E377F7002367F5 /* UIViewElasticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A3820E377F7002367F5 /* UIViewElasticHelper.m */; };
-		FBCC6A3C20E37F7F002367F5 /* UIView+Elastic.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A3B20E37F7F002367F5 /* UIView+Elastic.m */; };
-		FBCC6A4020E38584002367F5 /* UIElasticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A3E20E38584002367F5 /* UIElasticViewController.m */; };
-		FBCC6A4120E38584002367F5 /* UIElasticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCC6A3F20E38584002367F5 /* UIElasticViewController.xib */; };
+		FBCC6A5520E39A3B002367F5 /* UIElasticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A4E20E39A3A002367F5 /* UIElasticViewController.m */; };
+		FBCC6A5620E39A3B002367F5 /* UIView+Elastic.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A4F20E39A3B002367F5 /* UIView+Elastic.m */; };
+		FBCC6A5720E39A3B002367F5 /* UIViewElasticHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A5220E39A3B002367F5 /* UIViewElasticHelper.m */; };
+		FBCC6A5820E39A3B002367F5 /* UIElasticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCC6A5420E39A3B002367F5 /* UIElasticViewController.xib */; };
 		FBCF6AEC1F8CAA7700E3B58C /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */; };
 		FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */; };
 		FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */; };
@@ -1525,13 +1525,13 @@
 		FBCC6A0E20E0DB58002367F5 /* testExplodPic.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testExplodPic.jpeg; sourceTree = "<group>"; };
 		FBCC6A3220E0EBD8002367F5 /* ExplodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplodeViewController.h; sourceTree = "<group>"; };
 		FBCC6A3320E0EBD8002367F5 /* ExplodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplodeViewController.m; sourceTree = "<group>"; };
-		FBCC6A3720E377F7002367F5 /* UIViewElasticHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewElasticHelper.h; sourceTree = "<group>"; };
-		FBCC6A3820E377F7002367F5 /* UIViewElasticHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewElasticHelper.m; sourceTree = "<group>"; };
-		FBCC6A3A20E37F7F002367F5 /* UIView+Elastic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Elastic.h"; sourceTree = "<group>"; };
-		FBCC6A3B20E37F7F002367F5 /* UIView+Elastic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Elastic.m"; sourceTree = "<group>"; };
-		FBCC6A3D20E38584002367F5 /* UIElasticViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIElasticViewController.h; sourceTree = "<group>"; };
-		FBCC6A3E20E38584002367F5 /* UIElasticViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIElasticViewController.m; sourceTree = "<group>"; };
-		FBCC6A3F20E38584002367F5 /* UIElasticViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIElasticViewController.xib; sourceTree = "<group>"; };
+		FBCC6A4E20E39A3A002367F5 /* UIElasticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElasticViewController.m; sourceTree = "<group>"; };
+		FBCC6A4F20E39A3B002367F5 /* UIView+Elastic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Elastic.m"; sourceTree = "<group>"; };
+		FBCC6A5020E39A3B002367F5 /* UIView+Elastic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Elastic.h"; sourceTree = "<group>"; };
+		FBCC6A5120E39A3B002367F5 /* UIViewElasticHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewElasticHelper.h; sourceTree = "<group>"; };
+		FBCC6A5220E39A3B002367F5 /* UIViewElasticHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewElasticHelper.m; sourceTree = "<group>"; };
+		FBCC6A5320E39A3B002367F5 /* UIElasticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElasticViewController.h; sourceTree = "<group>"; };
+		FBCC6A5420E39A3B002367F5 /* UIElasticViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIElasticViewController.xib; sourceTree = "<group>"; };
 		FBCF6AEA1F8CAA7700E3B58C /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FBCF6AF51F8CAD3E00E3B58C /* ZCPDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoHomeViewController.h; sourceTree = "<group>"; };
@@ -3753,7 +3753,7 @@
 		FB139FD820D8ED0100DD6D34 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
-				FBCC6A2520E0E288002367F5 /* 未读消息小红点 */,
+				FBCC6A4220E39A30002367F5 /* 橡皮筋效果 */,
 				FB139FD920D8ED0100DD6D34 /* 爆炸效果 */,
 				FB139FE620D8ED5700DD6D34 /* AnimationDemoHomeViewController.h */,
 				FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */,
@@ -4337,18 +4337,18 @@
 			path = "广告";
 			sourceTree = "<group>";
 		};
-		FBCC6A2520E0E288002367F5 /* 未读消息小红点 */ = {
+		FBCC6A4220E39A30002367F5 /* 橡皮筋效果 */ = {
 			isa = PBXGroup;
 			children = (
-				FBCC6A3D20E38584002367F5 /* UIElasticViewController.h */,
-				FBCC6A3E20E38584002367F5 /* UIElasticViewController.m */,
-				FBCC6A3F20E38584002367F5 /* UIElasticViewController.xib */,
-				FBCC6A3A20E37F7F002367F5 /* UIView+Elastic.h */,
-				FBCC6A3B20E37F7F002367F5 /* UIView+Elastic.m */,
-				FBCC6A3720E377F7002367F5 /* UIViewElasticHelper.h */,
-				FBCC6A3820E377F7002367F5 /* UIViewElasticHelper.m */,
+				FBCC6A5320E39A3B002367F5 /* UIElasticViewController.h */,
+				FBCC6A4E20E39A3A002367F5 /* UIElasticViewController.m */,
+				FBCC6A5420E39A3B002367F5 /* UIElasticViewController.xib */,
+				FBCC6A5020E39A3B002367F5 /* UIView+Elastic.h */,
+				FBCC6A4F20E39A3B002367F5 /* UIView+Elastic.m */,
+				FBCC6A5120E39A3B002367F5 /* UIViewElasticHelper.h */,
+				FBCC6A5220E39A3B002367F5 /* UIViewElasticHelper.m */,
 			);
-			path = "未读消息小红点";
+			path = "橡皮筋效果";
 			sourceTree = "<group>";
 		};
 		FBCF6B031F8CBC0A00E3B58C /* en.lproj */ = {
@@ -4627,7 +4627,7 @@
 				FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */,
 				184439961D0012C700FDD7F7 /* tips_page_arrow.png in Resources */,
 				18A501491C92BE67006EBEB4 /* 002.jpg in Resources */,
-				FBCC6A4120E38584002367F5 /* UIElasticViewController.xib in Resources */,
+				FBCC6A5820E39A3B002367F5 /* UIElasticViewController.xib in Resources */,
 				FB0621D41ED275DD000AA258 /* rocket_ios9.png in Resources */,
 				FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */,
 				184439971D0012C700FDD7F7 /* tips_page_arrow@2x.png in Resources */,
@@ -4731,6 +4731,7 @@
 				FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */,
 				FB0621DA1ED275DD000AA258 /* RuntimeTest2.m in Sources */,
 				FB0621D51ED275DD000AA258 /* RuntimeExampleDemo.m in Sources */,
+				FBCC6A5520E39A3B002367F5 /* UIElasticViewController.m in Sources */,
 				FB50790B1E2618A900361E60 /* ZCPRecogniseQRCode.m in Sources */,
 				FB0621CA1ED275DD000AA258 /* ClassA.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
@@ -4764,13 +4765,13 @@
 				FB0621CD1ED275DD000AA258 /* OCClassMethodDemo.m in Sources */,
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
 				FB5079151E2618A900361E60 /* FontDemoHomeControllerViewController.m in Sources */,
+				FBCC6A5620E39A3B002367F5 /* UIView+Elastic.m in Sources */,
 				FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */,
 				FB9092841F6BC4DC007EC93B /* TestOperation.m in Sources */,
 				FB50791E1E2618A900361E60 /* UIImage+ClipRoundCorner.m in Sources */,
 				FB9092B41F6F5D83007EC93B /* MotoPhone.m in Sources */,
 				FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */,
-				FBCC6A4020E38584002367F5 /* UIElasticViewController.m in Sources */,
-				FBCC6A3920E377F7002367F5 /* UIViewElasticHelper.m in Sources */,
+				FBCC6A5720E39A3B002367F5 /* UIViewElasticHelper.m in Sources */,
 				FBB91DB41F2873E100D41838 /* DebugConsoleLogView.m in Sources */,
 				FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */,
 				FB5079171E2618A900361E60 /* PaletteDemoHomeController.m in Sources */,
@@ -4813,7 +4814,6 @@
 				FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */,
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,
-				FBCC6A3C20E37F7F002367F5 /* UIView+Elastic.m in Sources */,
 				FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.mm in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,

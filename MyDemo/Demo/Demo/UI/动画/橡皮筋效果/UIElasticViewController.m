@@ -34,6 +34,7 @@
     self.testLabel.layer.masksToBounds = YES;
     self.testButton.layer.cornerRadius = self.testButton.width / 2;
     self.testImageView.layer.cornerRadius = self.testImageView.width / 2;
+    self.testImageView.layer.masksToBounds = YES;
     
     self.testView.elasticHelper = [self makeHelper:self.testView.frame];
     self.testLabel.elasticHelper = [self makeHelper:self.testLabel.frame];
