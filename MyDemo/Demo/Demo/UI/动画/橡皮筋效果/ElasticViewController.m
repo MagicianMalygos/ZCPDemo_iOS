@@ -1,15 +1,15 @@
 //
-//  UIElasticViewController.m
+//  ElasticViewController.m
 //  Demo
 //
 //  Created by 朱超鹏 on 2018/6/27.
 //  Copyright © 2018年 zcp. All rights reserved.
 //
 
-#import "UIElasticViewController.h"
+#import "ElasticViewController.h"
 #import "UIView+Elastic.h"
 
-@interface UIElasticViewController ()
+@interface ElasticViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *testView;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
@@ -18,10 +18,10 @@
 
 @end
 
-@implementation UIElasticViewController
+@implementation ElasticViewController
 
 - (instancetype)initWithQuery:(NSDictionary *)query {
-    if (self = [super initWithNibName:@"UIElasticViewController" bundle:nil]) {
+    if (self = [super initWithNibName:@"ElasticViewController" bundle:nil]) {
     }
     return self;
 }

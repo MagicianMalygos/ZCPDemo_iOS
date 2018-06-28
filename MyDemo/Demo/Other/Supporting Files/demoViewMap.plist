@@ -252,9 +252,17 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>UIElasticViewController</string>
+		<string>ElasticViewController</string>
 		<key>identifier</key>
 		<string>elastic</string>
+		<key>description</key>
+		<string>橡皮筋效果</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ClockViewController</string>
+		<key>identifier</key>
+		<string>clock</string>
 		<key>description</key>
 		<string>橡皮筋效果</string>
 	</dict>

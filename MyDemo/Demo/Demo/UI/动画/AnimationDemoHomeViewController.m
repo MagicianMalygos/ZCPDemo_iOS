@@ -17,6 +17,7 @@
         _infoArr = [NSMutableArray arrayWithObjects:
                     @{@"title": @"爆炸效果"         , @"class": APPURL_VIEW_IDENTIFIER_EXPLODE},
                     @{@"title": @"橡皮筋效果"       , @"class": APPURL_VIEW_IDENTIFIER_ELASTIC},
+                    @{@"title": @"钟表"            , @"class": APPURL_VIEW_IDENTIFIER_CLOCK},
                     nil];
     }
     return _infoArr;

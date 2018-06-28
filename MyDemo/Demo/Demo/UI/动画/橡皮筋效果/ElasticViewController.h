@@ -1,5 +1,5 @@
 //
-//  UIElasticViewController.h
+//  ElasticViewController.h
 //  Demo
 //
 //  Created by 朱超鹏 on 2018/6/27.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 /// 橡皮筋效果视图控制器
-@interface UIElasticViewController : ZCPViewController
+@interface ElasticViewController : ZCPViewController
 
 @end

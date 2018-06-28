@@ -82,7 +82,8 @@
 #define APPURL_VIEW_IDENTIFIER_EXPLODE              @"explode"
 // 橡皮筋效果 UIElasticViewController
 #define APPURL_VIEW_IDENTIFIER_ELASTIC              @"elastic"
-
+// 钟表 ClockViewController
+#define APPURL_VIEW_IDENTIFIER_CLOCK                @"clock"
 
 
 #endif /* ZCPDemoViewMap_h */
