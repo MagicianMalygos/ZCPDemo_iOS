@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UIViewElasticHelper.h"
 
-/// 橡皮筋效果分类
+/**
+ 橡皮筋效果分类
+ */
 @interface UIView (Elastic)
 
 @property (nonatomic, strong) UIViewElasticHelper *elasticHelper;

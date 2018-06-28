@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 橡皮筋效果辅助类
+ */
 @interface UIViewElasticHelper : NSObject
 
 /// 需要施加橡皮筋效果的view

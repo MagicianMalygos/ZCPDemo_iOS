@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, UIViewExplodeEffect) {
 };
 
 /**
- 爆炸辅助类
+ 爆炸效果辅助类
  */
 @interface UIViewExplodeHelper : NSObject
 
