@@ -35,4 +35,12 @@
  */
 - (void)updateTime:(NSInteger)time;
 
+/**
+ 更新时间
+
+ @param time 新时间
+ @param animated 是否显示动画
+ */
+- (void)updateTime:(NSInteger)time animated:(BOOL)animated;
+
 @end

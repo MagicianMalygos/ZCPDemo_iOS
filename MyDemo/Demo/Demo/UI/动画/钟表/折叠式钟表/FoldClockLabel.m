@@ -47,6 +47,7 @@
         
         self.currentTime = time;
         
+        [self addSubview:self.bgView];
         [self addSubview:self.timeLabel];
         [self addSubview:self.nextLabel];
         [self addSubview:self.foldLabel];
@@ -57,6 +58,7 @@
         
         // 给nextLabel一个初始旋转角度，使其只显示上半部分
         self.nextLabel.layer.transform = CATransform3DMakeRotation(NextLabelStartAngel, -1, 0, 0);
+        // 初始化计时器
         self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateAnimation)];
     }
     return self;
@@ -64,10 +66,10 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.bgView.frame = self.bounds;
-    self.timeLabel.frame = self.bounds;
-    self.nextLabel.frame = self.bounds;
-    self.foldLabel.frame = self.bounds;
+    self.bgView.frame       = self.bounds;
+    self.timeLabel.frame    = self.bounds;
+    self.nextLabel.frame    = self.bounds;
+    self.foldLabel.frame    = self.bounds;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -82,20 +84,34 @@
 #pragma mark - public
 
 - (void)updateTime:(NSString *)time {
-    self.timeLabel.text     = self.currentTime;
-    self.foldLabel.text     = self.currentTime;
-    self.nextLabel.text     = time;
-    self.nextLabel.hidden   = YES;
-    self.animationProgress  = 0;
-    self.currentTime        = time;
-    [self startAnimation];
+    [self updateTime:time animated:YES];
+}
+
+- (void)updateTime:(NSString *)time animated:(BOOL)animated {
+    
+    if (animated) {
+        self.timeLabel.text     = self.currentTime;
+        self.foldLabel.text     = self.currentTime;
+        self.nextLabel.text     = time;
+        self.nextLabel.hidden   = YES;
+        self.animationProgress  = 0;
+        self.currentTime        = time;
+        [self startAnimation];
+    } else {
+        self.timeLabel.text     = time;
+        self.foldLabel.text     = time;
+        self.nextLabel.text     = time;
+        self.nextLabel.hidden   = YES;
+        self.animationProgress  = 0;
+        self.currentTime        = time;
+    }
 }
 
 #pragma mark - private
 
 /// 配置label信息
 - (void)configureLabel:(UILabel *)label {
-    label.font = [UIFont boldSystemFontOfSize:80.0f];
+    label.font = [UIFont fontWithName:@"AmericanTypewriter-Condensed" size:80.0f];
     label.textColor = [UIColor blackColor];
     
     label.textAlignment = NSTextAlignmentCenter;
@@ -156,10 +172,10 @@
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
-    self.bgView.backgroundColor = backgroundColor;
-    self.timeLabel.backgroundColor = backgroundColor;
-    self.nextLabel.backgroundColor = backgroundColor;
-    self.foldLabel.backgroundColor = backgroundColor;
+    self.bgView.backgroundColor     = backgroundColor;
+    self.timeLabel.backgroundColor  = backgroundColor;
+    self.nextLabel.backgroundColor  = backgroundColor;
+    self.foldLabel.backgroundColor  = backgroundColor;
 }
 
 #pragma mark - getters

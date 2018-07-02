@@ -39,7 +39,6 @@
             a = a / 10;
             
             FoldClockLabel *label = [[FoldClockLabel alloc] initWithTime:[@(b) stringValue]];
-            label.textColor = [UIColor whiteColor];
             [self addSubview:label];
             [self.labels insertObject:label atIndex:0];
         }
@@ -60,6 +59,10 @@
 #pragma mark - public
 
 - (void)updateTime:(NSInteger)time {
+    [self updateTime:time animated:YES];
+}
+
+- (void)updateTime:(NSInteger)time animated:(BOOL)animated {
     self.currentTime = time;
     
     NSInteger a = time;
@@ -74,7 +77,7 @@
         FoldClockLabel *label = self.labels[i];
         
         if (![label.currentTime isEqualToString:nextTime]) {
-            [label updateTime:nextTime];
+            [label updateTime:nextTime animated:animated];
         }
     }
 }
