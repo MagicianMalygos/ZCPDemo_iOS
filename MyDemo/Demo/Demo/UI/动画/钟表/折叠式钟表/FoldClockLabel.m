@@ -8,15 +8,29 @@
 
 #import "FoldClockLabel.h"
 
+// 动画最大进度
+#define MaximumProgress 1.0f
+// nextLabel的起始旋转角度，用于让其只显示上半部分
+#define NextLabelStartAngel (M_PI/180.0)
+
 @interface FoldClockLabel ()
 
+/// 背景视图，用于nextLabel存在旋转角度时遮挡其下半部分
 @property (nonatomic, strong) UIView *bgView;
+/// 用于展示完整时间的label
 @property (nonatomic, strong) UILabel *timeLabel;
+/// 用于展示下一个时间的label，只显示上半部分
 @property (nonatomic, strong) UILabel *nextLabel;
+/// 用于旋转实现折叠效果的label
 @property (nonatomic, strong) UILabel *foldLabel;
 
+/// 执行动画的定时器
 @property (nonatomic, strong) CADisplayLink *displayLink;
-@property (nonatomic, assign) CGFloat currTime;
+/// 折叠动画的进度，0~MaximumProgress
+@property (nonatomic, assign) CGFloat animationProgress;
+
+/// 当前时间
+@property (nonatomic, copy) NSString *currentTime;
 
 @end
 
@@ -25,12 +39,25 @@
 #pragma mark - life cycle
 
 - (instancetype)init {
+    return [self initWithTime:0];
+}
+
+- (instancetype)initWithTime:(NSString *)time {
     if (self = [super init]) {
+        
+        self.currentTime = time;
+        
         [self addSubview:self.timeLabel];
         [self addSubview:self.nextLabel];
         [self addSubview:self.foldLabel];
         
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateTime)];
+        self.timeLabel.text = self.currentTime;
+        self.foldLabel.text = self.currentTime;
+        self.nextLabel.text = self.currentTime;
+        
+        // 给nextLabel一个初始旋转角度，使其只显示上半部分
+        self.nextLabel.layer.transform = CATransform3DMakeRotation(NextLabelStartAngel, -1, 0, 0);
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateAnimation)];
     }
     return self;
 }
@@ -43,22 +70,31 @@
     self.foldLabel.frame = self.bounds;
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview == nil) {
+        if (_displayLink != nil) {
+            [_displayLink invalidate];
+            _displayLink = nil;
+        }
+    }
+}
+
 #pragma mark - public
 
-- (void)updateTime:(NSInteger)time nextTime:(NSInteger)nextTime {
-    self.timeLabel.text = [NSString stringWithFormat:@"%zd",time];
-    self.foldLabel.text = [NSString stringWithFormat:@"%zd",time];
-    self.nextLabel.text = [NSString stringWithFormat:@"%zd",nextTime];
-    self.nextLabel.layer.transform = CATransform3DMakeRotation(M_PI * 0.01, -1, 0, 0);
-    self.nextLabel.hidden = YES;
-    self.currTime = 0;
-    [self start];
+- (void)updateTime:(NSString *)time {
+    self.timeLabel.text     = self.currentTime;
+    self.foldLabel.text     = self.currentTime;
+    self.nextLabel.text     = time;
+    self.nextLabel.hidden   = YES;
+    self.animationProgress  = 0;
+    self.currentTime        = time;
+    [self startAnimation];
 }
 
 #pragma mark - private
 
+/// 配置label信息
 - (void)configureLabel:(UILabel *)label {
-    // 可配值
     label.font = [UIFont boldSystemFontOfSize:80.0f];
     label.textColor = [UIColor blackColor];
     
@@ -68,48 +104,65 @@
 
 #pragma mark - time
 
-- (void)start {
+- (void)startAnimation {
     [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)stop {
+- (void)stopAnimation {
     [self.displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
-- (void)updateTime {
-    int maxTime = 4;
-    self.currTime += 2.0/60.0;
+- (void)updateAnimation {
+    self.animationProgress += 1.0/60.0;
     
-    // (0, 0) (2 M_PI_2) (4 M_PI)
-    // y = π/4 * x
-    
-    // x轴反转 从 0~M_PI
-    CATransform3D transform = CATransform3DIdentity;
-    CGFloat angle = M_PI_4 * self.currTime;
-    angle = (self.currTime >= maxTime) > M_PI ? M_PI:angle;
-    transform = CATransform3DRotate(transform, M_PI_4 * self.currTime, -1, 0, 0);
-    
-    if (angle > M_PI * 0.01) {
-        self.nextLabel.hidden = NO;
+    // 如果 progress > max 则结束旋转
+    if (self.animationProgress > MaximumProgress) {
+        self.timeLabel.text = self.nextLabel.text;
+        [self stopAnimation];
+        return;
     }
     
-    // 如果x >= 2 则在y轴上反转M_PI一次
-    if (self.currTime >= 2) {
+    CATransform3D transform = CATransform3DIdentity;
+    // x轴旋转 从 0~M_PI
+    CGFloat currAngle = M_PI * self.animationProgress;
+    transform = CATransform3DRotate(transform, currAngle, -1, 0, 0);
+    
+    // 如果 progress >= max/2 则在y轴z轴上旋转M_PI
+    if (self.animationProgress >= MaximumProgress / 2) {
         transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
         transform = CATransform3DRotate(transform, M_PI, 0, 0, 1);
         self.foldLabel.text = self.nextLabel.text;
     }
-    
     self.foldLabel.layer.transform = transform;
-    
-    // 如果x >= 4 则结束反转
-    if (self.currTime >= maxTime) {
-        self.timeLabel.text = self.nextLabel.text;
-        [self stop];
-    }
+    // 在foldLabel旋转到能盖住nextLabel上半部分的时候，显示nextLabel
+    self.nextLabel.hidden = (currAngle < NextLabelStartAngel);
 }
 
-#pragma mark - getters and setters
+#pragma mark - setters
+
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.timeLabel.font = font;
+    self.nextLabel.font = font;
+    self.foldLabel.font = font;
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+    _textColor = textColor;
+    self.timeLabel.textColor = textColor;
+    self.nextLabel.textColor = textColor;
+    self.foldLabel.textColor = textColor;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+    self.bgView.backgroundColor = backgroundColor;
+    self.timeLabel.backgroundColor = backgroundColor;
+    self.nextLabel.backgroundColor = backgroundColor;
+    self.foldLabel.backgroundColor = backgroundColor;
+}
+
+#pragma mark - getters
 
 - (UILabel *)timeLabel {
     if (!_timeLabel) {

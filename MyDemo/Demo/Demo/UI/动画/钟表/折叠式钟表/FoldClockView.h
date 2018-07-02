@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoldClockItemView.h"
 
 /**
  折叠式钟表
@@ -14,5 +15,11 @@
 @interface FoldClockView : UIView
 
 @property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) UIFont *font;
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIColor *clockItemBackgroundColor;
+
+@property (nonatomic, assign) UIEdgeInsets itemInsets;
+@property (nonatomic, assign) CGFloat itemSpacing;
 
 @end

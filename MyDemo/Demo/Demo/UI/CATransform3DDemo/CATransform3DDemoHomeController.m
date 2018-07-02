@@ -52,10 +52,10 @@
 - (void)example2 {
     CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     
-    CATransform3D transform = CATransform3DMakeRotation(0, 1, 0, 0); // 旋转角度的弧度值，X * PI/180
+    CATransform3D transform = CATransform3DIdentity; // 旋转角度的弧度值，X * PI/180
     [theAnimation setFromValue:[NSValue valueWithCATransform3D:transform]];
     
-    transform = CATransform3DMakeRotation(1.57, 1, 0, 0);
+    transform = CATransform3DMakeRotation(M_PI, 0, 1, 1);
     [theAnimation setToValue:[NSValue valueWithCATransform3D:transform]];
     
     [theAnimation setAutoreverses:YES];
@@ -84,8 +84,8 @@
 
 - (void)click {
 //    [self example1];
-//    [self example2];
-    [self example3];
+    [self example2];
+//    [self example3];
 }
 
 @end
