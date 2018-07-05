@@ -38,6 +38,7 @@
 //    [self testSandBoxPath];
 //    [self testSettings];
 //    [self testNotification];
+    [self testAnchorPoint];
 }
 
 #pragma mark - test
@@ -317,6 +318,34 @@
     static BOOL showAlert;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"notification" object:nil userInfo:@{@"showAlert": @(showAlert)}];
     showAlert = !showAlert;
+}
+
+#pragma mark - testAnchorPoint
+
+- (void)testAnchorPoint {
+    
+    __block UIView *view = [[UIView alloc] init];
+    view.frame = CGRectMake(0, 0, 100, 100);
+    view.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view];
+    
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DTranslate(transform, 200, 0, 0);
+    
+    __block CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    animation.toValue = [NSValue valueWithCATransform3D:transform];
+    animation.duration = 5;
+    
+    [view.layer addAnimation:animation forKey:@"transform"];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        animation.fromValue = [view.layer.presentationLayer valueForKeyPath:@"transform"];
+        animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-200, 0, 0)];
+        [view.layer removeAllAnimations];
+        [view.layer addAnimation:animation forKey:@"transform"];
+    });
 }
 
 @end

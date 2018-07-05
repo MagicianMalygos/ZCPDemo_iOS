@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 爆炸效果demo 视图控制器
+ */
 @interface ExplodeViewController : UIViewController
 
 @end

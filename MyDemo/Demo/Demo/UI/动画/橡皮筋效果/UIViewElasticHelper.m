@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, UIViewElasticState) {
     _view       = view;
     _superview  = view.superview;
     
-    // maximumStretchDistance默认为5倍的圆周长
+    // maximumStretchDistance默认为5倍的视图宽度
     if (self.maximumStretchDistance == 0) {
         _maximumStretchDistance = view.width * 5;
     }
@@ -132,7 +132,7 @@ typedef NS_ENUM(NSInteger, UIViewElasticState) {
     // 三角形 三角形由“圆心线”、“圆1与x轴的垂直线”、“圆2与y轴的垂直线”组成，θ角为圆心线和圆2与y轴的垂直线的夹角
     CGFloat a = fabs(cc2.x - cc1.x);
     CGFloat b = fabs(cc2.y - cc1.y);
-    CGFloat c = sqrt(a * a + b * b);
+    CGFloat c = distance;
     CGFloat sin0 = b / c;
     CGFloat cos0 = a / c;
     

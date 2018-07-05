@@ -69,21 +69,22 @@
 // collection CollectionViewDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_COLLECTION           @"collection"
 
-// UIHomeDemo CATransform3DDemoHomeController
-#define APPURL_VIEW_IDENTIFIER_CATRANSFORM3D        @"catransform3d"
-// 波浪线 WaveLineDemoHomeController
-#define APPURL_VIEW_IDENTIFIER_WAVELINE             @"waveLine"
-
 #pragma mark - Animation
 
 // 动画首页 AnimationDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_ANIMATION            @"animationHome"
+// UIHomeDemo CATransform3DDemoHomeController
+#define APPURL_VIEW_IDENTIFIER_CATRANSFORM3D        @"catransform3d"
+// 波浪线 WaveLineDemoHomeController
+#define APPURL_VIEW_IDENTIFIER_WAVELINE             @"waveLine"
 // 爆炸效果 ExplodeViewController
 #define APPURL_VIEW_IDENTIFIER_EXPLODE              @"explode"
 // 橡皮筋效果 UIElasticViewController
 #define APPURL_VIEW_IDENTIFIER_ELASTIC              @"elastic"
 // 钟表 ClockViewController
 #define APPURL_VIEW_IDENTIFIER_CLOCK                @"clock"
+// 动画按钮 AnimationButtonViewController
+#define APPURL_VIEW_IDENTIFIER_ANIMATIONBUTTON      @"animationButton"
 
 
 #endif /* ZCPDemoViewMap_h */

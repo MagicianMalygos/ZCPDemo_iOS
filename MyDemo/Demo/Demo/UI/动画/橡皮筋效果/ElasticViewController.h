@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-/// 橡皮筋效果视图控制器
+/**
+ 橡皮筋效果demo 视图控制器
+ */
 @interface ElasticViewController : ZCPViewController
 
 @end

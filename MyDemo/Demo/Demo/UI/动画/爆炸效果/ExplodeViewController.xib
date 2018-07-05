@@ -178,7 +178,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="whY-IA-Sgx" firstAttribute="leading" secondItem="E83-Ts-g7x" secondAttribute="trailing" constant="16" id="3LH-Iu-zFx"/>
+                <constraint firstItem="whY-IA-Sgx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="122" id="3LH-Iu-zFx"/>
                 <constraint firstItem="b6J-jC-RLk" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="6ad-q4-9r3"/>
                 <constraint firstItem="xRd-CH-ypN" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ca5-N0-Nsd"/>
                 <constraint firstItem="e3L-h0-6Vi" firstAttribute="top" secondItem="rUc-ua-Rrf" secondAttribute="bottom" constant="16" id="Efj-Z4-QjA"/>
@@ -190,13 +190,13 @@
                 <constraint firstItem="5TB-wf-Y75" firstAttribute="top" secondItem="s0C-2z-Maj" secondAttribute="top" id="Wxi-I9-gpv"/>
                 <constraint firstItem="b6J-jC-RLk" firstAttribute="top" secondItem="xRd-CH-ypN" secondAttribute="bottom" constant="16" id="Xqt-0Q-24s"/>
                 <constraint firstItem="E83-Ts-g7x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="cMR-UA-Kyh"/>
-                <constraint firstItem="whY-IA-Sgx" firstAttribute="top" secondItem="E83-Ts-g7x" secondAttribute="top" id="cuU-z4-s8R"/>
                 <constraint firstItem="s0C-2z-Maj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dOJ-QK-U7F"/>
-                <constraint firstItem="s0C-2z-Maj" firstAttribute="top" secondItem="E83-Ts-g7x" secondAttribute="bottom" constant="16" id="eJa-HF-ULA"/>
+                <constraint firstItem="s0C-2z-Maj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="146" id="eJa-HF-ULA"/>
                 <constraint firstItem="e3L-h0-6Vi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="k8S-wT-VPq"/>
+                <constraint firstItem="whY-IA-Sgx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="lUH-W0-eJf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="64.5"/>
+            <point key="canvasLocation" x="-65" y="-9"/>
         </view>
     </objects>
     <resources>

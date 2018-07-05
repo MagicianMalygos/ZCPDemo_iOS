@@ -144,9 +144,13 @@
 		FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F9D1FFE1C0900B366FA /* log_crypt.mm */; };
 		FB7E4FC01FFE1C2300B366FA /* LogDemoHomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */; };
 		FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */; };
-		FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */; };
 		FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */; };
 		FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */; };
+		FB875D8520EB738E00F8C868 /* AnimationButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */; };
+		FB875D8820EB741A00F8C868 /* AnimationButton1.m in Sources */ = {isa = PBXBuildFile; fileRef = FB875D8720EB741A00F8C868 /* AnimationButton1.m */; };
+		FB875D9120EB748F00F8C868 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FB875D8B20EB748E00F8C868 /* fire.png */; };
+		FB875D9220EB748F00F8C868 /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB875D8C20EB748E00F8C868 /* CATransform3DDemoHomeController.m */; };
+		FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB875D9020EB748E00F8C868 /* WaveLineDemoHomeController.m */; };
 		FB90927F1F6AD1C6007EC93B /* MultiThreadDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */; };
 		FB9092841F6BC4DC007EC93B /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092831F6BC4DC007EC93B /* TestOperation.m */; };
 		FB90929C1F6F56F7007EC93B /* NokiaPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90929B1F6F56F7007EC93B /* NokiaPhone.m */; };
@@ -158,8 +162,6 @@
 		FB9092B41F6F5D83007EC93B /* MotoPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092B31F6F5D83007EC93B /* MotoPhone.m */; };
 		FB9092B71F6F5E11007EC93B /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9092B61F6F5E11007EC93B /* Phone.m */; };
 		FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */; };
-		FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */; };
-		FB92C8931E5C21280095F31E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FB92C8921E5C21280095F31E /* fire.png */; };
 		FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03D51EFD0DE300B7591C /* MapViewController.m */; };
 		FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9F03D61EFD0DE300B7591C /* MapViewController.xib */; };
 		FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */; };
@@ -1454,10 +1456,17 @@
 		FB7E4FBE1FFE1C2300B366FA /* LogDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogDemoHomeViewController.h; sourceTree = "<group>"; };
 		FB7E4FBF1FFE1C2300B366FA /* LogDemoHomeViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LogDemoHomeViewController.mm; sourceTree = "<group>"; };
 		FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FB8216191FC5761400BB7710 /* WaveLineDemoHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveLineDemoHomeController.h; sourceTree = "<group>"; };
-		FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveLineDemoHomeController.m; sourceTree = "<group>"; };
 		FB8339791EDFB93800EF419F /* bubble_mine_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@2x.png"; sourceTree = "<group>"; };
 		FB83397A1EDFB93800EF419F /* bubble_mine_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_mine_green@3x.png"; sourceTree = "<group>"; };
+		FB875D8320EB738E00F8C868 /* AnimationButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButtonViewController.h; sourceTree = "<group>"; };
+		FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButtonViewController.m; sourceTree = "<group>"; };
+		FB875D8620EB741A00F8C868 /* AnimationButton1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButton1.h; sourceTree = "<group>"; };
+		FB875D8720EB741A00F8C868 /* AnimationButton1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton1.m; sourceTree = "<group>"; };
+		FB875D8B20EB748E00F8C868 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		FB875D8C20EB748E00F8C868 /* CATransform3DDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DDemoHomeController.m; sourceTree = "<group>"; };
+		FB875D8D20EB748E00F8C868 /* CATransform3DDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DDemoHomeController.h; sourceTree = "<group>"; };
+		FB875D8F20EB748E00F8C868 /* WaveLineDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveLineDemoHomeController.h; sourceTree = "<group>"; };
+		FB875D9020EB748E00F8C868 /* WaveLineDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveLineDemoHomeController.m; sourceTree = "<group>"; };
 		FB90927D1F6AD1C6007EC93B /* MultiThreadDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadDemo.h; sourceTree = "<group>"; };
 		FB90927E1F6AD1C6007EC93B /* MultiThreadDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadDemo.m; sourceTree = "<group>"; };
 		FB9092821F6BC4DC007EC93B /* TestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
@@ -1481,9 +1490,6 @@
 		FB9092B61F6F5E11007EC93B /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
 		FB92C8891E5C177B0095F31E /* CollectionViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewDemoHomeController.h; sourceTree = "<group>"; };
 		FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoHomeController.m; sourceTree = "<group>"; };
-		FB92C88F1E5C17CF0095F31E /* CATransform3DDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DDemoHomeController.h; sourceTree = "<group>"; };
-		FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DDemoHomeController.m; sourceTree = "<group>"; };
-		FB92C8921E5C21280095F31E /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		FB9F03D41EFD0DE300B7591C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FB9F03D51EFD0DE300B7591C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		FB9F03D61EFD0DE300B7591C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
@@ -3765,9 +3771,12 @@
 		FB139FD820D8ED0100DD6D34 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
-				FBCC6A5B20E48BD0002367F5 /* 钟表 */,
-				FBCC6A4220E39A30002367F5 /* 橡皮筋效果 */,
+				FB875D8920EB748E00F8C868 /* 动画基础 */,
+				FB875D8E20EB748E00F8C868 /* 波浪线 */,
 				FB139FD920D8ED0100DD6D34 /* 爆炸效果 */,
+				FBCC6A4220E39A30002367F5 /* 橡皮筋效果 */,
+				FBCC6A5B20E48BD0002367F5 /* 钟表 */,
+				FB875D7A20EB737300F8C868 /* 动画按钮 */,
 				FB139FE620D8ED5700DD6D34 /* AnimationDemoHomeViewController.h */,
 				FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */,
 			);
@@ -4036,8 +4045,6 @@
 			isa = PBXGroup;
 			children = (
 				FB139FD820D8ED0100DD6D34 /* 动画 */,
-				FB8216111FC575D300BB7710 /* 波浪线 */,
-				FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
 				FB50795A1E26193A00361E60 /* 气泡拉伸 */,
 				FB5078771E2618A900361E60 /* FontDemo */,
@@ -4178,11 +4185,40 @@
 			path = XLog;
 			sourceTree = "<group>";
 		};
-		FB8216111FC575D300BB7710 /* 波浪线 */ = {
+		FB875D7A20EB737300F8C868 /* 动画按钮 */ = {
 			isa = PBXGroup;
 			children = (
-				FB8216191FC5761400BB7710 /* WaveLineDemoHomeController.h */,
-				FB82161A1FC5761400BB7710 /* WaveLineDemoHomeController.m */,
+				FB875D8320EB738E00F8C868 /* AnimationButtonViewController.h */,
+				FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */,
+				FB875D8620EB741A00F8C868 /* AnimationButton1.h */,
+				FB875D8720EB741A00F8C868 /* AnimationButton1.m */,
+			);
+			path = "动画按钮";
+			sourceTree = "<group>";
+		};
+		FB875D8920EB748E00F8C868 /* 动画基础 */ = {
+			isa = PBXGroup;
+			children = (
+				FB875D8A20EB748E00F8C868 /* CATransform3DDemo */,
+			);
+			path = "动画基础";
+			sourceTree = "<group>";
+		};
+		FB875D8A20EB748E00F8C868 /* CATransform3DDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FB875D8D20EB748E00F8C868 /* CATransform3DDemoHomeController.h */,
+				FB875D8C20EB748E00F8C868 /* CATransform3DDemoHomeController.m */,
+				FB875D8B20EB748E00F8C868 /* fire.png */,
+			);
+			path = CATransform3DDemo;
+			sourceTree = "<group>";
+		};
+		FB875D8E20EB748E00F8C868 /* 波浪线 */ = {
+			isa = PBXGroup;
+			children = (
+				FB875D8F20EB748E00F8C868 /* WaveLineDemoHomeController.h */,
+				FB875D9020EB748E00F8C868 /* WaveLineDemoHomeController.m */,
 			);
 			path = "波浪线";
 			sourceTree = "<group>";
@@ -4237,16 +4273,6 @@
 				FB92C88A1E5C177B0095F31E /* CollectionViewDemoHomeController.m */,
 			);
 			path = CollectionViewDemo;
-			sourceTree = "<group>";
-		};
-		FB92C88E1E5C17AE0095F31E /* CATransform3DDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FB92C8921E5C21280095F31E /* fire.png */,
-				FB92C88F1E5C17CF0095F31E /* CATransform3DDemoHomeController.h */,
-				FB92C8901E5C17CF0095F31E /* CATransform3DDemoHomeController.m */,
-			);
-			path = CATransform3DDemo;
 			sourceTree = "<group>";
 		};
 		FBA5F3EE1EF3CA8200F97958 /* 国际化 */ = {
@@ -4639,7 +4665,6 @@
 				FB5079241E2618A900361E60 /* a.html in Resources */,
 				FBCF6B371F8CBC0A00E3B58C /* Localizable.strings in Resources */,
 				FB5079071E2618A900361E60 /* turn_off.png in Resources */,
-				FB92C8931E5C21280095F31E /* fire.png in Resources */,
 				18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */,
 				184439991D0012C700FDD7F7 /* tips_page_arrow_down.png in Resources */,
 				FB0621D31ED275DD000AA258 /* rocket.png in Resources */,
@@ -4675,6 +4700,7 @@
 				18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */,
 				FBB91DB61F2873EF00D41838 /* DebugStatusBallView.xib in Resources */,
 				1844399A1D0012C700FDD7F7 /* tips_page_arrow_down@2x.png in Resources */,
+				FB875D9120EB748F00F8C868 /* fire.png in Resources */,
 				FB5079081E2618A900361E60 /* turn_on.png in Resources */,
 				FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */,
 				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
@@ -4761,6 +4787,7 @@
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
 				FBB91DAA1F2871CA00D41838 /* YYFPSLabel.m in Sources */,
 				FB0621C71ED275DC000AA258 /* EnumAndFormatDemo.m in Sources */,
+				FB875D8820EB741A00F8C868 /* AnimationButton1.m in Sources */,
 				FB5079161E2618A900361E60 /* Line.m in Sources */,
 				FB5078C81E2618A900361E60 /* ZCPURLConnectionTool.m in Sources */,
 				FBCF6B461F8CBF3B00E3B58C /* DashedCell.m in Sources */,
@@ -4786,6 +4813,7 @@
 				FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */,
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
+				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
 				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
 				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,
@@ -4837,10 +4865,10 @@
 				FB5079091E2618A900361E60 /* QRCodeDemoHomeController.m in Sources */,
 				FB0621CE1ED275DD000AA258 /* OtherDemoHomeController.m in Sources */,
 				FB0621C91ED275DD000AA258 /* ClassA+Category.m in Sources */,
+				FB875D9220EB748F00F8C868 /* CATransform3DDemoHomeController.m in Sources */,
 				FB5079211E2618A900361E60 /* SetFilletTestCell.m in Sources */,
 				FB5079121E2618A900361E60 /* TabBarDemoHomeController.m in Sources */,
 				FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */,
-				FB92C8911E5C17CF0095F31E /* CATransform3DDemoHomeController.m in Sources */,
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,
 				FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */,
 				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
@@ -4854,7 +4882,7 @@
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,
 				FBCC6A7320E48F9A002367F5 /* FoldClockLabel.m in Sources */,
-				FB82161B1FC5761400BB7710 /* WaveLineDemoHomeController.m in Sources */,
+				FB875D8520EB738E00F8C868 /* AnimationButtonViewController.m in Sources */,
 				FB5078A11E2618A900361E60 /* AppDelegate.mm in Sources */,
 				FB92C88B1E5C177B0095F31E /* CollectionViewDemoHomeController.m in Sources */,
 				FB0621D71ED275DD000AA258 /* ZCPUser+AddProperty.m in Sources */,

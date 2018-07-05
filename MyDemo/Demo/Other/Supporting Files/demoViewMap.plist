@@ -266,5 +266,13 @@
 		<key>description</key>
 		<string>橡皮筋效果</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>AnimationButtonViewController</string>
+		<key>identifier</key>
+		<string>animationButton</string>
+		<key>description</key>
+		<string>动画按钮</string>
+	</dict>
 </array>
 </plist>
