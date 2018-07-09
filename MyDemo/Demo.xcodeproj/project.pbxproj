@@ -223,6 +223,7 @@
 		FBCF6B771F8F528800E3B58C /* ZCPMinesweeperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B751F8F528800E3B58C /* ZCPMinesweeperViewController.xib */; };
 		FBD4ABB91EFA5BF70030EFD2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */; };
 		FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */; };
+		FBEAE41320EF5EBA001E27AF /* AnimationButton2.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */; };
 		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
@@ -1599,6 +1600,8 @@
 		FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		FBD837081EF28BD20081672B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		FBD837091EF28BD20081672B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButton2.h; sourceTree = "<group>"; };
+		FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton2.m; sourceTree = "<group>"; };
 		FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笑傲江湖.txt"; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
 		FBF763CD1EA07124001E867B /* bubble_community@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@3x.png"; sourceTree = "<group>"; };
@@ -4192,6 +4195,8 @@
 				FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */,
 				FB875D8620EB741A00F8C868 /* AnimationButton1.h */,
 				FB875D8720EB741A00F8C868 /* AnimationButton1.m */,
+				FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */,
+				FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */,
 			);
 			path = "动画按钮";
 			sourceTree = "<group>";
@@ -4801,6 +4806,7 @@
 				FB0621CA1ED275DD000AA258 /* ClassA.m in Sources */,
 				FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */,
 				FB90927F1F6AD1C6007EC93B /* MultiThreadDemo.m in Sources */,
+				FBEAE41320EF5EBA001E27AF /* AnimationButton2.m in Sources */,
 				FB50790C1E2618A900361E60 /* ZCPScanQRCodeViewController.m in Sources */,
 				FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */,
 				FB9092B71F6F5E11007EC93B /* Phone.m in Sources */,
