@@ -175,6 +175,7 @@
 		FBB91DB41F2873E100D41838 /* DebugConsoleLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DB31F2873E100D41838 /* DebugConsoleLogView.m */; };
 		FBB91DB61F2873EF00D41838 /* DebugStatusBallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB91DB51F2873EF00D41838 /* DebugStatusBallView.xib */; };
 		FBB91DBB1F288AC000D41838 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DBA1F288AC000D41838 /* DebugManager.m */; };
+		FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1246F20F4B78C0060471A /* AnimationButton3.m */; };
 		FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E4081EEE43AC006482B8 /* BookViewController.m */; };
 		FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */; };
 		FBCC20F61F0377D9006FE26C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCC20F51F0377D9006FE26C /* iAd.framework */; };
@@ -1519,6 +1520,8 @@
 		FBB91DB51F2873EF00D41838 /* DebugStatusBallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugStatusBallView.xib; sourceTree = "<group>"; };
 		FBB91DB91F288AC000D41838 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
 		FBB91DBA1F288AC000D41838 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
+		FBC1246E20F4B78C0060471A /* AnimationButton3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButton3.h; sourceTree = "<group>"; };
+		FBC1246F20F4B78C0060471A /* AnimationButton3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton3.m; sourceTree = "<group>"; };
 		FBC4E4071EEE43AC006482B8 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		FBC4E4081EEE43AC006482B8 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FBC4E40A1EEE44CF006482B8 /* BookPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookPageViewController.h; sourceTree = "<group>"; };
@@ -4197,6 +4200,8 @@
 				FB875D8720EB741A00F8C868 /* AnimationButton1.m */,
 				FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */,
 				FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */,
+				FBC1246E20F4B78C0060471A /* AnimationButton3.h */,
+				FBC1246F20F4B78C0060471A /* AnimationButton3.m */,
 			);
 			path = "动画按钮";
 			sourceTree = "<group>";
@@ -4820,6 +4825,7 @@
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
 				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
+				FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */,
 				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
 				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,

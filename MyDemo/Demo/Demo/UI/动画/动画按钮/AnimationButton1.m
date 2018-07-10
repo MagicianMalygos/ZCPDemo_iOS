@@ -56,6 +56,8 @@
 
 @implementation AnimationButton1
 
+@synthesize lineColor = _lineColor;
+
 #pragma mark - life cycle
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -204,8 +206,8 @@
 - (void)click {
     [self startAnimation];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidClick:)]) {
-        [self.delegate animationButtonDidClick:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButton1DidClick:)]) {
+        [self.delegate animationButton1DidClick:self];
     }
 }
 
@@ -316,8 +318,11 @@
 #pragma mark - setters
 
 - (void)setFrame:(CGRect)frame {
+    CGSize originSize = self.frame.size;
     [super setFrame:frame];
-    [self update];
+    if (!CGSizeEqualToSize(originSize, frame.size)) {
+        [self update];
+    }
 }
 
 - (void)setLineColor:(UIColor *)lineColor {
@@ -336,6 +341,14 @@
 }
 
 #pragma mark - getters
+
+- (UIColor *)lineColor {
+    if (!_lineColor) {
+        // 缺省值
+        _lineColor = [UIColor blackColor];
+    }
+    return _lineColor;
+}
 
 - (CAShapeLayer *)topLayer {
     if (!_topLayer) {

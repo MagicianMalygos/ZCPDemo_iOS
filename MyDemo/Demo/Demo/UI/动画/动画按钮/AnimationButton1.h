@@ -31,7 +31,7 @@
 
  @param button 按钮
  */
-- (void)animationButtonDidClick:(AnimationButton1 *)button;
+- (void)animationButton1DidClick:(AnimationButton1 *)button;
 
 /**
  按钮动画结束回调
