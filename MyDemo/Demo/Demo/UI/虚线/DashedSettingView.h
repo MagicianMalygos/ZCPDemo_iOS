@@ -7,12 +7,36 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol DashedSettingViewDelegate;
 
+/**
+ 虚线配置参数视图
+ */
 @interface DashedSettingView : UIView
 
-@property (weak, nonatomic) IBOutlet UITextField *phase;
-@property (weak, nonatomic) IBOutlet UITextField *count;
-@property (weak, nonatomic) IBOutlet UITextField *lengths;
-@property (weak, nonatomic) IBOutlet UIButton *go;
+@property (weak, nonatomic) IBOutlet UITextField *phaseTextField;
+@property (weak, nonatomic) IBOutlet UITextField *countTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lengthsTextField;
+@property (weak, nonatomic) IBOutlet UIButton *goButton;
+@property (weak, nonatomic) IBOutlet UIButton *moveButton;
+
+@property (nonatomic, weak) id<DashedSettingViewDelegate> delegate;
+
+@end
+
+/**
+ 虚线配置参数视图代理回调
+ */
+@protocol DashedSettingViewDelegate <NSObject>
+
+/**
+ 点击go按钮
+ */
+- (void)clickGoButton:(UIButton *)button;
+
+/**
+ 点击move按钮
+ */
+- (void)clickMoveButton:(UIButton *)button;
 
 @end

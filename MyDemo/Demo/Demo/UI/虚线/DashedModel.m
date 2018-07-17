@@ -10,4 +10,17 @@
 
 @implementation DashedModel
 
+- (id)copyWithZone:(NSZone *)zone {
+    DashedModel *model  = [[DashedModel alloc] init];
+    model.lengthsV      = self.lengthsV.mutableCopy;
+    model.phaseV        = self.phaseV;
+    model.countV        = self.countV;
+    
+    model.lineWidth     = self.lineWidth;
+    model.lineColor     = self.lineColor;
+    
+    model.type          = self.type;
+    return model;
+}
+
 @end

@@ -16,160 +16,148 @@
 
 @implementation DashedView
 
-#pragma mark - Draw Dashed
-/*
- 1.可设置线条首尾样式；有模糊，水平方向线宽不对
- 2.可设置线条首尾样式，无模糊；水平方向线宽不对
- 3.可设置连接处样式，无线宽异常
- 
- 参考：
- 画虚线几种方法：http://www.jianshu.com/p/d64b0abef349
- CoreAnimation部分api解读：http://www.cnblogs.com/Free-Thinker/p/5117624.html
- */
 
-// 通过 Quartz 2D 生成UIImage虚线
-+ (UIView *)drawDashed1:(DashedModel *)dashedModel {
-    
-    /* - - - View - - - */
-    UIImageView *imageView  = [[UIImageView alloc] init];
-    imageView.frame         = dashedModel.dashedViewFrame;
-    
-    /* - - - Draw Dashed - - - */
-    // 设置frame
-    UIGraphicsBeginImageContext(imageView.frame.size);
-    [imageView.image drawInRect:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
-    
-    // 获取当前上下文
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    // 设置线条颜色
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-    // 设置线宽
-    CGContextSetLineWidth(context, 2);
-    
-    //  设置线条首尾样式()
-    //  kCGLineCapButt,  无形状
-    //  kCGLineCapRound, 矩形首尾样式
-    //  kCGLineCapSquare 圆角首尾样式
-    CGContextSetLineCap(context, kCGLineCapRound);
-    
-    /*
-     // 虚线长度参数
-     CGFloat lengths[] = {5, 10, 50, 20};
-     // 设置虚线参数
-     // p1：上下文；p2：在开始跳过多少长度；p3：虚线参数；p4：实虚交替使用lengths中前count个参数
-     CGContextSetLineDash(context, 0, lengths, 3);
-     */
-    CGContextSetLineDash(context, dashedModel.phaseV, dashedModel->lengthsV, dashedModel.countV);
-    
-    // 起始点
-    CGContextMoveToPoint(context, 0, 0);
-    // 设置线的落点
-    CGContextAddLineToPoint(context, imageView.width / 2, 0);
-    CGContextAddLineToPoint(context, imageView.width / 2, 50);
-    CGContextAddLineToPoint(context, imageView.width, 50);
-    // 画线
-    CGContextStrokePath(context); // CGContextDrawPath(context, kCGPathStroke);
-    
-    // 输出image
-    UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
-    // 结束
-    UIGraphicsEndImageContext();
-    
-    
-    /* - - - Return - - - */
-    imageView.image = outputImage;
-    return imageView;
-}
+#pragma mark - life cycle
 
-+ (UIView *)drawDashed2:(DashedModel *)dashedModel {
-    
-    /* - - - View - - - */
-    DashedView *view        = [[DashedView alloc] initWithFrame:dashedModel.dashedViewFrame];
-    view.backgroundColor    = [UIColor whiteColor];
-    view.dashedModel        = dashedModel;
-    
-    /* - - - Draw Dashed - - - */
-    [view setNeedsDisplay];
-    
-    /* - - - Return - - - */
-    
-    return view;
-}
-+ (UIView *)drawDashed3:(DashedModel *)dashedModel {
-    
-    /* - - - View - - - */
-    UIView *view        = [[UIView alloc] init];
-    view.frame          = dashedModel.dashedViewFrame;
-    
-    /* - - - Draw Dashed - - - */
-    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    [shapeLayer setBounds:view.bounds];
-    [shapeLayer setPosition:CGPointMake(shapeLayer.bounds.size.width / 2, shapeLayer.bounds.size.height / 2)];
-    // 填充颜色
-    [shapeLayer setFillColor:[UIColor clearColor].CGColor];
-    // 画笔颜色
-    [shapeLayer setStrokeColor:[UIColor redColor].CGColor];
-    // 首尾样式
-    [shapeLayer setLineCap:kCALineCapRound];
-    // 虚线宽度
-    [shapeLayer setLineWidth:5];
-    // 线段连接方式
-    // kCALineJoinMiter 菱角
-    // kCALineJoinRound 平滑
-    // kCALineJoinBevel 折线
-    [shapeLayer setLineJoin:kCALineJoinRound];
-    
-    NSMutableArray *pattern = @[].mutableCopy;
-    int  length = sizeof(dashedModel->lengthsV) / sizeof(dashedModel->lengthsV[0]);
-    for (int i = 0; i < length; i++) {
-        if (dashedModel->lengthsV[i] == EOF) {
-            break;
-        }
-        [pattern addObject:@(dashedModel->lengthsV[i])];
-    }
-    [shapeLayer setLineDashPattern:pattern];
-    
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, NULL, 0, 0);
-    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width / 2, 0);
-    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width / 2, 50);
-    CGPathAddLineToPoint(path, NULL, shapeLayer.bounds.size.width, 50);
-    
-    [shapeLayer setPath:path];
-    [view.layer addSublayer:shapeLayer];
-    
-    CGPathRelease(path);
-    /* - - - Return - - - */
-    
-    return view;
-}
-
-#pragma mark -
-
-- (instancetype)init {
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
+        self.layer.borderColor = [UIColor greenColor].CGColor;
+        self.layer.borderWidth = 1;
     }
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self draw];
+}
+
+#pragma mark - public
+
+- (void)configureWithModel:(DashedModel *)model {
+    self.dashedModel = model.copy;
+    [self draw];
+}
+
+#pragma mark - Draw Dashed
+
+- (void)draw {
+    if (self.dashedModel.type == DashedType1) {
+        [self drawDashed1];
+    } else if (self.dashedModel.type == DashedType2) {
+        [self drawDashed2];
+    }
+}
+
+- (void)drawDashed1 {
+    [self.layer removeAllSublayers];
+    
+    CAShapeLayer *dashedLayer   = [CAShapeLayer layer];
+    dashedLayer.frame           = self.bounds;
+    dashedLayer.anchorPoint     = CGPointZero;
+    dashedLayer.position        = CGPointZero;
+    
+    // 线宽
+    dashedLayer.lineWidth       = self.dashedModel.lineWidth;
+    // 填充色
+    dashedLayer.fillColor       = NULL;
+    // 画笔颜色
+    dashedLayer.strokeColor     = self.dashedModel.lineColor.CGColor;
+    // 首尾样式
+    dashedLayer.lineCap         = kCALineCapRound;
+    // 线段连接方式
+    // kCALineJoinMiter 菱角
+    // kCALineJoinRound 平滑
+    // kCALineJoinBevel 折线
+    dashedLayer.lineJoin        = kCALineJoinRound;
+    
+    // 设置虚线参数，设置后绘制出来的线都会变成虚线，没有count参数
+    // 虚线起始偏移量 -值为向右偏移，+值为向左偏移
+    dashedLayer.lineDashPhase   = self.dashedModel.phaseV;
+    // 虚线虚实部分的长度参数
+    dashedLayer.lineDashPattern = self.dashedModel.lengthsV;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    // 画直线
+    CGPathMoveToPoint(path, NULL, 0, 15);
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width - 10, 15);
+    // 画方形
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width - 10, dashedLayer.height - 10);
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width * 7/8, dashedLayer.height - 10);
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width * 7/8, 40);
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width * 5/8, 40);
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width * 5/8, dashedLayer.height - 10);
+    // 画圆形
+    CGPathAddLineToPoint(path, NULL, dashedLayer.width / 4, dashedLayer.height - 10);
+    CGFloat radius = (dashedLayer.height - 50)/2;
+    CGPoint center = CGPointMake(dashedLayer.width / 4, 40 + radius);
+    CGPathAddArc(path, NULL, center.x, center.y, radius, M_PI_2, -M_PI, true);
+    CGPathAddLineToPoint(path, NULL, 0, center.y);
+    
+    dashedLayer.path = path;
+    [self.layer addSublayer:dashedLayer];
+    
+    CGPathRelease(path);
+}
+
+- (void)drawDashed2 {
+    [self setNeedsDisplay];
+}
+
+#pragma mark - draw rect
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineCap(context, kCGLineCapRound);
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-    CGContextSetLineWidth(context, 2);
-    CGContextSetLineDash(context, self.dashedModel.phaseV, self.dashedModel->lengthsV, self.dashedModel.countV);
-    
-    CGContextMoveToPoint(context, 0, 0);
-    CGContextAddLineToPoint(context, rect.size.width / 2, 0);
-    CGContextAddLineToPoint(context, rect.size.width / 2, 50);
-    CGContextAddLineToPoint(context, rect.size.width, 50);
-    CGContextStrokePath(context);
-    
-    CGContextClosePath(context);
+    if (self.dashedModel.type == DashedType2) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        // 线宽
+        CGContextSetLineWidth(context, self.dashedModel.lineWidth);
+        // 填充色
+        CGContextSetFillColorWithColor(context, NULL);
+        // 画笔颜色
+        CGContextSetStrokeColorWithColor(context, self.dashedModel.lineColor.CGColor);
+        // 首尾样式
+        CGContextSetLineCap(context, kCGLineCapRound);
+        // 线段连接方式
+        // kCALineJoinMiter 菱角
+        // kCALineJoinRound 平滑
+        // kCALineJoinBevel 折线
+        CGContextSetLineJoin(context, kCGLineJoinRound);
+        
+        CGFloat lengthsV[10] = {EOF};
+        for (int i = 0; i < self.dashedModel.lengthsV.count; i++) {
+            lengthsV[i] = [self.dashedModel.lengthsV[i] floatValue];
+        }
+        
+        /*
+         设置虚线参数，设置后绘制出来的线都会变成虚线
+         phase: 虚线起始偏移量 -值为向右偏移，+值为向左偏移
+         lengths: 虚线虚实部分的长度参数
+         count: 限制长度参数中仅前count个参数生效
+         */
+        CGContextSetLineDash(context, self.dashedModel.phaseV, lengthsV, self.dashedModel.countV);
+        
+        // 画直线
+        CGContextMoveToPoint(context, 0, 15);
+        CGContextAddLineToPoint(context, rect.size.width - 10, 15);
+        // 画方形
+        CGContextAddLineToPoint(context, rect.size.width - 10, rect.size.height - 10);
+        CGContextAddLineToPoint(context, rect.size.width * 7/8, rect.size.height - 10);
+        CGContextAddLineToPoint(context, rect.size.width * 7/8, 40);
+        CGContextAddLineToPoint(context, rect.size.width * 5/8, 40);
+        CGContextAddLineToPoint(context, rect.size.width * 5/8, rect.size.height - 10);
+        // 画圆形
+        CGFloat radius = (rect.size.height - 50)/2;
+        CGPoint center = CGPointMake(rect.size.width / 4, 40 + radius);
+        CGContextAddLineToPoint(context, rect.size.width / 4, rect.size.height - 10);
+        CGContextAddArc(context, center.x, center.y, radius, M_PI_2, -M_PI, 1);
+        CGContextAddLineToPoint(context, 0, center.y);
+        
+        CGContextStrokePath(context);
+    }
 }
 
 @end

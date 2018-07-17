@@ -8,16 +8,18 @@
 
 #import "DashedSettingView.h"
 
-@interface DashedSettingView () <UITextFieldDelegate>
-
-@end
-
 @implementation DashedSettingView
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+- (IBAction)clickGoButton:(UIButton *)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickGoButton:)]) {
+        [self.delegate clickGoButton:sender];
     }
-    return self;
+}
+
+- (IBAction)clickMoveButton:(UIButton *)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickMoveButton:)]) {
+        [self.delegate clickMoveButton:sender];
+    }
 }
 
 @end

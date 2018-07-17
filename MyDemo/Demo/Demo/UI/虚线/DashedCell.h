@@ -7,15 +7,22 @@
 //
 
 #import <ZCPKit/ZCPKit.h>
+#import "DashedView.h"
 
-@interface DashedCellItem : ZCPCellDataModel
+/**
+ 虚线cell
+ */
+@interface DashedCell : ZCPBlankCell
 
-@property (nonatomic, strong) NSValue *drawDashedMethod;
+@property (nonatomic, strong) DashedView *dashedView;
 
 @end
 
-@interface DashedCell : ZCPBlankCell
+/**
+ 虚线cell item
+ */
+@interface DashedCellItem : ZCPCellDataModel
 
-@property (nonatomic, strong) DashedCellItem *item;
+@property (nonatomic, strong) DashedModel *model;
 
 @end

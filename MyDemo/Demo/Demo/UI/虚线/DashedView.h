@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "DashedModel.h"
 
+/**
+ 虚线view
+ */
 @interface DashedView : UIView
 
-+ (UIView *)drawDashed1:(DashedModel *)dashedModel;
-+ (UIView *)drawDashed2:(DashedModel *)dashedModel;
-+ (UIView *)drawDashed3:(DashedModel *)dashedModel;
+/**
+ 配置虚线view
+
+ @param model 虚线模型
+ */
+- (void)configureWithModel:(DashedModel *)model;
 
 @end

@@ -294,6 +294,20 @@
 			remoteGlobalIDString = BF98C7269E8F85B2EB06A7CE0BB6899A;
 			remoteInfo = Aspects;
 		};
+		FBF4BC6220FDD8B9005FD795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 49EF9A3DC6428EA30AC90B1C87F2B07B;
+			remoteInfo = FBRetainCycleDetector;
+		};
+		FBF4BC6420FDD8B9005FD795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 867FF2F26001CEF126906D358447DE0E;
+			remoteInfo = MLeaksFinder;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -3214,8 +3228,10 @@
 			children = (
 				9E3E86AE1D2A84A40061664A /* libAFNetworking.a */,
 				FBCF6B631F8DEBDA00E3B58C /* libAspects.a */,
+				FBF4BC6320FDD8B9005FD795 /* libFBRetainCycleDetector.a */,
 				FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */,
 				FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */,
+				FBF4BC6520FDD8B9005FD795 /* libMLeaksFinder.a */,
 				FBB1A1ED1EE10CBC004F013F /* libPods-Demo.a */,
 				9E3E86B21D2A84A40061664A /* libSDWebImage.a */,
 				9E3E86B41D2A84A40061664A /* libYYKit.a */,
@@ -4132,10 +4148,10 @@
 				FB4600701E2716DA003504AD /* DashedSettingView.h */,
 				FB4600711E2716DA003504AD /* DashedSettingView.m */,
 				FB4600771E27170E003504AD /* DashedSettingView.xib */,
-				FB46007B1E27322F003504AD /* DashedView.h */,
-				FB46007C1E27322F003504AD /* DashedView.m */,
 				FBCF6B441F8CBF3B00E3B58C /* DashedCell.h */,
 				FBCF6B451F8CBF3B00E3B58C /* DashedCell.m */,
+				FB46007B1E27322F003504AD /* DashedView.h */,
+				FB46007C1E27322F003504AD /* DashedView.m */,
 				FBCF6B471F8CC5CE00E3B58C /* DashedModel.h */,
 				FBCF6B481F8CC5CE00E3B58C /* DashedModel.m */,
 			);
@@ -4638,6 +4654,20 @@
 			fileType = archive.ar;
 			path = libAspects.a;
 			remoteRef = FBCF6B621F8DEBDA00E3B58C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FBF4BC6320FDD8B9005FD795 /* libFBRetainCycleDetector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFBRetainCycleDetector.a;
+			remoteRef = FBF4BC6220FDD8B9005FD795 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FBF4BC6520FDD8B9005FD795 /* libMLeaksFinder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMLeaksFinder.a;
+			remoteRef = FBF4BC6420FDD8B9005FD795 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

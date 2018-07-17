@@ -10,6 +10,33 @@
 
 @implementation DashedCell
 
++ (CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(id<ZCPTableViewCellItemBasicProtocol>)object {
+    return 150;
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.accessoryType = UITableViewCellAccessoryNone;
+        
+        _dashedView = [[DashedView alloc] init];
+        [self.contentView addSubview:_dashedView];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.dashedView.frame = self.bounds;
+}
+
+- (void)setObject:(DashedCellItem *)object {
+    if (object && self.object != object) {
+        [super setObject:object];
+        [self.dashedView configureWithModel:object.model];
+    }
+}
+
 @end
 
 @implementation DashedCellItem
