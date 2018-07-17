@@ -19,7 +19,10 @@
 /// 虚线参数
 @property (nonatomic, strong) DashedModel *dashedModel;
 
+/// 定时器
 @property (nonatomic, strong) CADisplayLink *displayLink;
+/// 移动增量
+@property (nonatomic, assign) CGFloat moveIncrement;
 
 @end
 
@@ -56,11 +59,20 @@
 }
 
 - (void)clickMoveButton:(UIButton *)button {
-    self.displayLink.paused = !self.displayLink.isPaused;
-    if (self.displayLink.isPaused) {
+    if (button.tag == 0) {
+        button.tag              = 1;
+        self.moveIncrement      = 1;
+        self.displayLink.paused = NO;
         [button setTitle:@"Move" forState:UIControlStateNormal];
-    } else {
+    } else if (button.tag == 1) {
+        button.tag              = 2;
+        self.moveIncrement      = -1;
+        self.displayLink.paused = NO;
         [button setTitle:@"Pause" forState:UIControlStateNormal];
+    } else if (button.tag == 2) {
+        button.tag              = 0;
+        self.displayLink.paused = YES;
+        [button setTitle:@"Move" forState:UIControlStateNormal];
     }
 }
 
@@ -97,7 +109,7 @@
 
 - (void)move {
     NSString *phaseS    = self.settingView.phaseTextField.text;
-    CGFloat phaseV      = [phaseS floatValue] + 1;
+    CGFloat phaseV      = [phaseS floatValue] + self.moveIncrement;
     self.settingView.phaseTextField.text = [@(phaseV) stringValue];
     [self update];
 }
