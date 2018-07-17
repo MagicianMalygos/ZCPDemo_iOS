@@ -11,7 +11,7 @@
 #import "AnimationButton2.h"
 #import "AnimationButton3.h"
 
-@interface AnimationButtonViewController () <AnimationButton1Delegate, AnimationButton2Delegate>
+@interface AnimationButtonViewController () <AnimationButtonDelegate>
 
 /// 汉堡包按钮
 @property (nonatomic, strong) AnimationButton1 *button1;
@@ -37,13 +37,25 @@
     [self.view addSubview:self.button2];
     
     self.button3 = [[AnimationButton3 alloc] init];
+    self.button3.delegate = self;
     [self.view addSubview:self.button3];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    NSArray *arr = @[self.button1, self.button2, self.button3];
+    NSMutableArray *arr = [NSMutableArray array];
+    
+    if (self.button1) {
+        [arr addObject:self.button1];
+    }
+    if (self.button2) {
+        [arr addObject:self.button2];
+    }
+    if (self.button3) {
+        [arr addObject:self.button3];
+    }
+    
     for (int i = 0; i < arr.count; i++) {
         UIView *view    = arr[i];
         CGFloat width   = self.view.width / 3;
@@ -52,32 +64,38 @@
     }
 }
 
-#pragma mark - AnimationButton1Delegate
+#pragma mark - AnimationButtonDelegate
 
-- (void)animationButton1DidClick:(AnimationButton1 *)button {
-    NSLog(@"点击了汉堡包按钮");
-    self.button1.lineColor = RANDOM_COLOR;
-}
-
-- (void)animationButtonDidStopAnimation:(AnimationButton1 *)button finished:(BOOL)flag {
-    if (flag) {
-        NSLog(@"汉堡包按钮动画结束");
-    } else {
-        NSLog(@"汉堡包按钮动画中断");
+- (void)animationButtonDidClick:(UIView *)button {
+    if (button == self.button1) {
+        NSLog(@"点击了汉堡包按钮");
+        self.button1.lineColor = RANDOM_COLOR;
+    } else if (button == self.button2) {
+        NSLog(@"点击了爱奇艺播放按钮");
+    } else if (button == self.button3) {
+        NSLog(@"点击了优酷播放按钮");
     }
 }
 
-#pragma mark - AnimationButton2Delegate
-
-- (void)animationButton2DidClick:(AnimationButton2 *)button {
-    NSLog(@"点击了爱奇艺按钮");
-}
-
-- (void)animationButtonDidStopAnimation:(AnimationButton2 *)button playing:(BOOL)isPlaying {
-    if (isPlaying) {
-        NSLog(@"动画结束，当前处于播放状态");
-    } else {
-        NSLog(@"动画结束，当前处于暂停状态");
+- (void)animationButtonDidStopAnimation:(UIView *)button state:(BOOL)state {
+    if (button == self.button1) {
+        if (state) {
+            NSLog(@"汉堡包按钮动画结束，当前处于打开状态");
+        } else {
+            NSLog(@"汉堡包按钮动画结束，当前处于关闭状态");
+        }
+    } else if (button == self.button2) {
+        if (state) {
+            NSLog(@"爱奇艺播放按钮动画结束，当前处于播放状态");
+        } else {
+            NSLog(@"爱奇艺播放按钮动画结束，当前处于暂停状态");
+        }
+    } else if (button == self.button3) {
+        if (state) {
+            NSLog(@"优酷播放按钮动画结束，当前处于播放状态");
+        } else {
+            NSLog(@"优酷播放按钮动画结束，当前处于暂停状态");
+        }
     }
 }
 

@@ -37,12 +37,18 @@
     CGFloat _zoomLineTop;
 }
 
+/// 左线layer
 @property (nonatomic, strong) CAShapeLayer *leftLineLayer;
+/// 右线layer
 @property (nonatomic, strong) CAShapeLayer *rightLineLayer;
+/// 三角layer
 @property (nonatomic, strong) CAShapeLayer *triangleLayer;
+/// 下部分半圆弧layer
 @property (nonatomic, strong) CAShapeLayer *arcLayer;
 
+/// 是否正在执行动画
 @property (nonatomic, assign, getter=isAnimating) BOOL animating;
+/// 播放状态
 @property (nonatomic, assign, getter=isPlaying) BOOL playing;
 
 @end
@@ -60,6 +66,7 @@
         [self.layer addSublayer:self.triangleLayer];
         [self.layer addSublayer:self.arcLayer];
         
+        // 初始化状态
         self.playing = YES;
         
         // 初始化参数和layer
@@ -69,6 +76,15 @@
         [self addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    
+    // 处理内存泄漏
+    if (newSuperview == nil) {
+        [self clearAllAnimation];
+    }
 }
 
 #pragma mark - update
@@ -88,7 +104,7 @@
  更新配置参数
  */
 - (void)updateConfigurableParameters {
-    _lineWidth      = 6;
+    _lineWidth      = 8;
     _lineLength     = self.height * 0.4;
     _lineGap        = _lineLength / sqrt(3);
     _lineLeft       = (self.width - _lineGap) / 2;
@@ -117,12 +133,14 @@
     self.leftLineLayer.lineWidth    = _lineWidth;
     self.leftLineLayer.lineCap      = kCALineCapRound;
     self.leftLineLayer.lineJoin     = kCALineJoinRound;
+    self.leftLineLayer.frame        = self.bounds;
     
     self.rightLineLayer.fillColor   = nil;
     self.rightLineLayer.strokeColor = self.lineColor.CGColor;
     self.rightLineLayer.lineWidth   = _lineWidth;
     self.rightLineLayer.lineCap     = kCALineCapRound;
     self.rightLineLayer.lineJoin    = kCALineJoinRound;
+    self.rightLineLayer.frame       = self.bounds;
     
     self.triangleLayer.fillColor    = nil;
     self.triangleLayer.strokeColor  = self.lineColor.CGColor;
@@ -130,6 +148,7 @@
     self.triangleLayer.lineCap      = kCALineCapRound;
     self.triangleLayer.lineJoin     = kCALineJoinRound;
     self.triangleLayer.strokeEnd    = 0;
+    self.triangleLayer.frame        = self.bounds;
     
     self.arcLayer.fillColor         = nil;
     self.arcLayer.strokeColor       = self.lineColor.CGColor;
@@ -137,6 +156,7 @@
     self.arcLayer.lineCap           = kCALineCapRound;
     self.arcLayer.lineJoin          = kCALineJoinRound;
     self.arcLayer.strokeEnd         = 0;
+    self.arcLayer.frame             = self.bounds;
 }
 
 #pragma mark - private
@@ -179,14 +199,17 @@
     if (self.animating) {
         return;
     }
+    // 更新动画执行状态
     self.animating = YES;
     
+    // 开始动画
     if (self.isPlaying) {
         [self startLineAnimation];
     } else {
         [self startInverseTriangleAnimation];
     }
     
+    // 更新播放状态
     self.playing = !self.isPlaying;
 }
 
@@ -412,29 +435,37 @@
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    NSString *key = [anim valueForKey:kAnimation];
+    if (!flag) {
+        // 如果动画被终止则不回调
+        return;
+    }
     
+    NSString *key = [anim valueForKey:kAnimation];
     if ([key isEqualToString:kLineAnimation]) {
         [self startTriangleAnimation];
     } else if ([key isEqualToString:kTriangleAnimation]) {
         self.animating = NO;
         
-        if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:playing:)]) {
-            [self.delegate animationButtonDidStopAnimation:self playing:self.isPlaying];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:state:)]) {
+            [self.delegate animationButtonDidStopAnimation:self state:self.isPlaying];
         }
     } else if ([key isEqualToString:kInverseTriangleAnimation]) {
         [self startInverseLineAnimation];
     } else if ([key isEqualToString:kInverseLineAnimation]) {
         self.animating = NO;
-        [self.leftLineLayer removeAllAnimations];
-        [self.rightLineLayer removeAllAnimations];
-        [self.triangleLayer removeAllAnimations];
-        [self.arcLayer removeAllAnimations];
+        [self clearAllAnimation];
         
-        if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:playing:)]) {
-            [self.delegate animationButtonDidStopAnimation:self playing:self.isPlaying];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:state:)]) {
+            [self.delegate animationButtonDidStopAnimation:self state:self.isPlaying];
         }
     }
+}
+
+- (void)clearAllAnimation {
+    [self.leftLineLayer removeAllAnimations];
+    [self.rightLineLayer removeAllAnimations];
+    [self.triangleLayer removeAllAnimations];
+    [self.arcLayer removeAllAnimations];
 }
 
 #pragma mark - event response
@@ -442,8 +473,8 @@
 - (void)click {
     [self startAnimation];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButton2DidClick:)]) {
-        [self.delegate animationButton2DidClick:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidClick:)]) {
+        [self.delegate animationButtonDidClick:self];
     }
 }
 
@@ -485,28 +516,36 @@
 
 - (CAShapeLayer *)leftLineLayer {
     if (!_leftLineLayer) {
-        _leftLineLayer = [CAShapeLayer layer];
+        _leftLineLayer              = [CAShapeLayer layer];
+        _leftLineLayer.anchorPoint  = CGPointZero;
+        _leftLineLayer.position     = CGPointZero;
     }
     return _leftLineLayer;
 }
 
 - (CAShapeLayer *)rightLineLayer {
     if (!_rightLineLayer) {
-        _rightLineLayer = [CAShapeLayer layer];
+        _rightLineLayer             = [CAShapeLayer layer];
+        _rightLineLayer.anchorPoint = CGPointZero;
+        _rightLineLayer.position    = CGPointZero;
     }
     return _rightLineLayer;
 }
 
 - (CAShapeLayer *)triangleLayer {
     if (!_triangleLayer) {
-        _triangleLayer = [CAShapeLayer layer];
+        _triangleLayer              = [CAShapeLayer layer];
+        _triangleLayer.anchorPoint  = CGPointZero;
+        _triangleLayer.position     = CGPointZero;
     }
     return _triangleLayer;
 }
 
 - (CAShapeLayer *)arcLayer {
     if (!_arcLayer) {
-        _arcLayer = [CAShapeLayer layer];
+        _arcLayer               = [CAShapeLayer layer];
+        _arcLayer.anchorPoint   = CGPointZero;
+        _arcLayer.position      = CGPointZero;
     }
     return _arcLayer;
 }

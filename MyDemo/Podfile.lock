@@ -21,10 +21,13 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - FBRetainCycleDetector (0.1.4)
   - IQKeyboardManager (5.0.3)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
@@ -58,6 +61,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - Aspects (~> 1.4.1)
   - IQKeyboardManager (~> 5.0.2)
+  - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
   - ZCPKit (~> 0.0.2)
@@ -66,8 +70,10 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Aspects
+    - FBRetainCycleDetector
     - IQKeyboardManager
     - MagicalRecord
+    - MLeaksFinder
     - SDWebImage
     - YYKit
   https://gitlab.com/Malygos/zcprepo.git:
@@ -76,12 +82,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   IQKeyboardManager: dc5b18b47e5170e4d150bb86dbee8c8a2fc48997
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZCPKit: c0cd0ee2441b52ebefc842e1b00bc64ededeeb3f
 
-PODFILE CHECKSUM: 327ae5ec2cd662dd58c22a233f224b0f903e79da
+PODFILE CHECKSUM: 745f2de53097b9f04edcc6ed13180bc9cfe7f819
 
 COCOAPODS: 1.5.3

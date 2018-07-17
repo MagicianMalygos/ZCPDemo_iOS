@@ -80,6 +80,15 @@
     return self;
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    
+    // 处理内存泄漏
+    if (newSuperview == nil) {
+        [self clearAllAnimation];
+    }
+}
+
 #pragma mark - update
 
 - (void)update {
@@ -206,8 +215,8 @@
 - (void)click {
     [self startAnimation];
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButton1DidClick:)]) {
-        [self.delegate animationButton1DidClick:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidClick:)]) {
+        [self.delegate animationButtonDidClick:self];
     }
 }
 
@@ -310,9 +319,20 @@
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:finished:)]) {
-        [self.delegate animationButtonDidStopAnimation:self finished:flag];
+    if (!flag) {
+        // 如果动画被终止则不回调
+        return;
     }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(animationButtonDidStopAnimation:state:)]) {
+        [self.delegate animationButtonDidStopAnimation:self state:self.isOpen];
+    }
+}
+
+- (void)clearAllAnimation {
+    [self.topLayer removeAllAnimations];
+    [self.middleLayer removeAllAnimations];
+    [self.bottomLayer removeAllAnimations];
 }
 
 #pragma mark - setters

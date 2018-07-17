@@ -1606,6 +1606,7 @@
 		FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButton2.h; sourceTree = "<group>"; };
 		FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton2.m; sourceTree = "<group>"; };
 		FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笑傲江湖.txt"; sourceTree = "<group>"; };
+		FBF4BC4B20FC4205005FD795 /* AnimationButtonDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButtonDelegate.h; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
 		FBF763CD1EA07124001E867B /* bubble_community@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -4196,6 +4197,7 @@
 			children = (
 				FB875D8320EB738E00F8C868 /* AnimationButtonViewController.h */,
 				FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */,
+				FBF4BC4B20FC4205005FD795 /* AnimationButtonDelegate.h */,
 				FB875D8620EB741A00F8C868 /* AnimationButton1.h */,
 				FB875D8720EB741A00F8C868 /* AnimationButton1.m */,
 				FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */,

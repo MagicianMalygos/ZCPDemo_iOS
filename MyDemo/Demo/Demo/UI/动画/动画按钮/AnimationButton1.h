@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol AnimationButton1Delegate;
+#import "AnimationButtonDelegate.h"
 
 /**
  汉堡包按钮
@@ -17,28 +17,9 @@
 /// 线的颜色
 @property (nonatomic, strong) UIColor *lineColor;
 /// 代理
-@property (nonatomic, weak) id<AnimationButton1Delegate> delegate;
+@property (nonatomic, weak) id<AnimationButtonDelegate> delegate;
 
-@end
-
-/**
- 汉堡包按钮回调方法
- */
-@protocol AnimationButton1Delegate <NSObject>
-
-/**
- 按钮被点击回调
-
- @param button 按钮
- */
-- (void)animationButton1DidClick:(AnimationButton1 *)button;
-
-/**
- 按钮动画结束回调
-
- @param button 按钮
- @param flag 动画是否执行完成
- */
-- (void)animationButtonDidStopAnimation:(AnimationButton1 *)button finished:(BOOL)flag;
+/// 打开状态
+@property (nonatomic, assign, getter=isOpen, readonly) BOOL open;
 
 @end

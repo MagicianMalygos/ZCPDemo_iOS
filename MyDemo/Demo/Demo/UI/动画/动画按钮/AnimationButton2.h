@@ -7,38 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol AnimationButton2Delegate;
+#import "AnimationButtonDelegate.h"
 
 /**
- 爱奇艺按钮
+ 爱奇艺视频播放按钮
  */
 @interface AnimationButton2 : UIControl
 
 /// 线的颜色
 @property (nonatomic, strong) UIColor *lineColor;
 /// 代理
-@property (nonatomic, weak) id<AnimationButton2Delegate> delegate;
+@property (nonatomic, weak) id<AnimationButtonDelegate> delegate;
 
-@end
-
-/**
- 爱奇艺按钮回调方法
- */
-@protocol AnimationButton2Delegate <NSObject>
-
-/**
- 按钮被点击回调
- 
- @param button 按钮
- */
-- (void)animationButton2DidClick:(AnimationButton2 *)button;
-
-/**
- 按钮动画结束回调
-
- @param button 按钮
- @param isPlaying 播放状态
- */
-- (void)animationButtonDidStopAnimation:(AnimationButton2 *)button playing:(BOOL)isPlaying;
+/// 播放状态
+@property (nonatomic, assign, getter=isPlaying, readonly) BOOL playing;
 
 @end
