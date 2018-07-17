@@ -194,8 +194,8 @@ static NSString     *kScanLineImageName     = @"scanLine";
     // 系统照明灯自动关闭，更新按钮状态
     if (_lampButton.selected == YES) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_lampButton setImage:[UIImage imageNamed:@"turn_off"] forState:UIControlStateNormal];
-            _lampButton.selected = !_lampButton.selected;
+            [self.lampButton setImage:[UIImage imageNamed:@"turn_off"] forState:UIControlStateNormal];
+            self.lampButton.selected = !self.lampButton.selected;
         });
     }
     
@@ -232,7 +232,7 @@ static NSString     *kScanLineImageName     = @"scanLine";
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"未扫描到有效二维码" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 // * * 结束本次扫描 * *
-                _processing = NO;
+                self.processing = NO;
             }];
             [alertController addAction:okAction];
             // 在主线程中显示alert
@@ -245,7 +245,7 @@ static NSString     *kScanLineImageName     = @"scanLine";
 #pragma mark 取消选择的代理方法
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:^{
-        _processing = NO;
+        self.processing = NO;
     }];
 }
 
@@ -275,11 +275,11 @@ static NSString     *kScanLineImageName     = @"scanLine";
                 });
                 
                 [self startScan];
-                _processing = NO;
+                self.processing = NO;
             }];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 [self startScan];
-                _processing = NO;
+                self.processing = NO;
             }];
             [alertController addAction:openAction];
             [alertController addAction:cancelAction];
@@ -291,7 +291,7 @@ static NSString     *kScanLineImageName     = @"scanLine";
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"未识别到网址，扫描得到的信息为：%@", info] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 [self startScan];
-                _processing = NO;
+                self.processing = NO;
             }];
             [alertController addAction:cancelAction];
             // 在主线程中显示alert

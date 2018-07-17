@@ -82,7 +82,7 @@
     }
     
     for (int alreadyCount = 0; alreadyCount < count; alreadyCount++) {
-        int randomIndex = RANDOM(0, arr.count - 1);
+        NSInteger randomIndex = RANDOM(0, arr.count - 1);
         NSNumber *resultNumber = arr[randomIndex];
         [resultArr addObject:[NSNumber numberWithInt:[resultNumber intValue]]];
         [arr removeObject:resultNumber];

@@ -69,24 +69,24 @@
     return _infoArr;
 }
 
-- (void)didSelectCell:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
     SEL method = NSSelectorFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"sel"]);
     
-    NSObject *object = nil;
+    NSObject *obj = nil;
     NSString *type = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"type"];
     if ([type isEqualToString:@"connection"]) {
-        object = [ZCPURLConnectionTool new];
+        obj = [ZCPURLConnectionTool new];
     } else if ([type isEqualToString:@"session"]) {
-        object = [ZCPURLSessionTool new];
+        obj = [ZCPURLSessionTool new];
     } else if ([type isEqualToString:@"AF"]) {
-        object = [ZCPAFNetworkingTool new];
+        obj = [ZCPAFNetworkingTool new];
     } else if ([type isEqualToString:@"self"]) {
-        object = self;
+        obj = self;
     }
     
-    if ([object respondsToSelector:method]) {
+    if ([obj respondsToSelector:method]) {
         SuppressPerformSelectorLeakWarning({
-            [object performSelector:method];
+            [obj performSelector:method];
         });
     }
 }
@@ -97,7 +97,7 @@
     NSString *urlStr1 = @"http://www.weather.com.cn/data/sk/101010100.html?username=1001&pwd=abc123";
     NSString *urlStr2 = @"http://www.weather.com.cn/data/sk/101010100.html?username=朱超鹏&pwd=abc123";
     // 如果参数有中文需要转码
-    NSString *transformURLStr2 = [urlStr2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *transformURLStr2 = [urlStr2 stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url1 = [NSURL URLWithString:urlStr1];
     NSURL *url2 = [NSURL URLWithString:urlStr2];
     NSURL *url3 = [NSURL URLWithString:transformURLStr2];

@@ -94,35 +94,35 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 准备上锁");
-        OSSpinLockLock(&_osSpinLock);
+        OSSpinLockLock(&self->_osSpinLock);
         NSLog(@"线程1 执行任务");
         sleep(2);
-        OSSpinLockUnlock(&_osSpinLock);
+        OSSpinLockUnlock(&self->_osSpinLock);
         NSLog(@"线程1 解锁成功");
     });
     
     // 线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 准备上锁");
-        while (OSSpinLockTry(&_osSpinLock) != true) {
+        while (OSSpinLockTry(&self->_osSpinLock) != true) {
             usleep(10 * 1000);
             NSLog(@"线程1 等待...");
         }
         NSLog(@"线程1 执行任务");
         sleep(2);
-        OSSpinLockUnlock(&_osSpinLock);
+        OSSpinLockUnlock(&self->_osSpinLock);
         NSLog(@"线程1 解锁成功");
     });
     
     // 线程2
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程2 准备上锁");
-        while (OSSpinLockTry(&_osSpinLock) != true) {
+        while (OSSpinLockTry(&self->_osSpinLock) != true) {
             usleep(10 * 1000);
             NSLog(@"线程2 等待...");
         }
         NSLog(@"线程2 执行任务");
-        OSSpinLockUnlock(&_osSpinLock);
+        OSSpinLockUnlock(&self->_osSpinLock);
         NSLog(@"线程2 解锁成功");
     });
 }
@@ -150,22 +150,22 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 等待信号");
-        while (dispatch_semaphore_wait(_semaphore, timeout) != 0) {
+        while (dispatch_semaphore_wait(self->_semaphore, timeout) != 0) {
             NSLog(@"线程1 等待...");
         }
         NSLog(@"线程1 执行任务");
         sleep(2);
-        dispatch_semaphore_signal(_semaphore);
+        dispatch_semaphore_signal(self->_semaphore);
         NSLog(@"线程1 发送信号");
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程2 等待信号");
-        while (dispatch_semaphore_wait(_semaphore, timeout) != 0) {
+        while (dispatch_semaphore_wait(self->_semaphore, timeout) != 0) {
             NSLog(@"线程2 等待...");
         }
         NSLog(@"线程2 执行任务");
-        dispatch_semaphore_signal(_semaphore);
+        dispatch_semaphore_signal(self->_semaphore);
         NSLog(@"线程2 发送信号");
     });
 }
@@ -176,25 +176,25 @@
     // 线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 准备上锁");
-        while (pthread_mutex_trylock(&_mutexLock) != 0) {
+        while (pthread_mutex_trylock(&self->_mutexLock) != 0) {
             usleep(10 * 1000);
             NSLog(@"线程1 等待...");
         }
         NSLog(@"线程1 执行任务");
         sleep(2);
-        pthread_mutex_unlock(&_mutexLock);
+        pthread_mutex_unlock(&self->_mutexLock);
         NSLog(@"线程1 解锁成功");
     });
     
     // 线程2
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程2 准备上锁");
-        while (pthread_mutex_trylock(&_mutexLock) != 0) {// 返回 0（成功） 非0（错误码）
+        while (pthread_mutex_trylock(&self->_mutexLock) != 0) {// 返回 0（成功） 非0（错误码）
             usleep(10 * 1000);
             NSLog(@"线程2 等待...");
         }
         NSLog(@"线程2 执行任务");
-        pthread_mutex_unlock(&_mutexLock);
+        pthread_mutex_unlock(&self->_mutexLock);
         NSLog(@"线程2 解锁成功");
     });
 }
@@ -205,10 +205,10 @@
     // 线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 准备上锁");
-        [_nsLock lock];
+        [self->_nsLock lock];
         NSLog(@"线程1 执行任务");
         sleep(2);
-        [_nsLock unlock];
+        [self->_nsLock unlock];
         NSLog(@"线程1 解锁成功");
     });
     
@@ -220,12 +220,12 @@
 //            NSLog(@"线程2 等待...");
 //        }
         
-        while (![_nsLock lockBeforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]]) {
+        while (![self->_nsLock lockBeforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]]) {
             NSLog(@"线程2 等待...");
         }
         
         NSLog(@"线程2 执行任务");
-        [_nsLock unlock];
+        [self->_nsLock unlock];
         NSLog(@"线程2 解锁成功");
     });
 }
@@ -236,33 +236,33 @@
     // 线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 准备上锁");
-        [_condition lock];
+        [self->_condition lock];
         NSLog(@"线程1 等待中...");
-        [_condition wait];
-        [_condition unlock];
+        [self->_condition wait];
+        [self->_condition unlock];
         NSLog(@"线程1 解锁成功");
     });
     
     // 线程2
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程2 准备上锁");
-        [_condition lock];
+        [self->_condition lock];
         NSLog(@"线程2 等待中...");
-        [_condition wait];
-        [_condition unlock];
+        [self->_condition wait];
+        [self->_condition unlock];
         NSLog(@"线程2 解锁成功");
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(5);
         NSLog(@"唤醒一个等待的线程");
-        [_condition signal];
+        [self->_condition signal];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(10);
         NSLog(@"唤醒所有等待的线程");
-        [_condition broadcast];
+        [self->_condition broadcast];
     });
 }
 
@@ -280,12 +280,12 @@
         static void(^recursiveBlock)(int);
         recursiveBlock = ^(int value) {
             NSLog(@"准备上锁 %i", value);
-            pthread_mutex_lock(&_recursiveMutexLock);
+            pthread_mutex_lock(&self->_recursiveMutexLock);
             if (value > 0) {
                 NSLog(@"执行任务%i", value);
                 recursiveBlock(value - 1);
             }
-            pthread_mutex_unlock(&_recursiveMutexLock);
+            pthread_mutex_unlock(&self->_recursiveMutexLock);
             NSLog(@"解锁成功 %i", value);
         };
         recursiveBlock(5);
@@ -299,12 +299,12 @@
         static void(^recursiveLockBlock)(int);
         recursiveLockBlock = ^(int value) {
             NSLog(@"准备上锁 %i", value);
-            [_nsRecursiveLock lock];
+            [self->_nsRecursiveLock lock];
             if (value > 0) {
                 NSLog(@"执行任务%i", value);
                 recursiveLockBlock(value - 1);
             }
-            [_nsRecursiveLock unlock];
+            [self->_nsRecursiveLock unlock];
             NSLog(@"解锁成功 %i", value);
         };
         
@@ -316,36 +316,36 @@
     _nsConditionLock = [[NSConditionLock alloc] initWithCondition:0];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:1];
+        [self->_nsConditionLock lockWhenCondition:1];
         NSLog(@"请求数据1");
         sleep(2);
         NSLog(@"得到数据1");
-        [_nsConditionLock unlockWithCondition:2];
+        [self->_nsConditionLock unlockWithCondition:2];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         sleep(1);
-        [_nsConditionLock lockWhenCondition:0];
+        [self->_nsConditionLock lockWhenCondition:0];
         NSLog(@"请求数据2");
         sleep(2);
         NSLog(@"得到数据2");
-        [_nsConditionLock unlockWithCondition:1];
+        [self->_nsConditionLock unlockWithCondition:1];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:2];
+        [self->_nsConditionLock lockWhenCondition:2];
         NSLog(@"请求数据3");
         sleep(2);
         NSLog(@"得到数据3");
-        [_nsConditionLock unlockWithCondition:0];
+        [self->_nsConditionLock unlockWithCondition:0];
     });
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_nsConditionLock lockWhenCondition:2];
+        [self->_nsConditionLock lockWhenCondition:2];
         NSLog(@"请求数据4");
         sleep(2);
         NSLog(@"得到数据4");
-        [_nsConditionLock unlock];
+        [self->_nsConditionLock unlock];
     });
 }
 
