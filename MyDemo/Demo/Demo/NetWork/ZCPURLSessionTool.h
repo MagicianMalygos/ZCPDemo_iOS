@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZCPRequestMethodProtocol.h"
 
-#define GET_URL         [NSURL URLWithString:@"http://www.weather.com.cn/data/sk/101010100.html"]
-#define POST_URL        [NSURL URLWithString:@"http://120.25.226.186:32812/login"]
-#define POST_URL_PARAMS @"username=520it&pwd=520it&type=JSON"
+@interface ZCPURLSessionTool : NSObject <ZCPRequestMethodProtocol>
 
-@interface ZCPURLSessionTool : NSObject
-
-- (void)getRequest_Synchronouos_Session;
-- (void)postRequest_Asynchronous_Session;
+- (NSURLSessionDataTask *)getRequest_Synchronouos;
+- (NSURLSessionDataTask *)postRequest_Synchronouos;
 
 @end

@@ -92,11 +92,7 @@
 		FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077601E2618A800361E60 /* PAAssetPickerController.m */; };
 		FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */; };
 		FB5078C71E2618A900361E60 /* ZCPAFNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */; };
-		FB5078C81E2618A900361E60 /* ZCPURLConnectionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077B81E2618A800361E60 /* ZCPURLConnectionTool.m */; };
 		FB5078C91E2618A900361E60 /* ZCPURLSessionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077BA1E2618A800361E60 /* ZCPURLSessionTool.m */; };
-		FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078331E2618A900361E60 /* PADemoHomeController.m */; };
-		FB5078FC1E2618A900361E60 /* TipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078391E2618A900361E60 /* TipsView.m */; };
-		FB5078FD1E2618A900361E60 /* TipsViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50783B1E2618A900361E60 /* TipsViewDemoHomeController.m */; };
 		FB5078FE1E2618A900361E60 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50783E1E2618A900361E60 /* MyViewController.m */; };
 		FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078401E2618A900361E60 /* PageVCDemoHomeController.m */; };
 		FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078431E2618A900361E60 /* PhotoCarouselDemoHomeController.m */; };
@@ -194,7 +190,6 @@
 		FBCC6A6D20E48C86002367F5 /* FoldClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A6B20E48C86002367F5 /* FoldClockView.m */; };
 		FBCC6A7020E48F64002367F5 /* FoldClockItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A6F20E48F64002367F5 /* FoldClockItemView.m */; };
 		FBCC6A7320E48F9A002367F5 /* FoldClockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A7220E48F9A002367F5 /* FoldClockLabel.m */; };
-		FBCF6AEC1F8CAA7700E3B58C /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */; };
 		FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */; };
 		FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */; };
 		FBCF6B2E1F8CBC0A00E3B58C /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCF6B041F8CBC0A00E3B58C /* flag@2x.png */; };
@@ -226,6 +221,7 @@
 		FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */; };
 		FBEAE41320EF5EBA001E27AF /* AnimationButton2.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */; };
 		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
+		FBF4BC6820FEE46A005FD795 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC6720FEE469005FD795 /* UIImage+Category.m */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
 /* End PBXBuildFile section */
@@ -1368,16 +1364,8 @@
 		FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077B51E2618A800361E60 /* ZCPAFNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPAFNetworkingTool.h; sourceTree = "<group>"; };
 		FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPAFNetworkingTool.m; sourceTree = "<group>"; };
-		FB5077B71E2618A800361E60 /* ZCPURLConnectionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPURLConnectionTool.h; sourceTree = "<group>"; };
-		FB5077B81E2618A800361E60 /* ZCPURLConnectionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPURLConnectionTool.m; sourceTree = "<group>"; };
 		FB5077B91E2618A800361E60 /* ZCPURLSessionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPURLSessionTool.h; sourceTree = "<group>"; };
 		FB5077BA1E2618A800361E60 /* ZCPURLSessionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPURLSessionTool.m; sourceTree = "<group>"; };
-		FB5078321E2618A900361E60 /* PADemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADemoHomeController.h; sourceTree = "<group>"; };
-		FB5078331E2618A900361E60 /* PADemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADemoHomeController.m; sourceTree = "<group>"; };
-		FB5078381E2618A900361E60 /* TipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsView.h; sourceTree = "<group>"; };
-		FB5078391E2618A900361E60 /* TipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsView.m; sourceTree = "<group>"; };
-		FB50783A1E2618A900361E60 /* TipsViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsViewDemoHomeController.h; sourceTree = "<group>"; };
-		FB50783B1E2618A900361E60 /* TipsViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB50783D1E2618A900361E60 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		FB50783E1E2618A900361E60 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		FB50783F1E2618A900361E60 /* PageVCDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageVCDemoHomeController.h; sourceTree = "<group>"; };
@@ -1568,8 +1556,6 @@
 		FBCC6A6F20E48F64002367F5 /* FoldClockItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldClockItemView.m; sourceTree = "<group>"; };
 		FBCC6A7120E48F9A002367F5 /* FoldClockLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldClockLabel.h; sourceTree = "<group>"; };
 		FBCC6A7220E48F9A002367F5 /* FoldClockLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldClockLabel.m; sourceTree = "<group>"; };
-		FBCF6AEA1F8CAA7700E3B58C /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
-		FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FBCF6AF51F8CAD3E00E3B58C /* ZCPDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoHomeViewController.h; sourceTree = "<group>"; };
 		FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPDemoHomeViewController.m; sourceTree = "<group>"; };
 		FBCF6AF81F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoBaseTableViewController.h; sourceTree = "<group>"; };
@@ -1621,6 +1607,9 @@
 		FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton2.m; sourceTree = "<group>"; };
 		FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笑傲江湖.txt"; sourceTree = "<group>"; };
 		FBF4BC4B20FC4205005FD795 /* AnimationButtonDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButtonDelegate.h; sourceTree = "<group>"; };
+		FBF4BC6620FEE469005FD795 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		FBF4BC6720FEE469005FD795 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
+		FBF4BC6B20FF3783005FD795 /* ZCPRequestMethodProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPRequestMethodProtocol.h; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
 		FBF763CD1EA07124001E867B /* bubble_community@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3864,7 +3853,6 @@
 				FB5077561E2618A800361E60 /* AlertViewDemo */,
 				FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */,
 				FB5077671E2618A800361E60 /* NetWork */,
-				FB5077DE1E2618A800361E60 /* PA */,
 				FB50783C1E2618A900361E60 /* PageVCDemo */,
 				FB5078411E2618A900361E60 /* PhotoCarouselDemo(图片轮播) */,
 				FB5078481E2618A900361E60 /* QRCode */,
@@ -3913,37 +3901,13 @@
 			children = (
 				FB5077B31E2618A800361E60 /* NetWorkDemoHomeController.h */,
 				FB5077B41E2618A800361E60 /* NetWorkDemoHomeController.m */,
-				FB5077B71E2618A800361E60 /* ZCPURLConnectionTool.h */,
-				FB5077B81E2618A800361E60 /* ZCPURLConnectionTool.m */,
 				FB5077B91E2618A800361E60 /* ZCPURLSessionTool.h */,
 				FB5077BA1E2618A800361E60 /* ZCPURLSessionTool.m */,
 				FB5077B51E2618A800361E60 /* ZCPAFNetworkingTool.h */,
 				FB5077B61E2618A800361E60 /* ZCPAFNetworkingTool.m */,
+				FBF4BC6B20FF3783005FD795 /* ZCPRequestMethodProtocol.h */,
 			);
 			path = NetWork;
-			sourceTree = "<group>";
-		};
-		FB5077DE1E2618A800361E60 /* PA */ = {
-			isa = PBXGroup;
-			children = (
-				FBCF6AEA1F8CAA7700E3B58C /* UIImage+Category.h */,
-				FBCF6AEB1F8CAA7700E3B58C /* UIImage+Category.m */,
-				FB5078321E2618A900361E60 /* PADemoHomeController.h */,
-				FB5078331E2618A900361E60 /* PADemoHomeController.m */,
-				FB5078371E2618A900361E60 /* TipsViewDemo */,
-			);
-			path = PA;
-			sourceTree = "<group>";
-		};
-		FB5078371E2618A900361E60 /* TipsViewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FB5078381E2618A900361E60 /* TipsView.h */,
-				FB5078391E2618A900361E60 /* TipsView.m */,
-				FB50783A1E2618A900361E60 /* TipsViewDemoHomeController.h */,
-				FB50783B1E2618A900361E60 /* TipsViewDemoHomeController.m */,
-			);
-			path = TipsViewDemo;
 			sourceTree = "<group>";
 		};
 		FB50783C1E2618A900361E60 /* PageVCDemo */ = {
@@ -4359,6 +4323,8 @@
 			isa = PBXGroup;
 			children = (
 				FBB91DAB1F2871E100D41838 /* 调试工具 */,
+				FBF4BC6620FEE469005FD795 /* UIImage+Category.h */,
+				FBF4BC6720FEE469005FD795 /* UIImage+Category.m */,
 				FBB91DA61F2871CA00D41838 /* YYFPSLabel.h */,
 				FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */,
 				FBCF6AF81F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.h */,
@@ -4831,7 +4797,6 @@
 				FB0621C71ED275DC000AA258 /* EnumAndFormatDemo.m in Sources */,
 				FB875D8820EB741A00F8C868 /* AnimationButton1.m in Sources */,
 				FB5079161E2618A900361E60 /* Line.m in Sources */,
-				FB5078C81E2618A900361E60 /* ZCPURLConnectionTool.m in Sources */,
 				FBCF6B461F8CBF3B00E3B58C /* DashedCell.m in Sources */,
 				FBCC6A7020E48F64002367F5 /* FoldClockItemView.m in Sources */,
 				FB0621CB1ED275DD000AA258 /* ClassASub.m in Sources */,
@@ -4858,7 +4823,6 @@
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
 				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
 				FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */,
-				FB5078FA1E2618A900361E60 /* PADemoHomeController.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
 				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,
 				FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */,
@@ -4871,7 +4835,6 @@
 				FB9092A81F6F5762007EC93B /* DecoratorBlueTooth.m in Sources */,
 				FB0621DC1ED275DD000AA258 /* SocketDemo.m in Sources */,
 				FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */,
-				FB5078FD1E2618A900361E60 /* TipsViewDemoHomeController.m in Sources */,
 				FB0621CD1ED275DD000AA258 /* OCClassMethodDemo.m in Sources */,
 				FB46007D1E27322F003504AD /* DashedView.m in Sources */,
 				FB5079151E2618A900361E60 /* FontDemoHomeControllerViewController.m in Sources */,
@@ -4894,10 +4857,10 @@
 				FB5079001E2618A900361E60 /* PhotoCarouselDemoHomeController.m in Sources */,
 				FBCC21001F03786C006FE26C /* ADDemoHomeViewController.m in Sources */,
 				FBCF6B421F8CBC0A00E3B58C /* ZCPControllerFactory+Category.m in Sources */,
+				FBF4BC6820FEE46A005FD795 /* UIImage+Category.m in Sources */,
 				FB50791B1E2618A900361E60 /* TouchDrawView.m in Sources */,
 				FB5079221E2618A900361E60 /* SizeToFitDemoHomeController.m in Sources */,
 				FB0621D81ED275DD000AA258 /* ZCPUser.m in Sources */,
-				FB5078FC1E2618A900361E60 /* TipsView.m in Sources */,
 				FBCC6A6D20E48C86002367F5 /* FoldClockView.m in Sources */,
 				FB7E4FAF1FFE1C0900B366FA /* EPLog.mm in Sources */,
 				FBCF6B761F8F528800E3B58C /* ZCPMinesweeperViewController.m in Sources */,
@@ -4921,7 +4884,6 @@
 				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
 				FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */,
 				FB0621D61ED275DD000AA258 /* UIImage+Runtime.m in Sources */,
-				FBCF6AEC1F8CAA7700E3B58C /* UIImage+Category.m in Sources */,
 				FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */,
 				FB5079021E2618A900361E60 /* ZCPPhotoCarouselView.m in Sources */,
 				FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */,

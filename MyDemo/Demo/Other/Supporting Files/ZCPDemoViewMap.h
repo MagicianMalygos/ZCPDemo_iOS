@@ -31,8 +31,6 @@
 #define APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME    @"photoCarouselHome"
 // 分享 ShareDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_SHAREHOME            @"shareHome"
-// 平安 PADemoHomeController
-#define APPURL_VIEW_IDENTIFIER_PAHOME               @"PAHome"
 // tabbar TabBarDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_TABBARHOME           @"tabbarHome"
 // 网络 NetWorkDemoHomeController

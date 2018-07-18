@@ -8,7 +8,6 @@
 //
 
 #import "NetWorkDemoHomeController.h"
-#import "ZCPURLConnectionTool.h"
 #import "ZCPURLSessionTool.h"
 #import "ZCPAFNetworkingTool.h"
 
@@ -18,47 +17,38 @@
 
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
-        _infoArr = @[@{@"title": @"get异步 Connection",
-                       @"sel": @"getRequest_Asynchronous_Connection",
-                       @"type": @"connection"},
-                     @{@"title": @"post异步 Connection",
-                       @"sel": @"postRequest_Asynchronous_Connection",
-                       @"type": @"connection"},
-                     @{@"title": @"下载 Connection",
-                       @"sel": @"uploadRequest_Connection",
-                       @"type": @"connection"},
-                     
-                     @{@"title": @"get同步 Session",
-                       @"sel": @"getRequest_Synchronouos_Session",
+        _infoArr = @[@{@"title": @"get同步",
+                       @"sel": @"getRequest_Synchronouos",
                        @"type": @"session"},
-                     @{@"title": @"post异步 Session",
-                       @"sel": @"postRequest_Asynchronous_Session",
+                     @{@"title": @"post同步",
+                       @"sel": @"postRequest_Synchronouos",
+                       @"type": @"session"},
+                     @{@"title": @"get异步",
+                       @"sel": @"getRequest",
+                       @"type": @"session"},
+                     @{@"title": @"post异步",
+                       @"sel": @"postRequest",
+                       @"type": @"session"},
+                     @{@"title": @"上传",
+                       @"sel": @"uploadRequest",
+                       @"type": @"session"},
+                     @{@"title": @"下载",
+                       @"sel": @"downloadRequest",
                        @"type": @"session"},
                      
                      @{@"title": @"get异步 AF",
-                       @"sel": @"getRequest_Asynchronous_AF",
+                       @"sel": @"getRequest",
                        @"type": @"AF"},
                      @{@"title": @"post异步 AF",
-                       @"sel": @"postRequest_Asynchronous_AF",
+                       @"sel": @"postRequest",
                        @"type": @"AF"},
                      @{@"title": @"上传 AF",
-                       @"sel": @"uploadRequest_AF",
+                       @"sel": @"uploadRequest",
                        @"type": @"AF"},
                      @{@"title": @"下载 AF",
-                       @"sel": @"downloadRequest_AF",
+                       @"sel": @"downloadRequest",
                        @"type": @"AF"},
-                     @{@"title": @"get异步 AF Session",
-                       @"sel": @"getRequest_Asynchronous_AF_Session",
-                       @"type": @"AF"},
-                     @{@"title": @"post异步 AF Session",
-                       @"sel": @"postRequest_Asynchronous_AF_Session",
-                       @"type": @"AF"},
-                     @{@"title": @"上传AF Session",
-                       @"sel": @"uploadRequest_AF_Session",
-                       @"type": @"AF"},
-                     @{@"title": @"下载AF Session",
-                       @"sel": @"downloadRequest_AF_Session",
-                       @"type": @"AF"},
+                     
                      @{@"title": @"测试Https",
                        @"sel": @"testHttps",
                        @"type": @"AF"},
@@ -74,9 +64,7 @@
     
     NSObject *obj = nil;
     NSString *type = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"type"];
-    if ([type isEqualToString:@"connection"]) {
-        obj = [ZCPURLConnectionTool new];
-    } else if ([type isEqualToString:@"session"]) {
+    if ([type isEqualToString:@"session"]) {
         obj = [ZCPURLSessionTool new];
     } else if ([type isEqualToString:@"AF"]) {
         obj = [ZCPAFNetworkingTool new];
@@ -108,7 +96,6 @@
     [request setValue:@"ios" forHTTPHeaderField:@"User-Agent"];
     
     // 3.任何NSURLRequest默认都是get请求
-    
 }
 
 @end

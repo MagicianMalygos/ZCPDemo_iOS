@@ -24,7 +24,8 @@
 }
 
 + (void)requestAppVersionWithAppID:(NSString *)appID success:(void(^)(AppUpdateModel *model))success {
-    [[AFHTTPRequestOperationManager manager] GET:@"http://itunes.apple.com/cn/lookup" parameters:@{@"id": appID} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[AFHTTPSessionManager manager] GET:@"http://itunes.apple.com/cn/lookup" parameters:@{@"id": appID} progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *results            = [responseObject objectForKey:@"results"];
         NSDictionary *appInfo       = [results firstObject];
         
@@ -45,7 +46,7 @@
         if (success) {
             success(model);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     }];
 }
 

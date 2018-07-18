@@ -61,7 +61,7 @@
     self.window.rootViewController = [ZCPNavigator sharedInstance].rootViewController;
     [self.window makeKeyAndVisible];
     
-//    [DebugManager defaultManager].alwaysShowStatusBall = YES;
+    [DebugManager defaultManager].alwaysShowStatusBall = YES;
     
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];

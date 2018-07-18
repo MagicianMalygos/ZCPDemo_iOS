@@ -148,14 +148,6 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>PADemoHomeController</string>
-		<key>identifier</key>
-		<string>PAHome</string>
-		<key>description</key>
-		<string>平安</string>
-	</dict>
-	<dict>
-		<key>className</key>
 		<string>TabBarDemoHomeController</string>
 		<key>identifier</key>
 		<string>tabbarHome</string>

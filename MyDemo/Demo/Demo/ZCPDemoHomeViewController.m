@@ -29,7 +29,6 @@
                     @{@"title": @"OtherDemo"            , @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},
                     @{@"title": @"PhotoCarouselDemo"    , @"class": APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME},
                     @{@"title": @"ShareDemo"            , @"class": APPURL_VIEW_IDENTIFIER_SHAREHOME},
-                    @{@"title": @"PADemo"               , @"class": APPURL_VIEW_IDENTIFIER_PAHOME},
                     @{@"title": @"TabBarDemo"           , @"class": APPURL_VIEW_IDENTIFIER_TABBARHOME},
                     @{@"title": @"NetWorkDemo"          , @"class": APPURL_VIEW_IDENTIFIER_NETWORKHOME},
                     @{@"title": @"二维码扫描"             , @"class": APPURL_VIEW_IDENTIFIER_QRCODEHOME},

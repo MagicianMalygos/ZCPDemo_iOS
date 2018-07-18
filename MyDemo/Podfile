@@ -9,7 +9,7 @@ target:'Demo' do
 # zcp
 pod 'ZCPKit', '~> 0.0.2'
 # 网络请求
-pod 'AFNetworking', '~> 2.5.4'
+pod 'AFNetworking', '~> 3.2.1'
 # 图片加载
 pod 'SDWebImage', '~> 4.1.0'
 # 各种
