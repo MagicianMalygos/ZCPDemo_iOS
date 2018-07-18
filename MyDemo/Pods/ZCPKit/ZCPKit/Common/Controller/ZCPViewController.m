@@ -167,9 +167,11 @@
 #pragma mark - jump / back
 // ----------------------------------------------------------------------
 - (void)presentViewController:(UIViewController<ZCPNavigatorProtocol> *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
-    self.latterViewController                       = viewControllerToPresent;
-    viewControllerToPresent.formerViewController    = self;
-    viewControllerToPresent.viewJumpModel           = ZCPViewModalJumpMode;
+    self.latterViewController                           = viewControllerToPresent;
+    if ([viewControllerToPresent conformsToProtocol:@protocol(ZCPNavigatorProtocol)]) {
+        viewControllerToPresent.formerViewController    = self;
+        viewControllerToPresent.viewJumpModel           = ZCPViewModalJumpMode;
+    }
     [super presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {

@@ -58,7 +58,7 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
-  - ZCPKit (~> 0.0.2)
+  - "ZCPKit (from `git@gitlab.com:Malygos/ZCPKit.git`)"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -70,8 +70,15 @@ SPEC REPOS:
     - MLeaksFinder
     - SDWebImage
     - YYKit
-  https://gitlab.com/Malygos/zcprepo.git:
-    - ZCPKit
+
+EXTERNAL SOURCES:
+  ZCPKit:
+    :git: "git@gitlab.com:Malygos/ZCPKit.git"
+
+CHECKOUT OPTIONS:
+  ZCPKit:
+    :commit: 50b6a1f622e11d10252a15acba74df35f7b49949
+    :git: "git@gitlab.com:Malygos/ZCPKit.git"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -82,8 +89,8 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPKit: c0cd0ee2441b52ebefc842e1b00bc64ededeeb3f
+  ZCPKit: a254623daab9092fee84eb58e8e35a0d26662be3
 
-PODFILE CHECKSUM: 10549b2f11cc850bb4a5b3092ed6ae564bc256e2
+PODFILE CHECKSUM: daf37d5939282d50e9c08044c2a9d58c634b2ea9
 
 COCOAPODS: 1.5.3

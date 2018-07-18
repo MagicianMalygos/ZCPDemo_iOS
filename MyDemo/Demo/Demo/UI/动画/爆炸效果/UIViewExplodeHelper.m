@@ -20,9 +20,6 @@
 #define ScaleAndOpacityAnimationDuration 0.1
 #define ParticleAnimationDuration       (0.5 + RANDOMF(0, 0.5))
 
-#define JD  1000000
-#define RANDOMF(a, b) (RANDOM((NSInteger)((a) * JD), (NSInteger)((b) * JD)) / (CGFloat)JD)
-
 @interface UIViewExplodeHelper () <CAAnimationDelegate>
 
 @property (nonatomic, strong) NSMutableArray *particleArray;

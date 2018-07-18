@@ -129,9 +129,13 @@ do { \
 
 #pragma mark - - - - - - - - - - - random - - - - - - - - - -
 
-// 生成a-b范围内的整数随机数
+// 生成a-b范围内的随机整数
 #define RANDOM(a, b)                    (((NSInteger)arc4random() % ((b) - (a) + 1)) + a)
+// 生成a~b范围内的随机浮点数（该宏存在缺陷，当a或b的值乘以 RANDOM_PRECISION 之后如果超出NSInteger的范围，则会出现异常）
+#define RANDOM_PRECISION                1000000
+#define RANDOMF(a, b)                   (RANDOM((NSInteger)((a) * RANDOM_PRECISION), (NSInteger)((b) * RANDOM_PRECISION)) / (CGFloat)RANDOM_PRECISION)
+
 // 生成随机颜色
-#define RANDOM_COLOR                    [UIColor colorWithRed:arc4random() % 10 / 10.0f green:arc4random() % 10 / 10.0f blue:arc4random() % 10 / 10.0f alpha:1.0f]
+#define RANDOM_COLOR                    [UIColor colorWithRed:RANDOMF(0, 1) green:RANDOMF(0, 1) blue:RANDOMF(0, 1) alpha:1.0f]
 
 #endif /* ZCPGlobalMacros_h */
