@@ -24,6 +24,12 @@
 
 #pragma mark - life cycle
 
+- (instancetype)initWithQuery:(NSDictionary *)query {
+    if (self = [super initWithNibName:@"ZCPMinesweeperViewController" bundle:nil]) {
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     mineSide        = (APPLICATIONWIDTH - (LineNum + 1) * MineGap) / LineNum;

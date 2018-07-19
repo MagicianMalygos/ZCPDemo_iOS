@@ -8,7 +8,7 @@
 
 #import <ZCPKit/ZCPKit.h>
 
-@interface ZCPMinesweeperViewController : UIViewController
+@interface ZCPMinesweeperViewController : ZCPViewController
 
 // 雷区
 @property (weak, nonatomic) IBOutlet UIView *mineField;
