@@ -223,6 +223,7 @@
 		FBF4BC6820FEE46A005FD795 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC6720FEE469005FD795 /* UIImage+Category.m */; };
 		FBF4BC8A210026FD005FD795 /* AlertViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC87210026FD005FD795 /* AlertViewDemoController.m */; };
 		FBF4BC8B210026FD005FD795 /* AlertViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */; };
+		FBF4BC9221006B07005FD795 /* IOS12ICONAnimationButton1.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC9121006B07005FD795 /* IOS12ICONAnimationButton1.m */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
 /* End PBXBuildFile section */
@@ -1612,6 +1613,9 @@
 		FBF4BC87210026FD005FD795 /* AlertViewDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoController.m; sourceTree = "<group>"; };
 		FBF4BC88210026FD005FD795 /* AlertViewDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoController.h; sourceTree = "<group>"; };
 		FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertViewDemoController.xib; sourceTree = "<group>"; };
+		FBF4BC9021006B07005FD795 /* IOS12ICONAnimationButton1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOS12ICONAnimationButton1.h; sourceTree = "<group>"; };
+		FBF4BC9121006B07005FD795 /* IOS12ICONAnimationButton1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOS12ICONAnimationButton1.m; sourceTree = "<group>"; };
+		FBF4BC9321007A31005FD795 /* IOS12ICON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOS12ICON.h; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
 		FBF763CD1EA07124001E867B /* bubble_community@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -4168,6 +4172,7 @@
 		FB875D7A20EB737300F8C868 /* 动画按钮 */ = {
 			isa = PBXGroup;
 			children = (
+				FBF4BC8F21006AA8005FD795 /* iOS12贴纸 */,
 				FB875D8320EB738E00F8C868 /* AnimationButtonViewController.h */,
 				FB875D8420EB738E00F8C868 /* AnimationButtonViewController.m */,
 				FBF4BC4B20FC4205005FD795 /* AnimationButtonDelegate.h */,
@@ -4466,6 +4471,16 @@
 				FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */,
 			);
 			path = AlertViewDemo;
+			sourceTree = "<group>";
+		};
+		FBF4BC8F21006AA8005FD795 /* iOS12贴纸 */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4BC9321007A31005FD795 /* IOS12ICON.h */,
+				FBF4BC9021006B07005FD795 /* IOS12ICONAnimationButton1.h */,
+				FBF4BC9121006B07005FD795 /* IOS12ICONAnimationButton1.m */,
+			);
+			path = "iOS12贴纸";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4822,6 +4837,7 @@
 				FB0621C51ED275DC000AA258 /* TreeDemo.m in Sources */,
 				FBCF6B491F8CC5CE00E3B58C /* DashedModel.m in Sources */,
 				FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */,
+				FBF4BC9221006B07005FD795 /* IOS12ICONAnimationButton1.m in Sources */,
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
 				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
