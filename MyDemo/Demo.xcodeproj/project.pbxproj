@@ -86,7 +86,6 @@
 		FB4600781E27170E003504AD /* DashedSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4600771E27170E003504AD /* DashedSettingView.xib */; };
 		FB46007D1E27322F003504AD /* DashedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB46007C1E27322F003504AD /* DashedView.m */; };
 		FB46525E1EA76096006667EA /* codeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB46525D1EA76096006667EA /* codeLogo.png */; };
-		FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */; };
 		FB5078A11E2618A900361E60 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB50775A1E2618A800361E60 /* AppDelegate.mm */; };
 		FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50775D1E2618A800361E60 /* CameraAndAlbumDemoHomeController.m */; };
 		FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5077601E2618A800361E60 /* PAAssetPickerController.m */; };
@@ -222,6 +221,8 @@
 		FBEAE41320EF5EBA001E27AF /* AnimationButton2.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */; };
 		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
 		FBF4BC6820FEE46A005FD795 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC6720FEE469005FD795 /* UIImage+Category.m */; };
+		FBF4BC8A210026FD005FD795 /* AlertViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4BC87210026FD005FD795 /* AlertViewDemoController.m */; };
+		FBF4BC8B210026FD005FD795 /* AlertViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */; };
 		FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CC1EA07124001E867B /* bubble_community@2x.png */; };
 		FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF763CD1EA07124001E867B /* bubble_community@3x.png */; };
 /* End PBXBuildFile section */
@@ -1352,8 +1353,6 @@
 		FB46007B1E27322F003504AD /* DashedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedView.h; sourceTree = "<group>"; };
 		FB46007C1E27322F003504AD /* DashedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashedView.m; sourceTree = "<group>"; };
 		FB46525D1EA76096006667EA /* codeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeLogo.png; sourceTree = "<group>"; };
-		FB5077571E2618A800361E60 /* AlertViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoHomeController.h; sourceTree = "<group>"; };
-		FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB5077591E2618A800361E60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB50775A1E2618A800361E60 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		FB50775C1E2618A800361E60 /* CameraAndAlbumDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraAndAlbumDemoHomeController.h; sourceTree = "<group>"; };
@@ -1610,6 +1609,9 @@
 		FBF4BC6620FEE469005FD795 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		FBF4BC6720FEE469005FD795 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		FBF4BC6B20FF3783005FD795 /* ZCPRequestMethodProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPRequestMethodProtocol.h; sourceTree = "<group>"; };
+		FBF4BC87210026FD005FD795 /* AlertViewDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewDemoController.m; sourceTree = "<group>"; };
+		FBF4BC88210026FD005FD795 /* AlertViewDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewDemoController.h; sourceTree = "<group>"; };
+		FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertViewDemoController.xib; sourceTree = "<group>"; };
 		FBF763CC1EA07124001E867B /* bubble_community@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@2x.png"; sourceTree = "<group>"; };
 		FBF763CD1EA07124001E867B /* bubble_community@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_community@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3850,7 +3852,6 @@
 				FB06218A1ED275DC000AA258 /* OtherDemo */,
 				FBB836041EB9DFCD00C064A8 /* 临时测试用 */,
 				FBA976C91E669D3600C88BE5 /* App弹窗升级 */,
-				FB5077561E2618A800361E60 /* AlertViewDemo */,
 				FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */,
 				FB5077671E2618A800361E60 /* NetWork */,
 				FB50783C1E2618A900361E60 /* PageVCDemo */,
@@ -3866,15 +3867,6 @@
 				FBCF6AF61F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		FB5077561E2618A800361E60 /* AlertViewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FB5077571E2618A800361E60 /* AlertViewDemoHomeController.h */,
-				FB5077581E2618A800361E60 /* AlertViewDemoHomeController.m */,
-			);
-			path = AlertViewDemo;
 			sourceTree = "<group>";
 		};
 		FB50775B1E2618A800361E60 /* CameraAndAlbumDemo */ = {
@@ -4031,6 +4023,7 @@
 		FB5078761E2618A900361E60 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FBF4BC86210026FD005FD795 /* AlertViewDemo */,
 				FB139FD820D8ED0100DD6D34 /* 动画 */,
 				FB92C8881E5C177B0095F31E /* CollectionViewDemo */,
 				FB50795A1E26193A00361E60 /* 气泡拉伸 */,
@@ -4465,6 +4458,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FBF4BC86210026FD005FD795 /* AlertViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4BC88210026FD005FD795 /* AlertViewDemoController.h */,
+				FBF4BC87210026FD005FD795 /* AlertViewDemoController.m */,
+				FBF4BC89210026FD005FD795 /* AlertViewDemoController.xib */,
+			);
+			path = AlertViewDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4688,6 +4691,7 @@
 				FB5079031E2618A900361E60 /* scanBackground@2x.png in Resources */,
 				FBCF6B381F8CBC0A00E3B58C /* Main.strings in Resources */,
 				1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */,
+				FBF4BC8B210026FD005FD795 /* AlertViewDemoController.xib in Resources */,
 				FB50790F1E2618A900361E60 /* WeiboSDK.bundle in Resources */,
 				1844399D1D0012C700FDD7F7 /* tips_page_next_step@2x.png in Resources */,
 				18A5014B1C92BE67006EBEB4 /* 004.jpg in Resources */,
@@ -4815,7 +4819,6 @@
 				FBB91DBB1F288AC000D41838 /* DebugManager.m in Sources */,
 				FB5078FE1E2618A900361E60 /* MyViewController.m in Sources */,
 				FB0621C81ED275DC000AA258 /* MacroDemo.m in Sources */,
-				FB5078A01E2618A900361E60 /* AlertViewDemoHomeController.m in Sources */,
 				FB0621C51ED275DC000AA258 /* TreeDemo.m in Sources */,
 				FBCF6B491F8CC5CE00E3B58C /* DashedModel.m in Sources */,
 				FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */,
@@ -4881,6 +4884,7 @@
 				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
 				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
+				FBF4BC8A210026FD005FD795 /* AlertViewDemoController.m in Sources */,
 				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
 				FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */,
 				FB0621D61ED275DD000AA258 /* UIImage+Runtime.m in Sources */,

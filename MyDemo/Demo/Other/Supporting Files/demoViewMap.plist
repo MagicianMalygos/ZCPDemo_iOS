@@ -100,11 +100,11 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>AlertViewDemoHomeController</string>
+		<string>AlertViewDemoController</string>
 		<key>identifier</key>
-		<string>alertHome</string>
-		<key>description</key>
 		<string>alert</string>
+		<key>description</key>
+		<string>系统弹窗</string>
 	</dict>
 	<dict>
 		<key>className</key>

@@ -19,8 +19,6 @@
 #define APPURL_VIEW_IDENTIFIER_UIHOME               @"uiHome"
 // web容器 WebViewDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_WEBHOME              @"webHome"
-// alert AlertViewDemoHomeController
-#define APPURL_VIEW_IDENTIFIER_ALERTHOME            @"alertHome"
 // UIPageViewController PageVCDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_PAGEVCHOME           @"pageVCHome"
 // 相机/相册 CameraAndAlbumDemoHomeController
@@ -66,6 +64,8 @@
 #define APPURL_VIEW_IDENTIFIER_DASHED               @"dashed"
 // collection CollectionViewDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_COLLECTION           @"collection"
+// alert AlertViewDemoController
+#define APPURL_VIEW_IDENTIFIER_ALERT                @"alert"
 
 #pragma mark - Animation
 

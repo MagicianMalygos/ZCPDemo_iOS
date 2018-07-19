@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 访问相机、相册demo
+ */
 @interface CameraAndAlbumDemoHomeController : ZCPViewController
 
 @end

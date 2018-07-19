@@ -1,5 +1,5 @@
 //
-//  AlertViewDemoHomeController.h
+//  AlertViewDemoController.h
 //  UIAlertViewDemo
 //
 //  Created by apple on 16/3/9.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlertViewDemoHomeController : ZCPViewController
+/**
+ 弹窗Demo 视图控制器
+ */
+@interface AlertViewDemoController : ZCPViewController
 
 @end
 

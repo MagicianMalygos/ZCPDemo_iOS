@@ -26,9 +26,6 @@
 //屏幕高度
 #define SCREENHEIGHT                                [[UIScreen mainScreen] bounds].size.height
 
-// 生成随机颜色
-#define RANDOM_COLOR [UIColor colorWithRed:arc4random() % 10 / 10.0f green:arc4random() % 10 / 10.0f blue:arc4random() % 10 / 10.0f alpha:1.0f]
-
 // share相关
 #import "WeiboSDK.h"
 #define kAppKey         @"2163609371"

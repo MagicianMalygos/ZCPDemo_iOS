@@ -23,7 +23,6 @@
                     @{@"title": @"临时测试"             , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
                     @{@"title": @"UIDemo"               , @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
                     @{@"title": @"WebViewDemo"          , @"class": APPURL_VIEW_IDENTIFIER_WEBHOME},
-                    @{@"title": @"AlertViewDemo"        , @"class": APPURL_VIEW_IDENTIFIER_ALERTHOME},
                     @{@"title": @"PageVCDemo"           , @"class": APPURL_VIEW_IDENTIFIER_PAGEVCHOME},
                     @{@"title": @"CameraAndAlbumDemo"   , @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
                     @{@"title": @"OtherDemo"            , @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},

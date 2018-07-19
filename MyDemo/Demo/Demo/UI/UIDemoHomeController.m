@@ -23,6 +23,7 @@
                     @{@"title": @"QiPaoDemo"            , @"class": APPURL_VIEW_IDENTIFIER_QIPAO},
                     @{@"title": @"虚线"                  , @"class": APPURL_VIEW_IDENTIFIER_DASHED},
                     @{@"title": @"CollectionViewDemo"   , @"class":APPURL_VIEW_IDENTIFIER_COLLECTION},
+                    @{@"title": @"Alert"                , @"class":APPURL_VIEW_IDENTIFIER_ALERT},
                     nil];
     }
     return _infoArr;
