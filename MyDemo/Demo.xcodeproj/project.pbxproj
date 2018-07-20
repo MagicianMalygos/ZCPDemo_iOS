@@ -80,6 +80,7 @@
 		FB0621DF1ED2762D000AA258 /* NSTimer+WTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0621DE1ED2762D000AA258 /* NSTimer+WTUtils.m */; };
 		FB139FE820D8ED5700DD6D34 /* AnimationDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */; };
 		FB139FED20D8EE2E00DD6D34 /* ExplodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB139FEC20D8EE2E00DD6D34 /* ExplodeViewController.xib */; };
+		FB1433F121017EFA00395247 /* IOS12ICONAnimationButton2.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1433F021017EFA00395247 /* IOS12ICONAnimationButton2.m */; };
 		FB1608231EFA0DD900064DA2 /* MapDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */; };
 		FB2ECFF720B6595B00F362A0 /* LockDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2ECFF620B6595B00F362A0 /* LockDemoHomeViewController.m */; };
 		FB4600721E2716DA003504AD /* DashedSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4600711E2716DA003504AD /* DashedSettingView.m */; };
@@ -1344,6 +1345,8 @@
 		FB139FE620D8ED5700DD6D34 /* AnimationDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDemoHomeViewController.h; sourceTree = "<group>"; };
 		FB139FE720D8ED5700DD6D34 /* AnimationDemoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationDemoHomeViewController.m; sourceTree = "<group>"; };
 		FB139FEC20D8EE2E00DD6D34 /* ExplodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExplodeViewController.xib; sourceTree = "<group>"; };
+		FB1433EF21017EFA00395247 /* IOS12ICONAnimationButton2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOS12ICONAnimationButton2.h; sourceTree = "<group>"; };
+		FB1433F021017EFA00395247 /* IOS12ICONAnimationButton2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOS12ICONAnimationButton2.m; sourceTree = "<group>"; };
 		FB1608201EFA0DD900064DA2 /* MapDemoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoHomeViewController.h; sourceTree = "<group>"; };
 		FB1608211EFA0DD900064DA2 /* MapDemoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoHomeViewController.m; sourceTree = "<group>"; };
 		FB2ECFF520B6595B00F362A0 /* LockDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockDemoHomeViewController.h; sourceTree = "<group>"; };
@@ -4479,6 +4482,8 @@
 				FBF4BC9321007A31005FD795 /* IOS12ICON.h */,
 				FBF4BC9021006B07005FD795 /* IOS12ICONAnimationButton1.h */,
 				FBF4BC9121006B07005FD795 /* IOS12ICONAnimationButton1.m */,
+				FB1433EF21017EFA00395247 /* IOS12ICONAnimationButton2.h */,
+				FB1433F021017EFA00395247 /* IOS12ICONAnimationButton2.m */,
 			);
 			path = "iOS12贴纸";
 			sourceTree = "<group>";
@@ -4843,6 +4848,7 @@
 				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
 				FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
+				FB1433F121017EFA00395247 /* IOS12ICONAnimationButton2.m in Sources */,
 				FB7E4FB11FFE1C0900B366FA /* longlink_packer.mm in Sources */,
 				FB7E4FB31FFE1C0900B366FA /* log_crypt.mm in Sources */,
 				FB5079201E2618A900361E60 /* SetFilletDemoHomeController.m in Sources */,

@@ -28,7 +28,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        self.frame              = CGRectMake(0, 20, 50, 50);
+        self.frame              = CGRectMake(APPLICATIONWIDTH - 50, 50, 50, 50);
         self.layer.cornerRadius = self.height / 2;
         [self clipsToBounds];
     }

@@ -25,7 +25,7 @@
 
 // iOS12贴纸
 @property (nonatomic, strong) IOS12ICONAnimationButton1 *ios12iconButton1;
-@property (nonatomic, strong) IOS12ICONAnimationButton1 *ios12iconButton2;
+@property (nonatomic, strong) IOS12ICONAnimationButton2 *ios12iconButton2;
 @property (nonatomic, strong) IOS12ICONAnimationButton1 *ios12iconButton3;
 
 @end
@@ -52,7 +52,8 @@
     
     self.ios12iconButton1 = [[IOS12ICONAnimationButton1 alloc] init];
     [self.view addSubview:self.ios12iconButton1];
-    self.ios12iconButton2 = [[IOS12ICONAnimationButton1 alloc] init];
+    self.ios12iconButton2 = [[IOS12ICONAnimationButton2 alloc] init];
+    self.ios12iconButton2.time = 10;
     [self.view addSubview:self.ios12iconButton2];
     self.ios12iconButton3 = [[IOS12ICONAnimationButton1 alloc] init];
     [self.view addSubview:self.ios12iconButton3];
@@ -84,15 +85,8 @@
     if (button == self.button1) {
         NSLog(@"点击了汉堡包按钮");
         self.button1.lineColor = RANDOM_COLOR;
-        
-        // test
-        [self.ios12iconButton1 startAnimation];
-        
     } else if (button == self.button2) {
         NSLog(@"点击了爱奇艺播放按钮");
-        
-        // test
-        [self.ios12iconButton1 stopAnimation];
     } else if (button == self.button3) {
         NSLog(@"点击了优酷播放按钮");
     }

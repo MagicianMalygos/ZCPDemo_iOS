@@ -59,6 +59,9 @@
         
         // 初始化参数和layer
         [self update];
+        
+        // 添加点击事件
+        [self addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
 }
@@ -69,6 +72,7 @@
     // 处理内存泄漏
     if (newSuperview == nil) {
         [self clearAllAnimation];
+        self.animating = NO;
     }
 }
 
@@ -141,6 +145,16 @@
     [path moveToPoint:CGPointMake(self.width / 2, _lineWidth / 2 + 2 * _lineGap)];
     [path addArcWithCenter:_arcCenter radius:_radiusForInsideArc startAngle:-M_PI_2 endAngle:M_PI * 3/2 clockwise:YES];
     return path;
+}
+
+#pragma mark - event response
+
+- (void)click {
+    if (!self.animating) {
+        [self startAnimation];
+    } else {
+        [self stopAnimation];
+    }
 }
 
 #pragma mark - animation

@@ -10,5 +10,6 @@
 #define IOS12ICON_h
 
 #import "IOS12ICONAnimationButton1.h"
+#import "IOS12ICONAnimationButton2.h"
 
 #endif /* IOS12ICON_h */
