@@ -17,5 +17,9 @@
 #import "NSDate+Category.h"
 #import "NSString+Category.h"
 #import "NSArray+Category.h"
+#import "NSString+URL.h"
+#import "NSURL+URL.h"
+
+#import "UIBarButtonItem+Category.h"
 
 #endif /* ZCPCategory_h */

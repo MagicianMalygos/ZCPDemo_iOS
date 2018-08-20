@@ -19,3 +19,6 @@ FOUNDATION_EXPORT const unsigned char ZCPKitVersionString[];
 #import <ZCPKit/ZCPUtil.h>
 #import <ZCPKit/ZCPCommon.h>
 #import <ZCPKit/ZCPCache.h>
+#import <ZCPKit/ZCPUIKit.h>
+#import <ZCPKit/ZCPRouter.h>
+#import <ZCPKit/ZCPNetwork.h>

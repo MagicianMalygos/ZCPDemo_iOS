@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+//统计渠道
+typedef enum {
+    PAAppChannelAppStore=100,//appstore
+}PAAppChannel;
+
+#define kURLSchemeIdnentifier                           @"PingAnHaoFang"
+
 @interface ZCPPackageInfo : NSObject
 
 // 应用包名

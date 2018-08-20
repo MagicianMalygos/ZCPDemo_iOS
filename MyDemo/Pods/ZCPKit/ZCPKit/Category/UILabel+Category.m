@@ -1,9 +1,9 @@
 //
-//  UILabel+Icon.m
-//  haofang
+//  UILabel+Category.m
+//  ZCPKit
 //
-//  Created by DengJinlong on 4/8/14.
-//  Copyright (c) 2014 平安好房. All rights reserved.
+//  Created by 朱超鹏 on 2018/8/9.
+//  Copyright © 2018年 zcp. All rights reserved.
 //
 
 #import "UILabel+Category.h"
@@ -12,7 +12,7 @@
 
 @implementation UILabel (Category)
 
-//6.0及其以上系统调用 自定义行间距过大需要重新调整label高度
+/// 设置label行间距
 - (void)setLineSpace:(CGFloat)height{
     if (SYSTEM_VERSION < 6.0) {
         return;
@@ -36,9 +36,10 @@
     }
 }
 
+/// sizeToFit带边距方法
 - (void)sizeToFitWithEdge:(UIEdgeInsets)edgeInsets {
     [self sizeToFit];
-    self.width = self.width + edgeInsets.right + edgeInsets.left;
+    self.width  = self.width + edgeInsets.right + edgeInsets.left;
     self.height = self.height + edgeInsets.top + edgeInsets.bottom;
 }
 

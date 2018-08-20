@@ -22,7 +22,6 @@
 /// 优酷播放按钮
 @property (nonatomic, strong) AnimationButton3 *button3;
 
-
 // iOS12贴纸
 @property (nonatomic, strong) IOS12ICONAnimationButton1 *ios12iconButton1;
 @property (nonatomic, strong) IOS12ICONAnimationButton2 *ios12iconButton2;

@@ -25,4 +25,5 @@
     }
     return _infoArr;
 }
+
 @end

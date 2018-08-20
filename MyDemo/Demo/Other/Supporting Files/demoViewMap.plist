@@ -266,5 +266,13 @@
 		<key>description</key>
 		<string>动画按钮</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>CoreAnimationDemoViewController</string>
+		<key>identifier</key>
+		<string>coreAnimation</string>
+		<key>description</key>
+		<string>核心动画demo</string>
+	</dict>
 </array>
 </plist>

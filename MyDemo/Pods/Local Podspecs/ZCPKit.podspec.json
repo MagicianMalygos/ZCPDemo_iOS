@@ -1,6 +1,6 @@
 {
   "name": "ZCPKit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "It`s a framework.",
   "description": "It`s a framework for myself.",
   "homepage": "https://gitlab.com/Malygos/ZCPKit",
@@ -13,19 +13,86 @@
   },
   "source": {
     "git": "https://gitlab.com/Malygos/ZCPKit.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "ZCPKit/ZCPKit.h",
   "public_header_files": "ZCPKit/ZCPKit.h",
-  "resources": "ZCPKit/Common/Router/viewMap.plist",
   "frameworks": [
     "Foundation",
     "UIKit"
   ],
   "subspecs": [
+    {
+      "name": "ZCPUIKit",
+      "dependencies": {
+        "ZCPKit/Category": [
+
+        ],
+        "ZCPKit/Global": [
+
+        ]
+      },
+      "public_header_files": "ZCPKit/ZCPUIKit/ZCPUIKit.h",
+      "source_files": "ZCPKit/ZCPUIKit/ZCPUIKit.h",
+      "subspecs": [
+        {
+          "name": "ZCPListView",
+          "dependencies": {
+            "ZCPKit/Common": [
+
+            ]
+          },
+          "public_header_files": "ZCPKit/ZCPUIKit/ZCPListView/**/*.h",
+          "source_files": "ZCPKit/ZCPUIKit/ZCPListView/**/*.{h,m}"
+        },
+        {
+          "name": "ZCPWebView",
+          "dependencies": {
+            "ZCPKit/Router": [
+
+            ],
+            "ZCPKit/Network": [
+
+            ],
+            "ZCPKit/Util": [
+
+            ]
+          },
+          "public_header_files": "ZCPKit/ZCPUIKit/ZCPWebView/**/*.h",
+          "source_files": "ZCPKit/ZCPUIKit/ZCPWebView/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "Router",
+      "dependencies": {
+        "Aspects": [
+
+        ],
+        "ZCPKit/Global": [
+
+        ],
+        "ZCPKit/Common": [
+
+        ]
+      },
+      "resources": "ZCPKit/Router/viewMap.plist",
+      "public_header_files": "ZCPKit/Router/**/*.h",
+      "source_files": "ZCPKit/Router/**/*.{h,m}"
+    },
+    {
+      "name": "Network",
+      "dependencies": {
+        "ZCPKit/Global": [
+
+        ]
+      },
+      "public_header_files": "ZCPKit/Network/**/*.h",
+      "source_files": "ZCPKit/Network/**/*.{h,m}"
+    },
     {
       "name": "Common",
       "dependencies": {
@@ -36,9 +103,6 @@
 
         ],
         "ZCPKit/Util": [
-
-        ],
-        "Aspects": [
 
         ]
       },

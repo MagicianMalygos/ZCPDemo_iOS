@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZCPBaseNavigator.h"
 #import "ZCPGlobal.h"
 #import "ZCPCategory.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - 视图控制器基类
 // ----------------------------------------------------------------------
-@interface ZCPViewController : UIViewController <ZCPNavigatorProtocol>
+@interface ZCPViewController : UIViewController
 
 // tap事件
 @property (nonatomic, strong) UITapGestureRecognizer *tap;

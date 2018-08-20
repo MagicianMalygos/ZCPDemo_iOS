@@ -69,6 +69,8 @@
 
 #pragma mark - Animation
 
+// CoreAnimation CoreAnimationDemoViewController
+#define APPURL_VIEW_IDENTIFIER_COREANIMATION        @"coreAnimation"
 // 动画首页 AnimationDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_ANIMATION            @"animationHome"
 // UIHomeDemo CATransform3DDemoHomeController

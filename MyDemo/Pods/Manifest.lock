@@ -28,28 +28,51 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - ZCPKit (0.0.2):
-    - ZCPKit/Cache (= 0.0.2)
-    - ZCPKit/Category (= 0.0.2)
-    - ZCPKit/Common (= 0.0.2)
-    - ZCPKit/Global (= 0.0.2)
-    - ZCPKit/Util (= 0.0.2)
-  - ZCPKit/Cache (0.0.2):
-    - ZCPKit/Cache/CoreData (= 0.0.2)
+  - ZCPKit (0.0.3):
+    - ZCPKit/Cache (= 0.0.3)
+    - ZCPKit/Category (= 0.0.3)
+    - ZCPKit/Common (= 0.0.3)
+    - ZCPKit/Global (= 0.0.3)
+    - ZCPKit/Network (= 0.0.3)
+    - ZCPKit/Router (= 0.0.3)
+    - ZCPKit/Util (= 0.0.3)
+    - ZCPKit/ZCPUIKit (= 0.0.3)
+  - ZCPKit/Cache (0.0.3):
+    - ZCPKit/Cache/CoreData (= 0.0.3)
     - ZCPKit/Global
-  - ZCPKit/Cache/CoreData (0.0.2):
+  - ZCPKit/Cache/CoreData (0.0.3):
     - MagicalRecord
     - ZCPKit/Global
-  - ZCPKit/Category (0.0.2):
+  - ZCPKit/Category (0.0.3):
     - ZCPKit/Global
-  - ZCPKit/Common (0.0.2):
-    - Aspects
+  - ZCPKit/Common (0.0.3):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Util
-  - ZCPKit/Global (0.0.2)
-  - ZCPKit/Util (0.0.2):
+  - ZCPKit/Global (0.0.3)
+  - ZCPKit/Network (0.0.3):
     - ZCPKit/Global
+  - ZCPKit/Router (0.0.3):
+    - Aspects
+    - ZCPKit/Common
+    - ZCPKit/Global
+  - ZCPKit/Util (0.0.3):
+    - ZCPKit/Global
+  - ZCPKit/ZCPUIKit (0.0.3):
+    - ZCPKit/Category
+    - ZCPKit/Global
+    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.3)
+    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.3)
+  - ZCPKit/ZCPUIKit/ZCPListView (0.0.3):
+    - ZCPKit/Category
+    - ZCPKit/Common
+    - ZCPKit/Global
+  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.3):
+    - ZCPKit/Category
+    - ZCPKit/Global
+    - ZCPKit/Network
+    - ZCPKit/Router
+    - ZCPKit/Util
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
@@ -58,7 +81,7 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
-  - "ZCPKit (from `git@gitlab.com:Malygos/ZCPKit.git`)"
+  - ZCPKit (~> 0.0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -70,15 +93,8 @@ SPEC REPOS:
     - MLeaksFinder
     - SDWebImage
     - YYKit
-
-EXTERNAL SOURCES:
-  ZCPKit:
-    :git: "git@gitlab.com:Malygos/ZCPKit.git"
-
-CHECKOUT OPTIONS:
-  ZCPKit:
-    :commit: 50b6a1f622e11d10252a15acba74df35f7b49949
-    :git: "git@gitlab.com:Malygos/ZCPKit.git"
+  https://gitlab.com/Malygos/zcprepo.git:
+    - ZCPKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -89,8 +105,8 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPKit: a254623daab9092fee84eb58e8e35a0d26662be3
+  ZCPKit: 6fade2f97bb05c348341e9e4a27feb5068404be7
 
-PODFILE CHECKSUM: daf37d5939282d50e9c08044c2a9d58c634b2ea9
+PODFILE CHECKSUM: 58512c731cb7017ab1554c517f36bf6186f4f617
 
 COCOAPODS: 1.5.3

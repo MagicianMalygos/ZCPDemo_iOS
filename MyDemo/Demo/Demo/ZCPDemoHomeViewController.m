@@ -20,7 +20,8 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"临时测试"             , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
+                    @{@"title": @"Core Animation"       , @"class": APPURL_VIEW_IDENTIFIER_COREANIMATION},
+                    @{@"title": @"临时测试"              , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
                     @{@"title": @"UIDemo"               , @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
                     @{@"title": @"CameraAndAlbumDemo"   , @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
                     @{@"title": @"OtherDemo"            , @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},

@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ZCPGlobal.h"
 
+// ----------------------------------------------------------------------
 #pragma mark - 吐司提示工具类
+// ----------------------------------------------------------------------
 @interface ZCPToastUtil : NSObject
 
 DEF_SINGLETON
-
-#pragma mark - function
 
 /**
  显示吐司

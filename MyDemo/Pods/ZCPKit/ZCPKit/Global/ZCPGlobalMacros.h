@@ -24,6 +24,8 @@
 #define iOS10Upper                      @available(iOS 10.0, *)
 // 判断系统版本是否为iOS 11及以上
 #define iOS11Upper                      @available(iOS 11.0, *)
+// 判断系统版本是否为iOS 12及以上
+#define iOS12Upper                      @available(iOS 12.0, *)
 
 // 判断是不是iPhone
 #define iPhone                          (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

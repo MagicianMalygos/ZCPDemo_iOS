@@ -19,6 +19,17 @@
     return [self rangeOfString:str].location != NSNotFound;
 }
 
+/// 转换为json对象
+- (id)JSONObject {
+    NSError *err        = nil;
+    NSObject *object    = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&err];
+    if (err == nil) {
+        return object;
+    } else {
+        return nil;
+    }
+}
+
 #pragma mark - 日期/字符串转换
 // 日期转换成字符串 yyyy-MM-dd格式
 + (NSString *)stringFromDate:(NSDate *)date {

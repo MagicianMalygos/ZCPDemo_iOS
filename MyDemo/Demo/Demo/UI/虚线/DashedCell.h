@@ -21,7 +21,7 @@
 /**
  虚线cell item
  */
-@interface DashedCellItem : ZCPCellDataModel
+@interface DashedCellItem : ZCPTableViewCellDataModel
 
 @property (nonatomic, strong) DashedModel *model;
 

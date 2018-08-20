@@ -18,6 +18,11 @@
  */
 - (BOOL)contains:(NSString *)str;
 
+/**
+ 转换为json对象
+ */
+- (id)JSONObject;
+
 #pragma mark - 日期/字符串转换
 /**
  日期转换成字符串 yyyy-MM-dd格式

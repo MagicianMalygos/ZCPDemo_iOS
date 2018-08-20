@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CATransform3DDemoHomeController : ZCPViewController
+@interface CATransform3DDemoHomeController : ZCPDemoBaseTableViewController
 
 @end

@@ -15,6 +15,7 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
+                    @{@"title": @"Core Animation"       , @"class": APPURL_VIEW_IDENTIFIER_COREANIMATION},
                     @{@"title": @"动画"                  , @"class": APPURL_VIEW_IDENTIFIER_ANIMATION},
                     @{@"title": @"SizeToFitDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SIZETOFIT},
                     @{@"title": @"FontDemo"             , @"class": APPURL_VIEW_IDENTIFIER_FONT},

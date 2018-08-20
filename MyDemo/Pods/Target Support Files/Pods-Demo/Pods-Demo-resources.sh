@@ -93,11 +93,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/ZCPKit/ZCPKit/Common/Router/viewMap.plist"
+  install_resource "${PODS_ROOT}/ZCPKit/ZCPKit/Router/viewMap.plist"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/ZCPKit/ZCPKit/Common/Router/viewMap.plist"
+  install_resource "${PODS_ROOT}/ZCPKit/ZCPKit/Router/viewMap.plist"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

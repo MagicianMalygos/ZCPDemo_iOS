@@ -1,1 +1,1 @@
-../../../ZCPKit/ZCPKit/Common/Util/Adaptor/ZCPTableViewCellItemBasicProtocol.h
+../../../ZCPKit/ZCPKit/ZCPUIKit/ZCPListView/Adaptor/ZCPTableViewCellItemBasicProtocol.h
