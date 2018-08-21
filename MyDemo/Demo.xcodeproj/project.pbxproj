@@ -783,6 +783,11 @@
 		FBD4ABB91EFA5BF70030EFD2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */; };
 		FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */; };
 		FBDBF81F212A982B0087AD7E /* CAEAGLDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBF81E212A982B0087AD7E /* CAEAGLDemoView.m */; };
+		FBDBF82C212AA9D30087AD7E /* CASection7Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBF82B212AA9D30087AD7E /* CASection7Demo.m */; };
+		FBDBF82F212AA9DD0087AD7E /* CASection8Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBF82E212AA9DD0087AD7E /* CASection8Demo.m */; };
+		FBDBF83D212BE4100087AD7E /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDBF832212BE40F0087AD7E /* plane.png */; };
+		FBDBF83F212C07840087AD7E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDBF83E212C07840087AD7E /* fire.png */; };
+		FBDBF842212C15270087AD7E /* CASection9Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBF841212C15270087AD7E /* CASection9Demo.m */; };
 		FBEAE41320EF5EBA001E27AF /* AnimationButton2.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */; };
 		FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */; };
 		FBEFD42E211BE64F0037989D /* CASection2Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEFD429211BE64E0037989D /* CASection2Demo.m */; };
@@ -2744,6 +2749,14 @@
 		FBD837091EF28BD20081672B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		FBDBF81D212A982B0087AD7E /* CAEAGLDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAEAGLDemoView.h; sourceTree = "<group>"; };
 		FBDBF81E212A982B0087AD7E /* CAEAGLDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAEAGLDemoView.m; sourceTree = "<group>"; };
+		FBDBF82A212AA9D30087AD7E /* CASection7Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASection7Demo.h; sourceTree = "<group>"; };
+		FBDBF82B212AA9D30087AD7E /* CASection7Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CASection7Demo.m; sourceTree = "<group>"; };
+		FBDBF82D212AA9DD0087AD7E /* CASection8Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASection8Demo.h; sourceTree = "<group>"; };
+		FBDBF82E212AA9DD0087AD7E /* CASection8Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CASection8Demo.m; sourceTree = "<group>"; };
+		FBDBF832212BE40F0087AD7E /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		FBDBF83E212C07840087AD7E /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		FBDBF840212C15270087AD7E /* CASection9Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASection9Demo.h; sourceTree = "<group>"; };
+		FBDBF841212C15270087AD7E /* CASection9Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CASection9Demo.m; sourceTree = "<group>"; };
 		FBEAE41120EF5EBA001E27AF /* AnimationButton2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationButton2.h; sourceTree = "<group>"; };
 		FBEAE41220EF5EBA001E27AF /* AnimationButton2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationButton2.m; sourceTree = "<group>"; };
 		FBEB3B591EEE9327003A6DCE /* 笑傲江湖.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "笑傲江湖.txt"; sourceTree = "<group>"; };
@@ -5423,6 +5436,8 @@
 			isa = PBXGroup;
 			children = (
 				FBA25CFC2129A21200E065CF /* superBigImage */,
+				FBDBF83E212C07840087AD7E /* fire.png */,
+				FBDBF832212BE40F0087AD7E /* plane.png */,
 				FBA25CD7212174DD00E065CF /* sex.png */,
 				FBA25CD52121711100E065CF /* number.png */,
 				FBA25CD12121607E00E065CF /* gradientColorBackground.png */,
@@ -6207,6 +6222,12 @@
 				FBA25CDA212182F900E065CF /* CASection5Demo.m */,
 				FBA25CEF212582FF00E065CF /* CASection6Demo.h */,
 				FBA25CF0212582FF00E065CF /* CASection6Demo.m */,
+				FBDBF82A212AA9D30087AD7E /* CASection7Demo.h */,
+				FBDBF82B212AA9D30087AD7E /* CASection7Demo.m */,
+				FBDBF82D212AA9DD0087AD7E /* CASection8Demo.h */,
+				FBDBF82E212AA9DD0087AD7E /* CASection8Demo.m */,
+				FBDBF840212C15270087AD7E /* CASection9Demo.h */,
+				FBDBF841212C15270087AD7E /* CASection9Demo.m */,
 				FBA25CFF2129A7E800E065CF /* CALayerHelper.h */,
 				FBA25D002129A7E800E065CF /* CALayerHelper.m */,
 				FBDBF81D212A982B0087AD7E /* CAEAGLDemoView.h */,
@@ -6711,6 +6732,7 @@
 				FBA25FD42129A88E00E065CF /* Azeroth_08_15.jpg in Resources */,
 				FBA260942129A88E00E065CF /* Azeroth_18_06.jpg in Resources */,
 				FBA2607C2129A88E00E065CF /* Azeroth_06_03.jpg in Resources */,
+				FBDBF83D212BE4100087AD7E /* plane.png in Resources */,
 				FBA25F762129A88E00E065CF /* Azeroth_12_00.jpg in Resources */,
 				FBCF6B3A1F8CBC0A00E3B58C /* 朱超鹏.cer in Resources */,
 				FBA25FD02129A88E00E065CF /* Azeroth_18_20.jpg in Resources */,
@@ -7048,6 +7070,7 @@
 				FBA260652129A88E00E065CF /* Azeroth_12_22.jpg in Resources */,
 				FBA25FFD2129A88E00E065CF /* Azeroth_03_16.jpg in Resources */,
 				FBA25F892129A88E00E065CF /* Azeroth_13_25.jpg in Resources */,
+				FBDBF83F212C07840087AD7E /* fire.png in Resources */,
 				FBA260982129A88E00E065CF /* Azeroth_14_22.jpg in Resources */,
 				FBA260D42129A88E00E065CF /* Azeroth_15_06.jpg in Resources */,
 				FBA25FDE2129A88E00E065CF /* Azeroth_03_25.jpg in Resources */,
@@ -7196,6 +7219,8 @@
 				FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */,
 				FB9092841F6BC4DC007EC93B /* TestOperation.m in Sources */,
 				FB50791E1E2618A900361E60 /* UIImage+ClipRoundCorner.m in Sources */,
+				FBDBF82F212AA9DD0087AD7E /* CASection8Demo.m in Sources */,
+				FBDBF82C212AA9D30087AD7E /* CASection7Demo.m in Sources */,
 				FB9092B41F6F5D83007EC93B /* MotoPhone.m in Sources */,
 				FB5078A31E2618A900361E60 /* PAAssetPickerController.m in Sources */,
 				FBCC6A5720E39A3B002367F5 /* UIViewElasticHelper.m in Sources */,
@@ -7236,6 +7261,7 @@
 				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
 				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
+				FBDBF842212C15270087AD7E /* CASection9Demo.m in Sources */,
 				FBF4BC8A210026FD005FD795 /* AlertViewDemoController.m in Sources */,
 				FB9092AB1F6F59E4007EC93B /* DesignPatternDemo.m in Sources */,
 				FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */,

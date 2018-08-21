@@ -42,7 +42,7 @@
     if (!annotationView) {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:ID_PIN_ANNOTATION];
     }
-    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.pinTintColor = [UIColor purpleColor];
     annotationView.animatesDrop = YES;
     annotationView.canShowCallout = YES;
     annotationView.selected = YES;

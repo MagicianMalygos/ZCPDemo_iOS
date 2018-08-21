@@ -101,6 +101,26 @@
                                   @"CAEmitterLayer",
                                   @"CAEAGLLayer",
                                   @"AVPlayerLayer"]
+                       },
+                     @{@"title": @"section7 隐式动画",
+                       @"list": @[@"隐式动画",
+                                  @"事务",
+                                  @"完成块",
+                                  @"图层行为",
+                                  @"呈现与模型"]
+                       },
+                     @{@"title": @"section8 显式动画",
+                       @"list": @[@"属性动画",
+                                  @"动画组",
+                                  @"过渡",
+                                  @"对图层树的动画",
+                                  @"自定义过渡动画",
+                                  @"在动画过程中取消动画"]
+                       },
+                     @{@"title": @"section9 图层时间",
+                       @"list": @[@"CAMediaTiming协议",
+                                  @"层级关系时间",
+                                  @"手动动画"]
                        }
                      ].mutableCopy;
     }

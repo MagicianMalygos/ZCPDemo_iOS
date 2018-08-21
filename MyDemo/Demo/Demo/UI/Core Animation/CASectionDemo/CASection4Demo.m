@@ -221,18 +221,18 @@
 
 - (void)demo4 {
     // mask图层的Color属性是无关紧要的，真正重要的是图层的轮廓，mask图层实心的部分会被保留下来，其他的则会被抛弃
-    CALayer *bgLayer = [CALayer layer];
-    bgLayer.frame = CGRectMake(0, 0, self.layer.width, self.layer.height);
-    bgLayer.position = CGPointMake(self.width / 2, self.height / 2);
-    bgLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"gradientColorBackground"].CGImage);
-    bgLayer.masksToBounds = YES;
+    CALayer *bgLayer        = [CALayer layer];
+    bgLayer.frame           = CGRectMake(0, 0, self.layer.width, self.layer.height);
+    bgLayer.position        = CGPointMake(self.width / 2, self.height / 2);
+    bgLayer.contents        = (__bridge id _Nullable)([UIImage imageNamed:@"gradientColorBackground"].CGImage);
+    bgLayer.masksToBounds   = YES;
     [self.layer addSublayer:bgLayer];
     
-    CALayer *maskLayer = [CALayer layer];
-    maskLayer.frame = CGRectMake(0, 0, 100, 100);
-    maskLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"starMask"].CGImage);
-    bgLayer.mask = maskLayer;
-    self.maskLayer = maskLayer;
+    CALayer *maskLayer      = [CALayer layer];
+    maskLayer.frame         = CGRectMake(0, 0, 120, 120);
+    maskLayer.contents      = (__bridge id _Nullable)([UIImage imageNamed:@"starMask"].CGImage);
+    bgLayer.mask            = maskLayer;
+    self.maskLayer          = maskLayer;
     
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveStarMask)];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
