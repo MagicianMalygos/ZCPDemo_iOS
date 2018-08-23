@@ -169,12 +169,12 @@
     // remove old view
     UIView *oldView = [self.contentView viewWithTag:999];
     [oldView removeFromSuperview];
-    
+
     // add new view
     UIView *newView = [[viewCls alloc] initWithFrame:self.contentView.bounds];
     newView.tag = 999;
     [self.contentView addSubview:newView];
-    
+
     // invoke method
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[newView methodSignatureForSelector:sel]];
     invocation.target = newView;

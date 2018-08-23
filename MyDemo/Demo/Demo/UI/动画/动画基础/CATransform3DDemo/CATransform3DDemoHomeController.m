@@ -29,15 +29,15 @@
  CAMediaTiming
     beginTime           CFTimeInterval(double)      开始时间，如果想要设置为当前时间+2s，需要设置为CACurrentMediaTime() + 2，默认为0
     duration            CFTimeInterval(double)      持续时间，默认为0
-    speed               float                       速度倍数（相对于父时间环境）
+    speed               float                       速度倍数（相对于父时间环境），例如speed=2时，1秒动画，实际0.5秒就完成。
     timeOffset          CFTimeInterval(double)      动画执行的时间偏移量，默认为0
     repeatCount         float                       重复次数，不能和repeatDuration同时使用，可以为分数，默认为0
     repeatDuration      CFTimeInterval(double)      在指定时间内重复执行，不能和repeatCount同时使用，默认为0
     autoreverses        BOOL                        自动反转，动画执行结束后再反向执行，默认为NO
     fillMode            NSString*                   定义计时对象在其活动持续时间之外的行为，默认为removed
     有以下几个值：
-        kCAFillModeForwards:    'forwards'              动画结束后保持状态。需要将removedOnCompletion设置为NO，仅设置该模式是不起作用的。
-        kCAFillModeBackwards:   'backwards'             如果设置了beginTime，该模式的效果为：会先将对象设置到动画初始状态，然后等待beginTime之后再执行动画。未设置该模式的效果为：等待beginTime之后再瞬间将对象设置到动画初始状态，然后再执行动画。
+        kCAFillModeForwards:    'forwards'              动画结束后保持状态。使动画结束后保持动画结束那一刻的值。需要将removedOnCompletion设置为NO，仅设置该模式是不起作用的。
+        kCAFillModeBackwards:   'backwards'             如果设置了beginTime，使动画开始前保持动画开始那一刻的值，该模式的效果为：会先将对象设置到动画初始状态，然后等待beginTime之后再执行动画。未设置该模式的效果为：等待beginTime之后再瞬间将对象设置到动画初始状态，然后再执行动画。
         kCAFillModeBoth:        'both'                  forwards + backward的组合效果
         kCAFillModeRemoved:     'removed'               动画结束后移除
  
@@ -46,7 +46,7 @@
  CAAnimationDelegate
     当动画开始时
     - (void)animationDidStart:(CAAnimation *)anim;
-    当动画执行完毕或动画被移除时，flag YES动画执行完毕 NO动画被移除
+    当动画执行完毕或动画被移除时，flag YES动画执行完毕 NO动画被中断
     - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
  
  
@@ -161,9 +161,9 @@
 
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
-        _infoArr = @[@{@"title": @"Move", @"method": [NSValue valueWithPointer:@selector(testMove)]},
+        _infoArr = @[@{@"title": @"Move",   @"method": [NSValue valueWithPointer:@selector(testMove)]},
                      @{@"title": @"Spring", @"method": [NSValue valueWithPointer:@selector(testSpring)]},
-                     @{@"title": @"Path", @"method": [NSValue valueWithPointer:@selector(testPath)]}
+                     @{@"title": @"Path",   @"method": [NSValue valueWithPointer:@selector(testPath)]}
                      ].mutableCopy;
     }
     return _infoArr;
