@@ -96,6 +96,7 @@
     layer.position          = self.center;
     layer.contents          = (__bridge id _Nullable)[UIImage imageNamed:@"colorbox"].CGImage;
     layer.contentsGravity   = kCAGravityResize;
+    layer.magnificationFilter = kCAFilterNearest;
     
     // 拉伸图像时，根据如下的矩形范围去拉伸
     // 该矩形范围是一个比例值，每个值取值范围为[0, 1]

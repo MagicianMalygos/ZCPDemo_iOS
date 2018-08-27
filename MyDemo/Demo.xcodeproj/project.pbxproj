@@ -728,6 +728,13 @@
 		FBA5F3FB1EF3CB2500F97958 /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F31EF3CB2500F97958 /* flag@2x.png */; };
 		FBA5F3FC1EF3CB2500F97958 /* flag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA5F3F51EF3CB2500F97958 /* flag@3x.png */; };
 		FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA976CF1E669D5D00C88BE5 /* AppManager.m */; };
+		FBAE24ED2133D6830031CE27 /* CASection10Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBAE24EC2133D6830031CE27 /* CASection10Demo.m */; };
+		FBAE24FA2133D68B0031CE27 /* CASection11Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBAE24F92133D68B0031CE27 /* CASection11Demo.m */; };
+		FBAE24FF2133E3310031CE27 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAE24FC2133E3300031CE27 /* car.png */; };
+		FBAE25022133E3EE0031CE27 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAE25012133E3EE0031CE27 /* gear.png */; };
+		FBAE25042133ED4D0031CE27 /* billiards.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAE25032133ED4D0031CE27 /* billiards.png */; };
+		FBAE25062133EDCC0031CE27 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAE25052133EDCC0031CE27 /* missile.png */; };
+		FBAE25082133EFA70031CE27 /* redFire.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAE25072133EFA70031CE27 /* redFire.png */; };
 		FBB836071EB9DFCD00C064A8 /* TemporaryTestHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */; };
 		FBB91DAA1F2871CA00D41838 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */; };
 		FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB91DB01F28738D00D41838 /* DebugStatusBallView.m */; };
@@ -2655,6 +2662,15 @@
 		FBA5F3FA1EF3CB2500F97958 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/flag@3x.png"; sourceTree = "<group>"; };
 		FBA976CE1E669D5D00C88BE5 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		FBA976CF1E669D5D00C88BE5 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		FBAE24EB2133D6830031CE27 /* CASection10Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASection10Demo.h; sourceTree = "<group>"; };
+		FBAE24EC2133D6830031CE27 /* CASection10Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CASection10Demo.m; sourceTree = "<group>"; };
+		FBAE24F82133D68B0031CE27 /* CASection11Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASection11Demo.h; sourceTree = "<group>"; };
+		FBAE24F92133D68B0031CE27 /* CASection11Demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CASection11Demo.m; sourceTree = "<group>"; };
+		FBAE24FC2133E3300031CE27 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		FBAE25012133E3EE0031CE27 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		FBAE25032133ED4D0031CE27 /* billiards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billiards.png; sourceTree = "<group>"; };
+		FBAE25052133EDCC0031CE27 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missile.png; sourceTree = "<group>"; };
+		FBAE25072133EFA70031CE27 /* redFire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redFire.png; sourceTree = "<group>"; };
 		FBB836051EB9DFCD00C064A8 /* TemporaryTestHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemporaryTestHomeController.h; sourceTree = "<group>"; };
 		FBB836061EB9DFCD00C064A8 /* TemporaryTestHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemporaryTestHomeController.m; sourceTree = "<group>"; };
 		FBB91DA61F2871CA00D41838 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
@@ -5436,6 +5452,11 @@
 			isa = PBXGroup;
 			children = (
 				FBA25CFC2129A21200E065CF /* superBigImage */,
+				FBAE25072133EFA70031CE27 /* redFire.png */,
+				FBAE25052133EDCC0031CE27 /* missile.png */,
+				FBAE25032133ED4D0031CE27 /* billiards.png */,
+				FBAE25012133E3EE0031CE27 /* gear.png */,
+				FBAE24FC2133E3300031CE27 /* car.png */,
 				FBDBF83E212C07840087AD7E /* fire.png */,
 				FBDBF832212BE40F0087AD7E /* plane.png */,
 				FBA25CD7212174DD00E065CF /* sex.png */,
@@ -6228,6 +6249,10 @@
 				FBDBF82E212AA9DD0087AD7E /* CASection8Demo.m */,
 				FBDBF840212C15270087AD7E /* CASection9Demo.h */,
 				FBDBF841212C15270087AD7E /* CASection9Demo.m */,
+				FBAE24EB2133D6830031CE27 /* CASection10Demo.h */,
+				FBAE24EC2133D6830031CE27 /* CASection10Demo.m */,
+				FBAE24F82133D68B0031CE27 /* CASection11Demo.h */,
+				FBAE24F92133D68B0031CE27 /* CASection11Demo.m */,
 				FBA25CFF2129A7E800E065CF /* CALayerHelper.h */,
 				FBA25D002129A7E800E065CF /* CALayerHelper.m */,
 				FBDBF81D212A982B0087AD7E /* CAEAGLDemoView.h */,
@@ -6554,6 +6579,7 @@
 				FBA260EC2129A88E00E065CF /* Azeroth_06_00.jpg in Resources */,
 				FBA260EE2129A88E00E065CF /* Azeroth_12_11.jpg in Resources */,
 				FBCF6B341F8CBC0A00E3B58C /* Localizable.strings in Resources */,
+				FBAE25042133ED4D0031CE27 /* billiards.png in Resources */,
 				FBA25F4A2129A88E00E065CF /* Azeroth_03_05.jpg in Resources */,
 				FBA260F02129A88E00E065CF /* Azeroth_10_06.jpg in Resources */,
 				FBA2601C2129A88E00E065CF /* Azeroth_00_13.jpg in Resources */,
@@ -6629,6 +6655,7 @@
 				FBA260D12129A88E00E065CF /* Azeroth_08_05.jpg in Resources */,
 				FBA25FBF2129A88E00E065CF /* Azeroth_09_02.jpg in Resources */,
 				FBA261392129A88E00E065CF /* Azeroth_13_04.jpg in Resources */,
+				FBAE25082133EFA70031CE27 /* redFire.png in Resources */,
 				FBA25F772129A88E00E065CF /* Azeroth_02_11.jpg in Resources */,
 				FBA260A82129A88E00E065CF /* Azeroth_09_09.jpg in Resources */,
 				FBA260572129A88E00E065CF /* Azeroth_09_12.jpg in Resources */,
@@ -6745,6 +6772,7 @@
 				FBA2602F2129A88E00E065CF /* Azeroth_11_08.jpg in Resources */,
 				FBA25F7F2129A88E00E065CF /* Azeroth_14_23.jpg in Resources */,
 				FBA2611F2129A88E00E065CF /* Azeroth_06_22.jpg in Resources */,
+				FBAE25062133EDCC0031CE27 /* missile.png in Resources */,
 				FBA25F482129A88E00E065CF /* Azeroth_06_08.jpg in Resources */,
 				1897E2981D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png in Resources */,
 				FBA260A22129A88E00E065CF /* Azeroth_04_02.jpg in Resources */,
@@ -6867,6 +6895,7 @@
 				FBA2605F2129A88E00E065CF /* Azeroth_17_03.jpg in Resources */,
 				FBA25FBA2129A88E00E065CF /* Azeroth_15_23.jpg in Resources */,
 				FBA260FD2129A88E00E065CF /* Azeroth_02_01.jpg in Resources */,
+				FBAE24FF2133E3310031CE27 /* car.png in Resources */,
 				FBA260042129A88E00E065CF /* Azeroth_12_25.jpg in Resources */,
 				FBA25FD92129A88E00E065CF /* Azeroth_15_19.jpg in Resources */,
 				FBA25FAC2129A88E00E065CF /* Azeroth_18_21.jpg in Resources */,
@@ -7026,6 +7055,7 @@
 				FBA260D62129A88E00E065CF /* Azeroth_18_01.jpg in Resources */,
 				FBA25F532129A88E00E065CF /* Azeroth_04_04.jpg in Resources */,
 				FBA261332129A88E00E065CF /* Azeroth_13_23.jpg in Resources */,
+				FBAE25022133E3EE0031CE27 /* gear.png in Resources */,
 				FBA25FCF2129A88E00E065CF /* Azeroth_10_04.jpg in Resources */,
 				FBA260D52129A88E00E065CF /* Azeroth_17_01.jpg in Resources */,
 				FBA25F8E2129A88E00E065CF /* Azeroth_06_26.jpg in Resources */,
@@ -7159,6 +7189,7 @@
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,
 				FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */,
 				FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */,
+				FBAE24FA2133D68B0031CE27 /* CASection11Demo.m in Sources */,
 				FB0621D91ED275DD000AA258 /* RuntimeTest1.m in Sources */,
 				FBCC6A6620E48C22002367F5 /* ClockViewController.m in Sources */,
 				FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */,
@@ -7259,6 +7290,7 @@
 				FBA976D01E669D5D00C88BE5 /* AppManager.m in Sources */,
 				FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */,
 				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
+				FBAE24ED2133D6830031CE27 /* CASection10Demo.m in Sources */,
 				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
 				FBDBF842212C15270087AD7E /* CASection9Demo.m in Sources */,
