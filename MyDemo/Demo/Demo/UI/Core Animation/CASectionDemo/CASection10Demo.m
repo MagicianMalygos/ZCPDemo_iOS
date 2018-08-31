@@ -202,33 +202,151 @@
 
 #pragma mark 关键帧动画的动画速度
 - (void)demo2 {
-    UIButton *button        = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame            = CGRectMake((self.width - 150)/2, 10, 150, 50);
-    button.backgroundColor  = [UIColor redColor];
-    [button setTitle:@"点击开始动画" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:button];
+    // 小球落地demo
+    CALayer *ballLayer  = [CALayer layer];
+    ballLayer.contents  = (__bridge id _Nullable)([UIImage imageNamed:@"billiards"].CGImage);
+    ballLayer.frame     = CGRectMake(0, 0, 50, 50);
+    ballLayer.position  = CGPointMake(35, 35);
+    [self.layer addSublayer:ballLayer];
     
-    self.colorLayer1        = ({
-        CALayer *colorLayer = [CALayer layer];
-        colorLayer.frame    = CGRectMake((self.width - 300)/3, 100, 150, 150);
-        colorLayer.backgroundColor = [UIColor redColor].CGColor;
-        colorLayer;
-    });
-    [self.layer addSublayer:self.colorLayer1];
-    
-    self.colorLayer2        = ({
-        CALayer *colorLayer = [CALayer layer];
-        colorLayer.frame    = CGRectMake((self.width - 300)/3*2 + 150, 100, 150, 150);
-        colorLayer.backgroundColor = [UIColor redColor].CGColor;
-        colorLayer;
-    });
-    [self.layer addSublayer:self.colorLayer2];
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath               = @"position";
+    animation.duration              = 1;
+    animation.removedOnCompletion   = NO;
+    animation.fillMode              = kCAFillModeBoth;
+    animation.values                = @[@(CGPointMake(35, 35)),
+                                        @(CGPointMake(35, 300)),
+                                        @(CGPointMake(35, 180)),
+                                        @(CGPointMake(35, 300)),
+                                        @(CGPointMake(35, 260)),
+                                        @(CGPointMake(35, 300)),
+                                        @(CGPointMake(35, 290)),
+                                        @(CGPointMake(35, 300))];
+    animation.timingFunctions       = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    animation.keyTimes              = @[@0.0,
+                                        @0.3,
+                                        @0.5,
+                                        @0.7,
+                                        @0.8,
+                                        @0.9,
+                                        @0.95,
+                                        @1.0];
+    [ballLayer addAnimation:animation forKey:nil];
 }
 
-#pragma mark 自定义缓冲函数
+#pragma mark 绘制缓冲曲线
 - (void)demo3 {
+    // 设置坐标轴反转
+    self.layer.geometryFlipped  = YES;
     
+    NSArray *timingFunctionArr = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear],
+                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn],
+                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
+                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault],
+                                   [CAMediaTimingFunction functionWithControlPoints:0 :0.5 :1 :0.5]];
+    
+    for (int i = 0; i < timingFunctionArr.count; i++) {
+        CAMediaTimingFunction *timingFunction = timingFunctionArr[i];
+        
+        // 获取起始点和控制点
+        float start[2];
+        float control1[2];
+        float control2[2];
+        float end[2];
+        
+        [timingFunction getControlPointAtIndex:0 values:start]; // 起点固定为(0, 0)
+        [timingFunction getControlPointAtIndex:1 values:control1];
+        [timingFunction getControlPointAtIndex:2 values:control2];
+        [timingFunction getControlPointAtIndex:3 values:end]; // 终点固定为(1, 1)
+        
+        // 创建path
+        UIBezierPath *path          = [UIBezierPath bezierPath];
+        [path moveToPoint:CGPointZero];
+        [path addCurveToPoint:CGPointMake(1, 1) controlPoint1:CGPointMake(control1[0], control1[1]) controlPoint2:CGPointMake(control2[0], control2[1])];
+        [path applyTransform:CGAffineTransformMakeScale(100, 100)];
+        
+        // 绘制layer
+        CGFloat w = 100;
+        CGFloat h = w;
+        CGFloat x = 10*(i%3+1) + i%3*w;
+        CGFloat y = self.height - 10 * (i/3 + 1) - 100 * (i/3 + 1);
+        
+        CAShapeLayer *layer         = [CAShapeLayer layer];
+        layer.frame                 = CGRectMake(x, y, w, h);
+        layer.strokeColor           = [UIColor redColor].CGColor;
+        layer.fillColor             = nil;
+        layer.path                  = path.CGPath;
+        layer.lineWidth             = 2;
+        layer.backgroundColor       = [UIColor greenColor].CGColor;
+        [self.layer addSublayer:layer];
+    }
+    
+     self.layer.geometryFlipped  = YES;
+}
+
+#pragma mark 根据缓冲曲线绘制关键帧动画的所有帧
+float bounceEaseOut(float t);
+
+- (void)demo4 {
+    // 小球落地demo
+    CALayer *ballLayer  = [CALayer layer];
+    ballLayer.contents  = (__bridge id _Nullable)([UIImage imageNamed:@"billiards"].CGImage);
+    ballLayer.frame     = CGRectMake(0, 0, 50, 50);
+    ballLayer.position  = CGPointMake(35, 35);
+    [self.layer addSublayer:ballLayer];
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath               = @"position";
+    animation.duration              = 1;
+    animation.removedOnCompletion   = NO;
+    animation.fillMode              = kCAFillModeBoth;
+    
+    NSValue *fromValue              = @(CGPointMake(35, 35));
+    NSValue *toValue                = @(CGPointMake(35, 300));
+    CFTimeInterval duration         = 1.0;
+    NSInteger numFrames             = duration * 60;
+    NSMutableArray *frames          = [NSMutableArray array];
+    for (int i = 0; i < numFrames; i++) {
+        CGFloat currFrameTime       = 1.0 / numFrames * i;
+        currFrameTime               = bounceEaseOut(currFrameTime);
+        id currValue                = [self interpolateFromValue:fromValue toValue:toValue time:currFrameTime];
+        [frames addObject:currValue];
+    }
+    animation.values                = frames;
+    [ballLayer addAnimation:animation forKey:nil];
+}
+
+#pragma mark <help method>
+
+/// 计算插值
+- (id)interpolateFromValue:(id)fromValue toValue:(id)toValue time:(CGFloat)time {
+    CGPoint from    = [fromValue CGPointValue];
+    CGPoint to      = [toValue CGPointValue];
+    
+    CGFloat resultX = (to.x - from.x) * time + from.x;
+    CGFloat resultY = (to.y - from.y) * time + from.y;
+    
+    CGPoint result = CGPointMake(resultX, resultY);
+    return @(result);
+}
+
+/// 缓冲曲线
+float bounceEaseOut(float t) {
+    if (t < 4/11.0) {
+        return (121 * t * t)/16.0;
+    } else if (t < 8/11.0) {
+        return (363/40.0 * t * t) - (99/10.0 * t) + 17/5.0;
+    } else if (t < 9/10.0) {
+        return (4356/361.0 * t * t) - (35442/1805.0 * t) + 16061/1805.0;
+    }
+    return (54/5.0 * t * t) - (513/25.0 * t) + 268/25.0;
 }
 
 // ----------------------------------------------------------------------

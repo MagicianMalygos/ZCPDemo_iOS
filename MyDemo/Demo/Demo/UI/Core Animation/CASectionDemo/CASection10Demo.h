@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 // ----------------------------------------------------------------------
-#pragma mark - section10 图层时间
+#pragma mark - section10 缓冲
 // ----------------------------------------------------------------------
 @interface CASection10Demo : UIView
 

@@ -349,15 +349,30 @@
     // 所有显示在屏幕上的图片最终都会被转化为OpenGL纹理，同时OpenGL有一个最大的纹理尺寸。如果你想在单个纹理中显示一个比这大的图，即便图片已经存在于内存中了，你仍然会遇到很大的性能问题，因为Core Animation强制用CPU处理图片而不是更快的GPU
     // 可以将大图分解成小片然后将他们单独按需载入
     
-    // 瓦片图层
+    /// 图片图像像素尺寸
+    CGSize imageSize                = CGSizeMake(7180.0, 4783.0);
+    /// 瓦片图像像素尺寸
+    CGFloat tileImageSize           = 512;
+    /// 瓦片视图尺寸
+    CGFloat tileSize                = 256;
+    /// 缩放值
+    CGFloat scale                   = [UIScreen mainScreen].scale;
+    /// 视图大小
+    CGFloat size                    = 375;
     
-    CATiledLayer *tileLayer = [CATiledLayer layer];
-    tileLayer.frame         = CGRectMake(0, 0, 7180, 4783);
-    tileLayer.delegate      = [CALayerHelper sharedInstance];
-    tileLayer.caDemoTag     = @"section6_demo7_tileLayer";
+    // 瓦片图层
+    CATiledLayer *tileLayer         = [CATiledLayer layer];
+    tileLayer.frame                 = CGRectMake(0, 0, imageSize.width / tileImageSize * tileSize, imageSize.height / tileImageSize * tileSize);
+    tileLayer.contentsScale         = scale;
+    // tileSize单位为像素，决定了瓦片绘制时的尺寸。
+    // tileSize它有一个最大值，如果设置的太大了，会被限制为该值，在绘制时会使用该尺寸进行绘制
+    // 在iphone X上测试出来的该值为(1024, 1024)，也就是说绘制时的最大区域为(x, y, 341.333333333333333, 341.333333333333333)
+    tileLayer.tileSize              = CGSizeMake(256 * scale, 256 * scale);
+    tileLayer.delegate              = [CALayerHelper sharedInstance];
+    tileLayer.caDemoTag             = @"section6_demo7_tileLayer";
     // 滚动视图
     UIScrollView *scrollView        = [[UIScrollView alloc] init];
-    scrollView.frame                = CGRectMake(0, 0, 350, 350);
+    scrollView.frame                = CGRectMake(0, 0, size, size);
     scrollView.center               = CGPointMake(self.width / 2, self.height / 2);
     scrollView.layer.borderColor    = [UIColor redColor].CGColor;
     scrollView.layer.borderWidth    = 1;
@@ -381,7 +396,7 @@
     // 配置粒子图层
     emitterLayer.renderMode = kCAEmitterLayerAdditive;
     emitterLayer.emitterPosition = CGPointMake(emitterLayer.frame.size.width / 2.0f, emitterLayer.frame.size.height / 2);
-
+    
     // 创建一个粒子模型
     CAEmitterCell *cell = [[CAEmitterCell alloc] init];
     cell.contents = (__bridge id _Nullable)([UIImage imageNamed:@"starMask"].CGImage);
@@ -450,7 +465,7 @@
     CGSize inputImageSize = inputImage.size;
     
     // 碎片图片大小
-    CGSize tileImageSize = CGSizeMake(256, 256);
+    CGSize tileImageSize = CGSizeMake(512, 512);
     // 计算碎片图的行数和列数
     NSInteger rows = ceil(inputImageSize.height / tileImageSize.height);
     NSInteger cols = ceil(inputImageSize.width / tileImageSize.width);
@@ -466,6 +481,7 @@
             // 保存碎片图
             NSString *path = [outputPath stringByAppendingFormat:@"_%02i_%02i.jpg", row, col];
             [imageData writeToFile:path atomically:NO];
+            NSLog(@"%@", path);
         }
     }
 }
