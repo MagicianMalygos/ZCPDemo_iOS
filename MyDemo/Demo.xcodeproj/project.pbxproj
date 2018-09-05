@@ -161,6 +161,34 @@
 		FB9F03D71EFD0DE300B7591C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03D51EFD0DE300B7591C /* MapViewController.m */; };
 		FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9F03D61EFD0DE300B7591C /* MapViewController.xib */; };
 		FB9F03E01EFD1AE500B7591C /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */; };
+		FBA22A14213E864600C39E92 /* image1 40x25.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A06213E864500C39E92 /* image1 40x25.png */; };
+		FBA22A15213E864600C39E92 /* image1 120x75.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A07213E864500C39E92 /* image1 120x75.jpg */; };
+		FBA22A16213E864600C39E92 /* image1 8x5.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A08213E864500C39E92 /* image1 8x5.png */; };
+		FBA22A17213E864600C39E92 /* image1 1920x1200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A09213E864500C39E92 /* image1 1920x1200.jpg */; };
+		FBA22A18213E864600C39E92 /* image1 40x25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0A213E864500C39E92 /* image1 40x25.jpg */; };
+		FBA22A19213E864600C39E92 /* image1 120x75.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0B213E864500C39E92 /* image1 120x75.png */; };
+		FBA22A1A213E864600C39E92 /* image1 1920x1200.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0C213E864500C39E92 /* image1 1920x1200.png */; };
+		FBA22A1B213E864600C39E92 /* image1 480x300.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0D213E864500C39E92 /* image1 480x300.png */; };
+		FBA22A1C213E864600C39E92 /* image1 240x150.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0E213E864600C39E92 /* image1 240x150.jpg */; };
+		FBA22A1D213E864600C39E92 /* image1 8x5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A0F213E864600C39E92 /* image1 8x5.jpg */; };
+		FBA22A1E213E864600C39E92 /* image1 240x150.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A10213E864600C39E92 /* image1 240x150.png */; };
+		FBA22A1F213E864600C39E92 /* image1 960x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A11213E864600C39E92 /* image1 960x600.jpg */; };
+		FBA22A20213E864600C39E92 /* image1 960x600.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A12213E864600C39E92 /* image1 960x600.png */; };
+		FBA22A21213E864600C39E92 /* image1 480x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A13213E864600C39E92 /* image1 480x300.jpg */; };
+		FBA22A30213E865000C39E92 /* image2 120x75.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A22213E864E00C39E92 /* image2 120x75.jpg */; };
+		FBA22A31213E865000C39E92 /* image2 40x25.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A23213E864F00C39E92 /* image2 40x25.png */; };
+		FBA22A32213E865000C39E92 /* image2 240x150.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A24213E864F00C39E92 /* image2 240x150.jpg */; };
+		FBA22A33213E865000C39E92 /* image2 480x300.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A25213E864F00C39E92 /* image2 480x300.png */; };
+		FBA22A34213E865000C39E92 /* image2 960x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A26213E864F00C39E92 /* image2 960x600.jpg */; };
+		FBA22A35213E865000C39E92 /* image2 120x75.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A27213E864F00C39E92 /* image2 120x75.png */; };
+		FBA22A36213E865000C39E92 /* image2 8x5.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A28213E864F00C39E92 /* image2 8x5.png */; };
+		FBA22A37213E865000C39E92 /* image2 40x25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A29213E864F00C39E92 /* image2 40x25.jpg */; };
+		FBA22A38213E865000C39E92 /* image2 1920x1200.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2A213E864F00C39E92 /* image2 1920x1200.png */; };
+		FBA22A39213E865000C39E92 /* image2 240x150.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2B213E864F00C39E92 /* image2 240x150.png */; };
+		FBA22A3A213E865000C39E92 /* image2 960x600.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2C213E864F00C39E92 /* image2 960x600.png */; };
+		FBA22A3B213E865000C39E92 /* image2 480x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2D213E865000C39E92 /* image2 480x300.jpg */; };
+		FBA22A3C213E865000C39E92 /* image2 1920x1200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2E213E865000C39E92 /* image2 1920x1200.jpg */; };
+		FBA22A3D213E865000C39E92 /* image2 8x5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBA22A2F213E865000C39E92 /* image2 8x5.jpg */; };
 		FBA25CCB2121604D00E065CF /* starMask.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA25CC52121604D00E065CF /* starMask.png */; };
 		FBA25CCC2121604D00E065CF /* swords.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA25CC62121604D00E065CF /* swords.png */; };
 		FBA25CCD2121604D00E065CF /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA25CC72121604D00E065CF /* panda.png */; };
@@ -1687,6 +1715,34 @@
 		FB9F03D61EFD0DE300B7591C /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		FB9F03DE1EFD1AE500B7591C /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		FB9F03DF1EFD1AE500B7591C /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		FBA22A06213E864500C39E92 /* image1 40x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 40x25.png"; sourceTree = "<group>"; };
+		FBA22A07213E864500C39E92 /* image1 120x75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 120x75.jpg"; sourceTree = "<group>"; };
+		FBA22A08213E864500C39E92 /* image1 8x5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 8x5.png"; sourceTree = "<group>"; };
+		FBA22A09213E864500C39E92 /* image1 1920x1200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 1920x1200.jpg"; sourceTree = "<group>"; };
+		FBA22A0A213E864500C39E92 /* image1 40x25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 40x25.jpg"; sourceTree = "<group>"; };
+		FBA22A0B213E864500C39E92 /* image1 120x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 120x75.png"; sourceTree = "<group>"; };
+		FBA22A0C213E864500C39E92 /* image1 1920x1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 1920x1200.png"; sourceTree = "<group>"; };
+		FBA22A0D213E864500C39E92 /* image1 480x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 480x300.png"; sourceTree = "<group>"; };
+		FBA22A0E213E864600C39E92 /* image1 240x150.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 240x150.jpg"; sourceTree = "<group>"; };
+		FBA22A0F213E864600C39E92 /* image1 8x5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 8x5.jpg"; sourceTree = "<group>"; };
+		FBA22A10213E864600C39E92 /* image1 240x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 240x150.png"; sourceTree = "<group>"; };
+		FBA22A11213E864600C39E92 /* image1 960x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 960x600.jpg"; sourceTree = "<group>"; };
+		FBA22A12213E864600C39E92 /* image1 960x600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1 960x600.png"; sourceTree = "<group>"; };
+		FBA22A13213E864600C39E92 /* image1 480x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1 480x300.jpg"; sourceTree = "<group>"; };
+		FBA22A22213E864E00C39E92 /* image2 120x75.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 120x75.jpg"; sourceTree = "<group>"; };
+		FBA22A23213E864F00C39E92 /* image2 40x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 40x25.png"; sourceTree = "<group>"; };
+		FBA22A24213E864F00C39E92 /* image2 240x150.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 240x150.jpg"; sourceTree = "<group>"; };
+		FBA22A25213E864F00C39E92 /* image2 480x300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 480x300.png"; sourceTree = "<group>"; };
+		FBA22A26213E864F00C39E92 /* image2 960x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 960x600.jpg"; sourceTree = "<group>"; };
+		FBA22A27213E864F00C39E92 /* image2 120x75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 120x75.png"; sourceTree = "<group>"; };
+		FBA22A28213E864F00C39E92 /* image2 8x5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 8x5.png"; sourceTree = "<group>"; };
+		FBA22A29213E864F00C39E92 /* image2 40x25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 40x25.jpg"; sourceTree = "<group>"; };
+		FBA22A2A213E864F00C39E92 /* image2 1920x1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 1920x1200.png"; sourceTree = "<group>"; };
+		FBA22A2B213E864F00C39E92 /* image2 240x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 240x150.png"; sourceTree = "<group>"; };
+		FBA22A2C213E864F00C39E92 /* image2 960x600.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image2 960x600.png"; sourceTree = "<group>"; };
+		FBA22A2D213E865000C39E92 /* image2 480x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 480x300.jpg"; sourceTree = "<group>"; };
+		FBA22A2E213E865000C39E92 /* image2 1920x1200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 1920x1200.jpg"; sourceTree = "<group>"; };
+		FBA22A2F213E865000C39E92 /* image2 8x5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image2 8x5.jpg"; sourceTree = "<group>"; };
 		FBA25CC52121604D00E065CF /* starMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starMask.png; sourceTree = "<group>"; };
 		FBA25CC62121604D00E065CF /* swords.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swords.png; sourceTree = "<group>"; };
 		FBA25CC72121604D00E065CF /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
@@ -4658,9 +4714,61 @@
 			path = CollectionViewDemo;
 			sourceTree = "<group>";
 		};
+		FBA229CB213E85B100C39E92 /* imageGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FBA229CC213E85B100C39E92 /* image1 */,
+				FBA229DB213E85B100C39E92 /* image2 */,
+			);
+			path = imageGroup;
+			sourceTree = "<group>";
+		};
+		FBA229CC213E85B100C39E92 /* image1 */ = {
+			isa = PBXGroup;
+			children = (
+				FBA22A0F213E864600C39E92 /* image1 8x5.jpg */,
+				FBA22A08213E864500C39E92 /* image1 8x5.png */,
+				FBA22A0A213E864500C39E92 /* image1 40x25.jpg */,
+				FBA22A06213E864500C39E92 /* image1 40x25.png */,
+				FBA22A07213E864500C39E92 /* image1 120x75.jpg */,
+				FBA22A0B213E864500C39E92 /* image1 120x75.png */,
+				FBA22A0E213E864600C39E92 /* image1 240x150.jpg */,
+				FBA22A10213E864600C39E92 /* image1 240x150.png */,
+				FBA22A13213E864600C39E92 /* image1 480x300.jpg */,
+				FBA22A0D213E864500C39E92 /* image1 480x300.png */,
+				FBA22A11213E864600C39E92 /* image1 960x600.jpg */,
+				FBA22A12213E864600C39E92 /* image1 960x600.png */,
+				FBA22A09213E864500C39E92 /* image1 1920x1200.jpg */,
+				FBA22A0C213E864500C39E92 /* image1 1920x1200.png */,
+			);
+			path = image1;
+			sourceTree = "<group>";
+		};
+		FBA229DB213E85B100C39E92 /* image2 */ = {
+			isa = PBXGroup;
+			children = (
+				FBA22A2F213E865000C39E92 /* image2 8x5.jpg */,
+				FBA22A28213E864F00C39E92 /* image2 8x5.png */,
+				FBA22A29213E864F00C39E92 /* image2 40x25.jpg */,
+				FBA22A23213E864F00C39E92 /* image2 40x25.png */,
+				FBA22A22213E864E00C39E92 /* image2 120x75.jpg */,
+				FBA22A27213E864F00C39E92 /* image2 120x75.png */,
+				FBA22A24213E864F00C39E92 /* image2 240x150.jpg */,
+				FBA22A2B213E864F00C39E92 /* image2 240x150.png */,
+				FBA22A2D213E865000C39E92 /* image2 480x300.jpg */,
+				FBA22A25213E864F00C39E92 /* image2 480x300.png */,
+				FBA22A26213E864F00C39E92 /* image2 960x600.jpg */,
+				FBA22A2C213E864F00C39E92 /* image2 960x600.png */,
+				FBA22A2E213E865000C39E92 /* image2 1920x1200.jpg */,
+				FBA22A2A213E864F00C39E92 /* image2 1920x1200.png */,
+			);
+			path = image2;
+			sourceTree = "<group>";
+		};
 		FBA25CC42121604D00E065CF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FBA229CB213E85B100C39E92 /* imageGroup */,
 				FBA25CFC2129A21200E065CF /* superBigImage */,
 				FBAE25072133EFA70031CE27 /* redFire.png */,
 				FBAE25052133EDCC0031CE27 /* missile.png */,
@@ -5298,6 +5406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBBD4C8A2137DC15009ECC69 /* Azeroth_08_14.jpg in Resources */,
+				FBA22A14213E864600C39E92 /* image1 40x25.png in Resources */,
 				FBBD4CDD2137DC15009ECC69 /* Azeroth_07_10.jpg in Resources */,
 				FBBD4CCE2137DC15009ECC69 /* Azeroth_05_01.jpg in Resources */,
 				FBA25CCF2121604D00E065CF /* colorbox.png in Resources */,
@@ -5305,18 +5414,23 @@
 				FBBD4C902137DC15009ECC69 /* Azeroth_01_07.jpg in Resources */,
 				FBBD4CAD2137DC15009ECC69 /* Azeroth_05_12.jpg in Resources */,
 				FB0621D01ED275DD000AA258 /* class.png in Resources */,
+				FBA22A1A213E864600C39E92 /* image1 1920x1200.png in Resources */,
 				FBCF6B301F8CBC0A00E3B58C /* InfoPlist.strings in Resources */,
 				FBBD4C9A2137DC15009ECC69 /* Azeroth_04_03.jpg in Resources */,
 				FBBD4CCB2137DC15009ECC69 /* Azeroth_08_11.jpg in Resources */,
 				FBBD4CA02137DC15009ECC69 /* Azeroth_08_00.jpg in Resources */,
 				FBBD4C922137DC15009ECC69 /* Azeroth_07_00.jpg in Resources */,
+				FBA22A17213E864600C39E92 /* image1 1920x1200.jpg in Resources */,
+				FBA22A21213E864600C39E92 /* image1 480x300.jpg in Resources */,
 				FBBD4CEC2137DC15009ECC69 /* Azeroth_02_04.jpg in Resources */,
 				184439A51D002E5B00FDD7F7 /* tips_page_done.png in Resources */,
 				FBCF6B2E1F8CBC0A00E3B58C /* flag@2x.png in Resources */,
 				FBBD4C912137DC15009ECC69 /* Azeroth_06_10.jpg in Resources */,
 				FBBD4D072137DC15009ECC69 /* Azeroth_02_06.jpg in Resources */,
+				FBA22A20213E864600C39E92 /* image1 960x600.png in Resources */,
 				FBF763CF1EA07124001E867B /* bubble_community@3x.png in Resources */,
 				FBBD4CF42137DC15009ECC69 /* Azeroth_07_06.jpg in Resources */,
+				FBA22A33213E865000C39E92 /* image2 480x300.png in Resources */,
 				FBBD4CE12137DC15009ECC69 /* Azeroth_07_14.jpg in Resources */,
 				FBA5F3FC1EF3CB2500F97958 /* flag@3x.png in Resources */,
 				FBBD4C822137DC15009ECC69 /* Azeroth_07_09.jpg in Resources */,
@@ -5328,6 +5442,7 @@
 				FBBD4CC12137DC15009ECC69 /* Azeroth_07_05.jpg in Resources */,
 				FB139FED20D8EE2E00DD6D34 /* ExplodeViewController.xib in Resources */,
 				1844399B1D0012C700FDD7F7 /* tips_page_arrow_down@3x.png in Resources */,
+				FBA22A1F213E864600C39E92 /* image1 960x600.jpg in Resources */,
 				FBBD4D052137DC15009ECC69 /* Azeroth_01_09.jpg in Resources */,
 				FBBD4D0A2137DC15009ECC69 /* Azeroth_00_01.jpg in Resources */,
 				FBBD4CA52137DC15009ECC69 /* Azeroth_09_00.jpg in Resources */,
@@ -5340,13 +5455,16 @@
 				FBBD4CC32137DC15009ECC69 /* Azeroth_08_10.jpg in Resources */,
 				FBBD4C9C2137DC15009ECC69 /* Azeroth_07_03.jpg in Resources */,
 				FBCF6B361F8CBC0A00E3B58C /* LaunchScreen.strings in Resources */,
+				FBA22A38213E865000C39E92 /* image2 1920x1200.png in Resources */,
 				FBBD4CF82137DC15009ECC69 /* Azeroth_03_10.jpg in Resources */,
 				FBBD4CA92137DC15009ECC69 /* Azeroth_08_01.jpg in Resources */,
 				FBA25CCB2121604D00E065CF /* starMask.png in Resources */,
 				FBA25CCD2121604D00E065CF /* panda.png in Resources */,
 				FBBD4CDE2137DC15009ECC69 /* Azeroth_09_01.jpg in Resources */,
+				FBA22A37213E865000C39E92 /* image2 40x25.jpg in Resources */,
 				FB5079061E2618A900361E60 /* scanLine@3x.png in Resources */,
 				FBBD4CF62137DC15009ECC69 /* Azeroth_04_14.jpg in Resources */,
+				FBA22A3C213E865000C39E92 /* image2 1920x1200.jpg in Resources */,
 				FBCF6B3F1F8CBC0A00E3B58C /* demoViewMap.plist in Resources */,
 				FBCF6B351F8CBC0A00E3B58C /* InfoPlist.strings in Resources */,
 				FBBD4CBE2137DC15009ECC69 /* Azeroth_05_11.jpg in Resources */,
@@ -5365,6 +5483,7 @@
 				FBBD4CC02137DC15009ECC69 /* Azeroth_06_13.jpg in Resources */,
 				FBBD4C9F2137DC15009ECC69 /* Azeroth_06_00.jpg in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
+				FBA22A1E213E864600C39E92 /* image1 240x150.png in Resources */,
 				1844399C1D0012C700FDD7F7 /* tips_page_next_step.png in Resources */,
 				FBA5F3FB1EF3CB2500F97958 /* flag@2x.png in Resources */,
 				FBBD4CA72137DC15009ECC69 /* Azeroth_01_01.jpg in Resources */,
@@ -5382,6 +5501,7 @@
 				FBAE25082133EFA70031CE27 /* redFire.png in Resources */,
 				FB5079241E2618A900361E60 /* a.html in Resources */,
 				FBBD4CA32137DC15009ECC69 /* Azeroth_06_11.jpg in Resources */,
+				FBA22A15213E864600C39E92 /* image1 120x75.jpg in Resources */,
 				FBBD4CAE2137DC15009ECC69 /* Azeroth_09_03.jpg in Resources */,
 				FBBD4CED2137DC15009ECC69 /* Azeroth_04_09.jpg in Resources */,
 				FBBD4C7F2137DC15009ECC69 /* Azeroth_05_05.jpg in Resources */,
@@ -5411,16 +5531,19 @@
 				FBA25CD22121607E00E065CF /* gradientColorBackground.png in Resources */,
 				FBBD4D042137DC15009ECC69 /* Azeroth_04_11.jpg in Resources */,
 				FBBD4CEE2137DC15009ECC69 /* Azeroth_02_12.jpg in Resources */,
+				FBA22A32213E865000C39E92 /* image2 240x150.jpg in Resources */,
 				184439A01D0012C700FDD7F7 /* tips_page_star@2x.png in Resources */,
 				FBBD4CE22137DC15009ECC69 /* Azeroth_00_10.jpg in Resources */,
 				FBBD4CE52137DC15009ECC69 /* Azeroth_05_14.jpg in Resources */,
 				FBBD4D112137DC15009ECC69 /* Azeroth_05_00.jpg in Resources */,
+				FBA22A3A213E865000C39E92 /* image2 960x600.png in Resources */,
 				FBBD4D0C2137DC15009ECC69 /* Azeroth_06_02.jpg in Resources */,
 				FB50791A1E2618A900361E60 /* QuartzCorePaletteViewController.xib in Resources */,
 				FBCF6B331F8CBC0A00E3B58C /* InfoPlist.strings in Resources */,
 				FBBD4CE42137DC15009ECC69 /* Azeroth_01_13.jpg in Resources */,
 				FB5079181E2618A900361E60 /* PaletteDemoHomeController.xib in Resources */,
 				FBBD4CF52137DC15009ECC69 /* Azeroth_04_08.jpg in Resources */,
+				FBA22A35213E865000C39E92 /* image2 120x75.png in Resources */,
 				FBBD4C8E2137DC15009ECC69 /* Azeroth_07_04.jpg in Resources */,
 				FBBD4CAF2137DC15009ECC69 /* Azeroth_07_13.jpg in Resources */,
 				FBBD4CDB2137DC15009ECC69 /* Azeroth_02_09.jpg in Resources */,
@@ -5437,21 +5560,27 @@
 				FBBD4D122137DC15009ECC69 /* Azeroth_00_06.jpg in Resources */,
 				FBBD4CF92137DC15009ECC69 /* Azeroth_05_09.jpg in Resources */,
 				FBCF6B311F8CBC0A00E3B58C /* Localizable.strings in Resources */,
+				FBA22A1D213E864600C39E92 /* image1 8x5.jpg in Resources */,
 				FB5079031E2618A900361E60 /* scanBackground@2x.png in Resources */,
 				FBCF6B381F8CBC0A00E3B58C /* Main.strings in Resources */,
 				1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */,
+				FBA22A3D213E865000C39E92 /* image2 8x5.jpg in Resources */,
 				FBF4BC8B210026FD005FD795 /* AlertViewDemoController.xib in Resources */,
+				FBA22A18213E864600C39E92 /* image1 40x25.jpg in Resources */,
 				FB50790F1E2618A900361E60 /* WeiboSDK.bundle in Resources */,
 				FBBD4CAA2137DC15009ECC69 /* Azeroth_03_05.jpg in Resources */,
 				FBBD4CDA2137DC15009ECC69 /* Azeroth_09_10.jpg in Resources */,
 				FBBD4C8C2137DC15009ECC69 /* Azeroth_03_11.jpg in Resources */,
 				FBBD4CC72137DC15009ECC69 /* Azeroth_00_00.jpg in Resources */,
+				FBA22A36213E865000C39E92 /* image2 8x5.png in Resources */,
 				FBBD4CC42137DC15009ECC69 /* Azeroth_09_07.jpg in Resources */,
 				1844399D1D0012C700FDD7F7 /* tips_page_next_step@2x.png in Resources */,
+				FBA22A19213E864600C39E92 /* image1 120x75.png in Resources */,
 				FBBD4D0E2137DC15009ECC69 /* Azeroth_03_07.jpg in Resources */,
 				18A5014B1C92BE67006EBEB4 /* 004.jpg in Resources */,
 				184439A61D002E5B00FDD7F7 /* tips_page_done@2x.png in Resources */,
 				1897E2951D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png in Resources */,
+				FBA22A3B213E865000C39E92 /* image2 480x300.jpg in Resources */,
 				FBBD4CFD2137DC15009ECC69 /* Azeroth_03_04.jpg in Resources */,
 				FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */,
 				FBBD4CD02137DC15009ECC69 /* Azeroth_09_13.jpg in Resources */,
@@ -5465,6 +5594,7 @@
 				FBCC6A5820E39A3B002367F5 /* ElasticViewController.xib in Resources */,
 				FBBD4CD32137DC15009ECC69 /* Azeroth_00_11.jpg in Resources */,
 				FB0621D41ED275DD000AA258 /* rocket_ios9.png in Resources */,
+				FBA22A34213E865000C39E92 /* image2 960x600.jpg in Resources */,
 				FBBD4C962137DC15009ECC69 /* Azeroth_01_00.jpg in Resources */,
 				FBBD4C942137DC15009ECC69 /* Azeroth_09_04.jpg in Resources */,
 				FBBD4CB62137DC15009ECC69 /* Azeroth_03_02.jpg in Resources */,
@@ -5475,6 +5605,7 @@
 				184439971D0012C700FDD7F7 /* tips_page_arrow@2x.png in Resources */,
 				FBBD4CB32137DC15009ECC69 /* Azeroth_00_12.jpg in Resources */,
 				1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */,
+				FBA22A31213E865000C39E92 /* image2 40x25.png in Resources */,
 				FBBD4D0F2137DC15009ECC69 /* Azeroth_03_13.jpg in Resources */,
 				FBBD4CBC2137DC15009ECC69 /* Azeroth_03_12.jpg in Resources */,
 				FBBD4CB42137DC15009ECC69 /* Azeroth_04_07.jpg in Resources */,
@@ -5485,11 +5616,14 @@
 				FBBD4CE92137DC15009ECC69 /* Azeroth_02_05.jpg in Resources */,
 				FBF7B7EF2105BD1100ACBABB /* taiji.png in Resources */,
 				184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */,
+				FBA22A1C213E864600C39E92 /* image1 240x150.jpg in Resources */,
 				FBBD4D0B2137DC15009ECC69 /* Azeroth_01_12.jpg in Resources */,
 				FBCC6A0F20E0DB58002367F5 /* testExplodPic.jpeg in Resources */,
 				FBBD4C952137DC15009ECC69 /* Azeroth_05_06.jpg in Resources */,
 				FBBD4CE02137DC15009ECC69 /* Azeroth_09_11.jpg in Resources */,
+				FBA22A30213E865000C39E92 /* image2 120x75.jpg in Resources */,
 				FBBD4C892137DC15009ECC69 /* Azeroth_04_00.jpg in Resources */,
+				FBA22A39213E865000C39E92 /* image2 240x150.png in Resources */,
 				18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */,
 				FBBD4CEF2137DC15009ECC69 /* Azeroth_06_01.jpg in Resources */,
 				FBBD4C9E2137DC15009ECC69 /* Azeroth_08_03.jpg in Resources */,
@@ -5517,6 +5651,7 @@
 				FBBD4CBF2137DC15009ECC69 /* Azeroth_00_03.jpg in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
+				FBA22A1B213E864600C39E92 /* image1 480x300.png in Resources */,
 				FBBD4CEB2137DC15009ECC69 /* Azeroth_02_00.jpg in Resources */,
 				FBBD4CD92137DC15009ECC69 /* Azeroth_05_03.jpg in Resources */,
 				FBBD4C982137DC15009ECC69 /* Azeroth_06_08.jpg in Resources */,
@@ -5531,6 +5666,7 @@
 				FBBD4CB82137DC15009ECC69 /* Azeroth_09_06.jpg in Resources */,
 				FBA25CCE2121604D00E065CF /* earth.png in Resources */,
 				1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */,
+				FBA22A16213E864600C39E92 /* image1 8x5.png in Resources */,
 				1844399E1D0012C700FDD7F7 /* tips_page_next_step@3x.png in Resources */,
 				FBBD4CD52137DC15009ECC69 /* Azeroth_00_02.jpg in Resources */,
 				FBBD4D062137DC15009ECC69 /* Azeroth_01_02.jpg in Resources */,

@@ -52,6 +52,8 @@
 	<string>用于即时通讯的语音功能</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>此 App 需要您的同意才能读取媒体资料库</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>钟齐蔡云汉毛笔行书.TTF</string>

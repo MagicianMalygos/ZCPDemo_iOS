@@ -9,6 +9,7 @@
 #import "TemporaryTestHomeController.h"
 #import <IQKeyboardManager.h>
 #import <IQKeyboardReturnKeyHandler.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 #define SCALE 1
 #define S(s) ((s)*SCALE)
@@ -37,7 +38,7 @@
 //    [self testIQKeyboardManagerReturn];
 //    [self testSandBoxPath];
 //    [self testSettings];
-    [self testAnchorPoint];
+    [self testImage];
 }
 
 #pragma mark - test
@@ -292,32 +293,16 @@
     NSLog(@"%@ %@ %@", userName, cheatCode, area);
 }
 
-#pragma mark - testAnchorPoint
+#pragma mark - testImage
 
-- (void)testAnchorPoint {
+- (void)testImage {
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = CGRectMake(0, 0, 200, 200);
+    imageView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
+    imageView.backgroundColor = [UIColor lightGrayColor];
+    imageView.contentMode = UIViewContentModeScaleToFill;
     
-    __block UIView *view = [[UIView alloc] init];
-    view.frame = CGRectMake(0, 0, 100, 100);
-    view.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:view];
-    
-    CATransform3D transform = CATransform3DIdentity;
-    transform = CATransform3DTranslate(transform, 200, 0, 0);
-    
-    __block CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    animation.toValue = [NSValue valueWithCATransform3D:transform];
-    animation.duration = 5;
-    
-    [view.layer addAnimation:animation forKey:@"transform"];
-    
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        animation.fromValue = [view.layer.presentationLayer valueForKeyPath:@"transform"];
-        animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-200, 0, 0)];
-        [view.layer removeAllAnimations];
-        [view.layer addAnimation:animation forKey:@"transform"];
-    });
+    [self.view addSubview:imageView];
 }
 
 @end

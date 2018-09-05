@@ -192,7 +192,7 @@
         _imageView = [[UIImageView alloc] initWithFrame:({
             self.contentView.bounds;
         })];
-        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+        _imageView.contentMode = UIViewContentModeScaleToFill;
         _imageView.clipsToBounds = YES;
         _imageView.userInteractionEnabled = YES;
         [_imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onPressedImageView:)]];
