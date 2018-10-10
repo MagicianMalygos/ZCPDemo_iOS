@@ -8,6 +8,7 @@
 
 #import "ZCPUser.h"
 #import "ZCPUserMethod.h"
+#import <objc/runtime.h>
 
 @implementation ZCPUser
 
@@ -78,9 +79,10 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     if (sel == @selector(privilegeList)) {
+        id metaClass = objc_getMetaClass("ZCPUser");
+        class_addMethod(metaClass, @selector(privilegeList), (IMP)privilegeList, "v@:");
+        return YES;
 #pragma clang diagnostic pop
-        // 类方法不能动态添加
-        return NO;
     }
     return [super resolveClassMethod:sel];
 }
@@ -104,6 +106,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
         class_addMethod(self, @selector(eat), (IMP)eat, "v@:");
+        return YES;
 #pragma clang diagnostic pop
     }
     return [super resolveInstanceMethod:sel];

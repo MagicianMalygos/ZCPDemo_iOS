@@ -120,6 +120,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     [user001 performSelector:@selector(eat)];
+    [user001.class performSelector:@selector(privilegeList)];
 #pragma clang diagnostic pop
     
     // 5.字典转模型

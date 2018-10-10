@@ -80,6 +80,7 @@
         _infoArr = [NSMutableArray arrayWithObjects:
                     @{@"title":@"MacroDemo", @"class":@"MacroDemo"},
                     @{@"title":@"RuntimeDemo", @"class":@"RuntimeDemo"},
+                    @{@"title":@"ObjcMessageDemo", @"class":@"ObjcMessageDemo"},
                     @{@"title":@"RuntimeExampleDemo", @"class":@"RuntimeExampleDemo"},
                     @{@"title":@"EnumAndFormatDemo", @"class":@"EnumAndFormatDemo"},
                     @{@"title":@"OCClassPropertyDemo", @"class":@"OCClassPropertyDemo"},
@@ -92,7 +93,7 @@
     return _infoArr;
 }
 
-- (void)didSelectCell:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *classString = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"];
     Class class = NSClassFromString(classString);
     if ([classString isEqualToString:@"RuntimeExampleDemo"]) {

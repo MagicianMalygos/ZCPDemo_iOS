@@ -20,7 +20,6 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"Core Animation"       , @"class": APPURL_VIEW_IDENTIFIER_COREANIMATION},
                     @{@"title": @"临时测试"              , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
                     @{@"title": @"UIDemo"               , @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
                     @{@"title": @"CameraAndAlbumDemo"   , @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
@@ -36,13 +35,10 @@
                     
                     
                     @{@"title": @"PhotoCarouselDemo"    , @"class": APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME},
-                    @{@"title": @"ShareDemo"            , @"class": APPURL_VIEW_IDENTIFIER_SHAREHOME},
                     @{@"title": @"TabBarDemo"           , @"class": APPURL_VIEW_IDENTIFIER_TABBARHOME},
                     
                     @{@"title": @"国际化"                , @"class": APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME},
                     @{@"title": @"地图&定位"             , @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
-                    @{@"title": @"广告"                  , @"class": APPURL_VIEW_IDENTIFIER_ADHOME},
-                    
                     @{@"title": @"日志"                  , @"class": APPURL_VIEW_IDENTIFIER_LOG}, nil];
     }
     return _infoArr;

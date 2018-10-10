@@ -14,6 +14,11 @@
 
 @implementation InternationalizationDemoHomeController
 
+- (void)loadView {
+    [super loadView];
+    [self test];
+}
+
 - (void)test {
     NSLog(@"%@",NSLocalizedString(@"tabbar_home", nil));
     NSLog(@"%@",NSLocalizedString(@"tabbar_map", nil));

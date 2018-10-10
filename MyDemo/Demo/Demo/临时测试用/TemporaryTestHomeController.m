@@ -23,6 +23,8 @@
 @property (nonatomic, strong) NSArray *directorys;
 @property (nonatomic, copy) NSString *path;
 
+@property (nonatomic, assign) NSString *a;
+
 @end
 
 @implementation TemporaryTestHomeController
@@ -38,7 +40,7 @@
 //    [self testIQKeyboardManagerReturn];
 //    [self testSandBoxPath];
 //    [self testSettings];
-    [self testImage];
+    [self testBlock];
 }
 
 #pragma mark - test
@@ -95,17 +97,43 @@
 #pragma mark - testAutoreleasepool
 
 - (void)testAutoreleasepool {
-    // autoreleasepool主要用于创建大量临时变量的情况，例如for循环中的临时变量
-    
+    /*
+     @autoreleasepool实际上就是下面两句话，作用是其内包含的所有调用autorelease的对象在出这个作用域后都会执行一次release
+     
+     void * atautoreleasepoolobj = objc_autoreleasePoolPush();
+     // Do something
+     objc_autoreleasePoolPop(atautoreleasepoolobj);
+     
+     会创建一个pool，然后将nil(atautoreleasepoolobj)入栈，后面所有调用autorelease的对象都会放到这个pool中，
+     objc_autoreleasePoolPop这句代码会让里面所有的对象都执行一次release
+     */
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"rocket.png"];
     
     // 内存暴增
+    // 这种情况下image的释放归main函数中的@autoreleasepool {}管，下面的while循环会使得main runloop一直无法走下一次事件循环，因此也无法执行到objc_autoreleasePoolPop(atautoreleasepoolobj)这句代码，让其中的image对象执行release
+//    NSArray *list = @[@"1"];
     while (1) {
-        UIImage *image = [UIImage imageWithContentsOfFile:path];
-        [image description];
+        // object 不会暴增
+//        NSObject *obj = [[NSObject alloc] init];
+//        [obj description];
+        
+        // list 会暴增
+//        id arr = [NSArray array];
+//        id arr = [NSMutableArray new];
+//        id arr = list.mutableCopy;
+//        [arr description];
+        
+        // view 会暴增
+//        id view = [[UIView alloc] init];
+//        [view description];
+        
+        // image 会暴增
+//        UIImage *image = [UIImage imageWithContentsOfFile:path];
+//        [image description];
     }
     
     // image被及时释放，不会暴增
+    // 这种情况下image的释放归while循环中的autoreleasepool {}管，在一次while循环中，objc_autoreleasePoolPop(atautoreleasepoolobj)被调用，image就会执行release方法释放内存
 //    while (1) {
 //        @autoreleasepool {
 //            UIImage *image = [UIImage imageWithContentsOfFile:path];
@@ -293,16 +321,10 @@
     NSLog(@"%@ %@ %@", userName, cheatCode, area);
 }
 
-#pragma mark - testImage
+#pragma mark - testBlock
 
-- (void)testImage {
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.frame = CGRectMake(0, 0, 200, 200);
-    imageView.center = CGPointMake(self.view.width / 2, self.view.height / 2);
-    imageView.backgroundColor = [UIColor lightGrayColor];
-    imageView.contentMode = UIViewContentModeScaleToFill;
+- (void)testBlock {
     
-    [self.view addSubview:imageView];
 }
 
 @end

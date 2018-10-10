@@ -27,8 +27,6 @@
 #define APPURL_VIEW_IDENTIFIER_OTHERHOME            @"otherHome"
 // 图片轮播 PhotoCarouselDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME    @"photoCarouselHome"
-// 分享 ShareDemoHomeController
-#define APPURL_VIEW_IDENTIFIER_SHAREHOME            @"shareHome"
 // tabbar TabBarDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_TABBARHOME           @"tabbarHome"
 // 网络 NetWorkDemoHomeController
@@ -39,8 +37,6 @@
 #define APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME    @"internationalHome"
 // 地图 MapDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_MAPHOME              @"mapHome"
-// 广告 ADDemoHomeViewController
-#define APPURL_VIEW_IDENTIFIER_ADHOME               @"adHome"
 // 扫雷 ZCPMinesweeperViewController
 #define APPURL_VIEW_IDENTIFIER_MINESWEEPER          @"minesweeper"
 // 日志 LogDemoHomeViewController

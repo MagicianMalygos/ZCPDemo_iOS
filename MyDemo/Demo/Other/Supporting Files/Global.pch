@@ -26,13 +26,6 @@
 //屏幕高度
 #define SCREENHEIGHT                                [[UIScreen mainScreen] bounds].size.height
 
-// share相关
-#import "WeiboSDK.h"
-#define kAppKey         @"2163609371"
-#define kSecret         @"fe34b6ef5a554531acdc9970fa811db5"
-#define kRedirectURI    @"https://itunes.apple.com.cn"
-
-
 // 时间性能测量用
 // 结束时间除以CLOCKS_PER_SEC得到耗时秒数
 /*

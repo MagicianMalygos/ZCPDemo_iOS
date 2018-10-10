@@ -140,14 +140,6 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>ShareDemoHomeController</string>
-		<key>identifier</key>
-		<string>shareHome</string>
-		<key>description</key>
-		<string>分享</string>
-	</dict>
-	<dict>
-		<key>className</key>
 		<string>TabBarDemoHomeController</string>
 		<key>identifier</key>
 		<string>tabbarHome</string>
@@ -185,14 +177,6 @@
 		<string>mapHome</string>
 		<key>description</key>
 		<string>地图</string>
-	</dict>
-	<dict>
-		<key>className</key>
-		<string>ADDemoHomeViewController</string>
-		<key>identifier</key>
-		<string>adHome</string>
-		<key>description</key>
-		<string>广告</string>
 	</dict>
 	<dict>
 		<key>className</key>

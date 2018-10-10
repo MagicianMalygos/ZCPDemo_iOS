@@ -20,11 +20,32 @@
 @end
 @implementation CrashHelper
 - (void)iWillCrash {
-    NSLog(@"I`m already clean a crash.");
+    NSLog(@"I clear a crash.");
 }
 @end
 
-static CrashHelper *helper;
+@interface NewCrashHelper : CrashHelper
+- (void)invincible;
+@end
+@implementation NewCrashHelper
+- (void)invincible {
+    NSLog(@"I clear a crash. I`m invincible.");
+}
+@end
+
+@interface FakeCrashHelper : NSObject
+@end
+@implementation FakeCrashHelper
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    class_addMethod(self, sel, (IMP)fake, "v@:");
+    return YES;
+}
+void fake() {
+    NSLog(@"Haha, You idiot!");
+}
+@end
+
+static NewCrashHelper *helper;
 static MyClass3 *class3;
 
 @implementation RuntimeTest3
@@ -33,7 +54,7 @@ static MyClass3 *class3;
 }
 
 - (void)cognize {
-    helper = [CrashHelper new];
+    helper = [NewCrashHelper new];
     class3 = [MyClass3 new];
     
     // Objective-C在编译时，会依据每一个方法的名字、参数序列，生成一个唯一的整型标识(Int类型的地址)，这个标识就是SEL
@@ -107,79 +128,101 @@ static MyClass3 *class3;
     mySET setter = (mySET)[self methodForSelector:@selector(log)];
     
     START_COUNT_TIME(start1);
-    for (int i = 0 ; i < 100; i++) {
+    for (int i = 0 ; i < 500; i++) {
 //        objc_msgSend(self, @selector(log));  // 编译报错
     }
-    NSLog(@"Consume tiem: %lf ms", (double)END_COUNT_TIME(start1)/CLOCKS_PER_SEC * 1000);
+    NSLog(@"Consume time: %lf ms", (double)END_COUNT_TIME(start1)/CLOCKS_PER_SEC * 1000);
     
     // i值不同，两者耗时多少比较结果也不同
     START_COUNT_TIME(start2);
-    for (int i = 0 ; i < 100; i++) {
+    for (int i = 0 ; i < 500; i++) {
         setter(self, @selector(log), YES);
     }
-    NSLog(@"Consume tiem: %lf ms", (double)END_COUNT_TIME(start2)/CLOCKS_PER_SEC * 1000);
+    NSLog(@"Consume time: %lf ms", (double)END_COUNT_TIME(start2)/CLOCKS_PER_SEC * 1000);
     
     START_COUNT_TIME(start3);
-    for (int i = 0 ; i < 100; i++) {
+    for (int i = 0 ; i < 500; i++) {
         [self log];
     }
-    NSLog(@"Consume tiem: %lf ms", (double)END_COUNT_TIME(start3)/CLOCKS_PER_SEC * 1000);
+    NSLog(@"Consume time: %lf ms", (double)END_COUNT_TIME(start3)/CLOCKS_PER_SEC * 1000);
     
     // 运行时方法调用
     // 当一个对象无法接收指定消息时，不能以[object message]的方式调用方法，编译器会报错，但如果以perform...的形式来调用，则需要等到运行时才能确定object是否能接收message消息，如果不能则crash
     if ([self respondsToSelector:@selector(log)]) {
         START_COUNT_TIME(start4);
-        for (int i = 0 ; i < 100; i++) {
+        for (int i = 0 ; i < 500; i++) {
             [self performSelector:@selector(log)];
         }
-        NSLog(@"Consume tiem: %lf ms", (double)END_COUNT_TIME(start4)/CLOCKS_PER_SEC * 1000);
+        NSLog(@"Consume time: %lf ms", (double)END_COUNT_TIME(start4)/CLOCKS_PER_SEC * 1000);
     }
     
     // 消息转发
     [self performSelector:@selector(iWillCrash)];    // 崩溃的代码
+//    [RuntimeTest3 performSelector:@selector(iWillCrash)];
     // 通过消息转发避免程序崩溃：1.动态方法解析，2.备用接收者，3.完整消息转发
-    
 }
 
-// 1. 动态方法解析：对象在接收到未知的消息时，首先会调用所属类的该类方法
+// 1. 动态方法解析：对象在接收到未知的消息时，首先会调用所属类的该类方法.
+// 这个方法就是为了让我们给类加实例方法用的，好像返回NO和YES没什么区别，无论返回什么，加了方法就会执行顺利执行，不加方法就会走后续的消息转发
+// 试了下这个返回值也不是用作respondsToSelector、instancesRespondToSelector的返回值
 //+ (BOOL)resolveInstanceMethod:(SEL)sel {
 //    NSString *selectorString = NSStringFromSelector(sel);
 //    if ([selectorString isEqualToString:@"iWillCrash"]) {
-//        class_addMethod([self class], @selector(iWillCrash), (IMP)kidding, "@:");
+//        class_addMethod([self class], @selector(iWillCrash), (IMP)kidding, "v@:");
+//        return YES;
 //    }
 //    return [super resolveInstanceMethod:sel];
 //}
+// 类方法如果这步处理不了，就没有后续了，直接crash
+//+ (BOOL)resolveClassMethod:(SEL)sel {
+//    NSString *selectorString = NSStringFromSelector(sel);
+//    if ([selectorString isEqualToString:@"iWillCrash"]) {
+//        class_addMethod(objc_getMetaClass(object_getClassName(self)), @selector(iWillCrash), (IMP)kidding, "v@:");
+//        return YES;
+//    }
+//    return [super resolveInstanceMethod:sel];
+//}
+//
 //void kidding() {
 //    NSLog(@"Crash? I`m kidding you.");
 //}
 
-// 2. 备用接受者：如果在上一步无法处理消息，则Runtime会继续调用以下方法
-//- (id)forwardingTargetForSelector:(SEL)aSelector {
-//    NSString *selectorString = NSStringFromSelector(aSelector);
-//    if ([selectorString isEqualToString:@"iWillCrash"]) {
-//        return helper;
-//    }
-//    return [super forwardingTargetForSelector:aSelector];
-//}
+// 2. 备用接收者：如果在上一步无法处理消息，则Runtime会继续调用以下方法。无法处理类方法
+// 如果此处返回nil，那么会继续走后续的方法
+// 此处返回的对象会接手该消息，然后会走返回对象的消息发送流程。引起crash的对象的消息发送流程至此结束。
+// 此处返回的对象只要能够处理aSelector方法就行，即使是它父类去处理
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+//    return [FakeCrashHelper new];
+    NSString *selectorString = NSStringFromSelector(aSelector);
+    if ([selectorString isEqualToString:@"iWillCrash"]) {
+        return helper;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
 
 // 3. 完整消息转发：如果在上一步无法处理消息，则Runtime会继续调用以下方法
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    if ([CrashHelper instancesRespondToSelector:anInvocation.selector]) {
-        [anInvocation invokeWithTarget:helper];
-    }
-}
+// 如果返回nil则不会再走forwardInvocation，直接crash
+// 只要不为nil，返回值可以是任何signature，
+// 方法签名跟方法名什么没有关系，只是能够表示方法的返回类型和参数类型的一个类
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
-    
+//    signature = [NewCrashHelper instanceMethodSignatureForSelector:@selector(invincible)];
+//    signature = [NSMethodSignature signatureWithObjCTypes:"@@::::@@"];
     if (!signature) {
-        if ([CrashHelper instancesRespondToSelector:aSelector]) {
-            signature = [CrashHelper instanceMethodSignatureForSelector:aSelector];
+        if ([helper.class instancesRespondToSelector:aSelector]) {
+            signature = [helper.class instanceMethodSignatureForSelector:aSelector];
         }
     }
     return signature;
 }
-
-
+// 此处的NSInvocation中的signature是上一步返回的，但是好像没什么作用。里面的selector仍旧是那个导致crash的方法，target是导致crash的那个对象
+// 这里可以什么都不处理，那么就忽略掉了方法调用导致的crash。
+// 如果想要处理一些事情，可以做任何事
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    if ([helper.class instancesRespondToSelector:anInvocation.selector]) {
+        [anInvocation invokeWithTarget:helper];
+    }
+}
 
 - (void)log {
 //    NSLog(@"log!");
