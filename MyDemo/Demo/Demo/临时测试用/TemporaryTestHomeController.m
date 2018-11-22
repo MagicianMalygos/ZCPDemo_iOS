@@ -10,6 +10,7 @@
 #import <IQKeyboardManager.h>
 #import <IQKeyboardReturnKeyHandler.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <Masonry.h>
 
 #define SCALE 1
 #define S(s) ((s)*SCALE)
@@ -23,7 +24,7 @@
 @property (nonatomic, strong) NSArray *directorys;
 @property (nonatomic, copy) NSString *path;
 
-@property (nonatomic, assign) NSString *a;
+@property (nonatomic, assign) NSInteger count;
 
 @end
 
@@ -47,6 +48,19 @@
 
 // 测试XXX
 - (void)testXXX {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSInteger a = self.count - 1;
+        NSInteger b = self.count;
+        NSInteger c = self.count + 1;
+        self.count = a+b+c;
+        NSLog(@"%ld", (long)self.count);
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        self.count = 10;
+        NSLog(@"%ld", (long)self.count);
+    });
 }
 
 #pragma mark - sd test
@@ -324,6 +338,7 @@
 #pragma mark - testBlock
 
 - (void)testBlock {
+    
     
 }
 

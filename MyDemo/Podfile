@@ -20,5 +20,7 @@ pod 'IQKeyboardManager', '~> 5.0.2'
 pod 'Aspects', '~> 1.4.1'
 # 查找内存泄漏
 pod 'MLeaksFinder', '~> 1.0.0'
+# 约束
+pod 'Masonry', '~> 1.1.0'
 
 end

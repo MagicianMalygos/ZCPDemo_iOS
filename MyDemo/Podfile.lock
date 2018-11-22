@@ -20,6 +20,7 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SDWebImage (4.1.2):
@@ -78,6 +79,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - Aspects (~> 1.4.1)
   - IQKeyboardManager (~> 5.0.2)
+  - Masonry (~> 1.1.0)
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
@@ -90,6 +92,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - IQKeyboardManager
     - MagicalRecord
+    - Masonry
     - MLeaksFinder
     - SDWebImage
     - YYKit
@@ -102,11 +105,12 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   IQKeyboardManager: dc5b18b47e5170e4d150bb86dbee8c8a2fc48997
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZCPKit: 6fade2f97bb05c348341e9e4a27feb5068404be7
 
-PODFILE CHECKSUM: 58512c731cb7017ab1554c517f36bf6186f4f617
+PODFILE CHECKSUM: cb6276ea570f6acc58a107c425773535b5a1cb4c
 
 COCOAPODS: 1.5.3

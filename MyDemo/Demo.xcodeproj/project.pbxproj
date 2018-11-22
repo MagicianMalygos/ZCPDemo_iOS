@@ -47,10 +47,8 @@
 		9E3E828E1D2A83990061664A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E828D1D2A83990061664A /* CoreLocation.framework */; };
 		9E3E86B61D2A84BB0061664A /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86B51D2A84BB0061664A /* libz.1.2.5.tbd */; };
 		9E3E86B81D2A84D70061664A /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86B71D2A84D70061664A /* libxml2.2.tbd */; };
-		9E3E86BA1D2A84FE0061664A /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86B91D2A84FE0061664A /* libstdc++.6.0.9.tbd */; };
 		9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BB1D2A850A0061664A /* libz.tbd */; };
 		9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BD1D2A85240061664A /* libiconv.tbd */; };
-		9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E86BF1D2A86650061664A /* libstdc++.tbd */; };
 		D40645B14805E40EAAA5678C /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3213FF3F8441313D1E7568B /* libPods-Demo.a */; };
 		FB0621C41ED275DC000AA258 /* AlgorithmDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB06218D1ED275DC000AA258 /* AlgorithmDemo.m */; };
 		FB0621C51ED275DC000AA258 /* TreeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB06218F1ED275DC000AA258 /* TreeDemo.m */; };
@@ -372,7 +370,6 @@
 		FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC1246F20F4B78C0060471A /* AnimationButton3.m */; };
 		FBC4E4091EEE43AC006482B8 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E4081EEE43AC006482B8 /* BookViewController.m */; };
 		FBC4E40C1EEE44CF006482B8 /* BookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4E40B1EEE44CF006482B8 /* BookPageViewController.m */; };
-		FBCC20F61F0377D9006FE26C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCC20F51F0377D9006FE26C /* iAd.framework */; };
 		FBCC210B1F03AA54006FE26C /* RegexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC210A1F03AA54006FE26C /* RegexTests.m */; };
 		FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0620E0C1B4002367F5 /* UIView+Explode.m */; };
 		FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCC6A0920E0C200002367F5 /* UIViewExplodeHelper.m */; };
@@ -2047,13 +2044,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBCC20F61F0377D9006FE26C /* iAd.framework in Frameworks */,
 				9E3E828E1D2A83990061664A /* CoreLocation.framework in Frameworks */,
 				FB81A8DD1DAB3FD400B6F46E /* QuartzCore.framework in Frameworks */,
-				9E3E86C01D2A86650061664A /* libstdc++.tbd in Frameworks */,
 				9E3E86BE1D2A85240061664A /* libiconv.tbd in Frameworks */,
 				9E3E86BC1D2A850A0061664A /* libz.tbd in Frameworks */,
-				9E3E86BA1D2A84FE0061664A /* libstdc++.6.0.9.tbd in Frameworks */,
 				9E3E86B81D2A84D70061664A /* libxml2.2.tbd in Frameworks */,
 				9E3E86B61D2A84BB0061664A /* libz.1.2.5.tbd in Frameworks */,
 				9E3E828C1D2A83920061664A /* CoreMedia.framework in Frameworks */,
