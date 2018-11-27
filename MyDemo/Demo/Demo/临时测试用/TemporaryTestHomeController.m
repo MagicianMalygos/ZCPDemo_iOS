@@ -17,6 +17,19 @@
 #define W(w) ((w)*SCALE)
 #define H(h) ((h)*SCALE)
 
+
+
+@interface ZCPObject : NSObject
+
+@end
+
+@implementation ZCPObject
+
+@end
+
+
+
+
 @interface TemporaryTestHomeController ()
 
 @property (nonatomic, strong) NSMutableDictionary *headerDict;
@@ -25,6 +38,11 @@
 @property (nonatomic, copy) NSString *path;
 
 @property (nonatomic, assign) NSInteger count;
+
+@property (nonatomic, weak) UIView *weak_view;
+
+
+@property (nonatomic, strong) UIView *v1;
 
 @end
 
@@ -48,19 +66,63 @@
 
 // 测试XXX
 - (void)testXXX {
+    // thread backtrace
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSInteger a = self.count - 1;
-        NSInteger b = self.count;
-        NSInteger c = self.count + 1;
-        self.count = a+b+c;
-        NSLog(@"%ld", (long)self.count);
-    });
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        self.count = 10;
-        NSLog(@"%ld", (long)self.count);
-    });
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.backgroundColor = [UIColor redColor];
+    button1.frame = CGRectMake(100, 300, 50, 50);
+    [button1 addTarget:self action:@selector(resume) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+    
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button2.backgroundColor = [UIColor greenColor];
+    button2.frame = CGRectMake(100, 350, 50, 50);
+    [button2 addTarget:self action:@selector(pause) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
+    
+    UIView *v1 = [[UIView alloc] init];
+    v1.frame = CGRectMake(0, 100, 50, 50);
+    v1.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:v1];
+    self.v1 = v1;
+    
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
+    anim.fromValue = @(CGPointMake(0, 100));
+    anim.toValue = @(CGPointMake(300, 100));
+    anim.duration = 10;
+    [self.v1.layer addAnimation:anim forKey:nil];
+}
+
+- (void)resume {
+    CFTimeInterval pausedTime = [self.v1.layer timeOffset];
+    self.v1.layer.speed = 1.0;
+    self.v1.layer.timeOffset = 0.0;
+    self.v1.layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [self.v1.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    NSLog(@"timeSincePause %f", timeSincePause);
+    self.v1.layer.beginTime = timeSincePause;
+}
+
+- (void)pause {
+    CFTimeInterval pausedTime = [self.v1.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    self.v1.layer.speed = 0.0;
+    NSLog(@"pausedtime %f", pausedTime);
+    self.v1.layer.timeOffset = pausedTime;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%@", self.weak_view);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%@", self.weak_view);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark - sd test
