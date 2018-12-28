@@ -1,5 +1,5 @@
 //
-//  ZCPCellDataModel.m
+//  ZCPTableViewCellDataModel.m
 //  ZCPKit
 //
 //  Created by zhuchaopeng on 16/9/21.
@@ -46,8 +46,8 @@
 - (instancetype)initWithDefault {
     if (self = [super init]) {
         self.groupedCellPosition    = ZCPGroupedCellPositionNone;
-        self.topLineWidth           = APPLICATIONWIDTH;
-        self.bottomLineWidth        = APPLICATIONWIDTH;
+        self.topLineWidth           = SCREENWIDTH;
+        self.bottomLineWidth        = SCREENWIDTH;
         self.cellTag                = INT_MAX;
     }
     return self;

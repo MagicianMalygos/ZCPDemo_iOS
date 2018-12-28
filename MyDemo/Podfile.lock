@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - FBRetainCycleDetector (0.1.4)
-  - IQKeyboardManager (5.0.3)
+  - IQKeyboardManager (5.0.8)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -29,46 +29,46 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - ZCPKit (0.0.3):
-    - ZCPKit/Cache (= 0.0.3)
-    - ZCPKit/Category (= 0.0.3)
-    - ZCPKit/Common (= 0.0.3)
-    - ZCPKit/Global (= 0.0.3)
-    - ZCPKit/Network (= 0.0.3)
-    - ZCPKit/Router (= 0.0.3)
-    - ZCPKit/Util (= 0.0.3)
-    - ZCPKit/ZCPUIKit (= 0.0.3)
-  - ZCPKit/Cache (0.0.3):
-    - ZCPKit/Cache/CoreData (= 0.0.3)
+  - ZCPKit (0.0.1):
+    - ZCPKit/Cache (= 0.0.1)
+    - ZCPKit/Category (= 0.0.1)
+    - ZCPKit/Common (= 0.0.1)
+    - ZCPKit/Global (= 0.0.1)
+    - ZCPKit/Network (= 0.0.1)
+    - ZCPKit/Router (= 0.0.1)
+    - ZCPKit/Util (= 0.0.1)
+    - ZCPKit/ZCPUIKit (= 0.0.1)
+  - ZCPKit/Cache (0.0.1):
+    - ZCPKit/Cache/CoreData (= 0.0.1)
     - ZCPKit/Global
-  - ZCPKit/Cache/CoreData (0.0.3):
+  - ZCPKit/Cache/CoreData (0.0.1):
     - MagicalRecord
     - ZCPKit/Global
-  - ZCPKit/Category (0.0.3):
+  - ZCPKit/Category (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/Common (0.0.3):
+  - ZCPKit/Common (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Util
-  - ZCPKit/Global (0.0.3)
-  - ZCPKit/Network (0.0.3):
+  - ZCPKit/Global (0.0.1)
+  - ZCPKit/Network (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/Router (0.0.3):
+  - ZCPKit/Router (0.0.1):
     - Aspects
     - ZCPKit/Common
     - ZCPKit/Global
-  - ZCPKit/Util (0.0.3):
+  - ZCPKit/Util (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit (0.0.3):
+  - ZCPKit/ZCPUIKit (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
-    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.3)
-    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.3)
-  - ZCPKit/ZCPUIKit/ZCPListView (0.0.3):
+    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.1)
+    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.1)
+  - ZCPKit/ZCPUIKit/ZCPListView (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Common
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.3):
+  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Network
@@ -83,7 +83,7 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
-  - ZCPKit (~> 0.0.3)
+  - ZCPKit (~> 0.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -103,14 +103,14 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  IQKeyboardManager: dc5b18b47e5170e4d150bb86dbee8c8a2fc48997
+  IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPKit: 6fade2f97bb05c348341e9e4a27feb5068404be7
+  ZCPKit: 7851901c5c9818392b9f324f49532aa374990d45
 
-PODFILE CHECKSUM: cb6276ea570f6acc58a107c425773535b5a1cb4c
+PODFILE CHECKSUM: 999a90e769be5f4af693420ee674b1fcc97ac0a3
 
 COCOAPODS: 1.5.3

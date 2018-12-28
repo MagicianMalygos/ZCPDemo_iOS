@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    mineSide        = (APPLICATIONWIDTH - (LineNum + 1) * MineGap) / LineNum;
+    mineSide        = (SCREENWIDTH - (LineNum + 1) * MineGap) / LineNum;
     self.gameStatus = GamePrepareStatus;
     
     [self setupUI];

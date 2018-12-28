@@ -11,6 +11,7 @@
 #import <IQKeyboardReturnKeyHandler.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Masonry.h>
+#import <ZCPCommentView.h>
 
 #define SCALE 1
 #define S(s) ((s)*SCALE)
@@ -68,30 +69,18 @@
 - (void)testXXX {
     // thread backtrace
     
+    UIView *commentView = [[UIView alloc] init];
+    commentView.backgroundColor = [UIColor redColor];
+    commentView.frame = CGRectMake(0, 0, self.view.width, 50);
     
-    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button1.backgroundColor = [UIColor redColor];
-    button1.frame = CGRectMake(100, 300, 50, 50);
-    [button1 addTarget:self action:@selector(resume) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button1];
+    UITextField *tf = [[UITextField alloc] init];
+    tf.frame = CGRectMake(0, 50, 100, 50);
+    tf.backgroundColor = [UIColor redColor];
+    tf.inputAccessoryView = commentView;
+    [self.view addSubview:tf];
     
-    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button2.backgroundColor = [UIColor greenColor];
-    button2.frame = CGRectMake(100, 350, 50, 50);
-    [button2 addTarget:self action:@selector(pause) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button2];
+//    ZCPCommentView *commentView = [[ZCPCommentView alloc] initWithTarget:self];
     
-    UIView *v1 = [[UIView alloc] init];
-    v1.frame = CGRectMake(0, 100, 50, 50);
-    v1.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:v1];
-    self.v1 = v1;
-    
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
-    anim.fromValue = @(CGPointMake(0, 100));
-    anim.toValue = @(CGPointMake(300, 100));
-    anim.duration = 10;
-    [self.v1.layer addAnimation:anim forKey:nil];
 }
 
 - (void)resume {

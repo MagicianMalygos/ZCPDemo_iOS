@@ -308,16 +308,18 @@ float bounceEaseOut(float t);
     animation.removedOnCompletion   = NO;
     animation.fillMode              = kCAFillModeBoth;
     
-    NSValue *fromValue              = @(CGPointMake(35, 35));
-    NSValue *toValue                = @(CGPointMake(35, 300));
+    NSValue *fromValue              = @(CGPointMake(35, 10));
+    NSValue *toValue                = @(CGPointMake(35, 50));
     CFTimeInterval duration         = 1.0;
-    NSInteger numFrames             = duration * 60;
+    NSInteger numFrames             = duration * 120;
     NSMutableArray *frames          = [NSMutableArray array];
     for (int i = 0; i < numFrames; i++) {
         CGFloat currFrameTime       = 1.0 / numFrames * i;
         currFrameTime               = bounceEaseOut(currFrameTime);
         id currValue                = [self interpolateFromValue:fromValue toValue:toValue time:currFrameTime];
         [frames addObject:currValue];
+        CGPoint testP = [currValue CGPointValue];
+        NSLog(@"%lf, %lf, %lf", currFrameTime, testP.x, testP.y);
     }
     animation.values                = frames;
     [ballLayer addAnimation:animation forKey:nil];
