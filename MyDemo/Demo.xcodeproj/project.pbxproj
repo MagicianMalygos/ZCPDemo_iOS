@@ -23,14 +23,6 @@
 		184439A61D002E5B00FDD7F7 /* tips_page_done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184439A31D002E5B00FDD7F7 /* tips_page_done@2x.png */; };
 		184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184439A41D002E5B00FDD7F7 /* tips_page_done@3x.png */; };
 		184D75211C97A9B70068D686 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D75201C97A9B70068D686 /* default.png */; };
-		1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E28B1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png */; };
-		1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E28C1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png */; };
-		1897E2951D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E28D1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png */; };
-		1897E2961D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E28E1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png */; };
-		1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E28F1D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png */; };
-		1897E2981D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E2901D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png */; };
-		1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E2911D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png */; };
-		1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1897E2921D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png */; };
 		18A501481C92BE67006EBEB4 /* 001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A501411C92BE67006EBEB4 /* 001.jpg */; };
 		18A501491C92BE67006EBEB4 /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A501421C92BE67006EBEB4 /* 002.jpg */; };
 		18A5014A1C92BE67006EBEB4 /* 003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A501431C92BE67006EBEB4 /* 003.jpg */; };
@@ -39,6 +31,32 @@
 		18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 18A501461C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF */; };
 		18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 18A501471C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF */; };
 		18CB41DE1D123D150051B651 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB41DD1D123D150051B651 /* DemoTests.m */; };
+		650CF22521DC8DCD00E20261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650CF22421DC8DCC00E20261 /* Assets.xcassets */; };
+		65B048B522324C300050A7B1 /* ZCPDemoTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */; };
+		65B048D522324F740050A7B1 /* tabbar_job_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C122324F710050A7B1 /* tabbar_job_normal@3x.png */; };
+		65B048D622324F740050A7B1 /* tabbar_home_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C222324F710050A7B1 /* tabbar_home_gif.gif */; };
+		65B048D722324F740050A7B1 /* tabbar_top_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C322324F720050A7B1 /* tabbar_top_normal@3x.png */; };
+		65B048D822324F740050A7B1 /* tabbar_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C422324F720050A7B1 /* tabbar_home_selected@2x.png */; };
+		65B048D922324F740050A7B1 /* tabbar_home_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C522324F720050A7B1 /* tabbar_home_normal@2x.png */; };
+		65B048DA22324F740050A7B1 /* tabbar_job_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C622324F720050A7B1 /* tabbar_job_selected@2x.png */; };
+		65B048DB22324F740050A7B1 /* tabbar_my_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C722324F720050A7B1 /* tabbar_my_selected@2x.png */; };
+		65B048DC22324F740050A7B1 /* tabbar_my_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C822324F720050A7B1 /* tabbar_my_selected@3x.png */; };
+		65B048DD22324F740050A7B1 /* tabbar_my_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C922324F720050A7B1 /* tabbar_my_normal@3x.png */; };
+		65B048DE22324F740050A7B1 /* tabbar_top_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CA22324F720050A7B1 /* tabbar_top_selected@2x.png */; };
+		65B048DF22324F740050A7B1 /* tabbar_my_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CB22324F720050A7B1 /* tabbar_my_gif.gif */; };
+		65B048E022324F740050A7B1 /* tabbar_job_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CC22324F730050A7B1 /* tabbar_job_normal@2x.png */; };
+		65B048E122324F740050A7B1 /* tabbar_home_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CD22324F730050A7B1 /* tabbar_home_normal@3x.png */; };
+		65B048E222324F740050A7B1 /* tabbar_my_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CE22324F730050A7B1 /* tabbar_my_normal@2x.png */; };
+		65B048E322324F740050A7B1 /* tabbar_job_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048CF22324F730050A7B1 /* tabbar_job_selected@3x.png */; };
+		65B048E422324F740050A7B1 /* tabbar_top_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D022324F730050A7B1 /* tabbar_top_normal@2x.png */; };
+		65B048E522324F740050A7B1 /* tabbar_job_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D122324F730050A7B1 /* tabbar_job_gif.gif */; };
+		65B048E622324F740050A7B1 /* tabbar_top_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D222324F730050A7B1 /* tabbar_top_gif.gif */; };
+		65B048E722324F740050A7B1 /* tabbar_top_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D322324F740050A7B1 /* tabbar_top_selected@3x.png */; };
+		65B048E822324F740050A7B1 /* tabbar_home_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D422324F740050A7B1 /* tabbar_home_selected@3x.png */; };
+		65F3E235223664EC00057F1B /* tabbar_agent_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F3E228223664EB00057F1B /* tabbar_agent_selected@2x.png */; };
+		65F3E236223664EC00057F1B /* tabbar_agent_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F3E234223664EC00057F1B /* tabbar_agent_selected@3x.png */; };
+		65F3E2392236A4F100057F1B /* tabbar_agent_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F3E2372236A4F000057F1B /* tabbar_agent_normal@2x.png */; };
+		65F3E23A2236A4F100057F1B /* tabbar_agent_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F3E2382236A4F100057F1B /* tabbar_agent_normal@3x.png */; };
 		9E3E82841D2A83730061664A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82831D2A83730061664A /* AdSupport.framework */; };
 		9E3E82861D2A837B0061664A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82851D2A837B0061664A /* SystemConfiguration.framework */; };
 		9E3E82881D2A83830061664A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3E82871D2A83830061664A /* VideoToolbox.framework */; };
@@ -441,6 +459,13 @@
 			remoteGlobalIDString = 187250061C911810002D8C9E;
 			remoteInfo = Demo;
 		};
+		650CF22221DC8D0500E20261 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70B2E801D884FD87DCC8A3AC4429B71;
+			remoteInfo = Masonry;
+		};
 		9E3E86AD1D2A84A40061664A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
@@ -531,14 +556,6 @@
 		184439A41D002E5B00FDD7F7 /* tips_page_done@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tips_page_done@3x.png"; sourceTree = "<group>"; };
 		184D75201C97A9B70068D686 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		187250071C911810002D8C9E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1897E28B1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_home_normal_icon@2x.png"; sourceTree = "<group>"; };
-		1897E28C1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_home_normal_icon@3x.png"; sourceTree = "<group>"; };
-		1897E28D1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_home_selected_icon@2x.png"; sourceTree = "<group>"; };
-		1897E28E1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_home_selected_icon@3x.png"; sourceTree = "<group>"; };
-		1897E28F1D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_user_normal_icon@2x.png"; sourceTree = "<group>"; };
-		1897E2901D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_user_normal_icon@3x.png"; sourceTree = "<group>"; };
-		1897E2911D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_user_selected_icon@2x.png"; sourceTree = "<group>"; };
-		1897E2921D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_tabbar_user_selected_icon@3x.png"; sourceTree = "<group>"; };
 		18A501411C92BE67006EBEB4 /* 001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 001.jpg; sourceTree = "<group>"; };
 		18A501421C92BE67006EBEB4 /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002.jpg; sourceTree = "<group>"; };
 		18A501431C92BE67006EBEB4 /* 003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpg; sourceTree = "<group>"; };
@@ -549,6 +566,33 @@
 		18CB41DB1D123D150051B651 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CB41DD1D123D150051B651 /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		18CB41DF1D123D150051B651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650CF22421DC8DCC00E20261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65B048B322324C300050A7B1 /* ZCPDemoTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoTabBar.h; sourceTree = "<group>"; };
+		65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPDemoTabBar.m; sourceTree = "<group>"; };
+		65B048C122324F710050A7B1 /* tabbar_job_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_job_normal@3x.png"; sourceTree = "<group>"; };
+		65B048C222324F710050A7B1 /* tabbar_home_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_home_gif.gif; sourceTree = "<group>"; };
+		65B048C322324F720050A7B1 /* tabbar_top_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_top_normal@3x.png"; sourceTree = "<group>"; };
+		65B048C422324F720050A7B1 /* tabbar_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@2x.png"; sourceTree = "<group>"; };
+		65B048C522324F720050A7B1 /* tabbar_home_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_normal@2x.png"; sourceTree = "<group>"; };
+		65B048C622324F720050A7B1 /* tabbar_job_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_job_selected@2x.png"; sourceTree = "<group>"; };
+		65B048C722324F720050A7B1 /* tabbar_my_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_my_selected@2x.png"; sourceTree = "<group>"; };
+		65B048C822324F720050A7B1 /* tabbar_my_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_my_selected@3x.png"; sourceTree = "<group>"; };
+		65B048C922324F720050A7B1 /* tabbar_my_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_my_normal@3x.png"; sourceTree = "<group>"; };
+		65B048CA22324F720050A7B1 /* tabbar_top_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_top_selected@2x.png"; sourceTree = "<group>"; };
+		65B048CB22324F720050A7B1 /* tabbar_my_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_my_gif.gif; sourceTree = "<group>"; };
+		65B048CC22324F730050A7B1 /* tabbar_job_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_job_normal@2x.png"; sourceTree = "<group>"; };
+		65B048CD22324F730050A7B1 /* tabbar_home_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_normal@3x.png"; sourceTree = "<group>"; };
+		65B048CE22324F730050A7B1 /* tabbar_my_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_my_normal@2x.png"; sourceTree = "<group>"; };
+		65B048CF22324F730050A7B1 /* tabbar_job_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_job_selected@3x.png"; sourceTree = "<group>"; };
+		65B048D022324F730050A7B1 /* tabbar_top_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_top_normal@2x.png"; sourceTree = "<group>"; };
+		65B048D122324F730050A7B1 /* tabbar_job_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_job_gif.gif; sourceTree = "<group>"; };
+		65B048D222324F730050A7B1 /* tabbar_top_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_top_gif.gif; sourceTree = "<group>"; };
+		65B048D322324F740050A7B1 /* tabbar_top_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_top_selected@3x.png"; sourceTree = "<group>"; };
+		65B048D422324F740050A7B1 /* tabbar_home_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_selected@3x.png"; sourceTree = "<group>"; };
+		65F3E228223664EB00057F1B /* tabbar_agent_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_agent_selected@2x.png"; sourceTree = "<group>"; };
+		65F3E234223664EC00057F1B /* tabbar_agent_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_agent_selected@3x.png"; sourceTree = "<group>"; };
+		65F3E2372236A4F000057F1B /* tabbar_agent_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_agent_normal@2x.png"; sourceTree = "<group>"; };
+		65F3E2382236A4F100057F1B /* tabbar_agent_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_agent_normal@3x.png"; sourceTree = "<group>"; };
 		9E3E82831D2A83730061664A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E3E82851D2A837B0061664A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E3E82871D2A83830061664A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -1995,7 +2039,6 @@
 		FBCF6B731F8F528800E3B58C /* ZCPMinesweeperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPMinesweeperViewController.h; sourceTree = "<group>"; };
 		FBCF6B741F8F528800E3B58C /* ZCPMinesweeperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPMinesweeperViewController.m; sourceTree = "<group>"; };
 		FBCF6B751F8F528800E3B58C /* ZCPMinesweeperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCPMinesweeperViewController.xib; sourceTree = "<group>"; };
-		FBCF6B7A1F8F5B1500E3B58C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBD4ABB61EFA5BF70030EFD2 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FBD4ABB71EFA5BF70030EFD2 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FBD4ABB81EFA5BF70030EFD2 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
@@ -2139,14 +2182,30 @@
 		1897E28A1D0160C1002BEE0D /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				1897E28B1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png */,
-				1897E28C1D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png */,
-				1897E28D1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png */,
-				1897E28E1D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png */,
-				1897E28F1D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png */,
-				1897E2901D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png */,
-				1897E2911D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png */,
-				1897E2921D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png */,
+				65F3E2372236A4F000057F1B /* tabbar_agent_normal@2x.png */,
+				65F3E2382236A4F100057F1B /* tabbar_agent_normal@3x.png */,
+				65F3E228223664EB00057F1B /* tabbar_agent_selected@2x.png */,
+				65F3E234223664EC00057F1B /* tabbar_agent_selected@3x.png */,
+				65B048C222324F710050A7B1 /* tabbar_home_gif.gif */,
+				65B048C522324F720050A7B1 /* tabbar_home_normal@2x.png */,
+				65B048CD22324F730050A7B1 /* tabbar_home_normal@3x.png */,
+				65B048C422324F720050A7B1 /* tabbar_home_selected@2x.png */,
+				65B048D422324F740050A7B1 /* tabbar_home_selected@3x.png */,
+				65B048D122324F730050A7B1 /* tabbar_job_gif.gif */,
+				65B048CC22324F730050A7B1 /* tabbar_job_normal@2x.png */,
+				65B048C122324F710050A7B1 /* tabbar_job_normal@3x.png */,
+				65B048C622324F720050A7B1 /* tabbar_job_selected@2x.png */,
+				65B048CF22324F730050A7B1 /* tabbar_job_selected@3x.png */,
+				65B048CB22324F720050A7B1 /* tabbar_my_gif.gif */,
+				65B048CE22324F730050A7B1 /* tabbar_my_normal@2x.png */,
+				65B048C922324F720050A7B1 /* tabbar_my_normal@3x.png */,
+				65B048C722324F720050A7B1 /* tabbar_my_selected@2x.png */,
+				65B048C822324F720050A7B1 /* tabbar_my_selected@3x.png */,
+				65B048D222324F730050A7B1 /* tabbar_top_gif.gif */,
+				65B048D022324F730050A7B1 /* tabbar_top_normal@2x.png */,
+				65B048C322324F720050A7B1 /* tabbar_top_normal@3x.png */,
+				65B048CA22324F720050A7B1 /* tabbar_top_selected@2x.png */,
+				65B048D322324F740050A7B1 /* tabbar_top_selected@3x.png */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -3641,6 +3700,7 @@
 				FBF4BC6320FDD8B9005FD795 /* libFBRetainCycleDetector.a */,
 				FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */,
 				FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */,
+				650CF22321DC8D0500E20261 /* libMasonry.a */,
 				FBF4BC6520FDD8B9005FD795 /* libMLeaksFinder.a */,
 				FBB1A1ED1EE10CBC004F013F /* libPods-Demo.a */,
 				9E3E86B21D2A84A40061664A /* libSDWebImage.a */,
@@ -4387,6 +4447,8 @@
 				FB5078751E2618A900361E60 /* TBDemoVC2.m */,
 				FB35469A216E0056005FCF92 /* TabBarDemoController.h */,
 				FB35469B216E0056005FCF92 /* TabBarDemoController.m */,
+				65B048B322324C300050A7B1 /* ZCPDemoTabBar.h */,
+				65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */,
 			);
 			path = TabBarDemo;
 			sourceTree = "<group>";
@@ -5048,7 +5110,7 @@
 		FBCF6B201F8CBC0A00E3B58C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBCF6B7A1F8F5B1500E3B58C /* Assets.xcassets */,
+				650CF22421DC8DCC00E20261 /* Assets.xcassets */,
 				FBCF6B221F8CBC0A00E3B58C /* LaunchScreen.storyboard */,
 				FBCF6B261F8CBC0A00E3B58C /* demoViewMap.plist */,
 				FBCF6B271F8CBC0A00E3B58C /* Global.pch */,
@@ -5237,6 +5299,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		650CF22321DC8D0500E20261 /* libMasonry.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMasonry.a;
+			remoteRef = 650CF22221DC8D0500E20261 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9E3E86AE1D2A84A40061664A /* libAFNetworking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -5319,6 +5388,7 @@
 				FBBD4CDD2137DC15009ECC69 /* Azeroth_07_10.jpg in Resources */,
 				FBBD4CCE2137DC15009ECC69 /* Azeroth_05_01.jpg in Resources */,
 				FBA25CCF2121604D00E065CF /* colorbox.png in Resources */,
+				65B048DE22324F740050A7B1 /* tabbar_top_selected@2x.png in Resources */,
 				FBBD4C8F2137DC15009ECC69 /* Azeroth_00_07.jpg in Resources */,
 				FBBD4C902137DC15009ECC69 /* Azeroth_01_07.jpg in Resources */,
 				FBBD4CAD2137DC15009ECC69 /* Azeroth_05_12.jpg in Resources */,
@@ -5327,8 +5397,10 @@
 				FBCF6B301F8CBC0A00E3B58C /* InfoPlist.strings in Resources */,
 				FBBD4C9A2137DC15009ECC69 /* Azeroth_04_03.jpg in Resources */,
 				FBBD4CCB2137DC15009ECC69 /* Azeroth_08_11.jpg in Resources */,
+				65F3E236223664EC00057F1B /* tabbar_agent_selected@3x.png in Resources */,
 				FBBD4CA02137DC15009ECC69 /* Azeroth_08_00.jpg in Resources */,
 				FBBD4C922137DC15009ECC69 /* Azeroth_07_00.jpg in Resources */,
+				65B048D722324F740050A7B1 /* tabbar_top_normal@3x.png in Resources */,
 				FBA22A17213E864600C39E92 /* image1 1920x1200.jpg in Resources */,
 				FBA22A21213E864600C39E92 /* image1 480x300.jpg in Resources */,
 				FBBD4CEC2137DC15009ECC69 /* Azeroth_02_04.jpg in Resources */,
@@ -5355,6 +5427,7 @@
 				FBBD4D0A2137DC15009ECC69 /* Azeroth_00_01.jpg in Resources */,
 				FBBD4CA52137DC15009ECC69 /* Azeroth_09_00.jpg in Resources */,
 				FBBD4C872137DC15009ECC69 /* Azeroth_01_11.jpg in Resources */,
+				65B048E022324F740050A7B1 /* tabbar_job_normal@2x.png in Resources */,
 				18A5014C1C92BE67006EBEB4 /* 005.jpg in Resources */,
 				FBBD4D032137DC15009ECC69 /* Azeroth_08_06.jpg in Resources */,
 				FBCF6B321F8CBC0A00E3B58C /* Main.strings in Resources */,
@@ -5364,8 +5437,11 @@
 				FBBD4C9C2137DC15009ECC69 /* Azeroth_07_03.jpg in Resources */,
 				FBCF6B361F8CBC0A00E3B58C /* LaunchScreen.strings in Resources */,
 				FBA22A38213E865000C39E92 /* image2 1920x1200.png in Resources */,
+				65B048E622324F740050A7B1 /* tabbar_top_gif.gif in Resources */,
 				FBBD4CF82137DC15009ECC69 /* Azeroth_03_10.jpg in Resources */,
 				FBBD4CA92137DC15009ECC69 /* Azeroth_08_01.jpg in Resources */,
+				65B048D522324F740050A7B1 /* tabbar_job_normal@3x.png in Resources */,
+				65F3E23A2236A4F100057F1B /* tabbar_agent_normal@3x.png in Resources */,
 				FBA25CCB2121604D00E065CF /* starMask.png in Resources */,
 				FBA25CCD2121604D00E065CF /* panda.png in Resources */,
 				FBBD4CDE2137DC15009ECC69 /* Azeroth_09_01.jpg in Resources */,
@@ -5383,18 +5459,20 @@
 				FBBD4CD22137DC15009ECC69 /* Azeroth_00_09.jpg in Resources */,
 				FBBD4CBA2137DC15009ECC69 /* Azeroth_04_12.jpg in Resources */,
 				FBCF6B391F8CBC0A00E3B58C /* zcp.cer in Resources */,
+				65F3E2392236A4F100057F1B /* tabbar_agent_normal@2x.png in Resources */,
 				FBBD4D092137DC15009ECC69 /* Azeroth_02_08.jpg in Resources */,
 				FBCF6B771F8F528800E3B58C /* ZCPMinesweeperViewController.xib in Resources */,
 				FBBD4D022137DC15009ECC69 /* Azeroth_06_14.jpg in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
 				FBBD4CC02137DC15009ECC69 /* Azeroth_06_13.jpg in Resources */,
 				FBBD4C9F2137DC15009ECC69 /* Azeroth_06_00.jpg in Resources */,
+				65B048E322324F740050A7B1 /* tabbar_job_selected@3x.png in Resources */,
 				1844399F1D0012C700FDD7F7 /* tips_page_star.png in Resources */,
 				FBA22A1E213E864600C39E92 /* image1 240x150.png in Resources */,
 				1844399C1D0012C700FDD7F7 /* tips_page_next_step.png in Resources */,
+				65B048DC22324F740050A7B1 /* tabbar_my_selected@3x.png in Resources */,
 				FBA5F3FB1EF3CB2500F97958 /* flag@2x.png in Resources */,
 				FBBD4CA72137DC15009ECC69 /* Azeroth_01_01.jpg in Resources */,
-				1897E2961D0160C1002BEE0D /* pa_tabbar_home_selected_icon@3x.png in Resources */,
 				FBBD4CB92137DC15009ECC69 /* Azeroth_00_05.jpg in Resources */,
 				FBBD4CF02137DC15009ECC69 /* Azeroth_08_02.jpg in Resources */,
 				FBBD4CB72137DC15009ECC69 /* Azeroth_07_01.jpg in Resources */,
@@ -5415,9 +5493,11 @@
 				FBBD4CAB2137DC15009ECC69 /* Azeroth_06_05.jpg in Resources */,
 				FBBD4D082137DC15009ECC69 /* Azeroth_05_07.jpg in Resources */,
 				FBBD4CE32137DC15009ECC69 /* Azeroth_02_13.jpg in Resources */,
+				65B048DB22324F740050A7B1 /* tabbar_my_selected@2x.png in Resources */,
 				FBCF6B371F8CBC0A00E3B58C /* Localizable.strings in Resources */,
 				FBBD4C832137DC15009ECC69 /* Azeroth_02_11.jpg in Resources */,
 				FB5079071E2618A900361E60 /* turn_off.png in Resources */,
+				65B048E222324F740050A7B1 /* tabbar_my_normal@2x.png in Resources */,
 				FBBD4CD42137DC15009ECC69 /* Azeroth_03_06.jpg in Resources */,
 				FBBD4C9B2137DC15009ECC69 /* Azeroth_06_04.jpg in Resources */,
 				FBBD4CCD2137DC15009ECC69 /* Azeroth_03_01.jpg in Resources */,
@@ -5429,6 +5509,7 @@
 				FBBD4CC22137DC15009ECC69 /* Azeroth_08_07.jpg in Resources */,
 				FBBD4CFE2137DC15009ECC69 /* Azeroth_02_10.jpg in Resources */,
 				FB0621D31ED275DD000AA258 /* rocket.png in Resources */,
+				65B048D822324F740050A7B1 /* tabbar_home_selected@2x.png in Resources */,
 				FBBD4CA12137DC15009ECC69 /* Azeroth_06_06.jpg in Resources */,
 				FBBD4C852137DC15009ECC69 /* Azeroth_02_07.jpg in Resources */,
 				FBCF6B3D1F8CBC0A00E3B58C /* LaunchScreen.storyboard in Resources */,
@@ -5441,6 +5522,7 @@
 				FBA22A32213E865000C39E92 /* image2 240x150.jpg in Resources */,
 				184439A01D0012C700FDD7F7 /* tips_page_star@2x.png in Resources */,
 				FBBD4CE22137DC15009ECC69 /* Azeroth_00_10.jpg in Resources */,
+				65B048E122324F740050A7B1 /* tabbar_home_normal@3x.png in Resources */,
 				FBBD4CE52137DC15009ECC69 /* Azeroth_05_14.jpg in Resources */,
 				FBBD4D112137DC15009ECC69 /* Azeroth_05_00.jpg in Resources */,
 				FBA22A3A213E865000C39E92 /* image2 960x600.png in Resources */,
@@ -5456,11 +5538,11 @@
 				FBBD4CDB2137DC15009ECC69 /* Azeroth_02_09.jpg in Resources */,
 				FBBD4CB22137DC15009ECC69 /* Azeroth_09_12.jpg in Resources */,
 				FBDBF83D212BE4100087AD7E /* plane.png in Resources */,
+				650CF22521DC8DCD00E20261 /* Assets.xcassets in Resources */,
 				FBBD4CC52137DC15009ECC69 /* Azeroth_07_08.jpg in Resources */,
 				FBCF6B3A1F8CBC0A00E3B58C /* 朱超鹏.cer in Resources */,
 				FBBD4CDF2137DC15009ECC69 /* Azeroth_01_04.jpg in Resources */,
 				FBAE25062133EDCC0031CE27 /* missile.png in Resources */,
-				1897E2981D0160C1002BEE0D /* pa_tabbar_user_normal_icon@3x.png in Resources */,
 				FB5079041E2618A900361E60 /* scanBackground@3x.png in Resources */,
 				FBA25CFE2129A21200E065CF /* Azeroth.jpg in Resources */,
 				FBBD4CFB2137DC15009ECC69 /* Azeroth_08_08.jpg in Resources */,
@@ -5470,13 +5552,13 @@
 				FBA22A1D213E864600C39E92 /* image1 8x5.jpg in Resources */,
 				FB5079031E2618A900361E60 /* scanBackground@2x.png in Resources */,
 				FBCF6B381F8CBC0A00E3B58C /* Main.strings in Resources */,
-				1897E2991D0160C1002BEE0D /* pa_tabbar_user_selected_icon@2x.png in Resources */,
 				FBA22A3D213E865000C39E92 /* image2 8x5.jpg in Resources */,
 				FBF4BC8B210026FD005FD795 /* AlertViewDemoController.xib in Resources */,
 				FBA22A18213E864600C39E92 /* image1 40x25.jpg in Resources */,
 				FBBD4CAA2137DC15009ECC69 /* Azeroth_03_05.jpg in Resources */,
 				FBBD4CDA2137DC15009ECC69 /* Azeroth_09_10.jpg in Resources */,
 				FBBD4C8C2137DC15009ECC69 /* Azeroth_03_11.jpg in Resources */,
+				65B048E422324F740050A7B1 /* tabbar_top_normal@2x.png in Resources */,
 				FBBD4CC72137DC15009ECC69 /* Azeroth_00_00.jpg in Resources */,
 				FBA22A36213E865000C39E92 /* image2 8x5.png in Resources */,
 				FBBD4CC42137DC15009ECC69 /* Azeroth_09_07.jpg in Resources */,
@@ -5485,10 +5567,10 @@
 				FBBD4D0E2137DC15009ECC69 /* Azeroth_03_07.jpg in Resources */,
 				18A5014B1C92BE67006EBEB4 /* 004.jpg in Resources */,
 				184439A61D002E5B00FDD7F7 /* tips_page_done@2x.png in Resources */,
-				1897E2951D0160C1002BEE0D /* pa_tabbar_home_selected_icon@2x.png in Resources */,
 				FBA22A3B213E865000C39E92 /* image2 480x300.jpg in Resources */,
 				FBBD4CFD2137DC15009ECC69 /* Azeroth_03_04.jpg in Resources */,
 				FB83397B1EDFB93800EF419F /* bubble_mine_green@2x.png in Resources */,
+				65B048E722324F740050A7B1 /* tabbar_top_selected@3x.png in Resources */,
 				FBBD4CD02137DC15009ECC69 /* Azeroth_09_13.jpg in Resources */,
 				FBBD4D102137DC15009ECC69 /* Azeroth_01_06.jpg in Resources */,
 				FBA25CCC2121604D00E065CF /* swords.png in Resources */,
@@ -5505,12 +5587,12 @@
 				FBBD4C942137DC15009ECC69 /* Azeroth_09_04.jpg in Resources */,
 				FBBD4CB62137DC15009ECC69 /* Azeroth_03_02.jpg in Resources */,
 				FBBD4CCA2137DC15009ECC69 /* Azeroth_02_14.jpg in Resources */,
+				65B048DD22324F740050A7B1 /* tabbar_my_normal@3x.png in Resources */,
 				FBBD4CAC2137DC15009ECC69 /* Azeroth_08_12.jpg in Resources */,
 				FBBD4CB02137DC15009ECC69 /* Azeroth_05_08.jpg in Resources */,
 				FB9F03D81EFD0DE300B7591C /* MapViewController.xib in Resources */,
 				184439971D0012C700FDD7F7 /* tips_page_arrow@2x.png in Resources */,
 				FBBD4CB32137DC15009ECC69 /* Azeroth_00_12.jpg in Resources */,
-				1897E2931D0160C1002BEE0D /* pa_tabbar_home_normal_icon@2x.png in Resources */,
 				FBA22A31213E865000C39E92 /* image2 40x25.png in Resources */,
 				FBBD4D0F2137DC15009ECC69 /* Azeroth_03_13.jpg in Resources */,
 				FBBD4CBC2137DC15009ECC69 /* Azeroth_03_12.jpg in Resources */,
@@ -5518,7 +5600,7 @@
 				FB83397C1EDFB93800EF419F /* bubble_mine_green@3x.png in Resources */,
 				FBBD4D0D2137DC15009ECC69 /* Azeroth_09_02.jpg in Resources */,
 				FBBD4CA82137DC15009ECC69 /* Azeroth_03_09.jpg in Resources */,
-				1897E29A1D0160C1002BEE0D /* pa_tabbar_user_selected_icon@3x.png in Resources */,
+				65B048D922324F740050A7B1 /* tabbar_home_normal@2x.png in Resources */,
 				FBBD4CE92137DC15009ECC69 /* Azeroth_02_05.jpg in Resources */,
 				FBF7B7EF2105BD1100ACBABB /* taiji.png in Resources */,
 				184439A71D002E5B00FDD7F7 /* tips_page_done@3x.png in Resources */,
@@ -5536,6 +5618,7 @@
 				FBBD4CE62137DC15009ECC69 /* Azeroth_08_04.jpg in Resources */,
 				FBBD4CB52137DC15009ECC69 /* Azeroth_00_14.jpg in Resources */,
 				FBB91DB61F2873EF00D41838 /* DebugStatusBallView.xib in Resources */,
+				65B048D622324F740050A7B1 /* tabbar_home_gif.gif in Resources */,
 				FBBD4CE72137DC15009ECC69 /* Azeroth_08_05.jpg in Resources */,
 				FBA25CD62121711100E065CF /* number.png in Resources */,
 				FBBD4CD12137DC15009ECC69 /* Azeroth_03_08.jpg in Resources */,
@@ -5548,7 +5631,6 @@
 				FB5079081E2618A900361E60 /* turn_on.png in Resources */,
 				FBF763CE1EA07124001E867B /* bubble_community@2x.png in Resources */,
 				FBBD4CA62137DC15009ECC69 /* Azeroth_05_04.jpg in Resources */,
-				1897E2941D0160C1002BEE0D /* pa_tabbar_home_normal_icon@3x.png in Resources */,
 				FBEB3B5A1EEE9327003A6DCE /* 笑傲江湖.txt in Resources */,
 				FBBD4CA42137DC15009ECC69 /* Azeroth_07_07.jpg in Resources */,
 				FBBD4CC62137DC15009ECC69 /* Azeroth_06_03.jpg in Resources */,
@@ -5556,25 +5638,29 @@
 				FBAE25022133E3EE0031CE27 /* gear.png in Resources */,
 				FBBD4CBF2137DC15009ECC69 /* Azeroth_00_03.jpg in Resources */,
 				FB5079051E2618A900361E60 /* scanLine@2x.png in Resources */,
+				65B048DA22324F740050A7B1 /* tabbar_job_selected@2x.png in Resources */,
+				65F3E235223664EC00057F1B /* tabbar_agent_selected@2x.png in Resources */,
 				18A501481C92BE67006EBEB4 /* 001.jpg in Resources */,
 				FBA22A1B213E864600C39E92 /* image1 480x300.png in Resources */,
 				FBBD4CEB2137DC15009ECC69 /* Azeroth_02_00.jpg in Resources */,
 				FBBD4CD92137DC15009ECC69 /* Azeroth_05_03.jpg in Resources */,
+				65B048E822324F740050A7B1 /* tabbar_home_selected@3x.png in Resources */,
 				FBBD4C982137DC15009ECC69 /* Azeroth_06_08.jpg in Resources */,
 				FBD4ABBA1EFA5BF70030EFD2 /* LocationViewController.xib in Resources */,
 				FBBD4C882137DC15009ECC69 /* Azeroth_06_07.jpg in Resources */,
 				FBBD4D132137DC15009ECC69 /* Azeroth_08_09.jpg in Resources */,
 				184439A11D0012C700FDD7F7 /* tips_page_star@3x.png in Resources */,
+				65B048DF22324F740050A7B1 /* tabbar_my_gif.gif in Resources */,
 				FBBD4CDC2137DC15009ECC69 /* Azeroth_04_06.jpg in Resources */,
 				FBBD4D012137DC15009ECC69 /* Azeroth_05_02.jpg in Resources */,
 				FBBD4C932137DC15009ECC69 /* Azeroth_07_11.jpg in Resources */,
 				FBBD4CF12137DC15009ECC69 /* Azeroth_01_14.jpg in Resources */,
 				FBBD4CB82137DC15009ECC69 /* Azeroth_09_06.jpg in Resources */,
 				FBA25CCE2121604D00E065CF /* earth.png in Resources */,
-				1897E2971D0160C1002BEE0D /* pa_tabbar_user_normal_icon@2x.png in Resources */,
 				FBA22A16213E864600C39E92 /* image1 8x5.png in Resources */,
 				1844399E1D0012C700FDD7F7 /* tips_page_next_step@3x.png in Resources */,
 				FBBD4CD52137DC15009ECC69 /* Azeroth_00_02.jpg in Resources */,
+				65B048E522324F740050A7B1 /* tabbar_job_gif.gif in Resources */,
 				FBBD4D062137DC15009ECC69 /* Azeroth_01_02.jpg in Resources */,
 				FBDBF83F212C07840087AD7E /* fire.png in Resources */,
 				FBBD4CFC2137DC15009ECC69 /* Azeroth_02_03.jpg in Resources */,
@@ -5653,6 +5739,7 @@
 				FBCF6AF71F8CAD3E00E3B58C /* ZCPDemoHomeViewController.m in Sources */,
 				FB5078C61E2618A900361E60 /* NetWorkDemoHomeController.m in Sources */,
 				FBB91DB11F28738D00D41838 /* DebugStatusBallView.m in Sources */,
+				65B048B522324C300050A7B1 /* ZCPDemoTabBar.m in Sources */,
 				FBCC6A0A20E0C200002367F5 /* UIViewExplodeHelper.m in Sources */,
 				FB9092A51F6F5753007EC93B /* DecoratorGPS.m in Sources */,
 				FBAE24FA2133D68B0031CE27 /* CASection11Demo.m in Sources */,
@@ -6042,18 +6129,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Demo/OtherDemo/Log/XLog",
 					"$(PROJECT_DIR)/Demo/Demo/Log/XLog",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Demo/ShareDemo/SinaShareDemo/libWeiboSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -6108,18 +6191,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Demo/OtherDemo/Log/XLog",
 					"$(PROJECT_DIR)/Demo/Demo/Log/XLog",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Demo/ShareDemo/SinaShareDemo/libWeiboSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

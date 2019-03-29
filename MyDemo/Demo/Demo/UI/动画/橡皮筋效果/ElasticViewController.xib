@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZp-XN-vCM">
-                    <rect key="frame" x="177" y="70" width="20" height="20"/>
+                    <rect key="frame" x="177.5" y="50" width="20" height="20"/>
                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="OrL-3m-Qak"/>
@@ -44,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14I-aE-Ye7">
-                    <rect key="frame" x="172" y="210" width="30" height="30"/>
+                    <rect key="frame" x="172.5" y="210" width="30" height="30"/>
                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Aum-I5-s2F"/>
@@ -56,7 +55,7 @@
                     </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testExplodPic.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-vM-DMp">
-                    <rect key="frame" x="162" y="290" width="50" height="50"/>
+                    <rect key="frame" x="162.5" y="290" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="0Eq-j5-arR"/>
                         <constraint firstAttribute="height" constant="50" id="eCH-ut-YLl"/>
@@ -65,16 +64,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yRa-vM-DMp" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="1Gv-En-RlH"/>
-                <constraint firstItem="NZp-XN-vCM" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="NHH-6E-5BK"/>
+                <constraint firstItem="yRa-vM-DMp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Gv-En-RlH"/>
+                <constraint firstItem="NZp-XN-vCM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="NHH-6E-5BK"/>
                 <constraint firstItem="yRa-vM-DMp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="T0E-zv-Zzy"/>
-                <constraint firstItem="14I-aE-Ye7" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="bzC-V3-tjb"/>
+                <constraint firstItem="14I-aE-Ye7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bzC-V3-tjb"/>
                 <constraint firstItem="7RT-KS-Ibk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="cVe-fN-B4b"/>
-                <constraint firstItem="NZp-XN-vCM" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="kjJ-0s-xdi"/>
-                <constraint firstItem="7RT-KS-Ibk" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="q5k-eK-FdM"/>
+                <constraint firstItem="NZp-XN-vCM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kjJ-0s-xdi"/>
+                <constraint firstItem="7RT-KS-Ibk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="q5k-eK-FdM"/>
                 <constraint firstItem="14I-aE-Ye7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="210" id="qlb-gP-I1K"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="19" y="60"/>
         </view>
     </objects>

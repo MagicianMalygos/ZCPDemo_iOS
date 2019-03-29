@@ -58,6 +58,11 @@
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];
     
+    
+#if DEBUG
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+#endif
+    
     return YES;
 }
 

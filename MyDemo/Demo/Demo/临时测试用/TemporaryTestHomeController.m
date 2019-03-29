@@ -13,25 +13,19 @@
 #import <Masonry.h>
 #import <ZCPCommentView.h>
 
-#define SCALE 1
-#define S(s) ((s)*SCALE)
-#define W(w) ((w)*SCALE)
-#define H(h) ((h)*SCALE)
+#import <ifaddrs.h>
+#import <arpa/inet.h>
+#import <net/if.h>
+
+#define IOS_CELLULAR    @"pdp_ip0"
+#define IOS_WIFI        @"en0"
+#define IOS_VPN         @"utun0"
+#define IP_ADDR_IPv4    @"ipv4"
+#define IP_ADDR_IPv6    @"ipv6"
 
 
 
-@interface ZCPObject : NSObject
-
-@end
-
-@implementation ZCPObject
-
-@end
-
-
-
-
-@interface TemporaryTestHomeController ()
+@interface TemporaryTestHomeController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *headerDict;
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
@@ -39,11 +33,6 @@
 @property (nonatomic, copy) NSString *path;
 
 @property (nonatomic, assign) NSInteger count;
-
-@property (nonatomic, weak) UIView *weak_view;
-
-
-@property (nonatomic, strong) UIView *v1;
 
 @end
 
@@ -54,7 +43,6 @@
     
     // Test
     [self testXXX]; // 范例
-//    [self testSD];  // 测试给url添加HeaderField
 //    [self testAutoreleasepool];
 //    [self testGetImageFromView];
 //    [self testIQKeyboardManagerReturn];
@@ -63,100 +51,24 @@
     [self testBlock];
 }
 
-#pragma mark - test
-
-// 测试XXX
-- (void)testXXX {
-    // thread backtrace
-    
-    UIView *commentView = [[UIView alloc] init];
-    commentView.backgroundColor = [UIColor redColor];
-    commentView.frame = CGRectMake(0, 0, self.view.width, 50);
-    
-    UITextField *tf = [[UITextField alloc] init];
-    tf.frame = CGRectMake(0, 50, 100, 50);
-    tf.backgroundColor = [UIColor redColor];
-    tf.inputAccessoryView = commentView;
-    [self.view addSubview:tf];
-    
-//    ZCPCommentView *commentView = [[ZCPCommentView alloc] initWithTarget:self];
-    
-}
-
-- (void)resume {
-    CFTimeInterval pausedTime = [self.v1.layer timeOffset];
-    self.v1.layer.speed = 1.0;
-    self.v1.layer.timeOffset = 0.0;
-    self.v1.layer.beginTime = 0.0;
-    CFTimeInterval timeSincePause = [self.v1.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
-    NSLog(@"timeSincePause %f", timeSincePause);
-    self.v1.layer.beginTime = timeSincePause;
-}
-
-- (void)pause {
-    CFTimeInterval pausedTime = [self.v1.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    self.v1.layer.speed = 0.0;
-    NSLog(@"pausedtime %f", pausedTime);
-    self.v1.layer.timeOffset = pausedTime;
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"%@", self.weak_view);
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"%@", self.weak_view);
+    if (self.isMovingToParentViewController) {
+        NSLog(@"首次进入");
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-}
-
-#pragma mark - sd test
-
-// 测试给url添加HeaderField
-- (void)testSD {
-    
-    [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
-    [[SDImageCache sharedImageCache] clearMemory];
-    self.headerDict = [NSMutableDictionary dictionary];
-    
-    NSArray *urlArr = @[@"http://avatar.csdn.net/2/A/5/1_yiya1989.jpg",
-                        @"http://bpic.588ku.com/element_banner/20/16/12/50a1a3be752815245c8891004465717c.jpg",
-                        @"http://bpic.588ku.com/element_banner/20/17/02/c01d4b880f4b4d408805c61c726f16fc.png"];
-    
-    for (int i = 0; i < urlArr.count; i++) {
-        [self loadphoto:(NSString *)[urlArr objectAtIndex:i] index:i];
+    if (self.isMovingFromParentViewController) {
+        NSLog(@"退出");
     }
-    
-    WEAK_SELF;
-    [SDWebImageManager sharedManager].imageDownloader.headersFilter =  ^(NSURL *url, NSDictionary *headers) {
-        NSMutableDictionary *h = [NSMutableDictionary dictionary];
-        [h setDictionary:headers];
-        [h setDictionary:[weakSelf.headerDict valueForKey:url.absoluteString]];
-        return h;
-    };
 }
 
-- (void)loadphoto:(NSString *)url index:(NSInteger)i {
-    
-    // post获取header
-    NSDictionary *header = @{@"url": url};
-    [self.headerDict setValue:header forKey:[NSURL URLWithString:url].absoluteString];
-    
-    // get请求
-    UIImageView *imageView = [[UIImageView alloc] init];
-    
-    [imageView sd_setImageWithURL:[NSURL URLWithString:url]
-                 placeholderImage:[UIImage imageNamed:@""]
-                          options:SDWebImageAllowInvalidSSLCertificates
-                         progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-                         } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                         }];
-    imageView.frame = CGRectMake(i * 50, 0, 50, 50);
-    [self.view addSubview:imageView];
+#pragma mark - test
+
+// 测试XXX
+- (void)testXXX {
 }
 
 #pragma mark - testAutoreleasepool
@@ -173,6 +85,7 @@
      objc_autoreleasePoolPop这句代码会让里面所有的对象都执行一次release
      */
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"rocket.png"];
+    [path description];
     
     // 内存暴增
     // 这种情况下image的释放归main函数中的@autoreleasepool {}管，下面的while循环会使得main runloop一直无法走下一次事件循环，因此也无法执行到objc_autoreleasePoolPop(atautoreleasepoolobj)这句代码，让其中的image对象执行release
@@ -389,8 +302,126 @@
 #pragma mark - testBlock
 
 - (void)testBlock {
+    NSString *ip3 = [self.class getLocalIPAddress:YES];
+}
+
+#pragma mark - 获取设备当前网络IP地址
++ (NSString *)getNetworkIPAddress {
+    //方式一：淘宝api
+    NSURL *ipURL = [NSURL URLWithString:@"http://ip.taobao.com/service/getIpInfo.php?ip=myip"];
+    NSData *data = [NSData dataWithContentsOfURL:ipURL];
+    NSDictionary *ipDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    NSString *ipStr = nil;
+    if (ipDic && [ipDic[@"code"] integerValue] == 0) {
+        //获取成功
+        ipStr = ipDic[@"data"][@"ip"];
+    }
+    return (ipStr ? ipStr : @"0.0.0.0");
+}
+
++ (NSString *)getNetworkIPAddress2 {
+    //方式二：新浪api
+    NSError *error;
+    NSURL *ipURL = [NSURL URLWithString:@"http://pv.sohu.com/cityjson?ie=utf-8"];
+
+    NSMutableString *ip = [NSMutableString stringWithContentsOfURL:ipURL encoding:NSUTF8StringEncoding error:&error];
+    //判断返回字符串是否为所需数据
+    if ([ip hasPrefix:@"var returnCitySN = "]) {
+        //对字符串进行处理，然后进行json解析
+        //删除字符串多余字符串
+        NSRange range = NSMakeRange(0, 19);
+        [ip deleteCharactersInRange:range];
+        NSString * nowIp =[ip substringToIndex:ip.length-1];
+        //将字符串转换成二进制进行Json解析
+        NSData * data = [nowIp dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dict);
+        return dict[@"cip"] ? dict[@"cip"] : @"0.0.0.0";
+    }
+    return @"0.0.0.0";
+}
+
+#pragma mark - 获取设备当前本地IP地址
++ (NSString *)getLocalIPAddress:(BOOL)preferIPv4 {
+    NSArray *searchArray = preferIPv4 ?
+    @[ IOS_VPN @"/" IP_ADDR_IPv4, IOS_VPN @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6 ] :
+    @[ IOS_VPN @"/" IP_ADDR_IPv6, IOS_VPN @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4 ] ;
     
+    NSDictionary *addresses = [self getIPAddresses];
+    NSLog(@"addresses: %@", addresses);
     
+    __block NSString *address;
+    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
+        address = addresses[key];
+        //筛选出IP地址格式
+        if([self isValidatIP:address]) *stop = YES;
+    } ];
+    return address ? address : @"0.0.0.0";
+}
+
++ (BOOL)isValidatIP:(NSString *)ipAddress {
+    if (ipAddress.length == 0) {
+        return NO;
+    }
+    NSString *urlRegEx = @"^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
+    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
+    
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:urlRegEx options:0 error:&error];
+    
+    if (regex != nil) {
+        NSTextCheckingResult *firstMatch=[regex firstMatchInString:ipAddress options:0 range:NSMakeRange(0, [ipAddress length])];
+        
+        if (firstMatch) {
+            NSRange resultRange = [firstMatch rangeAtIndex:0];
+            NSString *result=[ipAddress substringWithRange:resultRange];
+            //输出结果
+            NSLog(@"%@",result);
+            return YES;
+        }
+    }
+    return NO;
+}
+
++ (NSDictionary *)getIPAddresses {
+    NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
+    
+    // retrieve the current interfaces - returns 0 on success
+    struct ifaddrs *interfaces;
+    if(!getifaddrs(&interfaces)) {
+        // Loop through linked list of interfaces
+        struct ifaddrs *interface;
+        for(interface=interfaces; interface; interface=interface->ifa_next) {
+            if(!(interface->ifa_flags & IFF_UP) /* || (interface->ifa_flags & IFF_LOOPBACK) */ ) {
+                continue; // deeply nested code harder to read
+            }
+            const struct sockaddr_in *addr = (const struct sockaddr_in*)interface->ifa_addr;
+            char addrBuf[ MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN) ];
+            if(addr && (addr->sin_family==AF_INET || addr->sin_family==AF_INET6)) {
+                NSString *name = [NSString stringWithUTF8String:interface->ifa_name];
+                NSString *type;
+                if(addr->sin_family == AF_INET) {
+                    if(inet_ntop(AF_INET, &addr->sin_addr, addrBuf, INET_ADDRSTRLEN)) {
+                        type = IP_ADDR_IPv4;
+                    }
+                } else {
+                    const struct sockaddr_in6 *addr6 = (const struct sockaddr_in6*)interface->ifa_addr;
+                    if(inet_ntop(AF_INET6, &addr6->sin6_addr, addrBuf, INET6_ADDRSTRLEN)) {
+                        type = IP_ADDR_IPv6;
+                    }
+                }
+                if(type) {
+                    NSString *key = [NSString stringWithFormat:@"%@/%@", name, type];
+                    addresses[key] = [NSString stringWithUTF8String:addrBuf];
+                }
+            }
+        }
+        // Free memory
+        freeifaddrs(interfaces);
+    }
+    return [addresses count] ? addresses : nil;
 }
 
 @end

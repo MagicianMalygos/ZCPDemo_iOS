@@ -249,14 +249,17 @@
         CAGradientLayer *layer = [CAGradientLayer layer];
         layer.frame = CGRectMake(10, 120, 300, 300);
         layer.colors = @[(__bridge id)[UIColor redColor].CGColor,
-                         (__bridge id)[UIColor orangeColor].CGColor,
-                         (__bridge id)[UIColor yellowColor].CGColor,
                          (__bridge id)[UIColor greenColor].CGColor,
-                         (__bridge id)[UIColor cyanColor].CGColor,
-                         (__bridge id)[UIColor blueColor].CGColor,
-                         (__bridge id)[UIColor purpleColor].CGColor];
-        // 渐变的位置
-        layer.locations = @[@0.1, @0.2, @0.3, @0.5, @0.7, @0.8, @0.9];
+                         (__bridge id)[UIColor blueColor].CGColor];
+//        layer.colors = @[(__bridge id)[UIColor redColor].CGColor,
+//                         (__bridge id)[UIColor orangeColor].CGColor,
+//                         (__bridge id)[UIColor yellowColor].CGColor,
+//                         (__bridge id)[UIColor greenColor].CGColor,
+//                         (__bridge id)[UIColor cyanColor].CGColor,
+//                         (__bridge id)[UIColor blueColor].CGColor,
+//                         (__bridge id)[UIColor purpleColor].CGColor];
+        // 对应颜色渐变开始的位置
+        layer.locations = @[@0.0, @0.5, @1.0];
         layer.startPoint = CGPointMake(0, 0);
         layer.endPoint = CGPointMake(1, 1);
         [self.layer addSublayer:layer];
