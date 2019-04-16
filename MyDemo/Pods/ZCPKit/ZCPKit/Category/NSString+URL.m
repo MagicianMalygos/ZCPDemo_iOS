@@ -38,4 +38,17 @@
     return paramDic;
 }
 
+/// 检测字符串中的url
+- (NSArray <NSString *>*)detectLink {
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];
+    NSArray *checkingResults = [detector matchesInString:self options:NSMatchingReportProgress range:NSMakeRange(0, self.length)];
+    NSMutableArray *links = [NSMutableArray array];
+    for (NSTextCheckingResult *result in checkingResults) {
+        NSURL *URL = result.URL;
+        NSString *url = URL.absoluteString;
+        [links addObject:url];
+    }
+    return links;
+}
+
 @end

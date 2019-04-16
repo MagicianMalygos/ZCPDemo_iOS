@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoCarouselDemoHomeController : ZCPViewController
+@interface PhotoCarouselDemoHomeController : ZCPBaseViewController
 
 @end

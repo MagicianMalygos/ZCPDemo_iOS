@@ -29,51 +29,51 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - ZCPKit (0.0.1):
-    - ZCPKit/Cache (= 0.0.1)
-    - ZCPKit/Category (= 0.0.1)
-    - ZCPKit/Common (= 0.0.1)
-    - ZCPKit/Global (= 0.0.1)
-    - ZCPKit/Network (= 0.0.1)
-    - ZCPKit/Router (= 0.0.1)
-    - ZCPKit/Util (= 0.0.1)
-    - ZCPKit/ZCPUIKit (= 0.0.1)
-  - ZCPKit/Cache (0.0.1):
-    - ZCPKit/Cache/CoreData (= 0.0.1)
-    - ZCPKit/Global
-  - ZCPKit/Cache/CoreData (0.0.1):
-    - MagicalRecord
-    - ZCPKit/Global
-  - ZCPKit/Category (0.0.1):
-    - ZCPKit/Global
-  - ZCPKit/Common (0.0.1):
+  - ZCPKit (0.0.2):
+    - ZCPKit/BaseClass (= 0.0.2)
+    - ZCPKit/Cache (= 0.0.2)
+    - ZCPKit/Category (= 0.0.2)
+    - ZCPKit/Global (= 0.0.2)
+    - ZCPKit/Network (= 0.0.2)
+    - ZCPKit/Router (= 0.0.2)
+    - ZCPKit/Util (= 0.0.2)
+    - ZCPKit/ZCPWebView (= 0.0.2)
+  - ZCPKit/BaseClass (0.0.2):
+    - Aspects (~> 1.4.1)
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Util
-  - ZCPKit/Global (0.0.1)
-  - ZCPKit/Network (0.0.1):
+  - ZCPKit/Cache (0.0.2):
+    - ZCPKit/Cache/CoreData (= 0.0.2)
     - ZCPKit/Global
-  - ZCPKit/Router (0.0.1):
-    - Aspects
-    - ZCPKit/Common
+  - ZCPKit/Cache/CoreData (0.0.2):
+    - MagicalRecord
     - ZCPKit/Global
-  - ZCPKit/Util (0.0.1):
+  - ZCPKit/Category (0.0.2):
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit (0.0.1):
-    - ZCPKit/Category
+  - ZCPKit/Global (0.0.2)
+  - ZCPKit/Network (0.0.2):
     - ZCPKit/Global
-    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.1)
-    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.1)
-  - ZCPKit/ZCPUIKit/ZCPListView (0.0.1):
-    - ZCPKit/Category
-    - ZCPKit/Common
+  - ZCPKit/Router (0.0.2):
+    - Aspects (~> 1.4.1)
+    - ZCPKit/BaseClass
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.1):
+  - ZCPKit/Util (0.0.2):
+    - ZCPKit/Global
+  - ZCPKit/ZCPWebView (0.0.2):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Network
     - ZCPKit/Router
     - ZCPKit/Util
+  - ZCPUIKit (0.0.1):
+    - ZCPUIKit/Extend (= 0.0.1)
+    - ZCPUIKit/ListView (= 0.0.1)
+  - ZCPUIKit/Extend (0.0.1):
+    - ZCPUIKit/ListView
+  - ZCPUIKit/ListView (0.0.1):
+    - ZCPKit/Category
+    - ZCPKit/Global
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
@@ -83,7 +83,8 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYKit (~> 1.0.9)
-  - ZCPKit (~> 0.0.1)
+  - ZCPKit (from `https://gitlab.com/Malygos/ZCPKit.git`)
+  - ZCPUIKit (from `https://gitlab.com/Malygos/ZCPUIKit.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -96,8 +97,20 @@ SPEC REPOS:
     - MLeaksFinder
     - SDWebImage
     - YYKit
-  https://gitlab.com/Malygos/zcprepo.git:
-    - ZCPKit
+
+EXTERNAL SOURCES:
+  ZCPKit:
+    :git: https://gitlab.com/Malygos/ZCPKit.git
+  ZCPUIKit:
+    :git: https://gitlab.com/Malygos/ZCPUIKit.git
+
+CHECKOUT OPTIONS:
+  ZCPKit:
+    :commit: ff3869bfb323ed7cfe87a4874d599917e3c0ffcb
+    :git: https://gitlab.com/Malygos/ZCPKit.git
+  ZCPUIKit:
+    :commit: 5744ed2a0e59dcc03cde6ae0a8c3ed4172f8307b
+    :git: https://gitlab.com/Malygos/ZCPUIKit.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -109,8 +122,9 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPKit: 7851901c5c9818392b9f324f49532aa374990d45
+  ZCPKit: 3f4465565393348dc0ce63cedeab6d839f97f443
+  ZCPUIKit: 7456a68b0bbb9cfd2cc9f1e5887f8ede1c6b81cd
 
-PODFILE CHECKSUM: 999a90e769be5f4af693420ee674b1fcc97ac0a3
+PODFILE CHECKSUM: 3f506304f2d5576bc4a7e87dba2ab802eb554f00
 
 COCOAPODS: 1.5.3

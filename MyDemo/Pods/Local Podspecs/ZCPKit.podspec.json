@@ -1,6 +1,6 @@
 {
   "name": "ZCPKit",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "summary": "It`s a framework.",
   "description": "It`s a framework for myself.",
   "homepage": "https://gitlab.com/Malygos/ZCPKit",
@@ -13,74 +13,52 @@
   },
   "source": {
     "git": "https://gitlab.com/Malygos/ZCPKit.git",
-    "tag": "0.0.3"
+    "tag": "0.0.2"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   },
   "source_files": "ZCPKit/ZCPKit.h",
-  "public_header_files": "ZCPKit/ZCPKit.h",
   "frameworks": [
     "Foundation",
     "UIKit"
   ],
   "subspecs": [
     {
-      "name": "ZCPUIKit",
+      "name": "ZCPWebView",
       "dependencies": {
         "ZCPKit/Category": [
 
         ],
         "ZCPKit/Global": [
 
+        ],
+        "ZCPKit/Router": [
+
+        ],
+        "ZCPKit/Network": [
+
+        ],
+        "ZCPKit/Util": [
+
         ]
       },
-      "public_header_files": "ZCPKit/ZCPUIKit/ZCPUIKit.h",
-      "source_files": "ZCPKit/ZCPUIKit/ZCPUIKit.h",
-      "subspecs": [
-        {
-          "name": "ZCPListView",
-          "dependencies": {
-            "ZCPKit/Common": [
-
-            ]
-          },
-          "public_header_files": "ZCPKit/ZCPUIKit/ZCPListView/**/*.h",
-          "source_files": "ZCPKit/ZCPUIKit/ZCPListView/**/*.{h,m}"
-        },
-        {
-          "name": "ZCPWebView",
-          "dependencies": {
-            "ZCPKit/Router": [
-
-            ],
-            "ZCPKit/Network": [
-
-            ],
-            "ZCPKit/Util": [
-
-            ]
-          },
-          "public_header_files": "ZCPKit/ZCPUIKit/ZCPWebView/**/*.h",
-          "source_files": "ZCPKit/ZCPUIKit/ZCPWebView/**/*.{h,m}"
-        }
-      ]
+      "source_files": "ZCPKit/ZCPWebView/**/*.{h,m}"
     },
     {
       "name": "Router",
       "dependencies": {
         "Aspects": [
-
+          "~>1.4.1"
         ],
         "ZCPKit/Global": [
 
         ],
-        "ZCPKit/Common": [
+        "ZCPKit/BaseClass": [
 
         ]
       },
       "resources": "ZCPKit/Router/viewMap.plist",
-      "public_header_files": "ZCPKit/Router/**/*.h",
       "source_files": "ZCPKit/Router/**/*.{h,m}"
     },
     {
@@ -90,12 +68,14 @@
 
         ]
       },
-      "public_header_files": "ZCPKit/Network/**/*.h",
       "source_files": "ZCPKit/Network/**/*.{h,m}"
     },
     {
-      "name": "Common",
+      "name": "BaseClass",
       "dependencies": {
+        "Aspects": [
+          "~>1.4.1"
+        ],
         "ZCPKit/Category": [
 
         ],
@@ -106,8 +86,7 @@
 
         ]
       },
-      "source_files": "ZCPKit/Common/**/*.{h,m}",
-      "public_header_files": "ZCPKit/Common/**/*.h"
+      "source_files": "ZCPKit/BaseClass/**/*.{h,m}"
     },
     {
       "name": "Category",
@@ -116,13 +95,11 @@
 
         ]
       },
-      "source_files": "ZCPKit/Category/**/*.{h,m}",
-      "public_header_files": "ZCPKit/Category/**/*.h"
+      "source_files": "ZCPKit/Category/**/*.{h,m}"
     },
     {
       "name": "Global",
-      "source_files": "ZCPKit/Global/**/*.h",
-      "public_header_files": "ZCPKit/Global/**/*.h"
+      "source_files": "ZCPKit/Global/**/*.{h,m}"
     },
     {
       "name": "Util",
@@ -131,8 +108,7 @@
 
         ]
       },
-      "source_files": "ZCPKit/Util/**/*.{h,m}",
-      "public_header_files": "ZCPKit/Util/**/*.h"
+      "source_files": "ZCPKit/Util/**/*.{h,m}"
     },
     {
       "name": "Cache",
@@ -142,7 +118,6 @@
         ]
       },
       "source_files": "ZCPKit/Cache/**/*.{h,m}",
-      "public_header_files": "ZCPKit/Cache/**/*.h",
       "frameworks": "CoreData",
       "subspecs": [
         {
@@ -155,8 +130,7 @@
 
             ]
           },
-          "source_files": "ZCPKit/Cache/CoreData/**/*.{h,m}",
-          "public_header_files": "ZCPKit/Cache/CoreData/**/*.h"
+          "source_files": "ZCPKit/Cache/CoreData/**/*.{h,m}"
         }
       ]
     }

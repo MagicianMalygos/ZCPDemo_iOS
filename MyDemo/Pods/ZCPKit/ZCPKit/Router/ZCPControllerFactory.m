@@ -11,9 +11,6 @@
 #import "ZCPViewMap.h"
 #import "ZCPBaseNavigator.h"
 
-#import "ZCPTabBarController.h"
-#import "ZCPNavigationController.h"
-
 @interface ZCPControllerFactory ()
 
 @property (nonatomic, strong) NSMutableDictionary *vcDataModelDict;
@@ -129,7 +126,12 @@ IMP_SINGLETON
 #pragma mark - viewcontroller stack
 // ----------------------------------------------------------------------
 
-// 生成 Nav - Tab - VCs 控制器栈
+/**
+ 生成 Nav - Tab - VCs 控制器栈。
+ 该方法只是一个参考，项目中可在ZCPControllerFactory分类中生成自定义的控制器栈
+
+ @return 导航控制器
+ */
 - (UINavigationController *)generate_Nav_Tab_VCs_Stack {
     /*
      iOS 7 设置UIImage的渲染模式：UIImageRenderingMode
@@ -138,29 +140,47 @@ IMP_SINGLETON
      UIImageRenderingModeAlwaysTemplate      // 始终根据Tint Color绘制图片，忽略图片的颜色信息
      */
     
-    NSArray *vcIdentifiers  = @[APPURL_VIEW_IDENTIFIER_VIEW,
-                                APPURL_VIEW_IDENTIFIER_TABLEVIEW,
+    NSArray *vcIdentifiers  = @[APPURL_VIEW_IDENTIFIER_TABLEVIEW,
                                 APPURL_VIEW_IDENTIFIER_WEBVIEW];
-    NSArray *titles         = @[@"view", @"tableview", @"webview"];
-    NSArray *images         = @[];
+    NSArray *titles         = @[@"tableview", @"webview"];
+    NSArray *normalImages   = @[];
     NSArray *selectedImages = @[];
     
     /**
-     *  此处会有一个执行的先后顺序问题
-     *  之前的tabBarController方法中会设置TabBarController的各tab
-     *  然后才初始化NavigationController
-     *  问题：在viewDidLoad方法中获取到的NavigationController是空
+     此处会有一个初始化先后顺序的问题：
+     tabbar上的vc，在viewDidLoad方法中获取到的navigationController是nil。
+     
+     这是由于初始化循序：viewControllers > tabBarController > navigationController
+     所以要注意，tabbar上的vc，在使用viewDidLoad方法时要注意这个情况。
+     navBarTitle要记得在viewWillAppear:方法中设置
      */
     
     // 初始化Tab
-    ZCPTabBarController *tabbarController = [[ZCPTabBarController alloc] init];
-    NSArray *vcs = [self generateVCsWithIdentifiers:vcIdentifiers];
-    [tabbarController setViewControllers:vcs];
-    [tabbarController setTabBarItemTitles:titles normalImages:images selectedImages:selectedImages];
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    NSArray *viewControllers = [self generateVCsWithIdentifiers:vcIdentifiers];
+    for (int i = 0; i < viewControllers.count; i++) {
+        UIViewController *vc        = [viewControllers objectAtIndex:i];
+        NSString *title             = nil;
+        UIImage *normalImage        = nil;
+        UIImage *selectedImage      = nil;
+        
+        if (i < titles.count) {
+            title = [titles objectAtIndex:i];
+        }
+        if (i < normalImages.count) {
+            normalImage = [normalImages objectAtIndex:i];
+        }
+        if (i < selectedImages.count) {
+            selectedImage = [normalImages objectAtIndex:i];
+        }
+        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:selectedImage];
+        vc.tabBarItem.tag = i;
+    }
+    [tabbarController setViewControllers:viewControllers];
     
     // 初始化Nav
     // ps：initWithRootViewController方法会调用pushViewController方法
-    ZCPNavigationController *navigationController = [[ZCPNavigationController alloc] initWithRootViewController:tabbarController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     // 设置navigation的颜色与样式
     // 取消半透明效果，解决界面跳转的时候能看到导航栏的颜色发生变化
     navigationController.navigationBar.translucent = NO;
@@ -168,7 +188,7 @@ IMP_SINGLETON
     // 设置状态栏样式
     [navigationController preferredStatusBarStyle];
     
-    // 组成栈
+    // 返回导航控制器
     return navigationController;
 }
 

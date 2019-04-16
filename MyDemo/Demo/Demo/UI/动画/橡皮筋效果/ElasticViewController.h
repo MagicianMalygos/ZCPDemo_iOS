@@ -11,6 +11,6 @@
 /**
  橡皮筋效果demo 视图控制器
  */
-@interface ElasticViewController : ZCPViewController
+@interface ElasticViewController : ZCPBaseViewController
 
 @end

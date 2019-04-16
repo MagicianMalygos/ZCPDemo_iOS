@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageVCDemoHomeController : ZCPViewController
+@interface PageVCDemoHomeController : ZCPBaseViewController
 
 @end
 

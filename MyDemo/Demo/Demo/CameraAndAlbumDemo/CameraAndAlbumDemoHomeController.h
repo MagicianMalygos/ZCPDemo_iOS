@@ -11,7 +11,7 @@
 /**
  访问相机、相册demo
  */
-@interface CameraAndAlbumDemoHomeController : ZCPViewController
+@interface CameraAndAlbumDemoHomeController : ZCPBaseViewController
 
 @end
 

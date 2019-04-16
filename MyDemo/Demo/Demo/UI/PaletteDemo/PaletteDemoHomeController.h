@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaletteDemoHomeController : ZCPViewController
+@interface PaletteDemoHomeController : ZCPBaseViewController
 
 @end

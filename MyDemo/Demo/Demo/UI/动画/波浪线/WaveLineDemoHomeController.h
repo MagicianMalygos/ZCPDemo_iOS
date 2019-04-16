@@ -11,6 +11,6 @@
 /**
  波浪线demo 视图控制器
  */
-@interface WaveLineDemoHomeController : ZCPViewController
+@interface WaveLineDemoHomeController : ZCPBaseViewController
 
 @end

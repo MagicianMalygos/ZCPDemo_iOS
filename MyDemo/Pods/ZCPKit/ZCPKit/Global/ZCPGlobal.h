@@ -11,5 +11,6 @@
 
 #import "ZCPGlobalMacros.h"
 #import "ZCPSingleton.h"
+#import "ZCPExtension.h"
 
 #endif /* ZCPGlobal_h */

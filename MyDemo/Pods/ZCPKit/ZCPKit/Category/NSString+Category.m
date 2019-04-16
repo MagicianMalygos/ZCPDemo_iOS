@@ -30,6 +30,28 @@
     }
 }
 
+#pragma mark - iconfont
+
+/// 将hex字符串转换成iconfont字符串
++ (NSString *)iconFromHexString:(NSString *)hexString {
+    hexString = hexString.lowercaseString;
+    int  length = (int)hexString.length;
+    unichar sum = 0;
+    for (int i = length - 1; i >= 0; i--) {
+        
+        char c = (char)[hexString characterAtIndex:i];
+        if (c >= '0' && c <= '9') {
+            c = c - '0';
+        } else if(c >= 'a' && c <= 'f') {
+            c = c - 'a' + 10;
+        }
+        sum += c * (int)pow(16, length - 1 - i);
+    }
+    
+    NSString *icon = [NSString stringWithCharacters:&sum length:1];
+    return icon;
+}
+
 #pragma mark - 日期/字符串转换
 // 日期转换成字符串 yyyy-MM-dd格式
 + (NSString *)stringFromDate:(NSDate *)date {

@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZCPBaseNavigator.h"
+@class ZCPBaseNavigator;
 
 @interface UINavigationController (Router)
 

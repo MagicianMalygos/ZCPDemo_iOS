@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InternationalizationDemoHomeController : ZCPViewController
+@interface InternationalizationDemoHomeController : ZCPBaseViewController
 
 @end

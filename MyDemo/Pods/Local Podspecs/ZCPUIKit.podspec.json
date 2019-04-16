@@ -1,0 +1,50 @@
+{
+  "name": "ZCPUIKit",
+  "version": "0.0.1",
+  "summary": "It`s my ui kit.",
+  "description": "It`s my ui kit. It has some ui util.",
+  "homepage": "https://gitlab.com/Malygos/ZCPUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
+  "source": {
+    "git": "https://gitlab.com/Malygos/ZCPUIKit.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZCPUIKit/ZCPUIKit.h",
+  "public_header_files": "ZCPUIKit/ZCPUIKit.h",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "subspecs": [
+    {
+      "name": "ListView",
+      "dependencies": {
+        "ZCPKit/Global": [
+
+        ],
+        "ZCPKit/Category": [
+
+        ]
+      },
+      "source_files": "ZCPUIKit/ListView/**/*.{h,m}"
+    },
+    {
+      "name": "Extend",
+      "dependencies": {
+        "ZCPUIKit/ListView": [
+
+        ]
+      },
+      "source_files": "ZCPUIKit/Extend/**/*.{h,m}"
+    }
+  ]
+}

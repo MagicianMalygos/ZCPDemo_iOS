@@ -71,12 +71,13 @@ DEF_SINGLETON
  */
 - (void)configController:(UIViewController *)controller withVCDataModel:(ZCPVCDataModel *)vcDataModel shouldCallInitMethod:(BOOL)shouldCallInitMethod;
 
-#pragma mark - 自定义生成控制器栈方法
+#pragma mark - Custom VC Stack
 
 /**
  生成 Nav - Tab - VCs 控制器栈
+ 该方法只是一个参考，项目中可在ZCPControllerFactory分类中定义自定义的控制器栈生成方法
 
- @return 控制器栈
+ @return 导航控制器
  */
 - (UINavigationController *)generate_Nav_Tab_VCs_Stack;
 

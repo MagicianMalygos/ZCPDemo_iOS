@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZCPNavigatorProtocol.h"
 @class ZCPVCDataModel;
-@protocol ZCPNavigatorProtocol;
 
 // ----------------------------------------------------------------------
 #pragma mark - 基础导航器
@@ -65,27 +65,5 @@
  @param index tabBarItem索引值
  */
 - (void)goToTabBarItemIndex:(NSUInteger)index;
-
-@end
-
-
-// ----------------------------------------------------------------------
-#pragma mark - 导航器管理的视图控制器协议
-// ----------------------------------------------------------------------
-// 使用导航栏导航的控制器均需要实现此协议
-@protocol ZCPNavigatorProtocol <NSObject>
-
-@required
-/// 前一控制器
-@property (nonatomic, weak) UIViewController<ZCPNavigatorProtocol> *formerViewController;
-/// 后一控制器
-@property (nonatomic, weak) UIViewController<ZCPNavigatorProtocol> *latterViewController;
-
-/**
- 带参初始化方法
-
- @param query 参数字典
- */
-- (instancetype)initWithQuery:(NSDictionary *)query;
 
 @end

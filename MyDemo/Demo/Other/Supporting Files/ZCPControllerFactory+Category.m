@@ -15,7 +15,7 @@
     UIViewController *rootViewController = [[ZCPControllerFactory sharedInstance] generateVCWithIdentifier:APPURL_VIEW_IDENTIFIER_HOME];
     
     // 初始化nav
-    ZCPNavigationController *navigationController = [[ZCPNavigationController alloc] initWithRootViewController:rootViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     navigationController.navigationBar.translucent = NO;
     
     // 初始化状态栏

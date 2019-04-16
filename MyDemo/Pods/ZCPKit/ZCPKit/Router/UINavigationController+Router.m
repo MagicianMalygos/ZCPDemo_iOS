@@ -12,7 +12,7 @@
 @implementation UINavigationController (Router)
 
 + (void)load {
-    NSError *error = nil;
+    NSError * __strong error = nil;
     
     [UINavigationController aspect_hookSelector:@selector(pushViewController:animated:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo) {
         UINavigationController *nav = aspectInfo.instance;
@@ -91,7 +91,7 @@
 // ----------------------------------------------------------------------
 
 - (ZCPBaseNavigator *)navigator {
-    id object = objc_getAssociatedObject(self, _cmd);
+    id object = objc_getAssociatedObject(self, @selector(navigator));
     return object;
 }
 

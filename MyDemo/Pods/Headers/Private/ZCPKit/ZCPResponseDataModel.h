@@ -1,1 +1,1 @@
-../../../ZCPKit/ZCPKit/Common/Model/ZCPResponseDataModel.h
+../../../ZCPKit/ZCPKit/BaseClass/Model/ZCPResponseDataModel.h

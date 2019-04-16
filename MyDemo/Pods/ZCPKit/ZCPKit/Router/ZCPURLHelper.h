@@ -47,7 +47,6 @@ BOOL openURL(NSString *url);
 
 DEF_SINGLETON
 
-
 /**
  打开一个url
 

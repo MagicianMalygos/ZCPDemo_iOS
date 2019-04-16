@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RuntimeExampleDemo : ZCPViewController
+@interface RuntimeExampleDemo : ZCPBaseViewController
 
 @end

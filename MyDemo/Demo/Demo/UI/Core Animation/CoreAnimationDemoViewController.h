@@ -6,7 +6,7 @@
 //  Copyright © 2018年 zcp. All rights reserved.
 //
 
-#import "ZCPViewController.h"
+#import <ZCPKit.h>
 #import <QuartzCore/QuartzCore.h>
 
 /**

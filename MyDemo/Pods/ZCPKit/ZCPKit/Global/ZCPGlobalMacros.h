@@ -9,7 +9,9 @@
 #ifndef ZCPGlobalMacros_h
 #define ZCPGlobalMacros_h
 
-#pragma mark - - - - - - - - - - - system - - - - - - - - - -
+// ----------------------------------------------------------------------
+#pragma mark - system
+// ----------------------------------------------------------------------
 
 // 当前系统版本号
 #define SYSTEM_VERSION                  [[UIDevice currentDevice] systemVersion].floatValue
@@ -52,7 +54,9 @@
 #define CAMERA_AVAILABLE                [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
 
 
-#pragma mark - - - - - - - - - - - frame - - - - - - - - - -
+// ----------------------------------------------------------------------
+#pragma mark - frame
+// ----------------------------------------------------------------------
 
 // 屏幕高度
 #define SCREENHEIGHT                    [[UIScreen mainScreen] bounds].size.height
@@ -68,7 +72,9 @@
 #define MARGIN_HORIZONTAL               16
 
 
-#pragma mark - - - - - - - - - - - util - - - - - - - - - -
+// ----------------------------------------------------------------------
+#pragma mark - util
+// ----------------------------------------------------------------------
 
 // 时间性能测量用，单位为微妙
 // 结束时间除以CLOCKS_PER_SEC得到耗时秒数
@@ -126,8 +132,17 @@ do { \
     _Pragma("clang diagnostic pop") \
 } while (0)
 
+// self是否实现指定协议
+#define SELF_CONFORMS_TO_PROTOCOL(__protocol, __block) \
+if ([self conformsToProtocol:__protocol]) { \
+    if (__block) { \
+        __block(); \
+    } \
+}
 
-#pragma mark - - - - - - - - - - - random - - - - - - - - - -
+// ----------------------------------------------------------------------
+#pragma mark - random
+// ----------------------------------------------------------------------
 
 // 生成a-b范围内的随机整数
 #define RANDOM(a, b)                    (((NSInteger)arc4random() % ((b) - (a) + 1)) + a)
@@ -137,5 +152,12 @@ do { \
 
 // 生成随机颜色
 #define RANDOM_COLOR                    [UIColor colorWithRed:RANDOMF(0, 1) green:RANDOMF(0, 1) blue:RANDOMF(0, 1) alpha:1.0f]
+
+
+
+// ----------------------------------------------------------------------
+#pragma mark - custom
+// ----------------------------------------------------------------------
+
 
 #endif /* ZCPGlobalMacros_h */

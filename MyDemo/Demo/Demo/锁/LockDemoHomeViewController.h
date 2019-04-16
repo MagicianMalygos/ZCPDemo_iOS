@@ -8,7 +8,7 @@
 
 #import <ZCPKit/ZCPKit.h>
 
-@interface LockDemoHomeViewController : ZCPViewController
+@interface LockDemoHomeViewController : ZCPBaseViewController
 
 @end
 

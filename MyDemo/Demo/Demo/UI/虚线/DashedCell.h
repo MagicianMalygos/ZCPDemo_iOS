@@ -12,7 +12,7 @@
 /**
  虚线cell
  */
-@interface DashedCell : ZCPBlankCell
+@interface DashedCell : ZCPTableViewCell
 
 @property (nonatomic, strong) DashedView *dashedView;
 

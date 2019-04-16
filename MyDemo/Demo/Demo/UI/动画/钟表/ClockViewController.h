@@ -6,8 +6,8 @@
 //  Copyright © 2018年 zcp. All rights reserved.
 //
 
-#import "ZCPViewController.h"
+#import <ZCPKit.h>
 
-@interface ClockViewController : ZCPViewController
+@interface ClockViewController : ZCPBaseViewController
 
 @end

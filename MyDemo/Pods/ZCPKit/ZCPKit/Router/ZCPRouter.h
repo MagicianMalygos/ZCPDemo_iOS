@@ -16,7 +16,7 @@
 #import "ZCPVCDataModel.h"
 #import "ZCPServiceHandler.h"
 #import "ZCPURLHelper.h"
-#import "ZCPViewController+Router.h"
+#import "UIViewController+ZCPRouter.h"
 #import "UINavigationController+Router.h"
 
 #endif /* ZCPRouter_h */

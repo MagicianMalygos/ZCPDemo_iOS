@@ -1,1 +1,1 @@
-../../../ZCPKit/ZCPKit/Common/Util/ZCPPackageInfo.h
+../../../ZCPKit/ZCPKit/Util/ZCPPackageInfo.h

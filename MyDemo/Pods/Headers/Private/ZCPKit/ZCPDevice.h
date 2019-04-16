@@ -1,1 +1,1 @@
-../../../ZCPKit/ZCPKit/Common/Util/ZCPDevice.h
+../../../ZCPKit/ZCPKit/Util/ZCPDevice.h

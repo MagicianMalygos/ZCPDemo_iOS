@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogDemoHomeViewController : ZCPViewController
+@interface LogDemoHomeViewController : ZCPBaseViewController
 
 @end

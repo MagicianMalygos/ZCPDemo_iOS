@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CollectionViewDemoHomeController : ZCPViewController
+@interface CollectionViewDemoHomeController : ZCPBaseViewController
 
 @end

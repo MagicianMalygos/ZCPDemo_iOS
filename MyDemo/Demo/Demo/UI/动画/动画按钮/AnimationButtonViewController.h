@@ -11,6 +11,6 @@
 /**
  动画按钮demo 视图控制器
  */
-@interface AnimationButtonViewController : ZCPViewController
+@interface AnimationButtonViewController : ZCPBaseViewController
 
 @end

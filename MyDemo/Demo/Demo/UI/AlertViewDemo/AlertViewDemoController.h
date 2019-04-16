@@ -11,7 +11,7 @@
 /**
  弹窗Demo 视图控制器
  */
-@interface AlertViewDemoController : ZCPViewController
+@interface AlertViewDemoController : ZCPBaseViewController
 
 @end
 

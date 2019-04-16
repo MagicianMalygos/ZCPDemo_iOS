@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FontDemoHomeControllerViewController : ZCPViewController
+@interface FontDemoHomeControllerViewController : ZCPBaseViewController
 
 @end

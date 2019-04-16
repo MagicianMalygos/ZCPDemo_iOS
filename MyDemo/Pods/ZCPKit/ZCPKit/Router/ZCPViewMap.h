@@ -33,16 +33,10 @@
 
 #pragma mark common
 
-// 视图控制器
-#define APPURL_VIEW_IDENTIFIER_VIEW             @"view"             // ZCPViewController
-// 列表视图控制器
-#define APPURL_VIEW_IDENTIFIER_TABLEVIEW        @"tableview"        // ZCPTableViewController
-// 导航视图控制器
-#define APPURL_VIEW_IDENTIFIER_NAVIGATIONVIEW   @"navigationview"   // ZCPNavigationController
-// 选项卡视图控制器
-#define APPURL_VIEW_IDENTIFIER_TABBARVIEW       @"tabbarview"       // ZCPTabBarController
-// 浏览器视图控制器
-#define APPURL_VIEW_IDENTIFIER_WEBVIEW          @"webview"          // ZCPWebViewController
+// 列表视图控制器 ZCPTableViewController
+#define APPURL_VIEW_IDENTIFIER_TABLEVIEW        @"tableview"
+// 浏览器视图控制器 ZCPWebViewController
+#define APPURL_VIEW_IDENTIFIER_WEBVIEW          @"webview"
 
 #endif /* ZCPViewMap_h */
 

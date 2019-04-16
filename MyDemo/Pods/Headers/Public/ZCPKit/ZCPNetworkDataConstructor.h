@@ -1,1 +1,1 @@
-../../../ZCPKit/ZCPKit/Common/DataConstructor/ZCPNetworkDataConstructor.h
+../../../ZCPKit/ZCPKit/BaseClass/DataConstructor/ZCPNetworkDataConstructor.h

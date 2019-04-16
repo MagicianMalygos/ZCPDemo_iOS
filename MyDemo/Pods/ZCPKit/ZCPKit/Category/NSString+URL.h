@@ -20,4 +20,11 @@
  */
 - (NSDictionary *)getURLParams;
 
+/**
+ 检测字符串中的url，使用系统方法，根据://检测
+
+ @return url
+ */
+- (NSArray <NSString *>*)detectLink;
+
 @end

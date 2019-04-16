@@ -32,6 +32,8 @@
 		18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 18A501471C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF */; };
 		18CB41DE1D123D150051B651 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB41DD1D123D150051B651 /* DemoTests.m */; };
 		650CF22521DC8DCD00E20261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650CF22421DC8DCC00E20261 /* Assets.xcassets */; };
+		656E44EA2260969F008365E6 /* ZCPTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 656E44E92260969F008365E6 /* ZCPTimeProfiler.m */; };
+		656E44F3226099E0008365E6 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 656E44F1226099E0008365E6 /* BSBacktraceLogger.m */; };
 		65B048B522324C300050A7B1 /* ZCPDemoTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */; };
 		65B048D522324F740050A7B1 /* tabbar_job_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C122324F710050A7B1 /* tabbar_job_normal@3x.png */; };
 		65B048D622324F740050A7B1 /* tabbar_home_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65B048C222324F710050A7B1 /* tabbar_home_gif.gif */; };
@@ -422,7 +424,6 @@
 		FBCF6B421F8CBC0A00E3B58C /* ZCPControllerFactory+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B2C1F8CBC0A00E3B58C /* ZCPControllerFactory+Category.m */; };
 		FBCF6B461F8CBF3B00E3B58C /* DashedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B451F8CBF3B00E3B58C /* DashedCell.m */; };
 		FBCF6B491F8CC5CE00E3B58C /* DashedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B481F8CC5CE00E3B58C /* DashedModel.m */; };
-		FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */; };
 		FBCF6B661F8E04B800E3B58C /* SquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B651F8E04B800E3B58C /* SquareButton.m */; };
 		FBCF6B6A1F8E0A9800E3B58C /* MinesweeperToolMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B691F8E0A9800E3B58C /* MinesweeperToolMethod.m */; };
 		FBCF6B761F8F528800E3B58C /* ZCPMinesweeperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCF6B741F8F528800E3B58C /* ZCPMinesweeperViewController.m */; };
@@ -567,6 +568,10 @@
 		18CB41DD1D123D150051B651 /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		18CB41DF1D123D150051B651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650CF22421DC8DCC00E20261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		656E44E82260969F008365E6 /* ZCPTimeProfiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPTimeProfiler.h; sourceTree = "<group>"; };
+		656E44E92260969F008365E6 /* ZCPTimeProfiler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPTimeProfiler.m; sourceTree = "<group>"; };
+		656E44F1226099E0008365E6 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		656E44F2226099E0008365E6 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		65B048B322324C300050A7B1 /* ZCPDemoTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoTabBar.h; sourceTree = "<group>"; };
 		65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPDemoTabBar.m; sourceTree = "<group>"; };
 		65B048C122324F710050A7B1 /* tabbar_job_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_job_normal@3x.png"; sourceTree = "<group>"; };
@@ -2029,8 +2034,6 @@
 		FBCF6B451F8CBF3B00E3B58C /* DashedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashedCell.m; sourceTree = "<group>"; };
 		FBCF6B471F8CC5CE00E3B58C /* DashedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DashedModel.h; sourceTree = "<group>"; };
 		FBCF6B481F8CC5CE00E3B58C /* DashedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DashedModel.m; sourceTree = "<group>"; };
-		FBCF6B581F8DEBD900E3B58C /* ZCPViewController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZCPViewController+Category.h"; sourceTree = "<group>"; };
-		FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZCPViewController+Category.m"; sourceTree = "<group>"; };
 		FBCF6B641F8E04B800E3B58C /* SquareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareButton.h; sourceTree = "<group>"; };
 		FBCF6B651F8E04B800E3B58C /* SquareButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareButton.m; sourceTree = "<group>"; };
 		FBCF6B671F8E053400E3B58C /* MinesweeperHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinesweeperHeader.h; sourceTree = "<group>"; };
@@ -2243,6 +2246,17 @@
 				18CB41DF1D123D150051B651 /* Info.plist */,
 			);
 			path = DemoTests;
+			sourceTree = "<group>";
+		};
+		656E44D92260967B008365E6 /* TimeProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				656E44F2226099E0008365E6 /* BSBacktraceLogger.h */,
+				656E44F1226099E0008365E6 /* BSBacktraceLogger.m */,
+				656E44E82260969F008365E6 /* ZCPTimeProfiler.h */,
+				656E44E92260969F008365E6 /* ZCPTimeProfiler.m */,
+			);
+			path = TimeProfiler;
 			sourceTree = "<group>";
 		};
 		9E3E828F1D2A84A30061664A /* MyDemo */ = {
@@ -4835,6 +4849,7 @@
 		FBB91DA11F2871CA00D41838 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				656E44D92260967B008365E6 /* TimeProfiler */,
 				FBB91DAB1F2871E100D41838 /* 调试工具 */,
 				FBF4BC6620FEE469005FD795 /* UIImage+Category.h */,
 				FBF4BC6720FEE469005FD795 /* UIImage+Category.m */,
@@ -4842,8 +4857,6 @@
 				FBB91DA71F2871CA00D41838 /* YYFPSLabel.m */,
 				FBCF6AF81F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.h */,
 				FBCF6AF91F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m */,
-				FBCF6B581F8DEBD900E3B58C /* ZCPViewController+Category.h */,
-				FBCF6B591F8DEBD900E3B58C /* ZCPViewController+Category.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -5776,6 +5789,7 @@
 				FB5079011E2618A900361E60 /* ZCPImageCircleView.m in Sources */,
 				FB0621DB1ED275DD000AA258 /* RuntimeTest3.m in Sources */,
 				FB875D9320EB748F00F8C868 /* WaveLineDemoHomeController.m in Sources */,
+				656E44EA2260969F008365E6 /* ZCPTimeProfiler.m in Sources */,
 				FBEFD42E211BE64F0037989D /* CASection2Demo.m in Sources */,
 				FBC1247020F4B78C0060471A /* AnimationButton3.m in Sources */,
 				FB5079191E2618A900361E60 /* QuartzCorePaletteViewController.m in Sources */,
@@ -5824,6 +5838,7 @@
 				FBEFD42F211BE64F0037989D /* CASection1Demo.m in Sources */,
 				FB5079221E2618A900361E60 /* SizeToFitDemoHomeController.m in Sources */,
 				FB0621D81ED275DD000AA258 /* ZCPUser.m in Sources */,
+				656E44F3226099E0008365E6 /* BSBacktraceLogger.m in Sources */,
 				FBCC6A6D20E48C86002367F5 /* FoldClockView.m in Sources */,
 				FB7E4FAF1FFE1C0900B366FA /* EPLog.mm in Sources */,
 				FB35469C216E0056005FCF92 /* TabBarDemoController.m in Sources */,
@@ -5845,7 +5860,6 @@
 				FBCF6AFA1F8CAF0900E3B58C /* ZCPDemoBaseTableViewController.m in Sources */,
 				FBCC6A0720E0C1B4002367F5 /* UIView+Explode.m in Sources */,
 				FBAE24ED2133D6830031CE27 /* CASection10Demo.m in Sources */,
-				FBCF6B5A1F8DEBD900E3B58C /* ZCPViewController+Category.m in Sources */,
 				FB5078FF1E2618A900361E60 /* PageVCDemoHomeController.m in Sources */,
 				FBDBF842212C15270087AD7E /* CASection9Demo.m in Sources */,
 				FBF4BC8A210026FD005FD795 /* AlertViewDemoController.m in Sources */,

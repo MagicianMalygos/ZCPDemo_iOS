@@ -23,6 +23,16 @@
  */
 - (id)JSONObject;
 
+#pragma mark - iconfont
+
+/**
+ 将hex字符串转换成iconfont字符串
+
+ @param hexString hex字符串，如"f846"、"e507"
+ @return iconfont字符串，如"\U0000f846"、"\U0000e507"
+ */
++ (NSString *)iconFromHexString:(NSString *)hexString;
+
 #pragma mark - 日期/字符串转换
 /**
  日期转换成字符串 yyyy-MM-dd格式
