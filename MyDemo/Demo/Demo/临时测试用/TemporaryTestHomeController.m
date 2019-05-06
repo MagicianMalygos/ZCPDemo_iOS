@@ -302,7 +302,8 @@
 #pragma mark - testBlock
 
 - (void)testBlock {
-    NSString *ip3 = [self.class getLocalIPAddress:YES];
+//    NSString *ip3 = [self.class getLocalIPAddress:YES];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"ytaxi://hellobike.com/home"]];
 }
 
 #pragma mark - 获取设备当前网络IP地址

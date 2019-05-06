@@ -23,9 +23,44 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.1)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
+  - Texture (2.8):
+    - Texture/AssetsLibrary (= 2.8)
+    - Texture/Core (= 2.8)
+    - Texture/MapKit (= 2.8)
+    - Texture/Photos (= 2.8)
+    - Texture/PINRemoteImage (= 2.8)
+    - Texture/Video (= 2.8)
+  - Texture/AssetsLibrary (2.8):
+    - Texture/Core
+  - Texture/Core (2.8)
+  - Texture/MapKit (2.8):
+    - Texture/Core
+  - Texture/Photos (2.8):
+    - Texture/Core
+  - Texture/PINRemoteImage (2.8):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (2.8):
+    - Texture/Core
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -49,8 +84,7 @@ PODS:
   - ZCPKit/Cache/CoreData (0.0.2):
     - MagicalRecord
     - ZCPKit/Global
-  - ZCPKit/Category (0.0.2):
-    - ZCPKit/Global
+  - ZCPKit/Category (0.0.2)
   - ZCPKit/Global (0.0.2)
   - ZCPKit/Network (0.0.2):
     - ZCPKit/Global
@@ -58,8 +92,7 @@ PODS:
     - Aspects (~> 1.4.1)
     - ZCPKit/BaseClass
     - ZCPKit/Global
-  - ZCPKit/Util (0.0.2):
-    - ZCPKit/Global
+  - ZCPKit/Util (0.0.2)
   - ZCPKit/ZCPWebView (0.0.2):
     - ZCPKit/Category
     - ZCPKit/Global
@@ -82,6 +115,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
+  - Texture (~> 2.8)
   - YYKit (~> 1.0.9)
   - ZCPKit (from `https://gitlab.com/Malygos/ZCPKit.git`)
   - ZCPUIKit (from `https://gitlab.com/Malygos/ZCPUIKit.git`)
@@ -95,7 +129,11 @@ SPEC REPOS:
     - MagicalRecord
     - Masonry
     - MLeaksFinder
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
     - SDWebImage
+    - Texture
     - YYKit
 
 EXTERNAL SOURCES:
@@ -106,10 +144,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ZCPKit:
-    :commit: ff3869bfb323ed7cfe87a4874d599917e3c0ffcb
+    :commit: 10eeefa72ba95bc96fef2e1c65fe56c5cd37048e
     :git: https://gitlab.com/Malygos/ZCPKit.git
   ZCPUIKit:
-    :commit: 5744ed2a0e59dcc03cde6ae0a8c3ed4172f8307b
+    :commit: 48724aa3ee3d4747d3ebeb515b96d02f66315a7c
     :git: https://gitlab.com/Malygos/ZCPUIKit.git
 
 SPEC CHECKSUMS:
@@ -120,11 +158,15 @@ SPEC CHECKSUMS:
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  Texture: fc6e0157201f3a6e503d364c147b1872e365cef4
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPKit: 3f4465565393348dc0ce63cedeab6d839f97f443
+  ZCPKit: 4ebd635cea81a74e0021fce78466b2cea5f1c95b
   ZCPUIKit: 7456a68b0bbb9cfd2cc9f1e5887f8ede1c6b81cd
 
-PODFILE CHECKSUM: 3f506304f2d5576bc4a7e87dba2ab802eb554f00
+PODFILE CHECKSUM: d1d9f679debb36de5b5c7f1ae7c806326c854921
 
 COCOAPODS: 1.5.3

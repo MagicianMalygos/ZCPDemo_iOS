@@ -258,5 +258,13 @@
 		<key>description</key>
 		<string>核心动画demo</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>TextureDemoHomeViewController</string>
+		<key>identifier</key>
+		<string>texture</string>
+		<key>description</key>
+		<string>Texture库测试</string>
+	</dict>
 </array>
 </plist>

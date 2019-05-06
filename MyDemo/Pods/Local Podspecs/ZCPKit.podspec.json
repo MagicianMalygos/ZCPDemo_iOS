@@ -1,29 +1,42 @@
 {
   "name": "ZCPKit",
   "version": "0.0.2",
-  "summary": "It`s a framework.",
-  "description": "It`s a framework for myself.",
-  "homepage": "https://gitlab.com/Malygos/ZCPKit",
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
-  "authors": {
-    "朱超鹏": "z164757979@163.com"
-  },
+  "homepage": "https://gitlab.com/Malygos/ZCPKit",
   "source": {
     "git": "https://gitlab.com/Malygos/ZCPKit.git",
     "tag": "0.0.2"
   },
+  "summary": "It`s a framework.",
+  "description": "It`s a framework for myself.",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "ZCPKit/ZCPKit.h",
+  "module_name": "ZCPKit",
   "frameworks": [
     "Foundation",
     "UIKit"
   ],
+  "source_files": "ZCPKit/ZCPKit.h",
   "subspecs": [
+    {
+      "name": "Global",
+      "source_files": "ZCPKit/Global/**/*.{h,m}"
+    },
+    {
+      "name": "Util",
+      "source_files": "ZCPKit/Util/**/*.{h,m}"
+    },
+    {
+      "name": "Category",
+      "source_files": "ZCPKit/Category/**/*.{h,m}"
+    },
     {
       "name": "ZCPWebView",
       "dependencies": {
@@ -89,28 +102,6 @@
       "source_files": "ZCPKit/BaseClass/**/*.{h,m}"
     },
     {
-      "name": "Category",
-      "dependencies": {
-        "ZCPKit/Global": [
-
-        ]
-      },
-      "source_files": "ZCPKit/Category/**/*.{h,m}"
-    },
-    {
-      "name": "Global",
-      "source_files": "ZCPKit/Global/**/*.{h,m}"
-    },
-    {
-      "name": "Util",
-      "dependencies": {
-        "ZCPKit/Global": [
-
-        ]
-      },
-      "source_files": "ZCPKit/Util/**/*.{h,m}"
-    },
-    {
       "name": "Cache",
       "dependencies": {
         "ZCPKit/Global": [
@@ -118,7 +109,6 @@
         ]
       },
       "source_files": "ZCPKit/Cache/**/*.{h,m}",
-      "frameworks": "CoreData",
       "subspecs": [
         {
           "name": "CoreData",
@@ -130,6 +120,7 @@
 
             ]
           },
+          "frameworks": "CoreData",
           "source_files": "ZCPKit/Cache/CoreData/**/*.{h,m}"
         }
       ]

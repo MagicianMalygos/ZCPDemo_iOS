@@ -76,19 +76,22 @@
 #pragma mark - util
 // ----------------------------------------------------------------------
 
-// 时间性能测量用，单位为微妙
-// 结束时间除以CLOCKS_PER_SEC得到耗时秒数
+// 时间性能测量用
 #define START_COUNT_TIME(start)         clock_t start = clock()
 #define END_COUNT_TIME(start)           (clock() - start)
+#define END_COUNT_TIME_SEC(start)       ((double)(clock() - start) / CLOCKS_PER_SEC)
 
 #define START_COUNT_TIME2(start)        CFTimeInterval start = CFAbsoluteTimeGetCurrent()
 #define END_COUNT_TIME2(start)          ((CFAbsoluteTimeGetCurrent() - start) * 1000000)
+#define END_COUNT_TIME2_SEC(start)      (CFAbsoluteTimeGetCurrent() - start)
 
 #define START_COUNT_TIME3(start)        NSTimeInterval start = [[NSDate date] timeIntervalSince1970]
-#define END_COUNT_TIME3(start)          ([[NSDate date] timeIntervalSince1970] - start) * 1000000)
+#define END_COUNT_TIME3(start)          (([[NSDate date] timeIntervalSince1970] - start) * 1000000)
+#define END_COUNT_TIME3_SEC(start)      ([[NSDate date] timeIntervalSince1970] - start)
 
 #define START_COUNT_TIME4(start)        CFTimeInterval start = CACurrentMediaTime()
-#define END_COUNT_TIME4(start)          (CACurrentMediaTime() - start) * 1000000)
+#define END_COUNT_TIME4(start)          ((CACurrentMediaTime() - start) * 1000000)
+#define END_COUNT_TIME4_SEC(start)      (CACurrentMediaTime() - start)
 
 // 一像素对应数值
 // 设置宽(高)时，x(y)值需要减 OnePixelOffset
@@ -152,12 +155,5 @@ if ([self conformsToProtocol:__protocol]) { \
 
 // 生成随机颜色
 #define RANDOM_COLOR                    [UIColor colorWithRed:RANDOMF(0, 1) green:RANDOMF(0, 1) blue:RANDOMF(0, 1) alpha:1.0f]
-
-
-
-// ----------------------------------------------------------------------
-#pragma mark - custom
-// ----------------------------------------------------------------------
-
 
 #endif /* ZCPGlobalMacros_h */

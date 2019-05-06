@@ -8,13 +8,12 @@
 
 #import "UILabel+Category.h"
 #import "UIView+EasyFrame.h"
-#import "ZCPGlobal.h"
 
 @implementation UILabel (Category)
 
 /// 设置label行间距
 - (void)setLineSpace:(CGFloat)height{
-    if (SYSTEM_VERSION < 6.0) {
+    if ([[UIDevice currentDevice] systemVersion].floatValue < 6.0) {
         return;
     }
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];

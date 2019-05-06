@@ -7,7 +7,6 @@
 //
 
 #import "UIView+EasyFrame.h"
-#import "ZCPGlobal.h"
 
 @implementation UIView (Background)
 
@@ -25,7 +24,7 @@
     } else if ([self isKindOfClass:[UINavigationBar class]]) {
         // UINavigationBar
         UINavigationBar *navigationBar      = (UINavigationBar *)self;
-        if (SYSTEM_VERSION < 7.0) {
+        if ([[UIDevice currentDevice] systemVersion].floatValue < 7.0) {
             navigationBar.clipsToBounds     = YES;
             navigationBar.shadowImage       = [[UIImage alloc] init];
             navigationBar.tintColor         = color;

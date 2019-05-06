@@ -7,28 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZCPGlobal.h"
 
 // ----------------------------------------------------------------------
 #pragma mark - 指示控制类，比如loading，activity等
 // ----------------------------------------------------------------------
 @interface ZCPIndicator : NSObject
 
-DEF_SINGLETON
-
 /**
  显示activity 指示
  */
-- (void)showIndicator;
++ (void)showIndicator;
 
 /**
  隐藏activity
  */
-- (void)dismissIndicator;
++ (void)dismissIndicator;
 
 /**
  隐藏activity
  */
-- (void)stopLoading;
++ (void)stopLoading;
 
 @end

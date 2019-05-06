@@ -26,8 +26,6 @@
     [haofangCookies addObject:[NSHTTPCookie cookieWithProperties:[self generateDeviceIDPropertiesWithDomain:domain originalUrl:oriUrl]]];
     // APP Type
     [haofangCookies addObject:[NSHTTPCookie cookieWithProperties:[self generateAppTypePropertiesWithDomain:domain originalUrl:oriUrl]]];
-    // APP Channel
-    [haofangCookies addObject:[NSHTTPCookie cookieWithProperties:[self generateAppChannelPropertiesWithDomain:domain originalUrl:oriUrl]]];
     
     return haofangCookies;
 }
@@ -60,17 +58,6 @@
     NSMutableDictionary *appVersionProperties = [NSMutableDictionary dictionary];
     [appVersionProperties setObject:@"app_version" forKey:NSHTTPCookieName];
     [appVersionProperties setObject:appVersion?:@"" forKey:NSHTTPCookieValue];
-    [appVersionProperties setObject:@"/" forKey:NSHTTPCookiePath];
-    [appVersionProperties setObject:domain forKey:NSHTTPCookieDomain];
-    [appVersionProperties setObject:oriUrl forKey:NSHTTPCookieOriginURL];
-    [appVersionProperties setObject:@"0" forKey:NSHTTPCookieVersion];
-    return appVersionProperties;
-}
-
-- (NSMutableDictionary *)generateAppChannelPropertiesWithDomain:(NSString *)domain originalUrl:(NSString *)oriUrl{
-    NSMutableDictionary *appVersionProperties = [NSMutableDictionary dictionary];
-    [appVersionProperties setObject:@"app_channel" forKey:NSHTTPCookieName];
-    [appVersionProperties setObject:[NSString stringWithFormat:@"%d",PAAppChannelAppStore] forKey:NSHTTPCookieValue];
     [appVersionProperties setObject:@"/" forKey:NSHTTPCookiePath];
     [appVersionProperties setObject:domain forKey:NSHTTPCookieDomain];
     [appVersionProperties setObject:oriUrl forKey:NSHTTPCookieOriginURL];

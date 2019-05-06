@@ -9,38 +9,38 @@
 #import "ZCPIndicator.h"
 
 @interface ZCPIndicator()
+
 @property (nonatomic, assign) NSInteger loadingCount;
+
 @end
 
 @implementation ZCPIndicator
 
-IMP_SINGLETON
++ (nonnull instancetype)sharedInstance {
+    static dispatch_once_t once;
+    static id __singleton__;
+    dispatch_once(&once, ^{
+        __singleton__ = [[self alloc] init];
+    });
+    return __singleton__;
+} \
 
 #pragma mark - public methods
-- (void)showIndicator {
-    // 只在状态栏显示菊花
-    [self showNetworkActivityIndicatorInStatusBar];
-}
-
-- (void)dismissIndicator {
-    //隐藏状态栏菊花
-    [self dismissNetworkActivityIndicator];
-}
-
-- (void)stopLoading {
-    self.loadingCount --;
-    if (self.loadingCount == 0) {
-        [self dismissIndicator];
-    }
-}
-
-#pragma mark - internal methods
-- (void)showNetworkActivityIndicatorInStatusBar {
++ (void)showIndicator {
+    // 显示状态栏菊花
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
-- (void)dismissNetworkActivityIndicator {
++ (void)dismissIndicator {
+    //隐藏状态栏菊花
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
++ (void)stopLoading {
+    [ZCPIndicator sharedInstance].loadingCount --;
+    if ([ZCPIndicator sharedInstance].loadingCount == 0) {
+        [self dismissIndicator];
+    }
 }
 
 @end

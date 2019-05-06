@@ -14,6 +14,13 @@ static NSDateFormatter *staticDateFormatter;
 
 @implementation NSDateFormatter (Category)
 
-IMP_SINGLETON_C(staticDateFormatter)
++ (nonnull instancetype)staticDateFormatter {
+    static dispatch_once_t once;
+    static id __singleton__;
+    dispatch_once(&once, ^{
+        __singleton__ = [[self alloc] init];
+    });
+    return __singleton__;
+}
 
 @end

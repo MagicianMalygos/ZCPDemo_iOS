@@ -32,6 +32,7 @@
 		18A5014E1C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 18A501471C92BE67006EBEB4 /* 钟齐蔡云汉毛笔行书.TTF */; };
 		18CB41DE1D123D150051B651 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB41DD1D123D150051B651 /* DemoTests.m */; };
 		650CF22521DC8DCD00E20261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650CF22421DC8DCC00E20261 /* Assets.xcassets */; };
+		653C1D4E2276FDD100679595 /* TextureDemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653C1D4D2276FDD100679595 /* TextureDemoHomeViewController.m */; };
 		656E44EA2260969F008365E6 /* ZCPTimeProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 656E44E92260969F008365E6 /* ZCPTimeProfiler.m */; };
 		656E44F3226099E0008365E6 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 656E44F1226099E0008365E6 /* BSBacktraceLogger.m */; };
 		65B048B522324C300050A7B1 /* ZCPDemoTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B048B422324C300050A7B1 /* ZCPDemoTabBar.m */; };
@@ -467,6 +468,41 @@
 			remoteGlobalIDString = A70B2E801D884FD87DCC8A3AC4429B71;
 			remoteInfo = Masonry;
 		};
+		653C1D442276FDBF00679595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 471777B634287E323D205B8C6A5B6E59;
+			remoteInfo = PINCache;
+		};
+		653C1D462276FDBF00679595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 810CFCCA3D651B36F114966D5A72BFFA;
+			remoteInfo = PINOperation;
+		};
+		653C1D482276FDBF00679595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B2E4765E645AD186F0C21F7A90B0737E;
+			remoteInfo = PINRemoteImage;
+		};
+		653C1D4A2276FDBF00679595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 76CAD00B4F2D031EDE1486B58CBCC1DA;
+			remoteInfo = Texture;
+		};
+		6595F42B22670A1000FBA993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42AB1D5893265EE42AE5455F5413DDF2;
+			remoteInfo = ZCPUIKit;
+		};
 		9E3E86AD1D2A84A40061664A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
@@ -568,6 +604,8 @@
 		18CB41DD1D123D150051B651 /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		18CB41DF1D123D150051B651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650CF22421DC8DCC00E20261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		653C1D4C2276FDD100679595 /* TextureDemoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureDemoHomeViewController.h; sourceTree = "<group>"; };
+		653C1D4D2276FDD100679595 /* TextureDemoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureDemoHomeViewController.m; sourceTree = "<group>"; };
 		656E44E82260969F008365E6 /* ZCPTimeProfiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPTimeProfiler.h; sourceTree = "<group>"; };
 		656E44E92260969F008365E6 /* ZCPTimeProfiler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPTimeProfiler.m; sourceTree = "<group>"; };
 		656E44F1226099E0008365E6 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
@@ -1538,10 +1576,8 @@
 		9E3E86A81D2A84A40061664A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9E3E86B51D2A84BB0061664A /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		9E3E86B71D2A84D70061664A /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		9E3E86B91D2A84FE0061664A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		9E3E86BB1D2A850A0061664A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9E3E86BD1D2A85240061664A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		9E3E86BF1D2A86650061664A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		D3213FF3F8441313D1E7568B /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC554412908634C841F9BC2B /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F3BF3F6C496B971EC55CC0F6 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -2246,6 +2282,15 @@
 				18CB41DF1D123D150051B651 /* Info.plist */,
 			);
 			path = DemoTests;
+			sourceTree = "<group>";
+		};
+		653C1D332276FDBE00679595 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				653C1D4C2276FDD100679595 /* TextureDemoHomeViewController.h */,
+				653C1D4D2276FDD100679595 /* TextureDemoHomeViewController.m */,
+			);
+			path = Texture;
 			sourceTree = "<group>";
 		};
 		656E44D92260967B008365E6 /* TimeProfiler */ = {
@@ -3716,10 +3761,15 @@
 				FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */,
 				650CF22321DC8D0500E20261 /* libMasonry.a */,
 				FBF4BC6520FDD8B9005FD795 /* libMLeaksFinder.a */,
+				653C1D452276FDBF00679595 /* libPINCache.a */,
+				653C1D472276FDBF00679595 /* libPINOperation.a */,
+				653C1D492276FDBF00679595 /* libPINRemoteImage.a */,
 				FBB1A1ED1EE10CBC004F013F /* libPods-Demo.a */,
 				9E3E86B21D2A84A40061664A /* libSDWebImage.a */,
+				653C1D4B2276FDBF00679595 /* libTexture.a */,
 				9E3E86B41D2A84A40061664A /* libYYKit.a */,
 				FBCF6AE11F8CA8B700E3B58C /* libZCPKit.a */,
+				6595F42C22670A1000FBA993 /* libZCPUIKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4125,10 +4175,8 @@
 			children = (
 				FBCC20F51F0377D9006FE26C /* iAd.framework */,
 				FB81A8DC1DAB3FD400B6F46E /* QuartzCore.framework */,
-				9E3E86BF1D2A86650061664A /* libstdc++.tbd */,
 				9E3E86BD1D2A85240061664A /* libiconv.tbd */,
 				9E3E86BB1D2A850A0061664A /* libz.tbd */,
-				9E3E86B91D2A84FE0061664A /* libstdc++.6.0.9.tbd */,
 				9E3E86B71D2A84D70061664A /* libxml2.2.tbd */,
 				9E3E86B51D2A84BB0061664A /* libz.1.2.5.tbd */,
 				9E3E828F1D2A84A30061664A /* MyDemo */,
@@ -4338,6 +4386,7 @@
 		FB5077551E2618A800361E60 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				653C1D332276FDBE00679595 /* Texture */,
 				FB2ECFEB20B6583600F362A0 /* 锁 */,
 				FB7E4F951FFE1C0900B366FA /* Log */,
 				FB16081A1EFA0DC200064DA2 /* 地图&定位 */,
@@ -5319,6 +5368,41 @@
 			remoteRef = 650CF22221DC8D0500E20261 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		653C1D452276FDBF00679595 /* libPINCache.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPINCache.a;
+			remoteRef = 653C1D442276FDBF00679595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		653C1D472276FDBF00679595 /* libPINOperation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPINOperation.a;
+			remoteRef = 653C1D462276FDBF00679595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		653C1D492276FDBF00679595 /* libPINRemoteImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPINRemoteImage.a;
+			remoteRef = 653C1D482276FDBF00679595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		653C1D4B2276FDBF00679595 /* libTexture.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTexture.a;
+			remoteRef = 653C1D4A2276FDBF00679595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6595F42C22670A1000FBA993 /* libZCPUIKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZCPUIKit.a;
+			remoteRef = 6595F42B22670A1000FBA993 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9E3E86AE1D2A84A40061664A /* libAFNetworking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -5849,6 +5933,7 @@
 				FB0621C61ED275DC000AA258 /* NSString+Demo.m in Sources */,
 				FB0621C41ED275DC000AA258 /* AlgorithmDemo.m in Sources */,
 				FB0621CC1ED275DD000AA258 /* ClassB.m in Sources */,
+				653C1D4E2276FDD100679595 /* TextureDemoHomeViewController.m in Sources */,
 				FB5079091E2618A900361E60 /* QRCodeDemoHomeController.m in Sources */,
 				FB0621CE1ED275DD000AA258 /* OtherDemoHomeController.m in Sources */,
 				FB0621C91ED275DD000AA258 /* ClassA+Category.m in Sources */,
@@ -6148,7 +6233,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -6210,7 +6295,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "Demo/Other/Supporting Files/Global.pch";
 				INFOPLIST_FILE = "Demo/Other/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (

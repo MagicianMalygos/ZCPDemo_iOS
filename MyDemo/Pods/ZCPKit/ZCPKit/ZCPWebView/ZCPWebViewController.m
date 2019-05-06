@@ -231,7 +231,7 @@
 /// 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
     // 显示状态栏菊花
-    [[ZCPIndicator sharedInstance] showIndicator];
+    [ZCPIndicator showIndicator];
     [self clearNavigationBar];
 }
 
@@ -259,7 +259,7 @@
     self.title = webView.title;
     
     // 隐藏状态栏菊花
-    [[ZCPIndicator sharedInstance] dismissIndicator];
+    [ZCPIndicator dismissIndicator];
     [self configureNavigationBar];
 }
 
@@ -291,7 +291,7 @@
     }
     
     // 隐藏状态栏菊花
-    [[ZCPIndicator sharedInstance] dismissIndicator];
+    [ZCPIndicator dismissIndicator];
     [self clearNavigationBar];
     self.title = @"加载失败";
 }

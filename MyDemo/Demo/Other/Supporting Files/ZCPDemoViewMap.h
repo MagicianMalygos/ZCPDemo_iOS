@@ -43,6 +43,8 @@
 #define APPURL_VIEW_IDENTIFIER_LOG                  @"log"
 // 锁 LockDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_LOCK                 @"lock"
+// Texture TextureDemoHomeViewController
+#define APPURL_VIEW_IDENTIFIER_TEXTURE              @"texture"
 
 #pragma mark - UI
 

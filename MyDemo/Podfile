@@ -24,4 +24,8 @@ pod 'MLeaksFinder', '~> 1.0.0'
 # 约束
 pod 'Masonry', '~> 1.1.0'
 
+
+# GUI
+pod 'Texture', '~> 2.8'
+
 end

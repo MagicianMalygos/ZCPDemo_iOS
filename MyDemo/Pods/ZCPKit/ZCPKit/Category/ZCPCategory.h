@@ -9,10 +9,6 @@
 #ifndef ZCPCategory_h
 #define ZCPCategory_h
 
-#import "UIView+EasyFrame.h"
-#import "UIView+Category.h"
-#import "UILabel+Category.h"
-#import "UIColor+Category.h"
 #import "NSDateFormatter+Category.h"
 #import "NSDate+Category.h"
 #import "NSString+Category.h"
@@ -20,6 +16,10 @@
 #import "NSString+URL.h"
 #import "NSURL+URL.h"
 
+#import "UIView+EasyFrame.h"
+#import "UIView+Category.h"
+#import "UILabel+Category.h"
+#import "UIColor+Category.h"
 #import "UIBarButtonItem+Category.h"
 
 #endif /* ZCPCategory_h */

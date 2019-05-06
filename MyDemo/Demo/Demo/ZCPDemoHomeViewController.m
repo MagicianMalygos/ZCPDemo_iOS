@@ -21,6 +21,7 @@
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
                     @{@"title": @"临时测试"              , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
+                    @{@"title": @"Texture"              , @"class": APPURL_VIEW_IDENTIFIER_TEXTURE},
                     @{@"title": @"UIDemo"               , @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
                     @{@"title": @"CameraAndAlbumDemo"   , @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
                     @{@"title": @"OtherDemo"            , @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},
