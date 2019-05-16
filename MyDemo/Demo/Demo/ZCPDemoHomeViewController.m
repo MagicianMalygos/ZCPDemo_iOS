@@ -20,27 +20,44 @@
 - (NSMutableArray *)infoArr {
     if (_infoArr == nil) {
         _infoArr = [NSMutableArray arrayWithObjects:
-                    @{@"title": @"临时测试"              , @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
-                    @{@"title": @"Texture"              , @"class": APPURL_VIEW_IDENTIFIER_TEXTURE},
-                    @{@"title": @"UIDemo"               , @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
-                    @{@"title": @"CameraAndAlbumDemo"   , @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
-                    @{@"title": @"OtherDemo"            , @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},
-                    @{@"title": @"二维码扫描"             , @"class": APPURL_VIEW_IDENTIFIER_QRCODEHOME},
-                    @{@"title": @"扫雷"                  , @"class": APPURL_VIEW_IDENTIFIER_MINESWEEPER},
+                    @{@"title": @"临时测试",
+                      @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
+                    @{@"title": @"LayoutDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_LAYOUTDEMO},
+                    @{@"title": @"Texture",
+                      @"class": APPURL_VIEW_IDENTIFIER_TEXTURE},
+                    @{@"title": @"UIDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
+                    @{@"title": @"CameraAndAlbumDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_ALBUMHOME},
+                    @{@"title": @"OtherDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_OTHERHOME},
+                    @{@"title": @"二维码扫描"             ,
+                      @"class": APPURL_VIEW_IDENTIFIER_QRCODEHOME},
+                    @{@"title": @"扫雷"                  ,
+                      @"class": APPURL_VIEW_IDENTIFIER_MINESWEEPER},
                     
-                    @{@"title": @"锁"                    , @"class": APPURL_VIEW_IDENTIFIER_LOCK},
+                    @{@"title": @"锁",
+                      @"class": APPURL_VIEW_IDENTIFIER_LOCK},
         
-                    @{@"title": @"NetWorkDemo"          , @"class": APPURL_VIEW_IDENTIFIER_NETWORKHOME},
-                    @{@"title": @"WebViewDemo"          , @"class": APPURL_VIEW_IDENTIFIER_WEBHOME},
-                    @{@"title": @"PageVCDemo"           , @"class": APPURL_VIEW_IDENTIFIER_PAGEVCHOME},
+                    @{@"title": @"NetWorkDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_NETWORKHOME},
+                    @{@"title": @"WebViewDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_WEBHOME},
+                    @{@"title": @"PageVCDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_PAGEVCHOME},
                     
+                    @{@"title": @"PhotoCarouselDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME},
+                    @{@"title": @"TabBarDemo",
+                      @"class": APPURL_VIEW_IDENTIFIER_TABBARHOME},
                     
-                    @{@"title": @"PhotoCarouselDemo"    , @"class": APPURL_VIEW_IDENTIFIER_PHOTOCAROUSELHOME},
-                    @{@"title": @"TabBarDemo"           , @"class": APPURL_VIEW_IDENTIFIER_TABBARHOME},
-                    
-                    @{@"title": @"国际化"                , @"class": APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME},
-                    @{@"title": @"地图&定位"             , @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
-                    @{@"title": @"日志"                  , @"class": APPURL_VIEW_IDENTIFIER_LOG}, nil];
+                    @{@"title": @"国际化",
+                      @"class": APPURL_VIEW_IDENTIFIER_INTERNATIONALHOME},
+                    @{@"title": @"地图&定位",
+                      @"class": APPURL_VIEW_IDENTIFIER_MAPHOME},
+                    @{@"title": @"日志",
+                      @"class": APPURL_VIEW_IDENTIFIER_LOG}, nil];
     }
     return _infoArr;
 }

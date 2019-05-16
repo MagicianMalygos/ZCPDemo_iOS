@@ -266,5 +266,13 @@
 		<key>description</key>
 		<string>Texture库测试</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>ZCPLDViewController</string>
+		<key>identifier</key>
+		<string>layoutDemo</string>
+		<key>description</key>
+		<string>layoutDemo</string>
+	</dict>
 </array>
 </plist>

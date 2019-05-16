@@ -24,8 +24,10 @@ pod 'MLeaksFinder', '~> 1.0.0'
 # 约束
 pod 'Masonry', '~> 1.1.0'
 
-
 # GUI
 pod 'Texture', '~> 2.8'
+
+# 滴滴 工具集合
+pod 'DoraemonKit', '~> 1.1.7'
 
 end

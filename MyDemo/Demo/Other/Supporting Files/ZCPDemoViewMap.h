@@ -84,5 +84,8 @@
 // 动画按钮 AnimationButtonViewController
 #define APPURL_VIEW_IDENTIFIER_ANIMATIONBUTTON      @"animationButton"
 
+#pragma mark - GUI
+
+#define APPURL_VIEW_IDENTIFIER_LAYOUTDEMO           @"layoutDemo"
 
 #endif /* ZCPDemoViewMap_h */

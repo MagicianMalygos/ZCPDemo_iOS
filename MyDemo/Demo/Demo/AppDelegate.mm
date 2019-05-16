@@ -14,6 +14,9 @@
 #import <mars/xlog/xlogger.h>
 #import <mars/xlog/xloggerbase.h>
 #import <sys/xattr.h>
+#ifdef DEBUG
+#import <DoraemonKit/DoraemonManager.h>
+#endif
 
 @interface AppDelegate ()
 
@@ -61,6 +64,10 @@
     
 #if DEBUG
     [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+#endif
+    
+#ifdef DEBUG
+    [[DoraemonManager shareInstance] install];
 #endif
     
     return YES;
