@@ -9,8 +9,15 @@
 #ifndef Global_pch
 #define Global_pch
 
+#import <ZCPGlobal.h>
+#import <ZCPCategory.h>
+#import <ZCPUtil.h>
+#import <ZCPNetwork.h>
+#import <ZCPBaseClass.h>
+#import <ZCPCache.h>
+#import <ZCPUIKit.h>
+#import <ZCPRouter.h>
 
-#import <ZCPKit.h>
 #import "ZCPDemoViewMap.h"
 
 

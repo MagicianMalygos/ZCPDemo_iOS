@@ -7,8 +7,16 @@ inhibit_all_warnings!
 target:'Demo' do
 
 # zcp
-pod 'ZCPKit', :git => 'https://gitlab.com/Malygos/ZCPKit.git'
-pod 'ZCPUIKit', :git => 'https://gitlab.com/Malygos/ZCPUIKit.git'
+pod 'ZCPGlobal', '~> 0.0.1'
+pod 'ZCPRouter', '~> 0.0.1'
+pod 'ZCPCategory', '~> 0.0.1'
+pod 'ZCPUIKit', '~> 0.0.1'
+pod 'ZCPUtil', '~> 0.0.1'
+pod 'ZCPNetwork', '~> 0.0.1'
+pod 'ZCPBaseClass', '~> 0.0.1'
+pod 'ZCPWebView', '~> 0.0.1'
+pod 'ZCPCache', '~> 0.0.1'
+
 # 网络请求
 pod 'AFNetworking', '~> 3.2.1'
 # 图片加载

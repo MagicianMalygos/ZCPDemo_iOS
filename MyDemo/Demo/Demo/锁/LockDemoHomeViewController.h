@@ -6,7 +6,7 @@
 //  Copyright © 2018年 zcp. All rights reserved.
 //
 
-#import <ZCPKit/ZCPKit.h>
+#import <UIKit/UIKit.h>
 
 @interface LockDemoHomeViewController : ZCPBaseViewController
 

@@ -6,8 +6,7 @@
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 
-#import <ZCPKit.h>
-#import <ZCPUIKit.h>
+#import <UIKit/UIKit.h>
 
 @interface ZCPDemoBaseTableViewController : ZCPTableViewController<ZCPViewControllerBaseProtocol, ZCPNavigatorProtocol>
 

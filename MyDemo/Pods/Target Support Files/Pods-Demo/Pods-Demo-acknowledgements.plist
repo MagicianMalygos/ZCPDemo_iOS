@@ -2295,7 +2295,57 @@ SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>ZCPKit</string>
+			<string>ZCPBaseClass</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPCache</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPCategory</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPGlobal</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPNetwork</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPRouter</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -2306,6 +2356,26 @@ SOFTWARE.
 			<string>MIT</string>
 			<key>Title</key>
 			<string>ZCPUIKit</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPUtil</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string></string>
+			<key>License</key>
+			<string>MIT</string>
+			<key>Title</key>
+			<string>ZCPWebView</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

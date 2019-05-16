@@ -6,7 +6,7 @@
 //  Copyright © 2017年 zcp. All rights reserved.
 //
 
-#import <ZCPKit/ZCPKit.h>
+#import <ZCPBaseClass.h>
 
 @interface ZCPMinesweeperViewController : ZCPBaseViewController
 
