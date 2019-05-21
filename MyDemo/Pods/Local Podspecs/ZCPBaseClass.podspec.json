@@ -1,0 +1,41 @@
+{
+  "name": "ZCPBaseClass",
+  "version": "0.0.1",
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "homepage": "https://gitlab.com/Malygos/ZCPBaseClass",
+  "source": {
+    "git": "https://gitlab.com/Malygos/ZCPBaseClass.git",
+    "tag": "0.0.1"
+  },
+  "summary": "ZCP ZCPBaseClass.",
+  "description": "ZCP ZCPBaseClass. pa hao fang router",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "module_name": "ZCPBaseClass",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "source_files": "ZCPBaseClass/ZCPBaseClass/**/*.{h,m}",
+  "dependencies": {
+    "Aspects": [
+      "~> 1.4.1"
+    ],
+    "ZCPGlobal": [
+      "~> 0.0.1"
+    ],
+    "ZCPCategory": [
+      "~> 0.0.1"
+    ],
+    "ZCPUtil": [
+      "~> 0.0.1"
+    ]
+  }
+}

@@ -6,16 +6,27 @@ inhibit_all_warnings!
 
 target:'Demo' do
 
+# develop
+pod 'ZCPCategory', :path => '~/Desktop/ZCPCode/ZCPCategory'
+pod 'ZCPUtil', :path => '~/Desktop/ZCPCode/ZCPUtil'
+pod 'ZCPGlobal', :path => '~/Desktop/ZCPCode/ZCPGlobal'
+pod 'ZCPWebView', :path => '~/Desktop/ZCPCode/ZCPWebView'
+pod 'ZCPUIKit', :path => '~/Desktop/ZCPCode/ZCPUIKit'
+pod 'ZCPRouter', :path => '~/Desktop/ZCPCode/ZCPRouter'
+pod 'ZCPNetwork', :path => '~/Desktop/ZCPCode/ZCPNetwork'
+pod 'ZCPBaseClass', :path => '~/Desktop/ZCPCode/ZCPBaseClass'
+pod 'ZCPCache', :path => '~/Desktop/ZCPCode/ZCPCache'
+
 # zcp
-pod 'ZCPGlobal', '~> 0.0.1'
-pod 'ZCPRouter', '~> 0.0.1'
-pod 'ZCPCategory', '~> 0.0.1'
-pod 'ZCPUIKit', '~> 0.0.1'
-pod 'ZCPUtil', '~> 0.0.1'
-pod 'ZCPNetwork', '~> 0.0.1'
-pod 'ZCPBaseClass', '~> 0.0.1'
-pod 'ZCPWebView', '~> 0.0.1'
-pod 'ZCPCache', '~> 0.0.1'
+#pod 'ZCPGlobal', '~> 0.0.1'
+#pod 'ZCPCategory', '~> 0.0.1'
+#pod 'ZCPUtil', '~> 0.0.1'
+#pod 'ZCPWebView', '~> 0.0.1'
+#pod 'ZCPUIKit', '~> 0.0.1'
+#pod 'ZCPRouter', '~> 0.0.1'
+#pod 'ZCPNetwork', '~> 0.0.1'
+#pod 'ZCPBaseClass', '~> 0.0.1'
+#pod 'ZCPCache', '~> 0.0.1'
 
 # 网络请求
 pod 'AFNetworking', '~> 3.2.1'

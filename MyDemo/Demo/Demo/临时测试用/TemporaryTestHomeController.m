@@ -12,18 +12,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Masonry.h>
 #import <ZCPCommentView.h>
-
-#import <ifaddrs.h>
-#import <arpa/inet.h>
-#import <net/if.h>
-
-#define IOS_CELLULAR    @"pdp_ip0"
-#define IOS_WIFI        @"en0"
-#define IOS_VPN         @"utun0"
-#define IP_ADDR_IPv4    @"ipv4"
-#define IP_ADDR_IPv6    @"ipv6"
-
-
+#import <ZCPSandBoxTools.h>
 
 @interface TemporaryTestHomeController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -43,12 +32,11 @@
     
     // Test
     [self testXXX]; // 范例
+    [self testBlock];
 //    [self testAutoreleasepool];
 //    [self testGetImageFromView];
 //    [self testIQKeyboardManagerReturn];
-//    [self testSandBoxPath];
 //    [self testSettings];
-    [self testBlock];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,6 +57,21 @@
 
 // 测试XXX
 - (void)testXXX {
+}
+
+#pragma mark - testBlock
+
+- (void)testBlock {
+    NSLog(@"%d", [ZCPDevice isQRCodeScanAvailable]);
+    NSLog(@"%@", [ZCPDevice locationAuthority]);
+    NSLog(@"%@", [ZCPDevice pushAuthority]);
+    NSLog(@"%@", [ZCPDevice cameraAuthority]);
+    NSLog(@"%@", [ZCPDevice audioAuthority]);
+    NSLog(@"%@", [ZCPDevice photoAuthority]);
+    NSLog(@"%@", [ZCPDevice addressAuthority]);
+    NSLog(@"%@", [ZCPDevice calendarAuthority]);
+    NSLog(@"%@", [ZCPDevice remindAuthority]);
+    NSLog(@"%@", [ZCPDevice bluetoothAuthority]);
 }
 
 #pragma mark - testAutoreleasepool
@@ -209,68 +212,6 @@
 
 #pragma mark - testSandBoxPath
 
-- (void)testSandBoxPath {
-    /*
-        1./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/10CB9AFC-A114-4E5F-B760-065EDAC5D31B/Documents
-        2.~/Documents
-     */
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, NO);
-
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, NO); // ~/Applications
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDemoApplicationDirectory, NSUserDomainMask, NO); // ~/Applications/Demos
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDeveloperApplicationDirectory, NSUserDomainMask, NO); // ~/Developer/Applications
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSAdminApplicationDirectory, NSUserDomainMask, NO); // ~/Applications/Utilities
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, NO); // ~/Library
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDeveloperDirectory, NSUserDomainMask, NO); // ~/Developer
-    
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSUserDirectory, NSUserDomainMask, NO); //
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, NO); // ~/Library/Documentation
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, NO); // ~/Documents
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSCoreServiceDirectory, NSUserDomainMask, NO); //
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSAutosavedInformationDirectory, NSUserDomainMask, NO); // ~/Library/Autosave Information
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, NO); // ~/Desktop
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, NO); // ~/Library/Caches
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, NO); // ~/Library/Application Support
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, NO); // ~/Downloads
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSInputMethodsDirectory, NSUserDomainMask, NO); // ~/Library/Input Methods
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSMoviesDirectory, NSUserDomainMask, NO); // ~/Movies
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, NO); // ~/Music
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSPicturesDirectory, NSUserDomainMask, NO); // ~/Pictures
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSPrinterDescriptionDirectory, NSUserDomainMask, NO); //
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSSharedPublicDirectory, NSUserDomainMask, NO); // ~/Public
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, NO); // ~/Library/PreferencePanes
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSItemReplacementDirectory, NSUserDomainMask, NO); //
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSAllApplicationsDirectory, NSUserDomainMask, NO); // ~/Applications、~/Applications/Utilities、~/Developer/Applications、~/Applications/Demos"
-    self.directorys = NSSearchPathForDirectoriesInDomains(NSAllLibrariesDirectory, NSUserDomainMask, NO); // ~/Library、~/Developer
-    
-    /*
-     1.
-     2.
-     3./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72
-     4./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72
-     5./Users/zhuchaopeng388/Library/Developer/CoreSimulator/Devices/8D557EBD-4180-4535-93B4-F9D9CD9D008F/data/Containers/Data/Application/39284E1B-9ACA-4FA3-AC1B-5B0AB6217A72/tmp/
-     6./
-     */
-    self.path = NSUserName();
-    self.path = NSFullUserName();
-    self.path = NSHomeDirectory();
-    self.path = NSHomeDirectoryForUser(@"zcp");
-    self.path = NSTemporaryDirectory();
-    self.path = NSOpenStepRootDirectory();
-    
-    
-    // 总结：
-    // 1.document目录
-    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    // 2.library目录：caches、preferences
-    NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory, NSUserDomainMask, YES);
-    // 3.tmp目录
-    NSTemporaryDirectory();
-}
-
 - (void)setDirectorys:(NSArray *)directorys {
     _directorys = directorys;
     NSLog(@"%@", directorys);
@@ -285,144 +226,16 @@
 
 // 读取Settings.bundle中的设置
 - (void)testSettings {
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     // 如果app第一次启动，则设置默认值
     [userDefaults setObject:@"zcp" forKey:@"user_name"];
     [userDefaults setObject:@"bobo4" forKey:@"cheat_code"];
     
-    
     NSString *userName = [userDefaults stringForKey:@"user_name"];
     NSString *cheatCode = [userDefaults stringForKey:@"cheat_code"];
     NSString *area = [userDefaults stringForKey:@"area"];
     NSLog(@"%@ %@ %@", userName, cheatCode, area);
-}
-
-#pragma mark - testBlock
-
-- (void)testBlock {
-//    NSString *ip3 = [self.class getLocalIPAddress:YES];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"ytaxi://hellobike.com/home"]];
-}
-
-#pragma mark - 获取设备当前网络IP地址
-+ (NSString *)getNetworkIPAddress {
-    //方式一：淘宝api
-    NSURL *ipURL = [NSURL URLWithString:@"http://ip.taobao.com/service/getIpInfo.php?ip=myip"];
-    NSData *data = [NSData dataWithContentsOfURL:ipURL];
-    NSDictionary *ipDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    NSString *ipStr = nil;
-    if (ipDic && [ipDic[@"code"] integerValue] == 0) {
-        //获取成功
-        ipStr = ipDic[@"data"][@"ip"];
-    }
-    return (ipStr ? ipStr : @"0.0.0.0");
-}
-
-+ (NSString *)getNetworkIPAddress2 {
-    //方式二：新浪api
-    NSError *error;
-    NSURL *ipURL = [NSURL URLWithString:@"http://pv.sohu.com/cityjson?ie=utf-8"];
-
-    NSMutableString *ip = [NSMutableString stringWithContentsOfURL:ipURL encoding:NSUTF8StringEncoding error:&error];
-    //判断返回字符串是否为所需数据
-    if ([ip hasPrefix:@"var returnCitySN = "]) {
-        //对字符串进行处理，然后进行json解析
-        //删除字符串多余字符串
-        NSRange range = NSMakeRange(0, 19);
-        [ip deleteCharactersInRange:range];
-        NSString * nowIp =[ip substringToIndex:ip.length-1];
-        //将字符串转换成二进制进行Json解析
-        NSData * data = [nowIp dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"%@",dict);
-        return dict[@"cip"] ? dict[@"cip"] : @"0.0.0.0";
-    }
-    return @"0.0.0.0";
-}
-
-#pragma mark - 获取设备当前本地IP地址
-+ (NSString *)getLocalIPAddress:(BOOL)preferIPv4 {
-    NSArray *searchArray = preferIPv4 ?
-    @[ IOS_VPN @"/" IP_ADDR_IPv4, IOS_VPN @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6 ] :
-    @[ IOS_VPN @"/" IP_ADDR_IPv6, IOS_VPN @"/" IP_ADDR_IPv4, IOS_WIFI @"/" IP_ADDR_IPv6, IOS_WIFI @"/" IP_ADDR_IPv4, IOS_CELLULAR @"/" IP_ADDR_IPv6, IOS_CELLULAR @"/" IP_ADDR_IPv4 ] ;
-    
-    NSDictionary *addresses = [self getIPAddresses];
-    NSLog(@"addresses: %@", addresses);
-    
-    __block NSString *address;
-    [searchArray enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        address = addresses[key];
-        //筛选出IP地址格式
-        if([self isValidatIP:address]) *stop = YES;
-    } ];
-    return address ? address : @"0.0.0.0";
-}
-
-+ (BOOL)isValidatIP:(NSString *)ipAddress {
-    if (ipAddress.length == 0) {
-        return NO;
-    }
-    NSString *urlRegEx = @"^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
-    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
-    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\."
-    "([01]?\\d\\d?|2[0-4]\\d|25[0-5])$";
-    
-    NSError *error;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:urlRegEx options:0 error:&error];
-    
-    if (regex != nil) {
-        NSTextCheckingResult *firstMatch=[regex firstMatchInString:ipAddress options:0 range:NSMakeRange(0, [ipAddress length])];
-        
-        if (firstMatch) {
-            NSRange resultRange = [firstMatch rangeAtIndex:0];
-            NSString *result=[ipAddress substringWithRange:resultRange];
-            //输出结果
-            NSLog(@"%@",result);
-            return YES;
-        }
-    }
-    return NO;
-}
-
-+ (NSDictionary *)getIPAddresses {
-    NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
-    
-    // retrieve the current interfaces - returns 0 on success
-    struct ifaddrs *interfaces;
-    if(!getifaddrs(&interfaces)) {
-        // Loop through linked list of interfaces
-        struct ifaddrs *interface;
-        for(interface=interfaces; interface; interface=interface->ifa_next) {
-            if(!(interface->ifa_flags & IFF_UP) /* || (interface->ifa_flags & IFF_LOOPBACK) */ ) {
-                continue; // deeply nested code harder to read
-            }
-            const struct sockaddr_in *addr = (const struct sockaddr_in*)interface->ifa_addr;
-            char addrBuf[ MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN) ];
-            if(addr && (addr->sin_family==AF_INET || addr->sin_family==AF_INET6)) {
-                NSString *name = [NSString stringWithUTF8String:interface->ifa_name];
-                NSString *type;
-                if(addr->sin_family == AF_INET) {
-                    if(inet_ntop(AF_INET, &addr->sin_addr, addrBuf, INET_ADDRSTRLEN)) {
-                        type = IP_ADDR_IPv4;
-                    }
-                } else {
-                    const struct sockaddr_in6 *addr6 = (const struct sockaddr_in6*)interface->ifa_addr;
-                    if(inet_ntop(AF_INET6, &addr6->sin6_addr, addrBuf, INET6_ADDRSTRLEN)) {
-                        type = IP_ADDR_IPv6;
-                    }
-                }
-                if(type) {
-                    NSString *key = [NSString stringWithFormat:@"%@/%@", name, type];
-                    addresses[key] = [NSString stringWithUTF8String:addrBuf];
-                }
-            }
-        }
-        // Free memory
-        freeifaddrs(interfaces);
-    }
-    return [addresses count] ? addresses : nil;
 }
 
 @end

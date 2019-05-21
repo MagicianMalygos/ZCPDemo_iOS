@@ -5995,7 +5995,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist",
+				"${PODS_ROOT}/../../../ZCPCode/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

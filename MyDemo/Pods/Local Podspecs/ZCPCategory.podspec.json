@@ -1,0 +1,37 @@
+{
+  "name": "ZCPCategory",
+  "version": "0.0.1",
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "homepage": "https://gitlab.com/Malygos/ZCPCategory",
+  "source": {
+    "git": "https://gitlab.com/Malygos/ZCPCategory.git",
+    "tag": "0.0.1"
+  },
+  "summary": "ZCP Category.",
+  "description": "ZCP Category. It has some Category",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "module_name": "ZCPCategory",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "source_files": "ZCPCategory/ZCPCategory/ZCPCategory.h",
+  "subspecs": [
+    {
+      "name": "Foundation",
+      "source_files": "ZCPCategory/ZCPCategory/Foundation/**/*.{h,m}"
+    },
+    {
+      "name": "UIKit",
+      "source_files": "ZCPCategory/ZCPCategory/UIKit/**/*.{h,m}"
+    }
+  ]
+}

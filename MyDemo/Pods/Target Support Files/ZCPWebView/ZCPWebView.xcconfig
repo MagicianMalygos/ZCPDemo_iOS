@@ -1,9 +1,9 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ZCPWebView
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ZCPWebView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Aspects" "${PODS_ROOT}/Headers/Public/ZCPCategory" "${PODS_ROOT}/Headers/Public/ZCPGlobal" "${PODS_ROOT}/Headers/Public/ZCPNetwork" "${PODS_ROOT}/Headers/Public/ZCPRouter" "${PODS_ROOT}/Headers/Public/ZCPUtil" "${PODS_ROOT}/Headers/Public/ZCPWebView"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ZCPWebView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Aspects" "${PODS_ROOT}/Headers/Public/OpenUDID" "${PODS_ROOT}/Headers/Public/ZCPCategory" "${PODS_ROOT}/Headers/Public/ZCPGlobal" "${PODS_ROOT}/Headers/Public/ZCPRouter" "${PODS_ROOT}/Headers/Public/ZCPUtil" "${PODS_ROOT}/Headers/Public/ZCPWebView"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}
-PODS_TARGET_SRCROOT = ${PODS_ROOT}/ZCPWebView
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/../../../ZCPCode/ZCPWebView
 PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
 SKIP_INSTALL = YES

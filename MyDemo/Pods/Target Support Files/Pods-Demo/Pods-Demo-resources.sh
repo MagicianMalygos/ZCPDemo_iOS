@@ -99,12 +99,12 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle"
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist"
+  install_resource "${PODS_ROOT}/../../../ZCPCode/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle"
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
-  install_resource "${PODS_ROOT}/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist"
+  install_resource "${PODS_ROOT}/../../../ZCPCode/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

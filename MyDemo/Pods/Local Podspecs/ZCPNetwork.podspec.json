@@ -1,0 +1,32 @@
+{
+  "name": "ZCPNetwork",
+  "version": "0.0.1",
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "homepage": "https://gitlab.com/Malygos/ZCPNetwork",
+  "source": {
+    "git": "https://gitlab.com/Malygos/ZCPNetwork.git",
+    "tag": "0.0.1"
+  },
+  "summary": "ZCP ZCPNetwork.",
+  "description": "ZCP ZCPNetwork. pa hao fang router",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "module_name": "ZCPNetwork",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "source_files": "ZCPNetwork/ZCPNetwork/**/*.{h,m}",
+  "dependencies": {
+    "ZCPGlobal": [
+      "~>0.0.1"
+    ]
+  }
+}

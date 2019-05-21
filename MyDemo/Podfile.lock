@@ -36,6 +36,7 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - OpenUDID (1.0.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -114,9 +115,8 @@ PODS:
     - ZCPGlobal
   - ZCPUtil (0.0.1)
   - ZCPWebView (0.0.1):
+    - OpenUDID (~> 1.0.0)
     - ZCPCategory (~> 0.0.1)
-    - ZCPGlobal (~> 0.0.1)
-    - ZCPNetwork (~> 0.0.1)
     - ZCPRouter (~> 0.0.1)
     - ZCPUtil (~> 0.0.1)
 
@@ -130,15 +130,15 @@ DEPENDENCIES:
   - SDWebImage (~> 4.1.0)
   - Texture (~> 2.8)
   - YYKit (~> 1.0.9)
-  - ZCPBaseClass (~> 0.0.1)
-  - ZCPCache (~> 0.0.1)
-  - ZCPCategory (~> 0.0.1)
-  - ZCPGlobal (~> 0.0.1)
-  - ZCPNetwork (~> 0.0.1)
-  - ZCPRouter (~> 0.0.1)
-  - ZCPUIKit (~> 0.0.1)
-  - ZCPUtil (~> 0.0.1)
-  - ZCPWebView (~> 0.0.1)
+  - ZCPBaseClass (from `~/Desktop/ZCPCode/ZCPBaseClass`)
+  - ZCPCache (from `~/Desktop/ZCPCode/ZCPCache`)
+  - ZCPCategory (from `~/Desktop/ZCPCode/ZCPCategory`)
+  - ZCPGlobal (from `~/Desktop/ZCPCode/ZCPGlobal`)
+  - ZCPNetwork (from `~/Desktop/ZCPCode/ZCPNetwork`)
+  - ZCPRouter (from `~/Desktop/ZCPCode/ZCPRouter`)
+  - ZCPUIKit (from `~/Desktop/ZCPCode/ZCPUIKit`)
+  - ZCPUtil (from `~/Desktop/ZCPCode/ZCPUtil`)
+  - ZCPWebView (from `~/Desktop/ZCPCode/ZCPWebView`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -152,6 +152,7 @@ SPEC REPOS:
     - MagicalRecord
     - Masonry
     - MLeaksFinder
+    - OpenUDID
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -161,16 +162,26 @@ SPEC REPOS:
     - UICountingLabel
     - "UITextView+Placeholder"
     - YYKit
-  https://gitlab.com/Malygos/zcprepo.git:
-    - ZCPBaseClass
-    - ZCPCache
-    - ZCPCategory
-    - ZCPGlobal
-    - ZCPNetwork
-    - ZCPRouter
-    - ZCPUIKit
-    - ZCPUtil
-    - ZCPWebView
+
+EXTERNAL SOURCES:
+  ZCPBaseClass:
+    :path: "~/Desktop/ZCPCode/ZCPBaseClass"
+  ZCPCache:
+    :path: "~/Desktop/ZCPCode/ZCPCache"
+  ZCPCategory:
+    :path: "~/Desktop/ZCPCode/ZCPCategory"
+  ZCPGlobal:
+    :path: "~/Desktop/ZCPCode/ZCPGlobal"
+  ZCPNetwork:
+    :path: "~/Desktop/ZCPCode/ZCPNetwork"
+  ZCPRouter:
+    :path: "~/Desktop/ZCPCode/ZCPRouter"
+  ZCPUIKit:
+    :path: "~/Desktop/ZCPCode/ZCPUIKit"
+  ZCPUtil:
+    :path: "~/Desktop/ZCPCode/ZCPUtil"
+  ZCPWebView:
+    :path: "~/Desktop/ZCPCode/ZCPWebView"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -183,6 +194,7 @@ SPEC CHECKSUMS:
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
@@ -192,16 +204,16 @@ SPEC CHECKSUMS:
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZCPBaseClass: cc61488f1ec0dd99b27aad2e057cefad46686c37
-  ZCPCache: fca5c7f81c4ef39fb6aa9e7c44ef7e0924d1b97c
-  ZCPCategory: c4746b6a55f88eed0eba795ba5f19c0041a9b9b7
-  ZCPGlobal: 7b47b61719855a1cb8d5bc0c7e9b47f6411eb44e
-  ZCPNetwork: 88984e6138c38278f329ade264f9579bd3252bcc
-  ZCPRouter: 1454e2a1efc55705b38a82e3f746a59e7697d6a2
-  ZCPUIKit: 52300d310574ff9e35a176dbb59bece4f95fa966
-  ZCPUtil: d33ec3ce0f172184ebbc37aa68622094212e19e3
-  ZCPWebView: 4a33451c2a3e2847714f4770e30db0ea842faad6
+  ZCPBaseClass: 9d55b8fbbeb96ac8b7ce23c90d7b84f1d8ba717c
+  ZCPCache: 5512e8e1b0fa8fd62c6a4f4b3c7aed9d7e14e02c
+  ZCPCategory: 385bccfa300fdf91288ac9970e950876b87ff343
+  ZCPGlobal: 6432ac9c0e20f860d139729b39d57ba85db5994b
+  ZCPNetwork: a56c273efbb8573b694b732ec0f190f7ede0c03c
+  ZCPRouter: 8da842275a0c16bf90e1d1a847f661bcaffff523
+  ZCPUIKit: 7df8111b24dc6931ca1165b3a62100459a18e835
+  ZCPUtil: 8fca2686936a62e28032c42231149955fbebb122
+  ZCPWebView: deaf7c4fed8279f13628c9b09eda7aaf00372565
 
-PODFILE CHECKSUM: 75136783d1a94d8e3f44eda0920245a0963cb626
+PODFILE CHECKSUM: 272701f06cc91f5abd9ccb9879485a08ea7c1385
 
 COCOAPODS: 1.6.2

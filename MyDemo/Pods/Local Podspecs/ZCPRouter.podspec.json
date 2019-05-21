@@ -1,0 +1,39 @@
+{
+  "name": "ZCPRouter",
+  "version": "0.0.1",
+  "authors": {
+    "朱超鹏": "z164757979@163.com"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "homepage": "https://gitlab.com/Malygos/ZCPRouter",
+  "source": {
+    "git": "https://gitlab.com/Malygos/ZCPRouter.git",
+    "tag": "0.0.1"
+  },
+  "summary": "ZCP ZCPRouter.",
+  "description": "ZCP ZCPRouter. pa hao fang router",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "module_name": "ZCPRouter",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ],
+  "source_files": "ZCPRouter/ZCPRouter/**/*.{h,m}",
+  "resources": "ZCPRouter/ZCPRouter/viewMap.plist",
+  "dependencies": {
+    "ZCPGlobal": [
+      "~>0.0.1"
+    ],
+    "ZCPCategory": [
+      "~>0.0.1"
+    ],
+    "Aspects": [
+      "~>1.4.1"
+    ]
+  }
+}
