@@ -56,14 +56,14 @@
     self.window.rootViewController = [ZCPNavigator sharedInstance].rootViewController;
     [self.window makeKeyAndVisible];
     
-//    [DebugManager defaultManager].alwaysShowStatusBall = YES;
+    [DebugManager defaultManager].alwaysShowStatusBall = YES;
     
 //    [AppManager checkAppVersion];
 //    [AppManager checkAppVersion_custom];
     
-    
+
 #if DEBUG
-    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
 #endif
     
 #ifdef DEBUG

@@ -65,13 +65,13 @@
 	<key>NSHomeKitUsageDescription</key>
 	<string>哈哈</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>哈哈</string>
+	<string>Location Always and When In Use Usage Description</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>哈哈</string>
+	<string>Location Always Usage Description</string>
 	<key>NSLocationUsageDescription</key>
-	<string>哈哈</string>
+	<string>Location Usage Description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>哈哈</string>
+	<string>Location When In Use Usage Description</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>哈哈</string>
 	<key>NSMicrophoneUsageDescription</key>

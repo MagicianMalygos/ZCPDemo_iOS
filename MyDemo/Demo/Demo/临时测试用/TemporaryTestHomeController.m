@@ -12,7 +12,8 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Masonry.h>
 #import <ZCPCommentView.h>
-#import <ZCPSandBoxTools.h>
+#import <ZCPWebView.h>
+#import "ZCPDemoWebViewController.h"
 
 @interface TemporaryTestHomeController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -42,14 +43,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (self.isMovingToParentViewController) {
-        NSLog(@"首次进入");
+        // 首次进入
     }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (self.isMovingFromParentViewController) {
-        NSLog(@"退出");
+        // 退出
     }
 }
 
@@ -62,16 +63,21 @@
 #pragma mark - testBlock
 
 - (void)testBlock {
-    NSLog(@"%d", [ZCPDevice isQRCodeScanAvailable]);
-    NSLog(@"%@", [ZCPDevice locationAuthority]);
-    NSLog(@"%@", [ZCPDevice pushAuthority]);
-    NSLog(@"%@", [ZCPDevice cameraAuthority]);
-    NSLog(@"%@", [ZCPDevice audioAuthority]);
-    NSLog(@"%@", [ZCPDevice photoAuthority]);
-    NSLog(@"%@", [ZCPDevice addressAuthority]);
-    NSLog(@"%@", [ZCPDevice calendarAuthority]);
-    NSLog(@"%@", [ZCPDevice remindAuthority]);
-    NSLog(@"%@", [ZCPDevice bluetoothAuthority]);
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    button.backgroundColor = [UIColor redColor];
+    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)click {
+    ZCPDemoWebViewController *vc = [[ZCPDemoWebViewController alloc] init];
+//    [vc loadURLString:@"https://www.baidu.com"];
+//    [vc loadURLString:@"https://mp.weixin.qq.com/s/rhYKLIbXOsUJC_n6dt9UfA"];
+    [vc loadURLString:[[NSBundle mainBundle] URLForResource:@"network_unavailable_cn.html" withExtension:nil].absoluteString];
+    
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - testAutoreleasepool

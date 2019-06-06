@@ -31,7 +31,9 @@ pod 'ZCPCache', :path => '~/Desktop/ZCPCode/ZCPCache'
 # 网络请求
 pod 'AFNetworking', '~> 3.2.1'
 # 图片加载
-pod 'SDWebImage', '~> 4.1.0'
+pod 'SDWebImage'
+pod 'SDWebImage/WebP'
+
 # 各种
 pod 'YYKit', '~> 1.0.9'
 # 键盘

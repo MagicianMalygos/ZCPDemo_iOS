@@ -30,6 +30,30 @@ PODS:
   - FBRetainCycleDetector (0.1.4)
   - fishhook (0.2)
   - IQKeyboardManager (5.0.8)
+  - libwebp (1.0.2):
+    - libwebp/core (= 1.0.2)
+    - libwebp/dec (= 1.0.2)
+    - libwebp/demux (= 1.0.2)
+    - libwebp/dsp (= 1.0.2)
+    - libwebp/enc (= 1.0.2)
+    - libwebp/mux (= 1.0.2)
+    - libwebp/utils (= 1.0.2)
+    - libwebp/webp (= 1.0.2)
+  - libwebp/core (1.0.2):
+    - libwebp/webp
+  - libwebp/dec (1.0.2):
+    - libwebp/core
+  - libwebp/demux (1.0.2):
+    - libwebp/core
+  - libwebp/dsp (1.0.2):
+    - libwebp/core
+  - libwebp/enc (1.0.2):
+    - libwebp/core
+  - libwebp/mux (1.0.2):
+    - libwebp/core
+  - libwebp/utils (1.0.2):
+    - libwebp/core
+  - libwebp/webp (1.0.2)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
@@ -57,6 +81,9 @@ PODS:
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
+  - SDWebImage/WebP (4.1.2):
+    - libwebp
+    - SDWebImage/Core
   - Texture (2.8):
     - Texture/AssetsLibrary (= 2.8)
     - Texture/Core (= 2.8)
@@ -117,8 +144,10 @@ PODS:
   - ZCPWebView (0.0.1):
     - OpenUDID (~> 1.0.0)
     - ZCPCategory (~> 0.0.1)
-    - ZCPRouter (~> 0.0.1)
-    - ZCPUtil (~> 0.0.1)
+    - ZCPWebView/JSBridge (= 0.0.1)
+  - ZCPWebView/JSBridge (0.0.1):
+    - OpenUDID (~> 1.0.0)
+    - ZCPCategory (~> 0.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
@@ -127,7 +156,8 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 5.0.2)
   - Masonry (~> 1.1.0)
   - MLeaksFinder (~> 1.0.0)
-  - SDWebImage (~> 4.1.0)
+  - SDWebImage
+  - SDWebImage/WebP
   - Texture (~> 2.8)
   - YYKit (~> 1.0.9)
   - ZCPBaseClass (from `~/Desktop/ZCPCode/ZCPBaseClass`)
@@ -149,6 +179,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - fishhook
     - IQKeyboardManager
+    - libwebp
     - MagicalRecord
     - Masonry
     - MLeaksFinder
@@ -191,6 +222,7 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  libwebp: 10b2bf3c62bfa28046ff701771c9a75a7683d49b
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
@@ -212,8 +244,8 @@ SPEC CHECKSUMS:
   ZCPRouter: 8da842275a0c16bf90e1d1a847f661bcaffff523
   ZCPUIKit: 7df8111b24dc6931ca1165b3a62100459a18e835
   ZCPUtil: 8fca2686936a62e28032c42231149955fbebb122
-  ZCPWebView: deaf7c4fed8279f13628c9b09eda7aaf00372565
+  ZCPWebView: 3025019e4e5323a3121846e171d24003e793877d
 
-PODFILE CHECKSUM: 272701f06cc91f5abd9ccb9879485a08ea7c1385
+PODFILE CHECKSUM: d05b7f05db057caf3e7641258b5850fdca95ac1e
 
 COCOAPODS: 1.6.2

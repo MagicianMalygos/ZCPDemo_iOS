@@ -23,19 +23,19 @@
     "Foundation",
     "UIKit"
   ],
-  "source_files": "ZCPWebView/ZCPWebView/**/*.{h,m}",
+  "source_files": "ZCPWebView/ZCPWebView/*.{h,m}",
   "dependencies": {
     "ZCPCategory": [
-      "~> 0.0.1"
-    ],
-    "ZCPRouter": [
-      "~> 0.0.1"
-    ],
-    "ZCPUtil": [
-      "~> 0.0.1"
+      "~>0.0.1"
     ],
     "OpenUDID": [
-      "~> 1.0.0"
+      "~>1.0.0"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "JSBridge",
+      "source_files": "ZCPWebView/ZCPWebView/JSBridge/**/*.{h,m}"
+    }
+  ]
 }

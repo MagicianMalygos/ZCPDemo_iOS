@@ -12,7 +12,7 @@
 
 - (NSURLSessionDataTask *)getRequest {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSURLSessionDataTask *task = [manager GET:GET_URL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDataTask *task = [manager GET:@"https://api.apiopen.top/getJoke?page=1&count=2&type=video"/*GET_URL*/ parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DebugLog(@"%@ %@", responseObject, [responseObject className]);
