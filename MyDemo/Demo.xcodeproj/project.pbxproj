@@ -56,7 +56,6 @@
 		65B048E822324F740050A7B1 /* tabbar_home_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B048D422324F740050A7B1 /* tabbar_home_selected@3x.png */; };
 		65B66C9622A60FA500214E55 /* ZCPDemoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B66C9522A60FA500214E55 /* ZCPDemoWebViewController.m */; };
 		65B66C9922A611CD00214E55 /* network_unavailable_cn.html in Resources */ = {isa = PBXBuildFile; fileRef = 65B66C9722A611CD00214E55 /* network_unavailable_cn.html */; };
-		65B66C9A22A611CD00214E55 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 65B66C9822A611CD00214E55 /* jquery.min.js */; };
 		65B66C9D22A6156700214E55 /* ZCPDemoWebViewController+JSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B66C9C22A6156700214E55 /* ZCPDemoWebViewController+JSAPI.m */; };
 		65F26F7822815DDD0015ADD4 /* TravelCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F26F7722815DDD0015ADD4 /* TravelCellNode.m */; };
 		65F26F8B228169AF0015ADD4 /* TravelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F26F8A228169AF0015ADD4 /* TravelModel.m */; };
@@ -159,8 +158,6 @@
 		FB5079211E2618A900361E60 /* SetFilletTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078931E2618A900361E60 /* SetFilletTestCell.m */; };
 		FB5079221E2618A900361E60 /* SizeToFitDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078961E2618A900361E60 /* SizeToFitDemoHomeController.m */; };
 		FB5079231E2618A900361E60 /* UIDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5078981E2618A900361E60 /* UIDemoHomeController.m */; };
-		FB5079241E2618A900361E60 /* a.html in Resources */ = {isa = PBXBuildFile; fileRef = FB50789B1E2618A900361E60 /* a.html */; };
-		FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50789D1E2618A900361E60 /* WebViewDemoHomeController.m */; };
 		FB50795F1E26193A00361E60 /* QiPaoDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */; };
 		FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5079651E262D8800361E60 /* DashedDemoHomeController.m */; };
 		FB7E4FAF1FFE1C0900B366FA /* EPLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7E4F961FFE1C0900B366FA /* EPLog.mm */; };
@@ -482,6 +479,13 @@
 			remoteGlobalIDString = A70B2E801D884FD87DCC8A3AC4429B71;
 			remoteInfo = Masonry;
 		};
+		650F652A22B780E200CE57A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8421BD44C8E24F78D1FF748566D8AC62;
+			remoteInfo = libwebp;
+		};
 		653C1D442276FDBF00679595 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E3E85B91D2A84A40061664A /* Pods.xcodeproj */;
@@ -750,7 +754,6 @@
 		65B66C9422A60FA500214E55 /* ZCPDemoWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPDemoWebViewController.h; sourceTree = "<group>"; };
 		65B66C9522A60FA500214E55 /* ZCPDemoWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPDemoWebViewController.m; sourceTree = "<group>"; };
 		65B66C9722A611CD00214E55 /* network_unavailable_cn.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = network_unavailable_cn.html; sourceTree = "<group>"; };
-		65B66C9822A611CD00214E55 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		65B66C9B22A6156700214E55 /* ZCPDemoWebViewController+JSAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZCPDemoWebViewController+JSAPI.h"; sourceTree = "<group>"; };
 		65B66C9C22A6156700214E55 /* ZCPDemoWebViewController+JSAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZCPDemoWebViewController+JSAPI.m"; sourceTree = "<group>"; };
 		65F26F7622815DDD0015ADD4 /* TravelCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelCellNode.h; sourceTree = "<group>"; };
@@ -1862,9 +1865,6 @@
 		FB5078961E2618A900361E60 /* SizeToFitDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeToFitDemoHomeController.m; sourceTree = "<group>"; };
 		FB5078971E2618A900361E60 /* UIDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDemoHomeController.h; sourceTree = "<group>"; };
 		FB5078981E2618A900361E60 /* UIDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDemoHomeController.m; sourceTree = "<group>"; };
-		FB50789B1E2618A900361E60 /* a.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = a.html; sourceTree = "<group>"; };
-		FB50789C1E2618A900361E60 /* WebViewDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewDemoHomeController.h; sourceTree = "<group>"; };
-		FB50789D1E2618A900361E60 /* WebViewDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewDemoHomeController.m; sourceTree = "<group>"; };
 		FB50795C1E26193A00361E60 /* QiPaoDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiPaoDemoHomeController.h; sourceTree = "<group>"; };
 		FB50795D1E26193A00361E60 /* QiPaoDemoHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiPaoDemoHomeController.m; sourceTree = "<group>"; };
 		FB5079641E262D8800361E60 /* DashedDemoHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashedDemoHomeController.h; sourceTree = "<group>"; };
@@ -3959,6 +3959,7 @@
 				FBF4BC6320FDD8B9005FD795 /* libFBRetainCycleDetector.a */,
 				65F26FAE22818BEE0015ADD4 /* libfishhook.a */,
 				FBB1A1EB1EE10CBC004F013F /* libIQKeyboardManager.a */,
+				650F652B22B780E200CE57A5 /* liblibwebp.a */,
 				FB4B531D20DCC6C700EC6C8B /* libMagicalRecord.a */,
 				650CF22321DC8D0500E20261 /* libMasonry.a */,
 				FBF4BC6520FDD8B9005FD795 /* libMLeaksFinder.a */,
@@ -4828,11 +4829,7 @@
 		FB50789A1E2618A900361E60 /* WebViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				65B66C9822A611CD00214E55 /* jquery.min.js */,
 				65B66C9722A611CD00214E55 /* network_unavailable_cn.html */,
-				FB50789B1E2618A900361E60 /* a.html */,
-				FB50789C1E2618A900361E60 /* WebViewDemoHomeController.h */,
-				FB50789D1E2618A900361E60 /* WebViewDemoHomeController.m */,
 				65B66C9422A60FA500214E55 /* ZCPDemoWebViewController.h */,
 				65B66C9522A60FA500214E55 /* ZCPDemoWebViewController.m */,
 				65B66C9B22A6156700214E55 /* ZCPDemoWebViewController+JSAPI.h */,
@@ -5587,6 +5584,13 @@
 			remoteRef = 650CF22221DC8D0500E20261 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		650F652B22B780E200CE57A5 /* liblibwebp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibwebp.a;
+			remoteRef = 650F652A22B780E200CE57A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		653C1D452276FDBF00679595 /* libPINCache.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -5886,7 +5890,6 @@
 				FBCF6B771F8F528800E3B58C /* ZCPMinesweeperViewController.xib in Resources */,
 				FBBD4D022137DC15009ECC69 /* Azeroth_06_14.jpg in Resources */,
 				18A5014D1C92BE67006EBEB4 /* 胡敬礼毛笔行书繁.TTF in Resources */,
-				65B66C9A22A611CD00214E55 /* jquery.min.js in Resources */,
 				FBBD4CC02137DC15009ECC69 /* Azeroth_06_13.jpg in Resources */,
 				FBBD4C9F2137DC15009ECC69 /* Azeroth_06_00.jpg in Resources */,
 				65B048E322324F740050A7B1 /* tabbar_job_selected@3x.png in Resources */,
@@ -5907,7 +5910,6 @@
 				FBBD4C802137DC15009ECC69 /* Azeroth_02_02.jpg in Resources */,
 				FBBD4CF22137DC15009ECC69 /* Azeroth_04_04.jpg in Resources */,
 				FBAE25082133EFA70031CE27 /* redFire.png in Resources */,
-				FB5079241E2618A900361E60 /* a.html in Resources */,
 				FBBD4CA32137DC15009ECC69 /* Azeroth_06_11.jpg in Resources */,
 				FBA22A15213E864600C39E92 /* image1 120x75.jpg in Resources */,
 				FBBD4CAE2137DC15009ECC69 /* Azeroth_09_03.jpg in Resources */,
@@ -6131,7 +6133,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/../../../ZCPCode/ZCPRouter/ZCPRouter/ZCPRouter/viewMap.plist",
@@ -6144,7 +6146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -6246,7 +6248,6 @@
 				FB5078A21E2618A900361E60 /* CameraAndAlbumDemoHomeController.m in Sources */,
 				FB5079171E2618A900361E60 /* PaletteDemoHomeController.m in Sources */,
 				FB9092A21F6F5735007EC93B /* Decorator.m in Sources */,
-				FB5079251E2618A900361E60 /* WebViewDemoHomeController.m in Sources */,
 				FB7E4FC01FFE1C2300B366FA /* LogDemoHomeViewController.mm in Sources */,
 				FB5079661E262D8800361E60 /* DashedDemoHomeController.m in Sources */,
 				FB9092B11F6F5D0E007EC93B /* Nokia5230Phone.m in Sources */,

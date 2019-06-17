@@ -23,7 +23,7 @@
     "Foundation",
     "UIKit"
   ],
-  "source_files": "ZCPCategory/ZCPCategory/ZCPCategory.h",
+  "source_files": "ZCPCategory/ZCPCategory/*.h",
   "subspecs": [
     {
       "name": "Foundation",

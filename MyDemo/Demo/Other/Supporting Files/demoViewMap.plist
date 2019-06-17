@@ -92,7 +92,7 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>WebViewDemoHomeController</string>
+		<string>ZCPDemoWebViewController</string>
 		<key>identifier</key>
 		<string>webHome</string>
 		<key>description</key>

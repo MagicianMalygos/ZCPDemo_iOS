@@ -17,7 +17,7 @@
 #define APPURL_VIEW_IDENTIFIER_TEMPTESTHOME         @"tempTestHome"
 // ui样例首页 UIDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_UIHOME               @"uiHome"
-// web容器 WebViewDemoHomeController
+// web容器 ZCPDemoWebViewController
 #define APPURL_VIEW_IDENTIFIER_WEBHOME              @"webHome"
 // UIPageViewController PageVCDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_PAGEVCHOME           @"pageVCHome"

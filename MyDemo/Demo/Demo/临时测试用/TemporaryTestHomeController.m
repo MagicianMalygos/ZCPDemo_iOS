@@ -63,21 +63,7 @@
 #pragma mark - testBlock
 
 - (void)testBlock {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 100, 100, 100);
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-}
-
-- (void)click {
-    ZCPDemoWebViewController *vc = [[ZCPDemoWebViewController alloc] init];
-//    [vc loadURLString:@"https://www.baidu.com"];
-//    [vc loadURLString:@"https://mp.weixin.qq.com/s/rhYKLIbXOsUJC_n6dt9UfA"];
-    [vc loadURLString:[[NSBundle mainBundle] URLForResource:@"network_unavailable_cn.html" withExtension:nil].absoluteString];
     
-    vc.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - testAutoreleasepool
