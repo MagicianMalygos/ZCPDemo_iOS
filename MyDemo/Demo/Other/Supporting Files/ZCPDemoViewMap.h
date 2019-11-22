@@ -43,15 +43,13 @@
 #define APPURL_VIEW_IDENTIFIER_LOG                  @"log"
 // 锁 LockDemoHomeViewController
 #define APPURL_VIEW_IDENTIFIER_LOCK                 @"lock"
-// Texture TextureDemoHomeViewController
-#define APPURL_VIEW_IDENTIFIER_TEXTURE              @"texture"
+// Gesture GestureDemoHomeViewController
+#define APPURL_VIEW_IDENTIFIER_GESTURE              @"gesture"
 
 #pragma mark - UI
 
 // 文字适配 SizeToFitDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_SIZETOFIT            @"sizeToFit"
-// 设置圆角 SetFilletDemoHomeController
-#define APPURL_VIEW_IDENTIFIER_SETFILLET            @"setFillet"
 // 画板 PaletteDemoHomeController
 #define APPURL_VIEW_IDENTIFIER_PALETTE              @"palette"
 // 字体 FontDemoHomeControllerViewController

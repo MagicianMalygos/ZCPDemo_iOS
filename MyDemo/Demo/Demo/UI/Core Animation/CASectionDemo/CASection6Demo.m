@@ -429,7 +429,7 @@
 - (void)demo10 {
     // AVPlayerLayer是用来在iOS上播放视频的。他是高级接口例如MPMoivePlayer的底层实现，提供了显示视频的底层控制
     
-    NSURL *url = [NSURL URLWithString:@"http://flv2.bn.netease.com/videolib3/1604/28/fVobI0704/SD/fVobI0704-mobile.mp4"];
+    NSURL *url = [NSURL URLWithString:@"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4"];
     
     AVPlayer *player = [AVPlayer playerWithURL:url];
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];

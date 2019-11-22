@@ -36,14 +36,6 @@
 	</dict>
 	<dict>
 		<key>className</key>
-		<string>SetFilletDemoHomeController</string>
-		<key>identifier</key>
-		<string>setFillet</string>
-		<key>description</key>
-		<string>设置圆角</string>
-	</dict>
-	<dict>
-		<key>className</key>
 		<string>PaletteDemoHomeController</string>
 		<key>identifier</key>
 		<string>palette</string>
@@ -257,14 +249,6 @@
 		<string>coreAnimation</string>
 		<key>description</key>
 		<string>核心动画demo</string>
-	</dict>
-	<dict>
-		<key>className</key>
-		<string>TextureDemoHomeViewController</string>
-		<key>identifier</key>
-		<string>texture</string>
-		<key>description</key>
-		<string>Texture库测试</string>
 	</dict>
 	<dict>
 		<key>className</key>

@@ -19,7 +19,6 @@
                     @{@"title": @"动画"                  , @"class": APPURL_VIEW_IDENTIFIER_ANIMATION},
                     @{@"title": @"SizeToFitDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SIZETOFIT},
                     @{@"title": @"FontDemo"             , @"class": APPURL_VIEW_IDENTIFIER_FONT},
-                    @{@"title": @"SetFilletDemo"        , @"class": APPURL_VIEW_IDENTIFIER_SETFILLET},
                     @{@"title": @"Palette"              , @"class": APPURL_VIEW_IDENTIFIER_PALETTE},
                     @{@"title": @"QiPaoDemo"            , @"class": APPURL_VIEW_IDENTIFIER_QIPAO},
                     @{@"title": @"虚线"                  , @"class": APPURL_VIEW_IDENTIFIER_DASHED},

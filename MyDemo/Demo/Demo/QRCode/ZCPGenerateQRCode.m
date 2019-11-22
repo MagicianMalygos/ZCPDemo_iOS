@@ -71,10 +71,10 @@
 
 
 #pragma mark release call back method
-void ProviderReleaseData(void *info, const void *data, size_t size) {
+void zcp_providerReleaseData(void *info, const void *data, size_t size) {
     free((void *)data);
 }
-
+ 
 #pragma mark 将UIImage中黑色的内容转换成参数对应的RGB颜色
 + (UIImage *)imageBlackToTransparent:(UIImage *)image withRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
     const int imageWidth        = image.size.width;
@@ -99,7 +99,7 @@ void ProviderReleaseData(void *info, const void *data, size_t size) {
         }
     }
     // 输出图片
-    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, ProviderReleaseData);
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, zcp_providerReleaseData);
     CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace, kCGImageAlphaLast | kCGBitmapByteOrder32Little, dataProvider, NULL, true, kCGRenderingIntentDefault);
     CGDataProviderRelease(dataProvider);
     UIImage *resultUIImage = [UIImage imageWithCGImage:imageRef];
@@ -133,7 +133,7 @@ void ProviderReleaseData(void *info, const void *data, size_t size) {
         }
     }
     // 输出图片
-    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, ProviderReleaseData);
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageBuf, bytesPerRow * imageHeight, zcp_providerReleaseData);
     CGImageRef imageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace, kCGImageAlphaLast | kCGBitmapByteOrder32Little, dataProvider, NULL, true, kCGRenderingIntentDefault);
     CGDataProviderRelease(dataProvider);
     UIImage *resultUIImage = [UIImage imageWithCGImage:imageRef];

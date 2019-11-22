@@ -44,11 +44,11 @@ pod 'Aspects', '~> 1.4.1'
 pod 'MLeaksFinder', '~> 1.0.0'
 # 约束
 pod 'Masonry', '~> 1.1.0'
-
-# GUI
-pod 'Texture', '~> 2.8'
-
 # 滴滴 工具集合
 pod 'DoraemonKit', '~> 1.1.7'
+
+
+pod 'lottie-ios', '~> 2.5.3'
+pod 'FLAnimatedImage'
 
 end

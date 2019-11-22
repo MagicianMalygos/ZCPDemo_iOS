@@ -27,15 +27,12 @@
   "subspecs": [
     {
       "name": "ListView",
+      "source_files": "ZCPUIKit/ListView/**/*.{h,m}",
       "dependencies": {
-        "ZCPGlobal": [
-
-        ],
-        "ZCPCategory": [
+        "Masonry": [
 
         ]
-      },
-      "source_files": "ZCPUIKit/ListView/**/*.{h,m}"
+      }
     },
     {
       "name": "Extend",

@@ -93,7 +93,7 @@
     return _infoArr;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(nonnull id<ZCPTableViewCellProtocol>)object rowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString *classString = [[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"class"];
     Class class = NSClassFromString(classString);
     if ([classString isEqualToString:@"RuntimeExampleDemo"]) {

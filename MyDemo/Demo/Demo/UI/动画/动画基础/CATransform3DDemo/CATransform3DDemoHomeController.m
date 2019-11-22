@@ -171,17 +171,17 @@
 
 - (void)constructData {
     [super constructData];
-    for (ZCPSectionCellItem *item in self.tableViewAdaptor.items) {
-        item.sectionTitleFont       = [UIFont systemFontOfSize:15.0f];
-        item.cellHeight             = @(40.0f);
+    ZCPTableViewSectionDataModel *sectionViewModel = [self.tableViewDataSource dataModelForSectionInSection:0];
+    for (ZCPTableViewSingleTitleCellViewModel *viewModel in sectionViewModel.cellViewModelArray) {
+        viewModel.titleFont = [UIFont systemFontOfSize:15];
+        viewModel.cellHeight = @(40);
     }
+    [self.tableView reloadData];
 }
 
-// ----------------------------------------------------------------------
-#pragma mark - ZCPListTableViewAdaptorDelegate
-// ----------------------------------------------------------------------
+#pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SEL sel                             = [self.infoArr[indexPath.row][@"method"] pointerValue];
     NSMethodSignature *methodSignature  = [self methodSignatureForSelector:sel];
     NSInvocation *invocation            = [NSInvocation invocationWithMethodSignature:methodSignature];
@@ -189,7 +189,6 @@
     invocation.selector                 = sel;
     [invocation invoke];
 }
-
 
 #pragma mark - event response
 

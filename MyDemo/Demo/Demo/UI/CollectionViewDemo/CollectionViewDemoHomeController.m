@@ -21,7 +21,6 @@
 #pragma mark - life circle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.view addSubview:self.collectionView];
 }
 #pragma mark - getter / setter

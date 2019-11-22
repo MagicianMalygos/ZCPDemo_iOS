@@ -24,8 +24,6 @@
                       @"class": APPURL_VIEW_IDENTIFIER_TEMPTESTHOME},
                     @{@"title": @"LayoutDemo",
                       @"class": APPURL_VIEW_IDENTIFIER_LAYOUTDEMO},
-                    @{@"title": @"Texture",
-                      @"class": APPURL_VIEW_IDENTIFIER_TEXTURE},
                     @{@"title": @"UIDemo",
                       @"class": APPURL_VIEW_IDENTIFIER_UIHOME},
                     @{@"title": @"CameraAndAlbumDemo",

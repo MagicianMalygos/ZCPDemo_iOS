@@ -28,7 +28,7 @@
     return _infoArr;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(nonnull id<ZCPTableViewCellProtocol>)object rowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     NSString *identifier = self.infoArr[indexPath.row][@"class"];
     

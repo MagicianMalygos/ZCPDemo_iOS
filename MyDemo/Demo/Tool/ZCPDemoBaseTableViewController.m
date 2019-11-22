@@ -22,24 +22,27 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tableView.frame = self.view.bounds;
 }
 
 #pragma mark - tableview
 
 - (void)constructData {
-    [self.tableViewAdaptor.items removeAllObjects];
+    [self.tableViewDataSource.sectionDataModelArray removeAllObjects];
     
+    ZCPTableViewSectionDataModel *section = [[ZCPTableViewSectionDataModel alloc] init];
     for (NSDictionary *infoDict in self.infoArr) {
-        ZCPSectionCellItem *item    = [[ZCPSectionCellItem alloc] initWithDefault];
-        item.sectionTitle           = infoDict[@"title"];
-        item.sectionTitlePosition   = ZCPSectionTitleLeftPosition;
-        item.sectionTitleFont       = [UIFont systemFontOfSize:20.0f];
-        item.cellHeight             = @(50.0f);
-        [self.tableViewAdaptor.items addObject:item];
+        ZCPTableViewSingleTitleCellViewModel *viewModel = [[ZCPTableViewSingleTitleCellViewModel alloc] init];
+        viewModel.titleString = infoDict[@"title"];
+        viewModel.titleFont = [UIFont boldSystemFontOfSize:18];
+        viewModel.cellHeight = @(50);
+        viewModel.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+        [section.cellViewModelArray addObject:viewModel];
     }
+    [self.tableViewDataSource.sectionDataModelArray addObject:section];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *identifier = self.infoArr[indexPath.row][@"class"];
     [[ZCPNavigator sharedInstance] gotoViewWithIdentifier:identifier queryForInit:nil  propertyDictionary:nil];

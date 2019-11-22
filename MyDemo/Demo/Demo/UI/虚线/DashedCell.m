@@ -10,19 +10,8 @@
 
 @implementation DashedCell
 
-+ (CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(id<ZCPTableViewCellItemBasicProtocol>)object {
-    return 150;
-}
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.accessoryType = UITableViewCellAccessoryNone;
-        
-        _dashedView = [[DashedView alloc] init];
-        [self.contentView addSubview:_dashedView];
-    }
-    return self;
+- (void)setupContentView {
+    [self.contentView addSubview:self.dashedView];
 }
 
 - (void)layoutSubviews {
@@ -30,21 +19,27 @@
     self.dashedView.frame = self.bounds;
 }
 
-- (void)setObject:(DashedCellItem *)object {
-    if (object && self.object != object) {
-        [super setObject:object];
-        [self.dashedView configureWithModel:object.model];
+- (void)updateWithViewModel:(DashedCellViewModel *)viewModel {
+    [super updateWithViewModel:viewModel];
+    [self.dashedView configureWithModel:viewModel.model];
+}
+
+- (DashedView *)dashedView {
+    if (!_dashedView) {
+        _dashedView = [[DashedView alloc] init];
     }
+    return _dashedView;
 }
 
 @end
 
-@implementation DashedCellItem
+@implementation DashedCellViewModel
 
 - (instancetype)init {
     if (self = [super init]) {
         self.cellClass = [DashedCell class];
-        self.cellType = @"DashedCell";
+        self.cellReuseIdentifier = [DashedCell cellReuseIdentifier];
+        self.cellHeight = @150;
     }
     return self;
 }

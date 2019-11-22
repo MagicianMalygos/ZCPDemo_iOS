@@ -14,15 +14,15 @@
 #import <ZCPCommentView.h>
 #import <ZCPWebView.h>
 #import "ZCPDemoWebViewController.h"
+//#import "ZCPCustomButton.h"
 
-@interface TemporaryTestHomeController () <UIPickerViewDataSource, UIPickerViewDelegate>
+#import <objc/runtime.h>
 
-@property (nonatomic, strong) NSMutableDictionary *headerDict;
+@interface TemporaryTestHomeController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
-@property (nonatomic, strong) NSArray *directorys;
-@property (nonatomic, copy) NSString *path;
 
-@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -40,17 +40,24 @@
 //    [self testSettings];
 }
 
+// 只有首次进入和退出的时候会触发这两个方法，首次进入时parent有值，退出时parent为nil
+- (void)willMoveToParentViewController:(nullable UIViewController *)parent {
+    NSLog(@"willMoveToParentViewController parent: %@", parent);
+}
+- (void)didMoveToParentViewController:(nullable UIViewController *)parent {
+    NSLog(@"didMoveToParentViewController parent: %@", parent);
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (self.isMovingToParentViewController) {
         // 首次进入
     }
 }
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (self.isMovingFromParentViewController) {
-        // 退出
+        // 退出视图
     }
 }
 
@@ -200,18 +207,6 @@
         [self.view addSubview:tf];
     }
     self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
-}
-
-#pragma mark - testSandBoxPath
-
-- (void)setDirectorys:(NSArray *)directorys {
-    _directorys = directorys;
-    NSLog(@"%@", directorys);
-}
-
-- (void)setPath:(NSString *)path {
-    _path = path;
-    NSLog(@"%@", self.path);
 }
 
 #pragma mark - testSettings

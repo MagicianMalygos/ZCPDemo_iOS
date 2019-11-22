@@ -117,14 +117,15 @@
 #pragma mark - tableview
 
 - (void)constructData {
-    [self.tableViewAdaptor.items removeAllObjects];
-    
+    [self.tableViewDataSource.sectionDataModelArray removeAllObjects];
+    ZCPTableViewSectionDataModel *sectionDataModel = [[ZCPTableViewSectionDataModel alloc] init];
     for (int i = 0; i < 2; i++) {
-        DashedCellItem *item    = [[DashedCellItem alloc] init];
+        DashedCellViewModel *item = [[DashedCellViewModel alloc] init];
         item.model              = self.dashedModel.copy;
         item.model.type         = i + 1;
-        [self.tableViewAdaptor.items addObject:item];
+        [sectionDataModel.cellViewModelArray addObject:item];
     }
+    [self.tableViewDataSource.sectionDataModelArray addObject:sectionDataModel];
 }
 
 #pragma mark - getter / setter

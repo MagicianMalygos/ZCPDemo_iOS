@@ -59,7 +59,7 @@
     return _infoArr;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectObject:(nonnull id<ZCPTableViewCellProtocol>)object rowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     SEL method = NSSelectorFromString([[self.infoArr objectAtIndex:indexPath.row] valueForKey:@"sel"]);
     
     NSObject *obj = nil;

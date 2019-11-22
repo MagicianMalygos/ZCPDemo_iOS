@@ -23,9 +23,7 @@
 
 @synthesize infoArr = _infoArr;
 
-// ----------------------------------------------------------------------
 #pragma mark - life cycle
-// ----------------------------------------------------------------------
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,21 +38,15 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    self.tableView.frame    = CGRectMake(0, 0, self.view.width, 200);
-    self.contentView.frame  = CGRectMake(0, self.tableView.bottom, self.view.width, self.view.height - self.tableView.height);
-    UIView *view            = [self.contentView viewWithTag:999];
+    self.tableView.frame = CGRectMake(0, 0, self.view.width, 200);
+    self.contentView.frame = CGRectMake(0, self.tableView.bottom, self.view.width, self.view.height - self.tableView.height);
+    UIView *view = [self.contentView viewWithTag:999];
     if (view) {
-        view.frame          = self.contentView.bounds;
+        view.frame = self.contentView.bounds;
     }
 }
 
-// ----------------------------------------------------------------------
 #pragma mark - override
-// ----------------------------------------------------------------------
-
-- (BOOL)isMultipleGroups {
-    return YES;
-}
 
 - (NSMutableArray *)infoArr {
     if (!_infoArr) {
@@ -155,42 +147,34 @@
 
 - (void)constructData {
     for (NSDictionary *infoDict in self.infoArr) {
-        ZCPTableViewGroupDataModel *group = [[ZCPTableViewGroupDataModel alloc] init];
+        ZCPTableViewSectionDataModel *sectionDataModel = [[ZCPTableViewSectionDataModel alloc] init];
+        
+        ZCPTableViewSingleTitleSectionViewModel *headerViewModel = [[ZCPTableViewSingleTitleSectionViewModel alloc] init];
+        headerViewModel.titleString = infoDict[@"title"];
+        headerViewModel.titleAlignment = NSTextAlignmentCenter;
+        sectionDataModel.headerViewModel = headerViewModel;
+        
         NSArray *list = infoDict[@"list"];
         
         for (NSString *title in list) {
-            ZCPSectionCellItem *item    = [[ZCPSectionCellItem alloc] initWithDefault];
-            item.sectionTitle           = title;
-            item.sectionTitlePosition   = ZCPSectionTitleLeftPosition;
-            item.sectionTitleFont       = [UIFont systemFontOfSize:13.0f];
-            item.cellHeight             = @(40.0f);
-            [group.sectionCellItems addObject:item];
+            ZCPTableViewSingleTitleCellViewModel *viewModel = [[ZCPTableViewSingleTitleCellViewModel alloc] init];
+            viewModel.titleString = title;
+            viewModel.titleFont = [UIFont systemFontOfSize:13.0f];
+            viewModel.cellHeight = @(40);
+            viewModel.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+            [sectionDataModel.cellViewModelArray addObject:viewModel];
         }
-        [self.tableViewAdaptor.items addObject:group];
+        [self.tableViewDataSource.sectionDataModelArray addObject:sectionDataModel];
     }
 }
 
-// ----------------------------------------------------------------------
-#pragma mark - ZCPGroupListTableViewAdaptorDelegate
-// ----------------------------------------------------------------------
+#pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section objectForHeader:(id)object {
-    return 20.0f;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section objectForHeader:(id)object {
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(0, 0, self.tableView.width, 20);
-    label.backgroundColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = self.infoArr[section][@"title"];
-    return label;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectObject:(id<ZCPTableViewCellItemBasicProtocol>)object rowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    Class viewCls   = NSClassFromString([NSString stringWithFormat:@"CASection%liDemo", indexPath.section + 1]);
-    SEL sel         = NSSelectorFromString([NSString stringWithFormat:@"demo%li", indexPath.row + 1]);
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *viewClassString = [NSString stringWithFormat:@"CASection%liDemo", indexPath.section + 1];
+    NSString *selString = [NSString stringWithFormat:@"demo%li", indexPath.row + 1];
+    Class viewCls = NSClassFromString(viewClassString);
+    SEL sel = NSSelectorFromString(selString);
     
     // remove old view
     UIView *oldView = [self.contentView viewWithTag:999];

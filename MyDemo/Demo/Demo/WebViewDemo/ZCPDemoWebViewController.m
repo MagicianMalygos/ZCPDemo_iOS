@@ -35,7 +35,7 @@
 
 - (void)testLoad {
     NSString *url = @"";
-    url = [[NSBundle mainBundle] URLForResource:@"network_unavailable_cn.html" withExtension:nil].absoluteString;
+//    url = [[NSBundle mainBundle] URLForResource:@"network_unavailable_cn.html" withExtension:nil].absoluteString;
 //    url = @"https://www.baidu.com";
 //    url = @"https://mp.weixin.qq.com/s/rhYKLIbXOsUJC_n6dt9UfA";
     [self loadURLString:url];
