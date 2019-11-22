@@ -44,7 +44,7 @@
 
 - (UIViewElasticHelper *)makeHelper:(CGRect)frame {
     UIViewElasticHelper *helper = [[UIViewElasticHelper alloc] init];
-    helper.lifeArea = CGRectMake(frame.origin.x - 20, frame.origin.y - 20, frame.size.width + 40, frame.size.height + 40);
+//    helper.lifeArea = CGRectMake(frame.origin.x - 20, frame.origin.y - 20, frame.size.width + 40, frame.size.height + 40);
     return helper;
 }
 

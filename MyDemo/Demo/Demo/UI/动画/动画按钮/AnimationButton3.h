@@ -9,14 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AnimationButtonDelegate.h"
 
-/**
- 优酷视频播放按钮
- */
+/// 优酷视频播放按钮
 @interface AnimationButton3 : UIControl
 
 /// 代理
 @property (nonatomic, weak) id<AnimationButtonDelegate> delegate;
-
 /// 播放状态
 @property (nonatomic, assign, getter=isPlaying, readonly) BOOL playing;
 

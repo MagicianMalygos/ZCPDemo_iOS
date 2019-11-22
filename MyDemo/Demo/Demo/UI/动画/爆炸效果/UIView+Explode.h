@@ -9,44 +9,27 @@
 #import <UIKit/UIKit.h>
 @protocol UIViewExplodeDelegate;
 
-/// 爆炸效果分类
+/// 视图爆炸效果分类
 @interface UIView (Explode)
 
 /// 爆炸回调
 @property (nonatomic, weak) id<UIViewExplodeDelegate> explodeDelegate;
 
-#pragma mark - setup
-
-/**
- 打开爆炸功能
- */
+/// 打开爆炸功能
 + (NSError *)openExplodeFunction;
-
-/**
- 关闭爆炸功能
- */
+/// 关闭爆炸功能
 + (void)closeExplodeFunction;;
-
-#pragma mark - function
-
-/**
- 爆炸
- */
+/// 爆炸
 - (void)explode;
-
-/**
- 恢复到未爆炸的状态
- */
+/// 恢复到未爆炸的状态
 - (void)recoverUnexplodedState;
 
 @end
 
-/// Protocol
+/// 爆炸回调协议
 @protocol UIViewExplodeDelegate <NSObject>
 
-/**
- 爆炸结束
- */
+/// 爆炸结束
 - (void)didFinishExplode:(UIView *)view;
 
 @end

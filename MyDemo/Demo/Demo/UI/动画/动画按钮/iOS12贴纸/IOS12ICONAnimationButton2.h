@@ -13,14 +13,10 @@
 /// 倒计时时间，单位秒
 @property (nonatomic, assign) NSInteger time;
 
-/**
- 开始动画
- */
+/// 开始动画
 - (void)startAnimation;
 
-/**
- 停止动画
- */
+/// 停止动画
 - (void)stopAnimation;
 
 @end

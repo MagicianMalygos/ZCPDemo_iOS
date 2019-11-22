@@ -8,24 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 按钮回调协议
- */
+/// 动画按钮回调协议
 @protocol AnimationButtonDelegate <NSObject>
 
-/**
- 按钮被点击回调
- 
- @param button 按钮
- */
+/// 按钮被点击回调
+/// @param button 执行动画的按钮
 - (void)animationButtonDidClick:(UIView *)button;
 
-/**
- 按钮动画结束回调
- 
- @param button 按钮
- @param flag 动画是否执行完成
- */
+/// 按钮动画结束回调
+/// @param button 执行动画的按钮
+/// @param state 动画是否执行完成
 - (void)animationButtonDidStopAnimation:(UIView *)button state:(BOOL)state;
 
 @end

@@ -10,14 +10,10 @@
 
 @interface IOS12ICONAnimationButton1 : UIControl
 
-/**
- 开始动画
- */
+/// 开始动画
 - (void)startAnimation;
 
-/**
- 停止动画
- */
+/// 停止动画
 - (void)stopAnimation;
 
 @end

@@ -8,33 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- 爆炸状态
-
- - UIViewExplodeStateInitial:   初始化状态
- - UIViewExplodeStateExploding: 正在爆炸状态
- - UIViewExplodeStateExploded:  已爆炸状态
- */
+/// 爆炸状态
 typedef NS_ENUM(NSInteger, UIViewExplodeState) {
-    UIViewExplodeStateInitial   = 0,
-    UIViewExplodeStateExploding = 1,
-    UIViewExplodeStateExploded  = 2,
+    UIViewExplodeStateInitial   = 0, //!< 初始化状态
+    UIViewExplodeStateExploding = 1, //!< 正在爆炸状态
+    UIViewExplodeStateExploded  = 2, //!< 已爆炸状态
 };
 
-/**
- 爆炸效果
-
- - UIViewExplodeEffectGravity:      重力爆炸效果
- - UIViewExplodeEffectShockWave:    冲击波爆炸效果
- */
+/// 爆炸效果
 typedef NS_ENUM(NSInteger, UIViewExplodeEffect) {
-    UIViewExplodeEffectGravity      = 0,
-    UIViewExplodeEffectShockWave    = 1
+    UIViewExplodeEffectGravity  = 0, //!< 重力爆炸效果
+    UIViewExplodeEffectShockWave= 1  //!< 冲击波爆炸效果
 };
 
-/**
- 爆炸效果辅助类
- */
+/// 爆炸效果辅助类
 @interface UIViewExplodeHelper : NSObject
 
 /// 执行爆炸效果的view
@@ -44,14 +31,9 @@ typedef NS_ENUM(NSInteger, UIViewExplodeEffect) {
 /// 爆炸效果
 @property (nonatomic, assign) UIViewExplodeEffect explodeEffect;
 
-/**
- 开始爆炸
- */
+/// 开始爆炸
 - (void)explode;
-
-/**
- 恢复状态
- */
+/// 恢复状态
 - (void)recover;
 
 @end

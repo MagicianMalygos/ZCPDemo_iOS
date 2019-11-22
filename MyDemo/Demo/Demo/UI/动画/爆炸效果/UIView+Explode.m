@@ -14,13 +14,9 @@
 static id<AspectToken> aop_willMoveToSuperview;
 static BOOL isOpenExplodeFunction;
 
-// property key
-static NSString *explodeHelperKey   = @"explodeHelper";
-static NSString *explodeDelegateKey = @"explodeDelegateKey";
-
 @implementation UIView (Explode)
 
-#pragma mark - setup
+#pragma mark - public
 
 + (NSError *)openExplodeFunction {
     NSError *error = nil;
@@ -41,15 +37,6 @@ static NSString *explodeDelegateKey = @"explodeDelegateKey";
     isOpenExplodeFunction = NO;
 }
 
-- (void)aop_willMoveToSuperview:(UIView *)newSuperview {
-    if (self.explodeHelper.explodeState == UIViewExplodeStateExploding &&
-        [newSuperview isKindOfClass:[NSNull class]]) {
-        [self recoverUnexplodedState];
-    }
-}
-
-#pragma mark - function
-
 - (void)explode {
     if (isOpenExplodeFunction) {
         [self.explodeHelper explode];
@@ -62,13 +49,22 @@ static NSString *explodeDelegateKey = @"explodeDelegateKey";
     }
 }
 
-#pragma mark - getters & setters
+#pragma mark - private
+
+- (void)aop_willMoveToSuperview:(UIView *)newSuperview {
+    if (self.explodeHelper.explodeState == UIViewExplodeStateExploding &&
+        [newSuperview isKindOfClass:[NSNull class]]) {
+        [self recoverUnexplodedState];
+    }
+}
+
+#pragma mark - getters and setters
 
 - (UIViewExplodeHelper *)explodeHelper {
-    UIViewExplodeHelper *explodeHelper = objc_getAssociatedObject(self, &explodeHelperKey);
+    UIViewExplodeHelper *explodeHelper = objc_getAssociatedObject(self, @selector(explodeHelper));
     if (!explodeHelper) {
-        explodeHelper               = [UIViewExplodeHelper new];
-        explodeHelper.view          = self;
+        explodeHelper = [UIViewExplodeHelper new];
+        explodeHelper.view = self;
         explodeHelper.explodeEffect = UIViewExplodeEffectShockWave;
         [self setExplodeHelper:explodeHelper];
     }
@@ -76,16 +72,16 @@ static NSString *explodeDelegateKey = @"explodeDelegateKey";
 }
 
 - (void)setExplodeHelper:(UIViewExplodeHelper *)explodeHelper {
-    objc_setAssociatedObject(self, &explodeHelperKey, explodeHelper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(explodeHelper), explodeHelper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (id<UIViewExplodeDelegate>)explodeDelegate {
-    id<UIViewExplodeDelegate> explodeDelegate = objc_getAssociatedObject(self, &explodeDelegateKey);
+    id<UIViewExplodeDelegate> explodeDelegate = objc_getAssociatedObject(self, @selector(explodeDelegate));
     return explodeDelegate;
 }
 
 - (void)setExplodeDelegate:(id<UIViewExplodeDelegate>)explodeDelegate {
-    objc_setAssociatedObject(self, &explodeDelegateKey, explodeDelegate, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(explodeDelegate), explodeDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
 @end

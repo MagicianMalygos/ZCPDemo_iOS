@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 动画demo
- */
+/// 动画demo
 @interface AnimationDemoHomeViewController : ZCPDemoBaseTableViewController
 
 @end

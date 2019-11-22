@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 波浪线demo 视图控制器
- */
+/// 波浪线demo
 @interface WaveLineDemoHomeController : ZCPBaseViewController
 
 @end

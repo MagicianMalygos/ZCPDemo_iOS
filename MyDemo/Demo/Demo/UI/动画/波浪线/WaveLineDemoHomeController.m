@@ -13,7 +13,7 @@
 /// 定时器
 @property (nonatomic, strong) CADisplayLink *displayLink;
 /// 相位
-@property (nonatomic, assign) CGFloat q;
+@property (nonatomic, assign) CGFloat φ;
 
 /// 波浪线1
 @property (nonatomic, strong) CAShapeLayer *waveLayer1;
@@ -79,15 +79,15 @@
 - (void)drawWaveLine1 {
     // y = Asin（ωx+φ）+ k
     CGFloat A = 20.0;   // 振幅
-    CGFloat w = 1/40.0; // 周期
-    CGFloat q = self.q; // 相位
+    CGFloat ω = 1/40.0; // 周期
+    CGFloat φ = self.φ; // 相位
     CGFloat k = 50;     // 竖直方向偏移
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, 0, self.waveLayer1.height / 2.0);
     
     for (int i = 0; i <= self.waveLayer1.width; i++) {
-        CGFloat y = A * sin(w * i + q) + k;
+        CGFloat y = A * sin(ω * i + φ) + k;
         CGPathAddLineToPoint(path, NULL, i, y);
     }
     
@@ -102,15 +102,15 @@
 - (void)drawWaveLine2 {
     // y = Asin（ωx+φ）+ k
     CGFloat A = 20.0;   // 振幅
-    CGFloat w = 1/40.0; // 周期
-    CGFloat q = self.q; // 相位
+    CGFloat ω = 1/40.0; // 周期
+    CGFloat φ = self.φ; // 相位
     CGFloat k = 50;     // 竖直方向偏移
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(0, self.waveLayer2.height / 2.0)];
     
     for (int i = 0; i <= self.waveLayer2.width; i++) {
-        CGFloat y = A * sin(w * i + q) + k;
+        CGFloat y = A * sin(ω * i + φ) + k;
         [path addLineToPoint:CGPointMake(i, y)];
     }
     
@@ -128,15 +128,15 @@
     {
         // y = Asin（ωx+φ）+ k
         CGFloat A = 20.0;       // 振幅
-        CGFloat w = 1/40.0;     // 周期
-        CGFloat q = self.q + 1; // 相位
+        CGFloat ω = 1/40.0;     // 周期
+        CGFloat φ = self.φ + 1; // 相位
         CGFloat k = 50;         // 竖直方向偏移
         
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path moveToPoint:CGPointMake(0, self.waveLayer2.height / 2.0)];
         
         for (int i = 0; i <= self.waveLayer2.width; i++) {
-            CGFloat y = A * sin(w * i + q) + k;
+            CGFloat y = A * sin(ω * i + φ) + k;
             [path addLineToPoint:CGPointMake(i, y)];
         }
         
@@ -150,15 +150,15 @@
     {
         // y = Asin（ωx+φ）+ k
         CGFloat A = 20.0;       // 振幅
-        CGFloat w = 1/50.0;     // 周期
-        CGFloat q = self.q + 3; // 相位
+        CGFloat ω = 1/50.0;     // 周期
+        CGFloat φ = self.φ + 3; // 相位
         CGFloat k = 50;         // 竖直方向偏移
         
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path moveToPoint:CGPointMake(0, self.waveLayer2.height / 2.0)];
         
         for (int i = 0; i <= self.waveLayer2.width; i++) {
-            CGFloat y = A * sin(w * i + q) + k;
+            CGFloat y = A * sin(ω * i + φ) + k;
             [path addLineToPoint:CGPointMake(i, y)];
         }
         
@@ -172,15 +172,15 @@
     {
         // y = Asin（ωx+φ）+ k
         CGFloat A = 20.0;       // 振幅
-        CGFloat w = 1/60.0;     // 周期
-        CGFloat q = self.q + 5; // 相位
+        CGFloat ω = 1/60.0;     // 周期
+        CGFloat φ = self.φ + 5; // 相位
         CGFloat k = 50;         // 竖直方向偏移
         
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path moveToPoint:CGPointMake(0, self.waveLayer2.height / 2.0)];
         
         for (int i = 0; i <= self.waveLayer2.width; i++) {
-            CGFloat y = A * sin(w * i + q) + k;
+            CGFloat y = A * sin(ω * i + φ) + k;
             [path addLineToPoint:CGPointMake(i, y)];
         }
         
@@ -195,7 +195,7 @@
 #pragma mark - event response
 
 - (void)updateWaveLine {
-    self.q += 0.01;
+    self.φ += 0.01;
     [self drawWaveLine1];
     [self drawWaveLine2];
     [self drawWaveLine3];
