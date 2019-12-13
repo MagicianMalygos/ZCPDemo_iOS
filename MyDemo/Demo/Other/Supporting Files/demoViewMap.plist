@@ -258,5 +258,13 @@
 		<key>description</key>
 		<string>layoutDemo</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>ListViewDemoViewController</string>
+		<key>identifier</key>
+		<string>listView</string>
+		<key>description</key>
+		<string>listView</string>
+	</dict>
 </array>
 </plist>

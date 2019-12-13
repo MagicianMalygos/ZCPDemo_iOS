@@ -14,6 +14,11 @@
 
 @implementation ZCPDemoBaseTableViewController
 
+@synthesize tap = _tap;
+@synthesize needsTapToDismissKeyboard = _needsTapToDismissKeyboard;
+@synthesize formerViewController = _formerViewController;
+@synthesize latterViewController = _latterViewController;
+
 #pragma mark - life cycle
 
 - (void)viewDidLoad {

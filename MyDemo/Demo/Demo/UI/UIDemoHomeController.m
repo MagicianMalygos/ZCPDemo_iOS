@@ -24,6 +24,7 @@
                     @{@"title": @"虚线"                  , @"class": APPURL_VIEW_IDENTIFIER_DASHED},
                     @{@"title": @"CollectionViewDemo"   , @"class":APPURL_VIEW_IDENTIFIER_COLLECTION},
                     @{@"title": @"Alert"                , @"class":APPURL_VIEW_IDENTIFIER_ALERT},
+                    @{@"title": @"ListView"             , @"class": APPURL_VIEW_IDENTIFIER_LISTVIEW},
                     nil];
     }
     return _infoArr;

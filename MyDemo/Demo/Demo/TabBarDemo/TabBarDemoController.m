@@ -89,14 +89,14 @@
     return tabbarItem;
     
     
-    // 创建UITabBarItem
-    UITabBarItem *tabBarItem = [[UITabBarItem alloc] init];
-    [tabBarItem setTitle:title];
-    [tabBarItem setTag:tag];
-    
-    // tabbarItem文字选中的颜色
-    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]} forState:UIControlStateNormal];
-    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor]} forState:UIControlStateSelected];
+//    // 创建UITabBarItem
+//    UITabBarItem *tabBarItem = [[UITabBarItem alloc] init];
+//    [tabBarItem setTitle:title];
+//    [tabBarItem setTag:tag];
+//
+//    // tabbarItem文字选中的颜色
+//    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor darkGrayColor]} forState:UIControlStateNormal];
+//    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor]} forState:UIControlStateSelected];
     
     /**
      *  控制图片大小
@@ -111,10 +111,10 @@
 //    [tabBarItem setImage:normalIMG];
 //    [tabBarItem setSelectedImage:selectedIMG];
     
-    [tabBarItem setImage:image];
-    [tabBarItem setSelectedImage:selectedImage];
-    
-    return tabBarItem;
+//    [tabBarItem setImage:image];
+//    [tabBarItem setSelectedImage:selectedImage];
+//
+//    return tabBarItem;
 }
 
 

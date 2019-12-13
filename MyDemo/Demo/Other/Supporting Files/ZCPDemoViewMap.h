@@ -62,6 +62,8 @@
 #define APPURL_VIEW_IDENTIFIER_COLLECTION           @"collection"
 // alert AlertViewDemoController
 #define APPURL_VIEW_IDENTIFIER_ALERT                @"alert"
+// listView ListViewDemoViewController
+#define APPURL_VIEW_IDENTIFIER_LISTVIEW             @"listView"
 
 #pragma mark - Animation
 

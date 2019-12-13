@@ -18,6 +18,6 @@ DEF_SINGLETON
 /// layer标记分类
 @interface CALayer (CADemoTag)
 
-@property (nonatomic, copy) NSString *caDemoTag;
+@property (nonatomic, copy, nullable) NSString *caDemoTag;
 
 @end

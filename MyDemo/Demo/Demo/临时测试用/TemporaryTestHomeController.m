@@ -18,11 +18,9 @@
 
 #import <objc/runtime.h>
 
-@interface TemporaryTestHomeController () <UITableViewDataSource, UITableViewDelegate>
+@interface TemporaryTestHomeController ()
 
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
-
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -33,7 +31,6 @@
     
     // Test
     [self testXXX]; // 范例
-    [self testBlock];
 //    [self testAutoreleasepool];
 //    [self testGetImageFromView];
 //    [self testIQKeyboardManagerReturn];
@@ -69,9 +66,6 @@
 
 #pragma mark - testBlock
 
-- (void)testBlock {
-    
-}
 
 #pragma mark - testAutoreleasepool
 

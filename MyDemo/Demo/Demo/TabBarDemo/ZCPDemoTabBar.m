@@ -30,7 +30,7 @@
 }
 
 - (void)clickTabBarButton:(UIControl *)tabBarButton {
-    int index = tabBarButton.tag;
+    NSInteger index = tabBarButton.tag;
     NSArray *gifArr = @[@"tabbar_home_gif", @"tabbar_job_gif", @"", @"tabbar_top_gif", @"tabbar_my_gif"];
     
     if (index == 2) {
@@ -50,7 +50,7 @@
                 }];
             }
             if ([imageView isKindOfClass:NSClassFromString(@"UITabBarButtonLabel")]) {
-                self.specialTabBarItemTitleView = imageView;
+                self.specialTabBarItemTitleView = (UILabel *)imageView;
                 self.specialTabBarItemTitleView.hidden = YES;
             }
         }
