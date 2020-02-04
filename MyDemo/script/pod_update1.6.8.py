@@ -8,150 +8,145 @@ import shutil
 import xml.dom.minidom
 
 def main():
-
-    # 打印当前路径
-    # no1. os.getcwd() 方法用于返回当前工作目录
+    # os.getcwd() 方法用于返回当前工作目录
     current_path = os.getcwd()
     print('当前所在路径：' + current_path)
     print('')
 
-    # 当前仓库的当前分支代码拉成最新的
-    # no1. python调用Shell脚本，有两种方法：os.system()和os.popen()，前者返回值是脚本的退出状态码，后者的返回值是脚本执行过程中的输出内容
-    # no2. git symbolic-ref -q --short 显示当前分支名并忽略错误，返回的是一个数组，如['master\n']
+    # 把当前分支的代码拉成最新的
     current_repo_current_branchs = os.popen('git symbolic-ref --short -q HEAD').readlines()
     if len(current_repo_current_branchs) > 0:
         current_branch = current_repo_current_branchs[0]
-        print('当前分支：' + current_branch)
         os.system('git pull origin ' + current_branch)
         print('当前仓库代码已是最新')
         print('')
 
-    # hello_code_path = os.environ['HOME']+ '/' + 'HelloCode/'
+    hello_code_path = os.environ['HOME']+ '/' + 'HelloCode/'
     
-    # if os.path.exists(hello_code_path):
-    #     print ('')
-    # else:
-    #     os.mkdir(hello_code_path)
+    if os.path.exists(hello_code_path):
+        print ('')
+    else:
+        os.mkdir(hello_code_path)
 
-    # podfiles_path = hello_code_path + 'Manifest_iOS/Podfiles/'
-    # podfile_path = hello_code_path + 'Manifest_iOS/Podfiles/Podfile'
+    podfiles_path = hello_code_path + 'Manifest_iOS/Podfiles/'
+    podfile_path = hello_code_path + 'Manifest_iOS/Podfiles/Podfile'
     
-#     # 检查 podfile_path
-#     func_check_podfile_path(podfile_path, hello_code_path, current_path)
+    # 检查 podfile_path
+    func_check_podfile_path(podfile_path, hello_code_path, current_path)
 
-#     # 设置 manifest_branch
-#     manifest_branch = ''
-#     is_update = True
-#     is_source = False
-#     if len(sys.argv) > 1:
-#         manifest_branch = sys.argv[1].split('/')[-1]
-#         if len(sys.argv)>2:
-#             is_update = False
-#             if len(sys.argv)>3:
-#                 is_source = True
-#     else:
-#         manifest_branch = os.popen('git symbolic-ref --short -q HEAD').readlines()[0]
+    # 设置 manifest_branch
+    manifest_branch = ''
+    is_update = True
+    is_source = False
+    if len(sys.argv) > 1:
+        manifest_branch = sys.argv[1].split('/')[-1]
+        if len(sys.argv)>2:
+            is_update = False
+            if len(sys.argv)>3:
+                is_source = True
+    else:
+        manifest_branch = os.popen('git symbolic-ref --short -q HEAD').readlines()[0]
 
-#     # 使 Manifest_iOS 仓库分支最新
-#     manifest_path = hello_code_path + 'Manifest_iOS'
-#     os.chdir(manifest_path)
-#     os.system('git reset --hard')
-#     os.system('git clean -xdf')
-#     os.system('git checkout .')
-#     os.system('git pull origin')
+    # 使 Manifest_iOS 仓库分支最新
+    manifest_path = hello_code_path + 'Manifest_iOS'
+    os.chdir(manifest_path)
+    os.system('git reset --hard')
+    os.system('git clean -xdf')
+    os.system('git checkout .')
+    os.system('git pull origin')
 
-#     # 拿 Manifest_iOS 远端所有分支
-#     manifest_all_branch = []
-#     remotes_origin_all_branch = os.popen('git branch -a | head -1000')
-#     for remotes_origin_branch in remotes_origin_all_branch:
-#         remotes_origin_branch_arr = remotes_origin_branch.split('/')
-#         if len(remotes_origin_branch_arr) == 3:
-#             branch = remotes_origin_branch_arr[2].replace('\n', '')
-#             manifest_all_branch.append(branch.strip())
+    # 拿 Manifest_iOS 远端所有分支
+    manifest_all_branch = []
+    remotes_origin_all_branch = os.popen('git branch -a | head -1000')
+    for remotes_origin_branch in remotes_origin_all_branch:
+        remotes_origin_branch_arr = remotes_origin_branch.split('/')
+        if len(remotes_origin_branch_arr) == 3:
+            branch = remotes_origin_branch_arr[2].replace('\n', '')
+            manifest_all_branch.append(branch.strip())
 
-#     os.chdir(current_path)
+    os.chdir(current_path)
 
-#     print('Manifest_iOS 所有分支：')
-#     print(manifest_all_branch)
-#     print('')
+    print('Manifest_iOS 所有分支：')
+    print(manifest_all_branch)
+    print('')
     
-#     if manifest_branch.strip() not in manifest_all_branch:
-#         manifest_branch = 'master'
-#     else:
-#         print('')
+    if manifest_branch.strip() not in manifest_all_branch:
+        manifest_branch = 'master'
+    else:
+        print('')
         
-#     os.chdir(manifest_path)
-#     os.system('git checkout ' + manifest_branch)
-#     print('git checkout ' + manifest_branch)
-#     os.system('git pull origin ' + manifest_branch)
-#     print('Manifest_iOS 仓库，分支已是最新：' + manifest_branch)
+    os.chdir(manifest_path)
+    os.system('git checkout ' + manifest_branch)
+    print('git checkout ' + manifest_branch)
+    os.system('git pull origin ' + manifest_branch)
+    print('Manifest_iOS 仓库，分支已是最新：' + manifest_branch)
 
     
-#     if is_source == True:
-#         is_update = True
-#         shutil.copyfile(os.path.join(current_path,'changeSource.sh'), podfiles_path+'changeSource.sh')
-#         os.chdir(podfiles_path)
-#         os.system('sh changeSource.sh ' + manifest_branch)
+    if is_source == True:
+        is_update = True
+        shutil.copyfile(os.path.join(current_path,'changeSource.sh'), podfiles_path+'changeSource.sh')
+        os.chdir(podfiles_path)
+        os.system('sh changeSource.sh ' + manifest_branch)
         
-#     os.chdir(current_path)
+    os.chdir(current_path)
 
 
-#     print('Manifest_iOS 仓库当前选择的分支是：' + manifest_branch)
+    print('Manifest_iOS 仓库当前选择的分支是：' + manifest_branch)
 
-#     func_clone_hellotrip(hello_code_path, current_path, manifest_branch)
+    func_clone_hellotrip(hello_code_path, current_path, manifest_branch)
 
-#     print('准备使用的 Podfile 的路径为：' + podfile_path)
-#     print('')
+    print('准备使用的 Podfile 的路径为：' + podfile_path)
+    print('')
 
-#     print('所有的代码仓库和对应的分支：')
-#     git_sever_address_and_branch_dict = func_read_podfile(podfile_path)
-#     print(git_sever_address_and_branch_dict)
-#     print('')
+    print('所有的代码仓库和对应的分支：')
+    git_sever_address_and_branch_dict = func_read_podfile(podfile_path)
+    print(git_sever_address_and_branch_dict)
+    print('')
 
-#     current_repo_git_sever = os.popen('git remote -v').readlines()[0].split(' ')[0].split('\t')[1]
-#     print('当前仓库关联的服务器地址：' + current_repo_git_sever)
-#     print('')
+    current_repo_git_sever = os.popen('git remote -v').readlines()[0].split(' ')[0].split('\t')[1]
+    print('当前仓库关联的服务器地址：' + current_repo_git_sever)
+    print('')
 
-#     git_source_name_list = []
-# #    拉代码
-#     for git_sever_address in git_sever_address_and_branch_dict.keys():
+    git_source_name_list = []
+#    拉代码
+    for git_sever_address in git_sever_address_and_branch_dict.keys():
 
-#         git_sever_address_list = git_sever_address.strip().split('/')
-#         git_sever_address_last_word = git_sever_address_list[len(git_sever_address_list) - 1]
+        git_sever_address_list = git_sever_address.strip().split('/')
+        git_sever_address_last_word = git_sever_address_list[len(git_sever_address_list) - 1]
 
-#         current_repo_git_sever_list = current_repo_git_sever.strip().split('/')
-#         current_repo_git_sever_last_word = current_repo_git_sever_list[len(current_repo_git_sever_list) - 1]
+        current_repo_git_sever_list = current_repo_git_sever.strip().split('/')
+        current_repo_git_sever_last_word = current_repo_git_sever_list[len(current_repo_git_sever_list) - 1]
 
-#         if (git_sever_address_last_word != current_repo_git_sever_last_word):
-#             path = func_git_clone_code(git_sever_address,git_sever_address_and_branch_dict[git_sever_address])
-#             git_source_name_list.extend(func_project_name(path))
+        if (git_sever_address_last_word != current_repo_git_sever_last_word):
+            path = func_git_clone_code(git_sever_address,git_sever_address_and_branch_dict[git_sever_address])
+            git_source_name_list.extend(func_project_name(path))
 
-#     private_specs_repo_path = os.environ['HOME'] + '/.cocoapods/repos/hellobike-torrent-iosprivatespecsrepo'
-#     if os.path.exists(private_specs_repo_path):
-#         print('')
-#         os.chdir(private_specs_repo_path)
-#         os.system('git pull origin master')
-#         print('iOSPrivateSpecsRepo 已是最新')
-#         print('')
+    private_specs_repo_path = os.environ['HOME'] + '/.cocoapods/repos/hellobike-torrent-iosprivatespecsrepo'
+    if os.path.exists(private_specs_repo_path):
+        print('')
+        os.chdir(private_specs_repo_path)
+        os.system('git pull origin master')
+        print('iOSPrivateSpecsRepo 已是最新')
+        print('')
     
-#     private_specs_repo_path = os.environ['HOME'] + '/.cocoapods/repos/hellobike-torrent-cocoapods_ios'
-#     if os.path.exists(private_specs_repo_path):
-#         print('')
-#         os.chdir(private_specs_repo_path)
-#         os.system('git pull origin master')
-#         print('Cocoapods_iOS 已是最新')
-#         print('')
+    private_specs_repo_path = os.environ['HOME'] + '/.cocoapods/repos/hellobike-torrent-cocoapods_ios'
+    if os.path.exists(private_specs_repo_path):
+        print('')
+        os.chdir(private_specs_repo_path)
+        os.system('git pull origin master')
+        print('Cocoapods_iOS 已是最新')
+        print('')
 
-#     os.chdir(current_path)
-#     project_podfile_path = func_project_podfile_path(current_path)
-#     func_rewrite_podfile(git_source_name_list,podfile_path,project_podfile_path)
+    os.chdir(current_path)
+    project_podfile_path = func_project_podfile_path(current_path)
+    func_rewrite_podfile(git_source_name_list,podfile_path,project_podfile_path)
 
 
-#     ###############设置framework######################
-#     func_git_clone_code_not_branch('http://gitlab.hellobike.cn/Torrent/CachePods.git')
-#     os.chdir(current_path)
-#     if is_update:
-#         os.system('pod update')
+    ###############设置framework######################
+    func_git_clone_code_not_branch('http://gitlab.hellobike.cn/Torrent/CachePods.git')
+    os.chdir(current_path)
+    if is_update:
+        os.system('pod update')
 
 
 
