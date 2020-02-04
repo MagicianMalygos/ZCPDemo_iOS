@@ -15,29 +15,38 @@ def main():
     print('当前所在路径：' + current_path)
     print('')
 
+
     # 当前仓库的当前分支代码拉成最新的
     # no1. python调用Shell脚本，有两种方法：os.system()和os.popen()，前者返回值是脚本的退出状态码，后者的返回值是脚本执行过程中的输出内容
+    #      system()用于纯显示的情况，等同于在terminal输入的效果；popen()用于需要使用输出内容的情况
     # no2. git symbolic-ref -q --short 显示当前分支名并忽略错误，返回的是一个数组，如['master\n']
     current_repo_current_branchs = os.popen('git symbolic-ref --short -q HEAD').readlines()
-    if len(current_repo_current_branchs) > 0:
-        current_branch = current_repo_current_branchs[0]
-        print('当前分支：' + current_branch)
-        os.system('git pull origin ' + current_branch)
-        print('当前仓库代码已是最新')
-        print('')
+    # if len(current_repo_current_branchs) > 0:
+    #     current_branch = current_repo_current_branchs[0]
+    #     print('当前分支：' + current_branch)
+    #     os.system('git pull origin ' + current_branch)
+    #     print('当前仓库代码已是最新')
+    #     print('')
 
-    # hello_code_path = os.environ['HOME']+ '/' + 'HelloCode/'
-    
-    # if os.path.exists(hello_code_path):
-    #     print ('')
-    # else:
-    #     os.mkdir(hello_code_path)
+    # zcp代码路径
+    # no1. os.environ 为环境变量字典，os.environ['HOME'] 值为当前用户主目录
+    zcp_code_path = os.environ['HOME'] + '/ZCPCode/'
+    if os.path.exists(zcp_code_path):
+        print ('Code路径已存在：' + zcp_code_path)
+    else:
+        os.mkdir(zcp_code_path)
+        print ('Code已创建：' + zcp_code_path)
 
-    # podfiles_path = hello_code_path + 'Manifest_iOS/Podfiles/'
-    # podfile_path = hello_code_path + 'Manifest_iOS/Podfiles/Podfile'
+
+
+
+
+
+    podfiles_path = zcp_code_path + 'Manifest_iOS/Podfiles/'
+    podfile_path = zcp_code_path + 'Manifest_iOS/Podfiles/Podfile'
     
 #     # 检查 podfile_path
-#     func_check_podfile_path(podfile_path, hello_code_path, current_path)
+    func_check_podfile_path(podfile_path, zcp_code_path, current_path)
 
 #     # 设置 manifest_branch
 #     manifest_branch = ''
@@ -53,7 +62,7 @@ def main():
 #         manifest_branch = os.popen('git symbolic-ref --short -q HEAD').readlines()[0]
 
 #     # 使 Manifest_iOS 仓库分支最新
-#     manifest_path = hello_code_path + 'Manifest_iOS'
+#     manifest_path = zcp_code_path + 'Manifest_iOS'
 #     os.chdir(manifest_path)
 #     os.system('git reset --hard')
 #     os.system('git clean -xdf')
@@ -98,7 +107,7 @@ def main():
 
 #     print('Manifest_iOS 仓库当前选择的分支是：' + manifest_branch)
 
-#     func_clone_hellotrip(hello_code_path, current_path, manifest_branch)
+#     func_clone_hellotrip(zcp_code_path, current_path, manifest_branch)
 
 #     print('准备使用的 Podfile 的路径为：' + podfile_path)
 #     print('')
@@ -240,14 +249,14 @@ def func_git_clone_code_not_branch(git_repo_sever):
     current_path = os.getcwd()
     
     os.chdir(os.environ['HOME'])
-    hello_code_path = os.getcwd() + '/' + 'HelloCode'
-    if os.path.exists(hello_code_path):
+    zcp_code_path = os.getcwd() + '/' + 'HelloCode'
+    if os.path.exists(zcp_code_path):
         print ('')
     else:
-        os.mkdir(hello_code_path)
+        os.mkdir(zcp_code_path)
     
 #    os.chdir() 方法用于改变当前工作目录到指定的路径。
-    os.chdir(hello_code_path)
+    os.chdir(zcp_code_path)
     
     project_branch_split = git_repo_sever.split('/')
     project_name = project_branch_split[len(project_branch_split) - 1].replace('.git', '')
@@ -266,14 +275,14 @@ def func_git_clone_code(git_repo_sever, project_branch):
     current_path = os.getcwd()
     
     os.chdir(os.environ['HOME'])
-    hello_code_path = os.getcwd() + '/' + 'HelloCode'
-    if os.path.exists(hello_code_path):
+    zcp_code_path = os.getcwd() + '/' + 'HelloCode'
+    if os.path.exists(zcp_code_path):
         print ('')
     else:
-        os.mkdir(hello_code_path)
+        os.mkdir(zcp_code_path)
     
 #    os.chdir() 方法用于改变当前工作目录到指定的路径。
-    os.chdir(hello_code_path)
+    os.chdir(zcp_code_path)
     
     project_branch_split = git_repo_sever.split('/')
     project_name = project_branch_split[len(project_branch_split) - 1].replace('.git', '')
