@@ -1,3 +1,0 @@
-# ZCPWebView
-
-ZCP WebView

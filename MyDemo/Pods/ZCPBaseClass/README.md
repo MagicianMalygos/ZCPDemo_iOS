@@ -1,3 +1,0 @@
-# ZCPBaseClass
-
-ZCP BaseClass

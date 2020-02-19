@@ -1,3 +1,0 @@
-# ZCPRouter
-
-ZCP Router

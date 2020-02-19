@@ -1,2 +1,0 @@
-# MyDemo
-My All Demo

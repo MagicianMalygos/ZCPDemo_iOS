@@ -1,3 +1,0 @@
-# ZCPGlobal
-
-ZCP Global

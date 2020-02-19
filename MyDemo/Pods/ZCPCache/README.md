@@ -1,3 +1,0 @@
-# ZCPCache
-
-ZCP Cache

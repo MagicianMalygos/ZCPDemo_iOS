@@ -1,3 +1,0 @@
-# ZCPNetwork
-
-ZCP Network
